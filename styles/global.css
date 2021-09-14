@@ -1,4 +1,24 @@
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('/fonts/gordita/GorditaBold.otf');
+    /* src: url('/fonts/gordita/GorditaBlackItalic.otf'); */
+    /* src: url('/fonts/gordita/GorditaBoldItalic.otf'); */
+    src: url('/fonts/gordita/GorditaLight.otf');
+    /* src: url('/fonts/gordita/GorditaLightItalic.otf'); */
+    src: url('/fonts/gordita/GorditaMedium.otf');
+    /* src: url('/fonts/gordita/GorditaMediumItalic.otf'); */
+    src: url('/fonts/gordita/GorditaRegular.otf');
+    /* src: url('/fonts/gordita/GorditaRegularItalic.otf'); */
+    src: url('/fonts/gordita/GorditaThin.otf');
+    /* src: url('/fonts/gordita/GorditaThinItalic.otf'); */
+    src: url('/fonts/gordita/GorditaUltra.otf');
+    /* src: url('/fonts/gordita/GorditaUltraItalic.otf'); */
+}
+
 body {
     padding: 0;
     margin: 0;
 }
+
+
