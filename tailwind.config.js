@@ -20,7 +20,7 @@ module.exports = {
       },
       fontFamily: {
         gordita: 'Gordita',
-        quicksand: 'Quicksand, sans-serif',
+        quicksand: 'Quicksand',
       },
       fontSize: {
         "2xs": "12px",
@@ -38,11 +38,14 @@ module.exports = {
       colors:{
         'black': "#020D1E",
         green: {
-          "50": "rgba(0, 228, 175, 0.6)",
+          "50": "rgba(35, 224, 162, 0.08)",
           "100": "rgba(0, 228, 175, 0.2)",
-          "200": "#23FDB4",
-          "300": "#00CC89",
-          "400": "#009F6B"
+          "200": "#23E0A2",
+          "300": "#23FDB4",
+          "400": "#00CC89",
+          "500": "#009F6B",
+          "600": "rgba(16, 197, 138, 1)",
+          "700": "rgba(0, 159, 107, 1)"
         },
         gray: {
           '50': "rgba(2, 13, 30, 0.4)",
