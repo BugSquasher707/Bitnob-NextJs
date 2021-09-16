@@ -1,30 +1,37 @@
+import { FaqSvg, NobCredit, Savings, Usd, Wallet } from "../public";
+
 const mockData = {
     headerLinks: {
         Home: '/',
         Features: [
             {
                 title: 'Dollar Cost Averaging',
-                icon: '',
+                icon: <Usd />,
+                route: '/',
                 description:'Spread the purchase of an asset over an extended period.'
             },
             {
                 title: 'Group Savings',
-                icon: '',
+                icon: <Savings />,
+                route: '/savings',
                 description:'Create a savings plan and invite others to join.'
             },
             {
                 title: 'USD Wallet',
-                icon: '',
+                icon: <Wallet />,
+                route: '/usd',
                 description:'Save in USD and send USD to anyone anywhere in the world.'
             },
             {
                 title: 'Nob Credit',
-                icon: '',
+                icon: <NobCredit />,
+                route: '/credit',
                 description:'Take a loan for up to 12 months.'
             },
             {
                 title: 'FAQs',
-                icon: '',
+                icon: <FaqSvg />,
+                route: '/faq',
                 description:'Got questions? We already answered them.'
             },
         ],
