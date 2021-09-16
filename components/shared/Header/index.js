@@ -49,7 +49,7 @@ const MenuDropDown = ({title, data})=> {
 }
 
 
-const LinkLists = ({ data, headerLinks })=> {
+const LinkLists = ({ data })=> {
     const [key, val] = data
     const [activelink, setActiveLink] = React.useState('')
     const { ref, visible, setVisible } = useCloseContext()
@@ -79,7 +79,7 @@ const LinkLists = ({ data, headerLinks })=> {
                         {key}
                     </BitNobLink>
             }
-                {(activelink === key && visible) && <MenuDropDown title={activelink} data={headerLinks[activelink]} />}
+                {(activelink === key && visible) && <MenuDropDown title={activelink} data={mockData?.headerLinks[activelink]} />}
             </li>
         </React.Fragment>
     )
@@ -95,7 +95,7 @@ const Header = ()=> (
                 <div className="flex justify-between items-center space-x-24">
                     <ul className="flex relative space-x-12">
                         {
-                            Object.entries(mockData?.headerLinks).map((a)=> <LinkLists headerLinks={headerLinks} key={a[0]} data={a} /> )
+                            Object.entries(mockData?.headerLinks).map((a)=> <LinkLists key={a[0]} data={a} /> )
                         }
                     </ul>
                     <BitNobButton>
