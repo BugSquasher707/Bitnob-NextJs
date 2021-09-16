@@ -1,0 +1,6 @@
+.dropDown {
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 290px;
+}
