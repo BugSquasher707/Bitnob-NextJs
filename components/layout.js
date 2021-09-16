@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './shared/Header';
+import { Header, Footer } from '.';
 
 const Layout = ({ children }) => {
   
@@ -9,6 +9,7 @@ const Layout = ({ children }) => {
       <main>
         {children}
       </main>
+      <Footer />
     </React.Fragment>
   )
 };

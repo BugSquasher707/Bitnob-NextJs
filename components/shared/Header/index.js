@@ -85,30 +85,26 @@ const LinkLists = ({ data, headerLinks })=> {
     )
 }
 
-const Header = ()=> {
-    const { headerLinks } = mockData;
-    
-    return(
-        <header>
-            <BitNobContainer>
-                <div className="flex justify-between items-center py-4 px-6 md:mt-10 rounded-xl bg-green-50">
-                    <div>
-                        <LogoFull />
-                    </div>
-                    <div className="flex justify-between items-center space-x-24">
-                        <ul className="flex relative space-x-12">
-                            {
-                                Object.entries(headerLinks).map((a)=> <LinkLists headerLinks={headerLinks} key={a[0]} data={a} /> )
-                            }
-                        </ul>
-                        <BitNobButton>
-                          Get Started  
-                        </BitNobButton>
-                    </div>
+const Header = ()=> (
+    <header>
+        <BitNobContainer>
+            <div className="flex justify-between items-center py-4 px-6 md:mt-10 rounded-xl bg-green-50">
+                <div>
+                    <LogoFull />
                 </div>
-            </BitNobContainer>
-        </header>
-    )
-}
+                <div className="flex justify-between items-center space-x-24">
+                    <ul className="flex relative space-x-12">
+                        {
+                            Object.entries(mockData?.headerLinks).map((a)=> <LinkLists headerLinks={headerLinks} key={a[0]} data={a} /> )
+                        }
+                    </ul>
+                    <BitNobButton>
+                      Get Started  
+                    </BitNobButton>
+                </div>
+            </div>
+        </BitNobContainer>
+    </header>
+)
 
 export default Header

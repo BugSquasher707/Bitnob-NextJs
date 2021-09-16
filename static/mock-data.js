@@ -1,5 +1,6 @@
 import { FaqSvg, NobCredit, Savings, Usd, Wallet } from "../public";
 
+const obj = {};
 const mockData = {
     headerLinks: {
         Home: '/',
@@ -43,7 +44,16 @@ const mockData = {
             {title: "FAQs", route:"/faqs"},
             {title: "Referral Leader Board", route:"/referral"},
         ]
+    },
+    footerLinks: {
+        Company: bindObj.Company,
+        Legal: [
+            {title: "Terms of service", route: '/terms'},
+            {title: "Privacy Policy", route: '/privacy'}
+        ]
     }
 }
+
+bindObj = mockData.bind(this);
 
 export default mockData;
