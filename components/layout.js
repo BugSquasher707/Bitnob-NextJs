@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return(
     <React.Fragment>
       <Header />
-      <main>
+      <main style={{minHeight:"500px"}}>
         {children}
       </main>
       <Footer />

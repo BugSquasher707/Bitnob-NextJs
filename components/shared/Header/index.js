@@ -13,10 +13,10 @@ const MenuDropDown = ({title, data})=> {
 
     if(title === "Company"){
         return (
-            <div className={`absolute flex flex-col text-center items-center space-y-5 p-8 px-10 whitespace-pre rounded-lg bg-white shadow-md ${style.dropDown}`}>
+            <div className={`absolute flex flex-col text-center items-center space-y-1 p-8 px-10 whitespace-pre rounded-lg bg-white shadow-md ${style.dropDown}`}>
                 {
                     data.map((d)=> (
-                        <BitNobLink activeStyles='bg-green-50 px-4 w-full py-1 rounded-lg' to={d.route}>{d.title}</BitNobLink>
+                        <BitNobLink activeStyles='bg-green-50 px-4 w-full py-1 rounded-lg' className="py-2" to={d.route}>{d.title}</BitNobLink>
                     ))
                 }
             </div>
@@ -75,7 +75,7 @@ const LinkLists = ({ data })=> {
                     </span>
                     
                 :
-                    <BitNobLink to={val}>
+                    <BitNobLink className="font-bold" to={val}>
                         {key}
                     </BitNobLink>
             }
