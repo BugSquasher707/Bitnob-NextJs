@@ -1,22 +1,39 @@
 
 @font-face {
     font-family: 'Gordita';
-    src: url('/fonts/gordita/GorditaBold.otf');
-    /* src: url('/fonts/gordita/GorditaBlackItalic.otf'); */
-    /* src: url('/fonts/gordita/GorditaBoldItalic.otf'); */
-    src: url('/fonts/gordita/GorditaLight.otf');
-    /* src: url('/fonts/gordita/GorditaLightItalic.otf'); */
-    src: url('/fonts/gordita/GorditaMedium.otf');
-    /* src: url('/fonts/gordita/GorditaMediumItalic.otf'); */
-    src: url('/fonts/gordita/GorditaRegular.otf');
-    /* src: url('/fonts/gordita/GorditaRegularItalic.otf'); */
-    src: url('/fonts/gordita/GorditaThin.otf');
-    /* src: url('/fonts/gordita/GorditaThinItalic.otf'); */
-    src: url('/fonts/gordita/GorditaUltra.otf');
-    /* src: url('/fonts/gordita/GorditaUltraItalic.otf'); */
+    src: url('/fonts/gordita/Gordita-Black.eot');
+    src: url('/fonts/gordita/Gordita-Black.ttf');
+    src: url('/fonts/gordita/Gordita-Black.woff');
+    src: url('/fonts/gordita/Gordita-Black.woff2');
+
+    src: url('/fonts/gordita/Gordita-Bold.eot');
+    src: url('/fonts/gordita/Gordita-Bold.ttf');
+    src: url('/fonts/gordita/Gordita-Bold.woff');
+    src: url('/fonts/gordita/Gordita-Bold.woff2');
+
+    src: url('/fonts/gordita/Gordita-Bold.eot');
+    src: url('/fonts/gordita/Gordita-Bold.ttf');
+    src: url('/fonts/gordita/Gordita-Bold.woff');
+    src: url('/fonts/gordita/Gordita-Bold.woff2');
+
+    src: url('/fonts/gordita/Gordita-Light.eot');
+    src: url('/fonts/gordita/Gordita-Light.ttf');
+    src: url('/fonts/gordita/Gordita-Light.woff');
+    src: url('/fonts/gordita/Gordita-Light.woff2');
+
+    src: url('/fonts/gordita/Gordita-Medium.eot');
+    src: url('/fonts/gordita/Gordita-Medium.ttf');
+    src: url('/fonts/gordita/Gordita-Medium.woff');
+    src: url('/fonts/gordita/Gordita-Medium.woff2');
+
+    src: url('/fonts/gordita/Gordita-Regular.eot');
+    src: url('/fonts/gordita/Gordita-Regular.ttf');
+    src: url('/fonts/gordita/Gordita-Regular.woff');
+    src: url('/fonts/gordita/Gordita-Regular.woff2');
 }
 
 body {
+    font-family: "Quicksand", Gordita;
     padding: 0;
     margin: 0;
 }

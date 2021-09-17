@@ -1,6 +1,6 @@
-import { Page } from '../shared'
+import { getLayout, Page } from '../components';
 
-export default function Home() {
+const Home = ()=> {
   return (
     <Page title="Welcome to BitNob">
       <div className="">
@@ -9,3 +9,6 @@ export default function Home() {
     </Page>
   )
 }
+
+Home.getLayout = getLayout;
+export default Home;

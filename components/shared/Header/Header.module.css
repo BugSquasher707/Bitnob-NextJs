@@ -1,0 +1,36 @@
+.dropDown {
+    top: 130%;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 290px;
+    animation: moveup .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.wide {
+    transform: translateX(-52%);
+    min-width: 1100px;
+    animation: moveUp .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes moveup {
+    from {
+        opacity: .5;
+        transform: translateX(-30%) scale(.9);
+    }
+    to {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    from {
+        opacity: .5;
+        transform: translateX(-32%) scale(.9);
+    }
+    to {
+        transform: translateX(-52%) scale(1);
+        opacity: 1;
+    }
+}
