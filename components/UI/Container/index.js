@@ -1,7 +1,7 @@
 
 
-const BitNobContainer = ({ children, ...rest })=> (
-    <div className="container mx-auto" {...rest}>
+const BitNobContainer = ({ children, className, ...rest })=> (
+    <div className={`container mx-auto ${className}`} {...rest}>
         {children}
     </div>
 )

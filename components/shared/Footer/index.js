@@ -4,10 +4,23 @@ import BitNobButton from "../../UI/Button"
 import BitNobInput from "../../UI/Input"
 import BitNobLink from "../../UI/Link"
 import { LogoFull } from "../../../public"
-import { mockData } from '../../../static'
 import { FaFacebook, FaPaperPlane, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
 const Footer = ()=> {
+    const data = {
+        Company: [
+            {title: "About", route:"/"},
+            {title: "Careers", route:"/careers"},
+            {title: "Learn", route:"/learn"},
+            {title: "FAQs", route:"/faqs"},
+            {title: "Referral Leader Board", route:"/referral"},
+        ],
+        Legal: [
+            {title: "Terms of service", route: '/terms'},
+            {title: "Privacy Policy", route: '/privacy'}
+        ]
+    }
+
     const socials = {
         facebook: {
             link: "facebook.com",
@@ -32,12 +45,12 @@ const Footer = ()=> {
     }
 
     return(
-        <footer className="bg-white mt-8 py-12">
+        <footer className="bg-white mt-40 py-12">
             <BitNobContainer>
                 <div className="grid grid-cols-5">
                     <LogoFull />
                     {
-                        Object.entries(mockData.footerLinks).map(([title, links])=> (
+                        Object.entries(data).map(([title, links])=> (
                             <React.Fragment>
                                 <ul>
                                     <h3 className="text-black font-bold font-gordita text-xs uppercase mb-3">{title}</h3>

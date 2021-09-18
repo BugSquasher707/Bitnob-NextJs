@@ -2,18 +2,62 @@ import BitNobContainer from "../../UI/Container"
 import BitNobButton from "../../UI/Button"
 import BitNobLink from "../../UI/Link"
 import React from "react"
-import { LogoFull } from "../../../public";
-import { mockData } from '../../../static'
+import { LogoFull, FaqSvg, NobCredit, Savings, Usd, Wallet } from "../../../public";
+
 import style from './Header.module.css';
 import { useCloseContext } from "../../../hooks";
 import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
+
+const headerLinks = {
+    Home: '/',
+    Features: [
+        {
+            title: 'Dollar Cost Averaging',
+            icon: <Usd />,
+            route: '/',
+            description:'Spread the purchase of an asset over an extended period.'
+        },
+        {
+            title: 'Group Savings',
+            icon: <Savings />,
+            route: '/savings',
+            description:'Create a savings plan and invite others to join.'
+        },
+        {
+            title: 'USD Wallet',
+            icon: <Wallet />,
+            route: '/usd',
+            description:'Save in USD and send USD to anyone anywhere in the world.'
+        },
+        {
+            title: 'Nob Credit',
+            icon: <NobCredit />,
+            route: '/credit',
+            description:'Take a loan for up to 12 months.'
+        },
+        {
+            title: 'FAQs',
+            icon: <FaqSvg />,
+            route: '/faq',
+            description:'Got questions? We already answered them.'
+        },
+    ],
+    Business: '/business',
+    Company: [
+        {title: "About", route:"/"},
+        {title: "Careers", route:"/careers"},
+        {title: "Learn", route:"/learn"},
+        {title: "FAQs", route:"/faqs"},
+        {title: "Referral Leader Board", route:"/referral"},
+    ]
+}
 
 const MenuDropDown = ({title, data})=> {
     if(!data) return null
 
     if(title === "Company"){
         return (
-            <div className={`absolute flex flex-col text-center items-center space-y-1 p-8 px-10 whitespace-pre rounded-lg bg-white shadow-md ${style.dropDown}`}>
+            <div className={`absolute z-20 flex flex-col text-center items-center space-y-1 p-8 px-10 whitespace-pre rounded-lg bg-white shadow-md ${style.dropDown}`}>
                 {
                     data.map((d)=> (
                         <BitNobLink activeStyles='bg-green-50 px-4 w-full py-1 rounded-lg' className="py-2" to={d.route}>{d.title}</BitNobLink>
@@ -25,7 +69,7 @@ const MenuDropDown = ({title, data})=> {
     
     if(title === "Features"){
         return(
-            <div className={`absolute grid grid-cols-3 gap-6 p-8 px-10 rounded-lg bg-white shadow-md ${style.dropDown} ${style.wide}`}>
+            <div className={`absolute z-20 grid grid-cols-3 gap-6 p-8 px-10 rounded-lg bg-white shadow-md ${style.dropDown} ${style.wide}`}>
                 {
                     data.map((d)=> (
                         <BitNobLink activeStyles='bg-green-50 px-4 w-full py-2 transition-all duration-100 rounded-lg' to={d.route}>
@@ -79,7 +123,7 @@ const LinkLists = ({ data })=> {
                         {key}
                     </BitNobLink>
             }
-                {(activelink === key && visible) && <MenuDropDown title={activelink} data={mockData?.headerLinks[activelink]} />}
+                {(activelink === key && visible) && <MenuDropDown title={activelink} data={headerLinks[activelink]} />}
             </li>
         </React.Fragment>
     )
@@ -95,7 +139,7 @@ const Header = ()=> (
                 <div className="flex justify-between items-center space-x-24">
                     <ul className="flex relative space-x-12">
                         {
-                            Object.entries(mockData?.headerLinks).map((a)=> <LinkLists key={a[0]} data={a} /> )
+                            Object.entries(headerLinks).map((a)=> <LinkLists key={a[0]} data={a} /> )
                         }
                     </ul>
                     <BitNobButton>
