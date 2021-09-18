@@ -3,9 +3,16 @@
     overflow: hidden;
 }
 
-.landing_artboard {
-    height: 450px;
+.landing_cover {
     flex: 1.4;
+}
+
+.landing_vector {
+    position: absolute;
+}
+
+.artboard {
+    height: 450px;
     background-image: url('/images/artboard.png');
     background-repeat: no-repeat;
     background-size: cover;
