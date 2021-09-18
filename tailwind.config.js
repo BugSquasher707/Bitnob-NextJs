@@ -54,7 +54,16 @@ module.exports = {
           '200': 'rgba(1, 25, 17, 0.8)',
           '300': '#011911',
         }
-      }
+      },
+      // container: {
+      //   padding: {
+      //     DEFAULT: '1rem',
+      //     sm: '2rem',
+      //     lg: '4rem',
+      //     xl: '5rem',
+      //     '2xl': '6rem',
+      //   },
+      // },
     },
   },
   variants: {

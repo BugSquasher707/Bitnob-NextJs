@@ -1,4 +1,4 @@
-import { FaqSvg, NobCredit, Savings, Usd, Wallet } from "../public";
+import { Bolt, FaqSvg, NobCredit, People, Savings, Shield, Usd, Wallet } from "../public";
 
 const mockData = {
     headerLinks: {
@@ -55,6 +55,28 @@ const mockData = {
         Legal: [
             {title: "Terms of service", route: '/terms'},
             {title: "Privacy Policy", route: '/privacy'}
+        ]
+    },
+    solutionSection: {
+        image: '/images/solution.png',
+        heading: `We’re the solution you’ve been waiting for`,
+        description: [`Keeping money in USD and Bitcoin has never been easier`, 'Don’t just take our word for it.'],
+        list: [
+            {
+                title: "Lightening Fast Transactions",
+                description: "Conduct transactions faster, less costly, and more effieciently.",
+                icon: <Bolt />
+            },
+            {
+                title: "Industry Standard Security",
+                description: `With us, you’re in safe hands. Our industry standard security features guarantee the safety of your funds.`,
+                icon: <Shield />
+            },
+            {
+                title: "Round the Clock Support",
+                description: `We’re ready to help whenever you need us. And we curated a fine list of resources to help you make the most of the app`,
+                icon: <People />
+            },
         ]
     }
 }

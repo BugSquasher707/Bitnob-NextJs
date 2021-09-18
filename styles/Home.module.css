@@ -1,0 +1,18 @@
+.landing {
+    height: 600px;
+    overflow: hidden;
+}
+
+.landing_artboard {
+    height: 450px;
+    flex: 1.4;
+    background-image: url('/images/artboard.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 2000px;
+}
+
+.phone {
+    max-height: 600px;
+    margin-left: 170px;
+}

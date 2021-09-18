@@ -9,7 +9,7 @@ const BitNobLink = React.forwardRef(({ children, className, activeStyles, to="#"
   
   return(
       <Link href={to}>
-        <a ref={ref} className={`font-quicksand transition-colors duration-75 text-sm font-medium text-gray-200 hover:opacity-70 ${className} ${activeLinkStyle}`} {...rest}>
+        <a ref={ref} className={`font-quicksand transition-colors duration-75 text-sm font-medium text-gray-200 hover:opacity-90 ${className} ${activeLinkStyle}`} {...rest}>
           {children}
         </a>
       </Link>
