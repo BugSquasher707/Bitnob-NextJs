@@ -12,7 +12,7 @@ const BitNobButton = React.forwardRef(({ children, className, variant = 'default
     return(
         <button 
             ref={ref} 
-            className={`hover:opacity-90 font-quicksand text-sm disabled:opacity-50 text-center transition-all duration-100 font-medium ${className} ${variants[variant]}`} 
+            className={`hover:opacity-90 font-bold font-quicksand text-sm disabled:opacity-50 text-center transition-all duration-100 ${className} ${variants[variant]}`} 
             {...rest}>
            <React.Fragment>
                { isLoading && <Loading /> } {children}

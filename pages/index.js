@@ -1,4 +1,11 @@
-import { BitNobContainer, BitNobLink, getLayout, Page } from '../components';
+import { 
+  BitNobButton,
+  BitNobContainer, 
+  BitNobLink, 
+  getLayout, 
+  Page 
+} from '../components';
+
 import { 
   Arrow, 
   Arrow2, 
@@ -11,6 +18,8 @@ import {
   Quote,
   Circle, 
   AppStore, 
+  Dots,
+  ArrowOutline,
   PlayStore, 
   Dollar, 
   People, 
@@ -81,7 +90,7 @@ const data = {
     assets: ["/images/r-1.png", "/images/r-2.png", "/images/r-3.png", "/images/r-4.png", "/images/r-5.png", "/images/r-6.png"],
     comments: [
       {
-        description:`uNo other  platform allows people to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
+        description:`No other  platform allows people to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
         author: "Bernard Parah",
         position: "CEO Bitnob"
       },
@@ -101,11 +110,30 @@ const data = {
         position: "CEO Bitnob"
       },
     ]
-  }
+  },
+  business: {
+    image: "/svgs/business-cover.svg",
+    heading: "See it in action",
+    description: "Bring your business onboard for to experience Secure bitcoin payment processing infrastructure."
+  },
+  preFooter: [
+    {
+      title: "We're a dedicated team",
+      description: "focused on making the preservation of your wealth super easy."
+    },
+    {
+      title: "Let's help you grow",
+      description: "we’re concerned with your best interests. So let us help you grow."
+    },
+    {
+      title: "Getting you started is simple",
+      description: "All you need is to have you phone handy and download the app from your appstore."
+    }
+  ]
 }
 
 const Home = ()=> {
-  const { solutionSection, howItWorks, seeInAction } = data
+  const { solutionSection, howItWorks, seeInAction, reviews, business, slides, preFooter } = data
 
   return (
     <Page title="Welcome to BitNob">
@@ -197,7 +225,7 @@ const Home = ()=> {
           <div className="flex flex-col items-center justify-center relative">
             <div className="flex space-x-4 mb-2">
               {
-                data.slides.map(({ trace, title })=> {
+                slides.map(({ trace, title })=> {
                   return(
                     <div className="relative">
                       <div 
@@ -213,7 +241,7 @@ const Home = ()=> {
             </div>
             <div className="flex ml-8 mt-40">
                 {
-                  data.slides.map(({image}, i)=> {
+                  slides.map(({image}, i)=> {
                     const style = {
                       height: "550px",
                       marginTop: `-${[1,2].includes(i) ? "90" : ""}px`,
@@ -252,37 +280,93 @@ const Home = ()=> {
         </BitNobContainer>
       </div>
       
-      <div className={`mt-40 bg-gradient-to-b from-white via-green-100    ${styles.reviews}`}>
+      <div className={`mt-40 bg-gradient-to-b from-white via-green-100  relative ${styles.reviews}`}>
         <BitNobContainer>
           <div className="max-w-2xl text-center mx-auto"> 
             <div className="text-center">
-              <h2 className="font-bold leading-tight text-5xl text-black font-gordita mb-2">{data.reviews.heading}</h2>
-              <p className="text-md text-gray-200 font-quicksand">{data.reviews.description}</p>
+              <h2 className="font-bold leading-tight text-5xl text-black font-gordita mb-2">{reviews.heading}</h2>
+              <p className="text-md text-gray-200 font-quicksand">{reviews.description}</p>
             </div>
             <div className="relative mt-28 flex mx-auto max-w-2xl">
-                {
-                  data.reviews.comments.map(({description, position, author}, i)=> {
-                    const styles = {
-                      top: `${i * 35}px`,
-                      zIndex: data.reviews.comments.length - i,
-                      transform: `scale(${1 - i/10})`,
-                      opacity: `1 - ${i/10}`,
-                      boxShadow:"0px 18px 52.8537px rgba(63, 177, 181, 0.16)"
-                    }
+              {
+                reviews.comments.map(({description, position, author}, i)=> {
+                  const styles = {
+                    top: `${i * 35}px`,
+                    zIndex: reviews.comments.length - i,
+                    transform: `scale(${1 - i/10})`,
+                    opacity: `1 - ${i/10}`,
+                    boxShadow:"0px 18px 52.8537px rgba(63, 177, 181, 0.16)"
+                  }
 
-                    return (
-                      <div style={styles} className="text-center absolute rounded-xl bg-white p-12 py-9 flex flex-col items-center">
-                        <Quote className="absolute transform scale-75 -top-1" />
-                        
-                        <p className="text-xl mt-8 text-gray-300 font-quicksand">{description}</p>
-                        <span className="block mt-12 text-lg">
-                          <b>{author}</b> - <span>{position}</span>
-                        </span>
-                      </div>
-                    )
-                  })
-                }
+                  return (
+                    <div style={styles} className="text-center absolute rounded-xl bg-white p-12 py-9 flex flex-col items-center">
+                      <Quote className="absolute transform scale-75 -top-1" />
+                      
+                      <p className="text-xl mt-8 text-gray-300 font-quicksand">{description}</p>
+                      <span className="block mt-12 text-lg">
+                        <b>{author}</b> - <span>{position}</span>
+                      </span>
+                    </div>
+                  )
+                })
+              }
+              <Dots className="absolute -top-8 -right-32" />
+              <Dots variant="green" className="absolute top-52 -left-28" />
             </div>
+            <div className=" absolute transform left-1/2 -translate-x-1/2 space-x-10 -bottom-10 flex w-full max-w-sm justify-center items-center mt-20">
+                <ArrowOutline role="button" tabIndex="0" className="transform scale-75 transition-all duration-100 hover:shadow-md rounded-full focus:ring-2 focus:ring-offset-2 focus:ring-black" />
+                <ArrowOutline role="button" tabIndex="0" className="transform -rotate-180 scale-75 transition-all duration-100 hover:shadow-md rounded-full focus:ring-2 focus:ring-offset-2 focus:ring-black" />
+            </div>
+            {
+                reviews.assets.map((a, i)=> {
+                  const loci = {
+                    0: {top:"10%", left:"15%"},
+                    1: {top:"10%", right:"23%"},
+                    2: {top:"50%", right:"5%"},
+                    3: {bottom:"0%", right:"12%"},
+                    4: {bottom:"0", left:"14%"},
+                    5: {top:"45%", left:"5%"},
+                  }
+
+                  return <img src={a} style={loci?.[i]} alt="avatar" className="absolute z-30" />
+                })
+              }
+          </div>
+        </BitNobContainer>
+      </div>
+
+      <div className="my-40 max-w-7xl mx-auto">
+        <BitNobContainer>
+          <div className="max-w-md text-center mx-auto">
+            <h2 className="font-bold text-5xl text-black font-gordita mb-2">{business.heading}</h2>
+            <p className="text-md text-gray-200 font-quicksand">{business.description}</p>
+          </div>
+          <div className="mt-14">
+            <img src={business.image} alt="business" />
+            <BitNobButton className="mt-6 max-w-xs w-max mx-auto">Learn More</BitNobButton>
+          </div>
+        </BitNobContainer>
+      </div>
+
+      <div className="bg-black mt-20 py-12">
+        <BitNobContainer>
+          <div className="flex max-w-6xl mx-auto space-x-6">
+            {
+              preFooter.map(({title, description})=> (
+                <div key={title} className="p-6 flex-1 rounded-3xl bg-white">
+                  <h3 className="text-lg font-gordita font-bold mb-3">{title}</h3>
+                  <p className="text-gray-200">{description}</p>
+                </div>
+              ))
+            }
+          </div>
+          <div className="flex space-x-4 justify-center items-center mt-8">
+            <BitNobLink className="border border-gray-500 rounded-md" to="#">
+              <AppStore />
+            </BitNobLink>
+            <BitNobLink className="border border-gray-500 rounded-md" to="#">
+              <PlayStore />
+            </BitNobLink>
           </div>
         </BitNobContainer>
       </div>

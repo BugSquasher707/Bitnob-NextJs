@@ -24,11 +24,13 @@ import Arrow2 from './svgs/arrow-2';
 import PlayButton from './svgs/play';
 import Quote from './svgs/quote';
 import Dots from './svgs/dots';
+import BAsset from './svgs/b-asset';
 import ArrowOutline from './svgs/arrow-outline';
 
 export {
     LogoFull,
     PlayButton,
+    BAsset,
     Usd,
     ArrowOutline,
     Dots,
