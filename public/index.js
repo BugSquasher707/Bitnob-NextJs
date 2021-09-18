@@ -15,9 +15,17 @@ import HowItWorks from './svgs/how-it-works';
 import Dollar from './svgs/dollar';
 import Arrow from './svgs/arrow';
 import Circles from './svgs/circles';
+import Circle from './svgs/circle';
+import Trace1 from './svgs/trace-1';
+import Trace2 from './svgs/trace-2';
+import Trace3 from './svgs/trace-3';
+import Trace4 from './svgs/trace-4';
+import Arrow2 from './svgs/arrow-2';
+import PlayButton from './svgs/play';
 
 export {
     LogoFull,
+    PlayButton,
     Usd,
     Bolt,
     Wallet,
@@ -25,10 +33,16 @@ export {
     Arrow,
     FaqSvg,
     Logo,
+    Trace1,
+    Trace2,
+    Trace3,
+    Arrow2,
+    Trace4,
     HowItWorks,
     Shield,
     NobCredit,
     Circles,
+    Circle,
     People,
     Savings,
     PlayStore,

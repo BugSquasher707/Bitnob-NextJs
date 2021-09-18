@@ -45,7 +45,7 @@ const Footer = ()=> {
     }
 
     return(
-        <footer className="bg-white mt-8 py-12">
+        <footer className="bg-white mt-40 py-12">
             <BitNobContainer>
                 <div className="grid grid-cols-5">
                     <LogoFull />

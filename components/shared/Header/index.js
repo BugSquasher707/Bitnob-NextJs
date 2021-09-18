@@ -57,7 +57,7 @@ const MenuDropDown = ({title, data})=> {
 
     if(title === "Company"){
         return (
-            <div className={`absolute flex flex-col text-center items-center space-y-1 p-8 px-10 whitespace-pre rounded-lg bg-white shadow-md ${style.dropDown}`}>
+            <div className={`absolute z-20 flex flex-col text-center items-center space-y-1 p-8 px-10 whitespace-pre rounded-lg bg-white shadow-md ${style.dropDown}`}>
                 {
                     data.map((d)=> (
                         <BitNobLink activeStyles='bg-green-50 px-4 w-full py-1 rounded-lg' className="py-2" to={d.route}>{d.title}</BitNobLink>
@@ -69,7 +69,7 @@ const MenuDropDown = ({title, data})=> {
     
     if(title === "Features"){
         return(
-            <div className={`absolute grid grid-cols-3 gap-6 p-8 px-10 rounded-lg bg-white shadow-md ${style.dropDown} ${style.wide}`}>
+            <div className={`absolute z-20 grid grid-cols-3 gap-6 p-8 px-10 rounded-lg bg-white shadow-md ${style.dropDown} ${style.wide}`}>
                 {
                     data.map((d)=> (
                         <BitNobLink activeStyles='bg-green-50 px-4 w-full py-2 transition-all duration-100 rounded-lg' to={d.route}>
@@ -123,7 +123,7 @@ const LinkLists = ({ data })=> {
                         {key}
                     </BitNobLink>
             }
-                {(activelink === key && visible) && <MenuDropDown title={activelink} data={mockData?.headerLinks[activelink]} />}
+                {(activelink === key && visible) && <MenuDropDown title={activelink} data={headerLinks[activelink]} />}
             </li>
         </React.Fragment>
     )

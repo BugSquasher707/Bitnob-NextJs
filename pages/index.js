@@ -1,5 +1,20 @@
 import { BitNobContainer, BitNobLink, getLayout, Page } from '../components';
-import { Arrow, Bolt,  AppStore, PlayStore, Dollar, People, Shield } from "../public";
+import { 
+  Arrow, 
+  Arrow2, 
+  Bolt, 
+  Trace1, 
+  Trace2, 
+  Trace3, 
+  Trace4, 
+  PlayButton,
+  Circle, 
+  AppStore, 
+  PlayStore, 
+  Dollar, 
+  People, 
+  Shield 
+} from "../public";
 import styles from '../styles/Home.module.css';
 
 
@@ -27,31 +42,42 @@ const data = {
       ]
   },
   howItWorks: {
-      cover: "/images/how-it-works.png",
-      heading: "How it works",
-      description: "We can help you save and manage your money in a way that maximizes the value of your returns.",
-      list: [
-          {
-              title:"Savings",
-              description: `Save in Bitcoin with (Dollar Cost Averaging)DCA. Learn More`,
-              icon: <Arrow />
-          },
-          {
-              title:"Loans",
-              description: `Save in Bitcoin with (Dollar Cost Averaging)DCA. Learn More`,
-              icon: <Arrow />
-          },
-          {
-              title:"Withdrawal",
-              description: `Withdraw your BTC to USD and USD to your bank account without stress. Learn More`,
-              icon: <Dollar />
-          },
-      ]
+    cover: "/images/how-it-works.png",
+    heading: "How it works",
+    description: "We can help you save and manage your money in a way that maximizes the value of your returns.",
+    list: [
+        {
+            title:"Savings",
+            description: `Save in Bitcoin with (Dollar Cost Averaging)DCA. Learn More`,
+            icon: <Arrow />
+        },
+        {
+            title:"Loans",
+            description: `Save in Bitcoin with (Dollar Cost Averaging)DCA. Learn More`,
+            icon: <Arrow />
+        },
+        {
+            title:"Withdrawal",
+            description: `Withdraw your BTC to USD and USD to your bank account without stress. Learn More`,
+            icon: <Dollar />
+        },
+    ]
+  },
+  slides: [
+    { title: "Lightning Transactions", image: "/images/phone-0.png", trace: <Trace1 /> },
+    { title: "Group Savings", image: "/images/phone-1.png", trace: <Trace2 /> },
+    { title: "Cross Platform Transfers", image: "/images/phone-2.png", trace: <Trace3 />},
+    { title: "NobCredit", image: "/images/phone-3.png", trace: <Trace4 />},
+  ],
+  seeInAction: {
+    heading: "See it in action",
+    image: '/images/video.png',
+    description: "Enough with the talking, why not see for yourself. Have a glimpse of our app in acton."
   }
 }
 
 const Home = ()=> {
-  const { solutionSection, howItWorks } = data
+  const { solutionSection, howItWorks, seeInAction } = data
 
   return (
     <Page title="Welcome to BitNob">
@@ -83,6 +109,7 @@ const Home = ()=> {
           </div>
         </div>
       </div>
+
 
       <BitNobContainer>
         <div className="flex space-x-24">
@@ -133,6 +160,66 @@ const Home = ()=> {
                 ))
               }
             </div>
+          </div>
+        </BitNobContainer>
+      </div>
+
+      <div style={{minHeight:"1000px"}} className="mt-28">
+        <BitNobContainer>
+          <div className="flex flex-col items-center justify-center relative">
+            <div className="flex space-x-4 mb-2">
+              {
+                data.slides.map(({ trace, title })=> {
+                  return(
+                    <div className="relative">
+                      <div 
+                        style={{borderColor:"rgba(239, 241, 241, 1)"}} 
+                        className="px-14 py-4  text-black font-bold border font-gordita text-lg rounded-3xl">
+                        {title}
+                        <span className="block left-1/5 top-full absolute">{trace}</span>
+                      </div>
+                    </div>
+                  )
+                })
+              }
+            </div>
+            <div className="flex ml-8 mt-40">
+                {
+                  data.slides.map(({image}, i)=> {
+                    const style = {
+                      height: "550px",
+                      marginTop: `-${[1,2].includes(i) ? "90" : ""}px`,
+                      marginLeft: `-${i < 2 ? "40" : "44"}px`,
+                      transform: `rotate(${i < 2 ? "-18" : "15"}deg)`,
+                    }
+                    
+                  return(
+                    <img 
+                      style={{left: i ? 20 : 0 }} 
+                      src={image} 
+                      style={style} 
+                      className="max-w-xs top-32 z-10" />
+                  )})
+                }
+            </div>
+            <div className="flex w-full -mt-60 justify-around items-center">
+              <Arrow2 className="z-20 hover:opacity-80 transition-all duration-150 cursor-pointer" />
+              <Arrow2 style={{transform: "rotate(209deg)"}} className="z-20 transform hover:opacity-90 transition-all duration-150 cursor-pointer" />
+            </div>
+            <Circle className="max-w-3xl top-10 absolute" />
+          </div>
+        </BitNobContainer>
+      </div>
+      
+      <div className="mt-30">
+        <BitNobContainer>
+          <div className="max-w-md text-center mx-auto">
+            <h2 className="font-bold text-5xl text-black font-gordita mb-2">{seeInAction.heading}</h2>
+            <p className="text-md text-gray-200 font-quicksand">{seeInAction.description}</p>
+          </div>
+          <div style={{borderRadius:"68px"}} className="bg-green-200 relative max-w-6xl mx-auto mt-20">
+            <img src={seeInAction.image} alt="video" />
+            <PlayButton style={{transform: "translate(-50%, -50%) scale(.8)"}} className="absolute left-1/2 top-1/2" />
           </div>
         </BitNobContainer>
       </div>
