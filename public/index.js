@@ -22,11 +22,17 @@ import Trace3 from './svgs/trace-3';
 import Trace4 from './svgs/trace-4';
 import Arrow2 from './svgs/arrow-2';
 import PlayButton from './svgs/play';
+import Quote from './svgs/quote';
+import Dots from './svgs/dots';
+import ArrowOutline from './svgs/arrow-outline';
 
 export {
     LogoFull,
     PlayButton,
     Usd,
+    ArrowOutline,
+    Dots,
+    Quote,
     Bolt,
     Wallet,
     Dollar,

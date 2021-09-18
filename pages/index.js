@@ -8,6 +8,7 @@ import {
   Trace3, 
   Trace4, 
   PlayButton,
+  Quote,
   Circle, 
   AppStore, 
   PlayStore, 
@@ -73,6 +74,33 @@ const data = {
     heading: "See it in action",
     image: '/images/video.png',
     description: "Enough with the talking, why not see for yourself. Have a glimpse of our app in acton."
+  },
+  reviews: {
+    heading: "Designed with your best interest in mind",
+    description: "This is why we are most trusted by individuals and businesses",
+    assets: ["/images/r-1.png", "/images/r-2.png", "/images/r-3.png", "/images/r-4.png", "/images/r-5.png", "/images/r-6.png"],
+    comments: [
+      {
+        description:`uNo other  platform allows people to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
+        author: "Bernard Parah",
+        position: "CEO Bitnob"
+      },
+      {
+        description:`No other  platform allows people to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
+        author: "Bernard Parah",
+        position: "CEO Bitnob"
+      },
+      {
+        description:`No other  platform allows people to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
+        author: "Bernard Parah",
+        position: "CEO Bitnob"
+      },
+      {
+        description:`No other  platform allows people to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
+        author: "Bernard Parah",
+        position: "CEO Bitnob"
+      },
+    ]
   }
 }
 
@@ -81,7 +109,7 @@ const Home = ()=> {
 
   return (
     <Page title="Welcome to BitNob">
-      <div className={`mt-20 flex flex-nowrap ${styles.landing}`}>
+      <div className={`mt-32 flex flex-nowrap ${styles.landing}`}>
         <BitNobContainer className="flex-1">
           <div className="flex justify-center">
             <div style={{maxWidth:"500px"}} className="">
@@ -219,7 +247,42 @@ const Home = ()=> {
           </div>
           <div style={{borderRadius:"68px"}} className="bg-green-200 relative max-w-6xl mx-auto mt-20">
             <img src={seeInAction.image} alt="video" />
-            <PlayButton style={{transform: "translate(-50%, -50%) scale(.8)"}} className="absolute left-1/2 top-1/2" />
+            <PlayButton style={{transform: "translate(-50%, -50%) scale(.8)"}} className="absolute cursor-pointer animate-pulse left-1/2 top-1/2" />
+          </div>
+        </BitNobContainer>
+      </div>
+      
+      <div className={`mt-40 bg-gradient-to-b from-white via-green-100    ${styles.reviews}`}>
+        <BitNobContainer>
+          <div className="max-w-2xl text-center mx-auto"> 
+            <div className="text-center">
+              <h2 className="font-bold leading-tight text-5xl text-black font-gordita mb-2">{data.reviews.heading}</h2>
+              <p className="text-md text-gray-200 font-quicksand">{data.reviews.description}</p>
+            </div>
+            <div className="relative mt-28 flex mx-auto max-w-2xl">
+                {
+                  data.reviews.comments.map(({description, position, author}, i)=> {
+                    const styles = {
+                      top: `${i * 35}px`,
+                      zIndex: data.reviews.comments.length - i,
+                      transform: `scale(${1 - i/10})`,
+                      opacity: `1 - ${i/10}`,
+                      boxShadow:"0px 18px 52.8537px rgba(63, 177, 181, 0.16)"
+                    }
+
+                    return (
+                      <div style={styles} className="text-center absolute rounded-xl bg-white p-12 py-9 flex flex-col items-center">
+                        <Quote className="absolute transform scale-75 -top-1" />
+                        
+                        <p className="text-xl mt-8 text-gray-300 font-quicksand">{description}</p>
+                        <span className="block mt-12 text-lg">
+                          <b>{author}</b> - <span>{position}</span>
+                        </span>
+                      </div>
+                    )
+                  })
+                }
+            </div>
           </div>
         </BitNobContainer>
       </div>
