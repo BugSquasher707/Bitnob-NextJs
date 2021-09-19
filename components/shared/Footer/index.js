@@ -13,8 +13,8 @@ const Footer = ()=> {
     return(
         <footer className="bg-white mt-20 xl:mt-40 py-12">
             <BitNobContainer>
-                <div className="grid grid-cols-5">
-                    <LogoFull className="col-span-6 mb-10 xl:mb-0 xl:col-span-1" />
+                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-14 md:gap-y-0 gap-x-32 md:gapx-10 xl:grid-cols-5">
+                    <LogoFull className="col-span-6 xl:col-span-1" />
                     {
                         Object.entries(footerLinks.links).map(([title, links])=> (
                             <React.Fragment>
@@ -31,15 +31,15 @@ const Footer = ()=> {
                             </React.Fragment>
                         ))
                     }
-                    <ul className="col-span-2 max-w-sm">
+                    <ul className="max-w-sm col-span-6 md:col-span-3 lg:col-span-1">
                         <h3 className="text-black font-bold font-gordita text-xs uppercase mb-4">Subscribe to our newsletter</h3>
                         <p className="text-sm text-black">
                             The latest news, articles, and resources, sent to your inbox weekly.
                         </p>
-                        <div className=" mt-4 ">
+                        <div className="mt-4 ">
                             <form>
                                 <div className="flex space-x-4">
-                                    <BitNobInput box={{minWidth:"300px"}} required className="flex-2" placeholder="Enter your email" name="email" />
+                                    <BitNobInput required className="flex-2" placeholder="Enter your email" name="email" />
                                     <BitNobButton style={{maxWidth:"120px"}} className="flex-1" variant="black">Subscribe</BitNobButton>
                                 </div>
                             </form>
@@ -47,8 +47,8 @@ const Footer = ()=> {
                     </ul>
                 </div>
                 <div style={{height:"1px"}} className="bg-bitGray-50 mt-16 mb-9 w-full" />
-                <div className="flex justify-between items-center space-x-5">
-                    <h2 className="font-quicksand font-bold">
+                <div className="flex flex-col-reverse md:flex-row text-center md:text-left justify-between items-center md:space-x-5">
+                    <h2 className="font-quicksand mt-8 md:mt-0 block font-bold">
                         © {new Date().getFullYear()} Bitnob Technologies. All rights reserved.
                     </h2>
                     <ul className="flex space-x-7">

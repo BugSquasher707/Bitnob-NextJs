@@ -8,8 +8,8 @@ const Reviews = () => {
     return(
         <div className={`mt-40 bg-gradient-to-b from-white via-bitGreen-100 to-white relative ${styles.reviews}`}>
             <BitNobContainer>
-            <div className="max-w-2xl text-center mx-auto"> 
-                <div className="text-center max-w-md mx-auto xl:max-w-full">
+            <div className="max-w-2xl mx-auto"> 
+                <div className="text-left max-w-sm lg:max-w-md mx-auto xl:max-w-full">
                     <h2 className="font-bold leading-tight text-3xl xl:text-4xl 2xl:text-5xl text-black font-gordita mb-2">{homeData.reviews.heading}</h2>
                     <p className="text-md pt-2 text-bitGray-200 font-quicksand">{homeData.reviews.description}</p>
                 </div>
@@ -60,7 +60,7 @@ const Reviews = () => {
                             src={a} 
                             style={loci?.[i]} 
                             alt="avatar" 
-                            className="absolute w-20 h-20 xl:h-28 xl:w-28 bg-bitGreen-50 rounded-full z-30" />
+                            className=" hidden lg:block absolute w-20 h-20 xl:h-28 xl:w-28 bg-bitGreen-50 rounded-full z-30" />
                         )
                     })
                 }

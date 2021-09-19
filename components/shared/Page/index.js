@@ -4,14 +4,10 @@ import React from 'react'
 const Page = ({ title, children }) => (
     <React.Fragment>
         <Head>
-            <title>
-                {title}
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            </title>
+            <title> {title} </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         </Head>
-        <React.Fragment>
-            {children}
-        </React.Fragment>
+        {children}
     </React.Fragment>
 )
 
