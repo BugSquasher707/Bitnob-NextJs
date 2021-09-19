@@ -8,7 +8,7 @@ const HowItWorks = () => {
     const { howItWorks } = homeData;
 
     return(
-        <div className="relative">
+        <div className="relative mt-60">
             <div 
                 className=" max-w-md xl:max-w-3xl 2xl:max-w-5xl right-0 h-80 xl:h-96 w-full bg-cover bg-no-repeat -top-20 xl:-top-32 absolute" 
                 style={{backgroundImage:`url(${howItWorks.cover})`}} />

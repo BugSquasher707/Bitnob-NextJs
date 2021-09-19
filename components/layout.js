@@ -7,9 +7,9 @@ const Layout = ({ children }) => {
   
   return(
     <React.Fragment>
-      <Circles className="absolute max-w-5xl right-0 -top-32" />
+      <Circles className="absolute hidden lg:block z-0 max-w-5xl right-0 -top-32" />
       <Header />
-      <main className="relative" style={{minHeight:"500px"}}>
+      <main className="relative z-10" style={{minHeight:"500px"}}>
         {children}
       </main>
       <Footer />

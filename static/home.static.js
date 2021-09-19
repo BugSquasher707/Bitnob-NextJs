@@ -14,6 +14,7 @@
   
   const homeData = {   
     landing: {
+      assets: '/images/artboard.png',
       cover: "/images/smartphone.png",
       heading: ["Freedom", "for your money"],
       description: `Making money moves has never been easier. 

@@ -5,8 +5,9 @@ import React, { useEffect, useRef } from "react"
 
 import style from './Header.module.css';
 import { useCloseContext } from "../../../hooks";
-import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
-import { LogoFull } from "public"
+import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
+import { HiViewGrid } from 'react-icons/hi';
+import { LogoFull } from "public";
 import { headerFooterLinks } from "static";
 import { useRouter } from "next/dist/client/router";
 
@@ -98,25 +99,29 @@ const Header = () => {
     }, [router.pathname])
     
     return(
-        <header className=" hidden lg:block">
-            <BitNobContainer>
-                <div ref={headerRef} className="flex justify-between items-center py-4 px-6 md:mt-6 rounded-xl bg-bitGreen-50">
-                    <div>
-                        <LogoFull />
-                    </div>
-                    <div className="flex justify-between items-center space-x-24">
-                        <ul className="flex relative space-x-12">
-                            {
-                                Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
-                            }
-                        </ul>
-                        <BitNobButton>
-                            Get Started
-                        </BitNobButton>
-                    </div>
+        <BitNobContainer>
+            <header ref={headerRef} className="flex justify-between items-center py-3 xl:py-4 px-6 md:mt-6 rounded-xl bg-bitGreen-50 z-10 w-full">
+                <div>
+                    <LogoFull />
                 </div>
-            </BitNobContainer>
-        </header>
+                <div className=" hidden absolute lg:static lg:flex justify-between items-center space-x-24">
+                    <ul className="flex relative space-x-12">
+                        {
+                            Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
+                        }
+                    </ul>
+                    <BitNobButton>
+                        Get Started
+                    </BitNobButton>
+                </div>
+                <div 
+                    tabIndex="0" 
+                    role="button" 
+                    className="text-4xl lg:hidden cursor-pointer transition-all duration-300 hover:opacity-95 bg-white rounded-full p-1 flex justify-center items-center box-border h-16 w-16 text-bitGreen-200">
+                    <HiViewGrid />
+                </div>
+            </header>
+        </BitNobContainer>
     )
 }
 

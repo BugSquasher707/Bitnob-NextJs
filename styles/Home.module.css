@@ -1,5 +1,5 @@
 .landing {
-    height: 600px;
+    height: 700px;
     overflow: hidden;
 }
 
@@ -7,22 +7,23 @@
     flex: 1.4;
 }
 
-.landing_vector {
-    position: absolute;
+.artboard {
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/images/artboard.png');
 }
 
-.artboard {
-    height: 450px;
-    background-image: url('/images/artboard.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 2000px;
+.asset {
+    height: 500px;
+    object-fit: cover;
 }
 
 .phone {
     max-height: 600px;
     position: absolute;
     left: 50%;
+    top: 0;
     transform: translateX(-70%);
     margin-left: 170px;
 }
@@ -34,5 +35,11 @@
 @media (max-width: 1280px) {
     .phone {
         margin-left: 100px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .artboard {
+        height:450px
     }
 }

@@ -35,7 +35,7 @@
     }
 }
 
-@media (max-width:1024px){
+@media (max-width:1300px){
     .wide {
         transform: translateX(-35%);
         min-width: 1000px;
