@@ -6,7 +6,7 @@ const BitNobButton = React.forwardRef(({ children, className, variant = 'default
 
     const variants = {
         black: 'px-4 md:px-6 py-1 md:py-2 bg-black text-white rounded-lg w-full block focus:outline-none hover:bg-black active:bg-black focus:ring-2 focus:ring-offset-2 focus:ring-black',
-        default: 'px-8 md:px-10 py-1 md:py-2 bg-green-200 rounded-xl text-black w-full block focus:outline-none hover:bg-green-600 active:bg-green-700 focus:ring-2 focus:ring-offset-2 focus:ring-green-400',
+        default: 'px-8 md:px-10 py-1 md:py-2 bg-bitGreen-200 rounded-xl text-black w-full block focus:outline-none hover:bg-bitGreen-600 active:bg-bitGreen-700 focus:ring-2 focus:ring-offset-2 focus:ring-bitGreen-400',
     }
     
     return(

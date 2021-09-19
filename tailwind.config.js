@@ -37,7 +37,7 @@ module.exports = {
       },
       colors:{
         'black': "#020D1E",
-        green: {
+        bitGreen: {
           "50": "rgba(35, 224, 162, 0.08)",
           "100": "rgba(0, 228, 175, 0.2)",
           "200": "rgba(35, 224, 162, 1)",
@@ -48,13 +48,22 @@ module.exports = {
           "700": "rgba(16, 197, 138, 1)",
           "800": "rgba(0, 159, 107, 1)"
         },
-        gray: {
+        bitGray: {
           '50': "rgba(1, 25, 17, 0.4)",
           '100': 'rgba(1, 25, 17, 0.6)',
           '200': 'rgba(1, 25, 17, 0.8)',
           '300': 'rgba(1, 25, 17, 1)',
           '400': '#011911',
         }
+      },
+      container: {
+        padding: {
+          DEFAULT: '1rem',
+          sm: '2rem',
+          lg: '3rem',
+          xl: '5rem',
+          '2xl': '6rem',
+        },
       }
     },
   },

@@ -1,4 +1,4 @@
-import { BitNobContainer } from "components"
+import { BitNobButton, BitNobContainer } from "components"
 import { homeData } from "static"
 
 const BusinessSection = props => (
@@ -6,7 +6,7 @@ const BusinessSection = props => (
         <BitNobContainer>
           <div className="max-w-md text-center mx-auto">
             <h2 className="font-bold text-5xl text-black font-gordita mb-2">{homeData.business.heading}</h2>
-            <p className="text-md text-gray-200 font-quicksand">{homeData.business.description}</p>
+            <p className="text-md text-bitGray-200 font-quicksand">{homeData.business.description}</p>
           </div>
           <div className="mt-14">
             <img src={homeData.business.image} alt="business" />

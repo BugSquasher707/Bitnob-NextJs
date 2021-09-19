@@ -8,8 +8,9 @@ import {
   Exhibition,
   Reviews,
   SeeInAction,
-  PreFooter
-} from '../components';
+  BusinessSection,
+  PreFooter,
+} from 'components';
 
 
 const Home = ()=> (
@@ -18,8 +19,9 @@ const Home = ()=> (
     <Solution />
     <HowItWorks />
     <Exhibition />
-    <Reviews />
     <SeeInAction />
+    <Reviews />
+    <BusinessSection />
     <PreFooter />
   </Page>
 )

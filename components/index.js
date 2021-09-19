@@ -15,6 +15,7 @@ import HowItWorks from "./Home/how-it-works";
 import Reviews from "./Home/reviews";
 import SeeInAction from "./Home/action";
 import PreFooter from "./Home/pre-footer";
+import BusinessSection from "./Home/business";
 
 export{
     BitNobInput,
@@ -33,5 +34,6 @@ export{
     HowItWorks,
     Reviews,
     SeeInAction,
+    BusinessSection,
     PreFooter
 }

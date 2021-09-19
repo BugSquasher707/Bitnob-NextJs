@@ -39,14 +39,14 @@ const Footer = ()=> {
                         <div className=" mt-4 ">
                             <form>
                                 <div className="flex space-x-4">
-                                    <BitNobInput required className="flex-2" placeholder="Enter your email" name="email" />
+                                    <BitNobInput box={{minWidth:"300px"}} required className="flex-2" placeholder="Enter your email" name="email" />
                                     <BitNobButton style={{maxWidth:"120px"}} className="flex-1" variant="black">Subscribe</BitNobButton>
                                 </div>
                             </form>
                         </div>
                     </ul>
                 </div>
-                <div style={{height:"1px"}} className="bg-gray-50 mt-16 mb-9 w-full" />
+                <div style={{height:"1px"}} className="bg-bitGray-50 mt-16 mb-9 w-full" />
                 <div className="flex justify-between items-center space-x-5">
                     <h2 className="font-quicksand font-bold">
                         © {new Date().getFullYear()} Bitnob Technologies. All rights reserved.
@@ -61,7 +61,7 @@ const Footer = ()=> {
                         }
                     </ul>
                 </div>
-                <p className="mt-10 text-gray-100">{footerLinks.description}</p>
+                <p className="mt-10 text-bitGray-100">{footerLinks.description}</p>
             </BitNobContainer>
         </footer>
     )

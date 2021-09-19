@@ -21,9 +21,18 @@
 
 .phone {
     max-height: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-70%);
     margin-left: 170px;
 }
 
 .reviews {
     min-height: 800px;
+}
+
+@media (max-width: 1280px) {
+    .phone {
+        margin-left: 100px;
+    }
 }
