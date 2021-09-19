@@ -37,6 +37,7 @@
 
 @media (max-width:1300px){
     .wide {
+        top: 60px;
         transform: translateX(-35%);
         min-width: 1000px;
     }
@@ -50,5 +51,19 @@
             transform: translateX(-35%) scale(1);
             opacity: 1;
         }
+    }
+}
+
+@media (max-width:768px) {
+    .dropDown {
+        width: 100%;
+        min-width: 0px;
+        animation: moveup .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    
+    .wide {
+        top: 40px;
+        transform: translateX(-50%);
+        min-width: 0px;
     }
 }

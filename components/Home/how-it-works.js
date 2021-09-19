@@ -26,7 +26,7 @@ const HowItWorks = () => {
                                 <div key={title} className={`${((i + 1) % 2 === 0) ? "bg-white shadow-xl" : ''} space-y-4 p-8 hover:bg-white hover:shadow-xl flex-1 cursor-default transition-all duration-400 rounded-2xl xl:max-w-xs`}>
                                     <span className="block w-min" style={{transform: title === "Loans" && "rotate(180deg)"}}>{icon}</span>
                                     <h4 className="font-bold text-black text-lg md:text-2xl lg:text-md font-gordita">{title}</h4>
-                                    <p className="text-bitGray-200 pb-4 md:pb-2 block font-quicksand">{description}</p>
+                                    <p className="text-bitGray-200 pb-4 text-xs md:pb-2 block font-quicksand">{description}</p>
                                     <BitNobLink className="font-bold text-bitGray-200">Learn More</BitNobLink>
                                 </div>
                             ))

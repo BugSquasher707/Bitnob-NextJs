@@ -8,9 +8,9 @@ const PreFooter = () => (
           <div className="flex flex-col lg:flex-row max-w-6xl mx-auto space-y-6 lg:space-y-0 lg:space-x-6">
             {
               homeData.preFooter.map(({title, description})=> (
-                <div key={title} className=" p-8 lg:px-6 lg:py-4 flex-1 rounded-3xl bg-white">
-                  <h3 className=" text-xl lg:text-md xl:text-lg font-gordita font-bold mb-3">{title}</h3>
-                  <p className=" text-sm lg:text-xs xl:text-sm text-bitGray-200">{description}</p>
+                <div key={title} className=" p-7 md:p-8 lg:px-6 lg:py-4 flex-1 rounded-3xl bg-white">
+                  <h3 className=" text-md md:text-xl lg:text-md xl:text-lg font-gordita font-bold mb-3">{title}</h3>
+                  <p className=" text-2xs md:text-sm lg:text-xs xl:text-sm text-bitGray-200">{description}</p>
                 </div>
               ))
             }

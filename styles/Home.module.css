@@ -17,7 +17,7 @@
 .phone {
     max-height: 600px;
     position: relative;
-    left: 52%;
+    left: 70%;
     margin-top: -450px;
     transform: translateX(-70%);
 }
@@ -53,6 +53,10 @@
     .phone {
         max-height: 500px;
         left: 45%;
-        margin-top: -300px;
+        margin-top: -250px;
+    }
+
+    .slide_image {
+        height: 220px !important;
     }
 }

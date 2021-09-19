@@ -20,8 +20,8 @@ const Landing = ()=> {
               <h1 className="text-black leading-tight text-5xl xl:text-6xl font-gordita font-black">
                 <span className="italic">{landing.heading[0]}</span> {landing.heading[1]}
               </h1>
-              <p className="mt-6 max-w-md text-sm xl:text-md text-bitGray-100">{landing.description}</p>
-              <div className="flex space-x-4 items-center mt-8">
+              <p className="mt-6 max-w-md text-xs md:text-sm xl:text-md text-bitGray-100">{landing.description}</p>
+              <div className="flex space-x-4 items-center mt-12 md:mt-8">
                 <BitNobLink to="#">
                   <AppStore className="w-36 md:w-auto" />
                 </BitNobLink>
