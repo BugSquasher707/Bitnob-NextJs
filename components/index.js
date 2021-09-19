@@ -8,6 +8,14 @@ import BitNobContainer from "./UI/Container";
 import Header from "./shared/Header";
 import Footer from "./shared/Footer";
 
+import Exhibition from "./Home/exhibition";
+import Landing from "./Home/landing";
+import Solution from "./Home/solution";
+import HowItWorks from "./Home/how-it-works";
+import Reviews from "./Home/reviews";
+import SeeInAction from "./Home/action";
+import PreFooter from "./Home/pre-footer";
+
 export{
     BitNobInput,
     Header,
@@ -17,5 +25,13 @@ export{
     BitNobLink,
     getLayout,
     Page,
-    BitNobContainer
+    BitNobContainer,
+
+    Landing,
+    Exhibition,
+    Solution,
+    HowItWorks,
+    Reviews,
+    SeeInAction,
+    PreFooter
 }
