@@ -1,5 +1,7 @@
-import mockData from "./mock-data";
+import homeData from "./home.static";
+import * as headerFooterLinks from './header-footer.static'
 
 export {
-    mockData
+    homeData,
+    headerFooterLinks
 }

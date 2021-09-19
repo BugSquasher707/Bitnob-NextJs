@@ -4,45 +4,11 @@ import BitNobButton from "../../UI/Button"
 import BitNobInput from "../../UI/Input"
 import BitNobLink from "../../UI/Link"
 import { LogoFull } from "../../../public"
-import { FaFacebook, FaPaperPlane, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
+import { headerFooterLinks } from "static"
+
+const { footerLinks } = headerFooterLinks;
 
 const Footer = ()=> {
-    const data = {
-        Company: [
-            {title: "About", route:"/"},
-            {title: "Careers", route:"/careers"},
-            {title: "Learn", route:"/learn"},
-            {title: "FAQs", route:"/faqs"},
-            {title: "Referral Leader Board", route:"/referral"},
-        ],
-        Legal: [
-            {title: "Terms of service", route: '/terms'},
-            {title: "Privacy Policy", route: '/privacy'}
-        ]
-    }
-
-    const socials = {
-        facebook: {
-            link: "facebook.com",
-            icon: <FaFacebook />
-        },
-        twitter: {
-            link: "twitter.com",
-            icon: <FaTwitter />
-        },
-        Instagram: {
-            link: "instagram.com",
-            icon: <FaInstagram />
-        },
-        Email: {
-            link: "email",
-            icon: <FaPaperPlane />
-        },
-        LinkinIn: {
-            link: "linkindin.com",
-            icon: <FaLinkedinIn />
-        },
-    }
 
     return(
         <footer className="bg-white mt-40 py-12">
@@ -50,7 +16,7 @@ const Footer = ()=> {
                 <div className="grid grid-cols-5">
                     <LogoFull />
                     {
-                        Object.entries(data).map(([title, links])=> (
+                        Object.entries(footerLinks.links).map(([title, links])=> (
                             <React.Fragment>
                                 <ul>
                                     <h3 className="text-black font-bold font-gordita text-xs uppercase mb-3">{title}</h3>
@@ -87,7 +53,7 @@ const Footer = ()=> {
                     </h2>
                     <ul className="flex space-x-7">
                         {
-                            Object.entries(socials).map(([key, {link, icon}])=> (
+                            Object.entries(footerLinks.socials).map(([key, {link, icon}])=> (
                                 <li title={key}>
                                     <BitNobLink className="text-black text-lg" to={link} title={key}>{icon}</BitNobLink>
                                 </li>
@@ -95,11 +61,7 @@ const Footer = ()=> {
                         }
                     </ul>
                 </div>
-                <p className="mt-10 text-gray-100">
-                    Digital currency is not legal tender, is not backed by any federal government and Coinfly accounts are not FDIC insured. 
-                    While Coinfly and its custodial partners make every effort to keep your money safe and covered, please note that any investment entails 
-                    risk. The interest rates featured on this page vary according to the dynamics of digital currency markets and are subject to change at any time.
-                </p>
+                <p className="mt-10 text-gray-100">{footerLinks.description}</p>
             </BitNobContainer>
         </footer>
     )
