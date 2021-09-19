@@ -100,10 +100,8 @@ const Header = () => {
     
     return(
         <BitNobContainer>
-            <header ref={headerRef} className="flex justify-between items-center py-3 xl:py-4 px-6 md:mt-6 rounded-xl bg-bitGreen-50 z-10 w-full">
-                <div>
-                    <LogoFull />
-                </div>
+            <header ref={headerRef} className="flex justify-between items-center py-3 xl:py-4 px-4 md:px-6 mt-6 rounded-2xl bg-bitGreen-50 z-10 w-full">
+                <LogoFull className=" w-24 lg:w-32" />
                 <div className=" hidden absolute lg:static lg:flex justify-between items-center space-x-24">
                     <ul className="flex relative space-x-12">
                         {
@@ -117,7 +115,7 @@ const Header = () => {
                 <div 
                     tabIndex="0" 
                     role="button" 
-                    className="text-4xl lg:hidden cursor-pointer transition-all duration-300 hover:opacity-95 bg-white rounded-full p-1 flex justify-center items-center box-border h-16 w-16 text-bitGreen-200">
+                    className=" text-3xl md:text-4xl lg:hidden cursor-pointer transition-all duration-300 hover:opacity-95 bg-white rounded-full p-2 md:p-1 flex justify-center items-center box-border w-12 h-12 md:h-16 md:w-16 text-bitGreen-200">
                     <HiViewGrid />
                 </div>
             </header>

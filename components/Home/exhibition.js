@@ -49,7 +49,7 @@ const Exhibition = () => {
                     <Arrow2 className="z-20 hover:opacity-80 transition-all transform scale-75 xl:scale-75 2xl:scale-90 duration-150 cursor-pointer" />
                     <Arrow2 className="z-20 transform scale-75 xl:scale-75 2xl:scale-90 -rotate-180 hover:opacity-90 transition-all duration-150 cursor-pointer" />
                 </div>
-                <Circle className=" max-w-md lg:max-w-3xl z-0 top-96 lg:mt-0 absolute" />
+                <Circle className=" max-w-md lg:max-w-3xl z-0 top-96 lg:top-0 absolute" />
             </div>
             </BitNobContainer>
         </div>

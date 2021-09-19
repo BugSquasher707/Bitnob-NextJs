@@ -9,7 +9,7 @@ const Reviews = () => {
         <div className={`mt-40 bg-gradient-to-b from-white via-bitGreen-100 to-white relative ${styles.reviews}`}>
             <BitNobContainer>
             <div className="max-w-2xl mx-auto"> 
-                <div className="text-left max-w-sm lg:max-w-md mx-auto xl:max-w-full">
+                <div className="text-left lg:text-center max-w-sm lg:max-w-md mx-auto xl:max-w-full">
                     <h2 className="font-bold leading-tight text-3xl xl:text-4xl 2xl:text-5xl text-black font-gordita mb-2">{homeData.reviews.heading}</h2>
                     <p className="text-md pt-2 text-bitGray-200 font-quicksand">{homeData.reviews.description}</p>
                 </div>

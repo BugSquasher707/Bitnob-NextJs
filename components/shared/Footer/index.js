@@ -13,8 +13,8 @@ const Footer = ()=> {
     return(
         <footer className="bg-white mt-20 xl:mt-40 py-12">
             <BitNobContainer>
-                <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-14 md:gap-y-0 gap-x-32 md:gapx-10 xl:grid-cols-5">
-                    <LogoFull className="col-span-6 xl:col-span-1" />
+                <div className="flex flex-col lg:flex-row text-center lg:text-left items-center lg:items-stretch justify-between space-y-20 lg:space-y-0 lg:space-x-12">
+                    <LogoFull />
                     {
                         Object.entries(footerLinks.links).map(([title, links])=> (
                             <React.Fragment>
@@ -23,7 +23,7 @@ const Footer = ()=> {
                                     {
                                         links.map(l=> (
                                             <li>
-                                                <BitNobLink className="block w-max font-normal py-2" to={l.title}>{l.title}</BitNobLink>
+                                                <BitNobLink className="block w-full lg:w-max text-center lg:text-left font-normal py-2" to={l.title}>{l.title}</BitNobLink>
                                             </li>
                                         ))
                                     }
@@ -31,7 +31,7 @@ const Footer = ()=> {
                             </React.Fragment>
                         ))
                     }
-                    <ul className="max-w-sm col-span-6 md:col-span-3 lg:col-span-1">
+                    <ul className="flex-1 max-w-sm">
                         <h3 className="text-black font-bold font-gordita text-xs uppercase mb-4">Subscribe to our newsletter</h3>
                         <p className="text-sm text-black">
                             The latest news, articles, and resources, sent to your inbox weekly.
@@ -39,8 +39,8 @@ const Footer = ()=> {
                         <div className="mt-4 ">
                             <form>
                                 <div className="flex space-x-4">
-                                    <BitNobInput required className="flex-2" placeholder="Enter your email" name="email" />
-                                    <BitNobButton style={{maxWidth:"120px"}} className="flex-1" variant="black">Subscribe</BitNobButton>
+                                    <BitNobInput required box={{minWidth:"250px"}} className="flex-2" placeholder="Enter your email" name="email" />
+                                    <BitNobButton className="flex-1" variant="black">Subscribe</BitNobButton>
                                 </div>
                             </form>
                         </div>
@@ -51,7 +51,7 @@ const Footer = ()=> {
                     <h2 className="font-quicksand mt-8 md:mt-0 block font-bold">
                         © {new Date().getFullYear()} Bitnob Technologies. All rights reserved.
                     </h2>
-                    <ul className="flex space-x-7">
+                    <ul className="flex w-full md:w-auto justify-evenly md:justify-items-start space-x-7">
                         {
                             Object.entries(footerLinks.socials).map(([key, {link, icon}])=> (
                                 <li title={key}>

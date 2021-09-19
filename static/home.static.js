@@ -44,7 +44,7 @@
     },
     howItWorks: {
       cover: "/images/how-it-works.png",
-      heading: "How it works",
+      heading: "How It Works",
       description: "We can help you save and manage your money in a way that maximizes the value of your returns.",
       list: [
           {
