@@ -98,7 +98,7 @@ const Header = () => {
     }, [router.pathname])
     
     return(
-        <header>
+        <header className=" hidden lg:block">
             <BitNobContainer>
                 <div ref={headerRef} className="flex justify-between items-center py-4 px-6 md:mt-6 rounded-xl bg-bitGreen-50">
                     <div>

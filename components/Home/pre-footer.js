@@ -9,17 +9,17 @@ const PreFooter = () => (
             {
               homeData.preFooter.map(({title, description})=> (
                 <div key={title} className="px-6 py-4 flex-1 rounded-3xl bg-white">
-                  <h3 className="text-lg font-gordita font-bold mb-3">{title}</h3>
-                  <p className="text-bitGray-200">{description}</p>
+                  <h3 className=" text-md xl:text-lg font-gordita font-bold mb-3">{title}</h3>
+                  <p className="text-xs xl:text-sm text-bitGray-200">{description}</p>
                 </div>
               ))
             }
           </div>
           <div className="flex space-x-4 justify-center items-center mt-8">
-            <BitNobLink className="border border-bitGray-500 rounded-md" to="#">
+            <BitNobLink className="border transform scale-90 xl:scale-100 border-bitGray-500 rounded-md" to="#">
               <AppStore />
             </BitNobLink>
-            <BitNobLink className="border border-bitGray-500 rounded-md" to="#">
+            <BitNobLink className="border transform scale-90 xl:scale-100 border-bitGray-500 rounded-md" to="#">
               <PlayStore />
             </BitNobLink>
           </div>

@@ -1,11 +1,11 @@
 import { BitNobButton, BitNobContainer } from "components"
 import { homeData } from "static"
 
-const BusinessSection = props => (
+const BusinessSection = () => (
     <div className="my-40 max-w-7xl mx-auto">
         <BitNobContainer>
           <div className="max-w-md text-center mx-auto">
-            <h2 className="font-bold text-5xl text-black font-gordita mb-2">{homeData.business.heading}</h2>
+            <h2 className="font-bold text-4xl xl:text-5xl text-black font-gordita mb-2">{homeData.business.heading}</h2>
             <p className="text-md text-bitGray-200 font-quicksand">{homeData.business.description}</p>
           </div>
           <div className="mt-14">

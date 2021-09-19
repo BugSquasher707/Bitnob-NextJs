@@ -34,3 +34,21 @@
         opacity: 1;
     }
 }
+
+@media (max-width:1024px){
+    .wide {
+        transform: translateX(-35%);
+        min-width: 1000px;
+    }
+
+    @keyframes moveUp {
+        from {
+            opacity: .5;
+            transform: translateX(-32%) scale(.9);
+        }
+        to {
+            transform: translateX(-35%) scale(1);
+            opacity: 1;
+        }
+    }
+}

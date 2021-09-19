@@ -11,10 +11,10 @@ const { footerLinks } = headerFooterLinks;
 const Footer = ()=> {
 
     return(
-        <footer className="bg-white mt-40 py-12">
+        <footer className="bg-white mt-20 xl:mt-40 py-12">
             <BitNobContainer>
                 <div className="grid grid-cols-5">
-                    <LogoFull />
+                    <LogoFull className="col-span-6 mb-10 xl:mb-0 xl:col-span-1" />
                     {
                         Object.entries(footerLinks.links).map(([title, links])=> (
                             <React.Fragment>
