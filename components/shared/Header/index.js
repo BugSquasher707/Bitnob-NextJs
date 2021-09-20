@@ -116,7 +116,7 @@ const Header = () => {
                                     Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
                                 }
                             </ul>
-                            <BitNobButton className=" mt-12 py-4 md:py-4 shadow-md lg:shadow-none lg:mt-0 z-10">
+                            <BitNobButton className=" mt-12 py-4 md:py-4 lg:py-3 shadow-md lg:shadow-none lg:mt-0 z-10">
                                 Get Started
                             </BitNobButton>
                         </div>
