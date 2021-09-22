@@ -7,7 +7,7 @@ const headerLinks = {
         {
             title: 'Dollar Cost Averaging',
             icon: <Usd />,
-            route: '/',
+            route: '/dollar',
             description:'Spread the purchase of an asset over an extended period.'
         },
         {
