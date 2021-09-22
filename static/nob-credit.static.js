@@ -4,7 +4,7 @@ const nobCreditData = {
     heading: "NobCredit",
     subHeading: "Bitnob's Feature",
     desktopImg: "/svgs/nob-desktop-cover.svg",
-    mobileImg: "/svgs/nob-desktop-cover.svg",
+    mobileImg: "/svgs/nob-mobile-cover.svg",
     dataList:[
         {
             title: "What is NobCredit",
