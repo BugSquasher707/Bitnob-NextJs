@@ -1,5 +1,5 @@
 .landing {
-    height: 600px;
+    min-height: 700px;
     overflow: hidden;
 }
 
@@ -7,23 +7,56 @@
     flex: 1.4;
 }
 
-.landing_vector {
-    position: absolute;
-}
-
 .artboard {
-    height: 450px;
-    background-image: url('/images/artboard.png');
-    background-repeat: no-repeat;
+    height: 400px;
     background-size: cover;
-    max-width: 2000px;
+    background-repeat: no-repeat;
+    background-image: url('/images/artboard.png');
 }
 
 .phone {
     max-height: 600px;
-    margin-left: 170px;
+    position: relative;
+    left: 70%;
+    margin-top: -450px;
+    transform: translateX(-70%);
 }
 
 .reviews {
     min-height: 800px;
+}
+
+@media (max-width: 1280px) {
+    .phone {
+        margin-left: 100px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .artboard {
+        height:450px
+    }
+}
+
+@media (max-width: 768px) {
+    .slide_image {
+        height: 350px !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .artboard {
+        height: 300px;
+        background-size: cover;
+    }
+
+    .phone {
+        max-height: 500px;
+        left: 45%;
+        margin-top: -250px;
+    }
+
+    .slide_image {
+        height: 220px !important;
+    }
 }

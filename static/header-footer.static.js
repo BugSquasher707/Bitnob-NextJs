@@ -61,15 +61,15 @@ const footerLinks = {
     },
     socials: {
         facebook: {
-            link: "facebook.com",
+            link: "https://facebook.com",
             icon: <FaFacebook />
         },
         twitter: {
-            link: "twitter.com",
+            link: "https://twitter.com",
             icon: <FaTwitter />
         },
         Instagram: {
-            link: "instagram.com",
+            link: "https://instagram.com",
             icon: <FaInstagram />
         },
         Email: {
@@ -77,7 +77,7 @@ const footerLinks = {
             icon: <FaPaperPlane />
         },
         LinkinIn: {
-            link: "linkindin.com",
+            link: "https://linkindin.com",
             icon: <FaLinkedinIn />
         },
     },
