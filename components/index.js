@@ -16,6 +16,7 @@ import Reviews from "./Home/reviews";
 import SeeInAction from "./Home/action";
 import PreFooter from "./Home/pre-footer";
 import BusinessSection from "./Home/business";
+import ProductPage from "./ProductPage";
 
 export{
     BitNobInput,
@@ -35,5 +36,7 @@ export{
     Reviews,
     SeeInAction,
     BusinessSection,
-    PreFooter
+    PreFooter,
+    ProductPage
+    
 }
