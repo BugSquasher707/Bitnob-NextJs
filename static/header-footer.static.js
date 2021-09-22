@@ -7,7 +7,7 @@ const headerLinks = {
         {
             title: 'Dollar Cost Averaging',
             icon: <Usd />,
-            route: '/',
+            route: '/dollar',
             description:'Spread the purchase of an asset over an extended period.'
         },
         {
@@ -25,7 +25,7 @@ const headerLinks = {
         {
             title: 'Nob Credit',
             icon: <NobCredit />,
-            route: '/credit',
+            route: '/nob-credit',
             description:'Take a loan for up to 12 months.'
         },
         {
