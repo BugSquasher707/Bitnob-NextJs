@@ -7,31 +7,31 @@ const headerLinks = {
         {
             title: 'Dollar Cost Averaging',
             icon: <Usd />,
-            route: '/dollar',
+            route: '/features/dollar',
             description:'Spread the purchase of an asset over an extended period.'
         },
         {
             title: 'Group Savings',
             icon: <Savings />,
-            route: '/savings',
+            route: '/features/savings',
             description:'Create a savings plan and invite others to join.'
         },
         {
             title: 'USD Wallet',
             icon: <Wallet />,
-            route: '/usd',
+            route: '/features/usd-wallet',
             description:'Save in USD and send USD to anyone anywhere in the world.'
         },
         {
             title: 'Nob Credit',
             icon: <NobCredit />,
-            route: '/nob-credit',
+            route: '/features/nob-credit',
             description:'Take a loan for up to 12 months.'
         },
         {
             title: 'FAQs',
             icon: <FaqSvg />,
-            route: '/faq',
+            route: '/features/faq',
             description:'Got questions? We already answered them.'
         },
     ],
