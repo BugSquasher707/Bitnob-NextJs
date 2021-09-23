@@ -1,9 +1,9 @@
 import { getLayout, Page, ProductPage } from "components"
-import { nobCreditData } from "static";
+import { featureData } from "static";
 
 const NobCredit = ()=> (
     <Page title="Nob Credit">
-        <ProductPage {...nobCreditData} />
+        <ProductPage {...featureData.nobCreditData} />
     </Page>
 )
 
