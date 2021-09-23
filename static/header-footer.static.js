@@ -7,7 +7,7 @@ const headerLinks = {
         {
             title: 'Dollar Cost Averaging',
             icon: <Usd />,
-            route: '/features/dollar',
+            route: '/features/dollar-cost-averaging',
             description:'Spread the purchase of an asset over an extended period.'
         },
         {
@@ -35,7 +35,7 @@ const headerLinks = {
             description:'Got questions? We already answered them.'
         },
     ],
-    Business: '/business',
+    Business: '/features/bitnob-business',
     Company: [
         {title: "About", route:"/"},
         {title: "Careers", route:"/careers"},

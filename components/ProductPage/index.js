@@ -2,7 +2,7 @@ import React from 'react';
 import { BitNobContainer, BitNobLink } from "components";
 import styles from 'styles/ProductPage.module.css';
 import { MdHome } from 'react-icons/md'
-import { AppStore, FaqSvg, NobCredit, PlayStore, Savings, Usd, Wallet } from "public"
+import { AppStore, FaqSvg, NobCredit, BusinessIcon, PlayStore, Savings, Usd, Wallet } from "public"
 import { useRouter } from "next/dist/client/router";
 
 
@@ -38,7 +38,8 @@ const ProductPage= ({ heading, subHeading, dataList, desktopImg, mobileImg })=> 
         "Savings" : <Savings />,
         'USD Wallet': <Wallet />,
         'NobCredit': <NobCredit />,
-        'FAQs': <FaqSvg />
+        'FAQs': <FaqSvg />,
+        'Bitnob for Businesses': <BusinessIcon />,
     }
 
     return(

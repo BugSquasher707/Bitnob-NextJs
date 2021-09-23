@@ -2,7 +2,7 @@ import { getLayout, Page, ProductPage } from "components"
 import { featureData } from "static";
 
 const NobCredit = ()=> (
-    <Page title="Nob Credit">
+    <Page title={featureData.nobCreditData.heading}>
         <ProductPage {...featureData.nobCreditData} />
     </Page>
 )
