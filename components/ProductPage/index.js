@@ -34,8 +34,8 @@ const BreadCrumb = ()=> {
 
 const ProductPage= ({ heading, subHeading, dataList, desktopImg, mobileImg })=> {
     const icons = {
-        "USD": <Usd />,
-        "Savings" : <Savings />,
+        "Dollar Cost Averaging": <Usd />,
+        "Group Saving" : <Savings />,
         'USD Wallet': <Wallet />,
         'NobCredit': <NobCredit />,
         'FAQs': <FaqSvg />,
