@@ -2,6 +2,7 @@ import LogoFull from './svgs/logo-full';
 import Logo from './svgs/logo';
 import NobCredit from './svgs/nob-credit';
 import Savings from './svgs/savings';
+import BusinessIcon from './svgs/business';
 import FaqSvg from './svgs/faq';
 import Wallet from './svgs/wallet';
 import Usd from './svgs/usd';
@@ -48,6 +49,7 @@ export {
     Trace4,
     HowItWorks,
     Shield,
+    BusinessIcon,
     NobCredit,
     Circles,
     Circle,

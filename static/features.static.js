@@ -54,11 +54,61 @@ const usdWalletData = {
     ]
 }
 
-export default nobCreditData
+const businessData = {
+    heading: "Bitnob for Businesses",
+    subHeading: "Bitnob's Feature",
+    desktopImg: "/svgs/business-desktop-cover.svg",
+    mobileImg: "/svgs/business-mobile-cover.svg",
+    dataList:[
+        {
+            title: "What is Bitnob for Businesses?",
+            description: `Bitnob for Businesses is an enterprise platform that enables businesses accept payments for services in Cryptocurrency (Bitcoin).`
+        },
+        {
+            title: "How does Bitnob for Business work?",
+            description: "You can use Bitnob for Business via a dashboard or via our public API for businesses that wants to integrate our services on their own platform."
+        },
+        {
+            title: "What is the purpose of Bitnob for Business?",
+            description: `The purpose of Bitnob for Business is to help businesses accept payments in Bitcoin.`,
+        },
+        {
+            title: "What makes Bitnob for Business? unique?",
+            description: `What makes Bitnob for Business unique is the fact that buusiness owners can accept payment for services in cryptocurrency.`,
+        }
+    ]
+}
+
+const dollarCostData = {
+    heading: "Dollar Cost Averaging",
+    subHeading: "Bitnob's Feature",
+    desktopImg: "/svgs/dollar-cost-desktop-cover.svg",
+    mobileImg: "/svgs/dollar-cost-mobile-cover.svg",
+    dataList:[
+        {
+            title: "What is Dollar Cost Averaging?",
+            description: `Popularly known as DCA, dollar cost averaging basically entails spreading purchase of an asset over an extended period rather than investing in such assets in one huge lump sum.`
+        },
+        {
+            title: "How does Dollar Cost Averaging work?",
+            description: "Dollar cost averaging (DCA) is an investment strategy that proposes periodic and timely acquisitions of a given amount of Bitcoin or stocks. A simple example is buying $10 worth of BTC on a weekly basis, irrespective of the current market price."
+        },
+        {
+            title: "What is the purpose of Dollar Cost Averaging?",
+            description: `The purpose of DCA is to spread purchase of an asset over an extended period rather than investing in such assets in one huge lump sum. `,
+        },
+        {
+            title: "What Makes Dollar Cost Averaging Unique?",
+            description: `Dollar Cost Averaging is unique because of it’s distinct investment strategy.`,
+        }
+    ]
+}
 
 
 export {
     nobCreditData,
     usdWalletData,
+    businessData,
+    dollarCostData
 }
 

@@ -2,7 +2,7 @@ import { getLayout, Page, ProductPage } from "components"
 import { featureData } from "static";
 
 const UsdWallet = ()=> (
-    <Page title="USD Wallet">
+    <Page title={featureData.usdWalletData.heading}>
         <ProductPage {...featureData.usdWalletData} />
     </Page>
 )
