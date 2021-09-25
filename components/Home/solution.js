@@ -7,8 +7,8 @@ const Solution = () => {
 
     return (
         <BitNobContainer>
-            <div className="flex flex-col-reverse items-center mt-20 lg:mt-0 lg:items-stretch lg:flex-row md:space-x-10 lg:space-x-24">
-                <div className=" mt-10 lg:mt-0 -ml-8 md:-ml-0 max-w-md md:max-w-xs xl:max-w-md 2xl:max-w-lg">
+            <div className="flex flex-col-reverse mt-16 lg:mt-0 lg:items-stretch lg:flex-row md:space-x-10 lg:space-x-24">
+                <div className=" self-center lg:self-stretch mt-10 lg:mt-0 -ml-8 xl:-ml-0 max-w-md 2xl:max-w-lg">
                     <img src={solutionSection.image} alt="solution" />
                 </div>
                 <div className="max-w-xl xl:max-w-2xl">

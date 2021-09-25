@@ -38,6 +38,7 @@ module.exports = {
       colors:{
         'black': "#020D1E",
         bitGreen: {
+          "temp": "#00e3be",
           "50": "rgba(35, 224, 162, 0.08)",
           "100": "rgba(0, 228, 175, 0.2)",
           "200": "rgba(35, 224, 162, 1)",
