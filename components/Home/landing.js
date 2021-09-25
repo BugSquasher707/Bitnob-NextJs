@@ -13,7 +13,7 @@ const Landing = ()=> {
 
   return (
     <Page title="Welcome to BitNob">
-      <div className="relative overflow-hidden">
+      <div className="relative xl:mt-10 overflow-hidden">
         <BitNobContainer>
           <div className="flex flex-col lg:flex-row w-full pt-16 md:pt-20 lg:justify-between">
             <div className=" max-w-md flex-1">

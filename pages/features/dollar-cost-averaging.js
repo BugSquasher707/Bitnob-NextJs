@@ -3,7 +3,7 @@ import { featureData } from "static";
 
 const DollarCostAveraging = ()=> (
     <Page title={featureData.dollarCostData.heading}>
-        <ProductPage {...featureData.dollarCostData} />
+        <ProductPage adjust {...featureData.dollarCostData} />
     </Page>
 )
 

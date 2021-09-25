@@ -15,16 +15,15 @@
     background-position: left;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 450px;
+    height: 470px;
     width: 100%;
     top: 10%;
-    left: 47%;
+    left: 42%;
 }
 
 .landing_cover img {
-    height: 600px;
-    left: 30%;
-    object-fit: contain;
+    height: 650px;
+    left: 35%;
 }
 
 .reviews {
