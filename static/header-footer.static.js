@@ -13,7 +13,7 @@ const headerLinks = {
         {
             title: 'Group Savings',
             icon: <Savings />,
-            route: '/features/savings',
+            route: '/features/group-saving',
             description:'Create a savings plan and invite others to join.'
         },
         {

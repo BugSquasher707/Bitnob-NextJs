@@ -36,6 +36,7 @@ const ProductPage= ({ heading, subHeading, dataList, desktopImg, mobileImg, adju
     const icons = {
         "Dollar Cost Averaging": <Usd />,
         "Savings" : <Savings />,
+        "Group Saving" : <Savings />,
         'USD Wallet': <Wallet />,
         'NobCredit': <NobCredit />,
         'FAQs': <FaqSvg />,

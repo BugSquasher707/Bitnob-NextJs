@@ -104,11 +104,37 @@ const dollarCostData = {
     ]
 }
 
+const groupSavingData = {
+    heading: "Group Saving",
+    subHeading: "Bitnob's Feature",
+    desktopImg: "/svgs/group-saving-desktop-cover.svg",
+    mobileImg: "/svgs/group-saving-mobile-cover.svg",
+    dataList:[
+        {
+            title: "What is Group Saving?",
+            description: `Bitnob's Group Savings is a feature that allows a user to create a savings plan with a set goal and invite interested users to join and save together.`
+        },
+        {
+            title: "How does Group Savings work?",
+            description: "With Bitnob’s Group Savings, up to 100 users can save and invest in Bitcoin in a particular group together at the same time and withdraw their savings as well as interest at the maturity date."
+        },
+        {
+            title: "What is the purpose of Group Saving?",
+            description: `The purpose of Group Savings is to enable users save and invest in Bitcoin with a group of interested users. `,
+        },
+        {
+            title: "What Makes Group Saving Unique?",
+            description: `Users can now save daily, weekly and monthly in Bitcoin over a specific period of time by using Dollar Cost Averaging on the Bitnob mobile app. `,
+        }
+    ]
+}
+
 
 export {
     nobCreditData,
     usdWalletData,
     businessData,
-    dollarCostData
+    dollarCostData,
+    groupSavingData
 }
 
