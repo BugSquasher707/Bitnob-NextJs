@@ -3,7 +3,7 @@ import { featureData } from "static";
 
 const UsdWallet = ()=> (
     <Page title={featureData.usdWalletData.heading}>
-        <ProductPage {...featureData.usdWalletData} />
+        <ProductPage adjust {...featureData.usdWalletData} />
     </Page>
 )
 

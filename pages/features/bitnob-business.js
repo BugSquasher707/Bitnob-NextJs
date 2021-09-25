@@ -3,7 +3,7 @@ import { featureData } from "static";
 
 const BitnobBusiness = ()=> (
     <Page title={featureData.businessData.heading}>
-        <ProductPage {...featureData.businessData} />
+        <ProductPage adjust {...featureData.businessData} />
     </Page>
 )
 

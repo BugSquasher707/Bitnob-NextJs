@@ -34,7 +34,7 @@ const BreadCrumb = ()=> {
 
 const ProductPage= ({ heading, subHeading, dataList, desktopImg, mobileImg, adjust })=> {
     const icons = {
-        "USD": <Usd />,
+        "Dollar Cost Averaging": <Usd />,
         "Savings" : <Savings />,
         'USD Wallet': <Wallet />,
         'NobCredit': <NobCredit />,
@@ -62,7 +62,7 @@ const ProductPage= ({ heading, subHeading, dataList, desktopImg, mobileImg, adju
                                     {heading}
                                 </h1>
                             </div>
-                            <div className={`space-y-12 items-center ${adjust ? 'mt-80 lg:mt-12' : "mt-12"}`}>
+                            <div className={`space-y-12 items-center ${adjust ? 'mt-60 lg:mt-12' : "mt-12"}`}>
                                 {
                                     dataList?.map(({title, description})=> (
                                         <div>
@@ -85,9 +85,9 @@ const ProductPage= ({ heading, subHeading, dataList, desktopImg, mobileImg, adju
                                     {heading}
                                 </h1>
                             </div>
-                            <div className={`max-w-2xl ${adjust ? styles.adjusted : ""} ${styles.hero_image}`}>
+                            <div className={`max-w-2xl flex justify-center ${adjust ? styles.adjusted : styles.normal} ${styles.hero_image}`}>
                                 <img src={desktopImg} className="hidden lg:block desktop" />
-                                <img src={mobileImg} className="block lg:hidden mobile relative left-1/4" />
+                                <img src={mobileImg} className="block lg:hidden mobile relative lg:left-1/4" />
                             </div>
                         </div>
                     </div>
