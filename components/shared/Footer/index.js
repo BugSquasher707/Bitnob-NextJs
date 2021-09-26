@@ -11,7 +11,7 @@ const { footerLinks } = headerFooterLinks;
 const Footer = ()=> {
 
     return(
-        <footer className="bg-white mt-10 md:mt-20 xl:mt-40 py-12">
+        <footer className="bg-white mt-10 md:mt-20 xl:mt-20 py-12">
             <BitNobContainer>
                 <div className="flex flex-col lg:flex-row text-center lg:text-left items-center lg:items-stretch justify-between space-y-14 lg:space-y-0 lg:space-x-12">
                     <LogoFull />

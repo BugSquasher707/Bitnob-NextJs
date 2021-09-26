@@ -27,6 +27,12 @@ import Quote from './svgs/quote';
 import Dots from './svgs/dots';
 import BAsset from './svgs/b-asset';
 import ArrowOutline from './svgs/arrow-outline';
+import CogIcon from './svgs/cogIcon';
+import PaymentIcon from './svgs/paymentIcon';
+import PeopleIcon from './svgs/peopleIcon';
+import InvoiceIcon from './svgs/invoiceIcon';
+import TransactionIcon from './svgs/transactionIcon';
+import WalletIcon from './svgs/walletIcon';
 
 export {
     LogoFull,
@@ -57,5 +63,11 @@ export {
     Savings,
     PlayStore,
     ArtBoard,
-    AppStore
+    AppStore,
+    CogIcon,
+    PaymentIcon,
+    PeopleIcon,
+    InvoiceIcon,
+    TransactionIcon,
+    WalletIcon
 }

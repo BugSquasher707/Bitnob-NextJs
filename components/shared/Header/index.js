@@ -57,8 +57,14 @@ const MenuDropDown = ({ title, data }) => {
 
 const LinkLists = ({ data }) => {
     const [key, val] = data
+    const router = useRouter()
+
     const [activelink, setActiveLink] = React.useState('')
     const { ref, visible, setVisible } = useCloseContext()
+
+    useEffect(()=> {
+        setVisible(false)
+    }, [router.pathname])
 
     return (
         <React.Fragment key={key}>
@@ -102,7 +108,7 @@ const Header = () => {
     
     return(
         <BitNobContainer>
-            <header ref={headerRef} className="flex justify-between items-center py-3 xl:py-4 px-4 md:px-6 mt-6 rounded-2xl bg-bitGreen-50 z-10 w-full">
+            <header ref={headerRef} className="flex z-20 justify-between items-center py-3 xl:py-4 px-4 md:px-6 mt-6 rounded-2xl bg-bitGreen-50 w-full">
                 <LogoFull className=" w-24 lg:w-32" />
                 {
                     !visible ? 
