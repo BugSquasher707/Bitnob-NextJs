@@ -35,4 +35,21 @@ body {
     overflow-x: hidden;
 }
 
+.slick-dots {
+    bottom: -40px !important;
+}
 
+.slick-arrow {
+    display: none !important;
+}
+
+.slick-dots li button::before {
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    color: rgba(35, 224, 162, 1) !important;
+}
+
+.slick-dots li.slick-active button::before {
+    color: #009F6B !important;
+    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: scale(1.7) !important;
+} 
