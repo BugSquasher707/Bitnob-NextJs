@@ -1,3 +1,11 @@
-.wrapper {
-    background: linear-gradient(180deg, rgba(0, 228, 175, 0) 0%, rgba(0, 228, 175, 0.56) 14.32%, #00E4AF 45.83%, rgba(0, 228, 175, 0.49) 84.33%, rgba(0, 228, 175, 0) 100%);;
+.business_foot {
+    background-image: url("/images/product-page-bg.png");
+
+}
+
+@media (max-width: 1007px) {
+    .business_foot {
+        background-image: url("/images/product-page-bg-mobile.png");
+    }
+    
 }

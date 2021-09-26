@@ -4,7 +4,8 @@ import { Quote, Dots, ArrowOutline } from "public";
 import styles from 'styles/Home.module.css';
 import { useState } from 'react';
 
-const Review = ({ i, active, position, reviews, description, author})=> {
+
+export const Review = ({ i, active, position, reviews, description, author})=> {
     const isActive = i === active;
 
     const styles = {
@@ -19,7 +20,7 @@ const Review = ({ i, active, position, reviews, description, author})=> {
             <div style={styles} className={`text-center transition-all duration-300 absolute rounded-xl bg-white px-6 md:p-12 py-9 flex flex-col items-center`}>
                 <Quote className="absolute transform scale-50 xl:scale-75 -top-1" />
                 
-                <p className=" text-md md:text-lg 2xl:text-xl mt-8 text-bitGray-300 font-quicksand">{description}</p>
+                <p className=" md:text-md lg:text-lg mt-8 text-bitGray-300 font-quicksand">{description}</p>
                 <span className="block mt-8 md:mt-12 text-xs md:text-md 2xl:text-lg">
                     <b>{author}</b> - <span>{position}</span>
                 </span>
