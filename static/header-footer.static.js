@@ -29,13 +29,13 @@ const headerLinks = {
             description:'Take a loan for up to 12 months.'
         },
         {
-            title: 'FAQs',
+            title: 'Bitnob Business',
             icon: <FaqSvg />,
-            route: '/features/faq',
-            description:'Got questions? We already answered them.'
+            route: '/features/bitnob-business',
+            description:'Take a loan for up to 12 months.'
         },
     ],
-    Business: '/features/bitnob-business',
+    Business: '/business',
     Company: [
         {title: "About", route:"/"},
         {title: "Careers", route:"/careers"},

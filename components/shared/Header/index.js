@@ -57,8 +57,14 @@ const MenuDropDown = ({ title, data }) => {
 
 const LinkLists = ({ data }) => {
     const [key, val] = data
+    const router = useRouter()
+
     const [activelink, setActiveLink] = React.useState('')
     const { ref, visible, setVisible } = useCloseContext()
+
+    useEffect(()=> {
+        setVisible(false)
+    }, [router.pathname])
 
     return (
         <React.Fragment key={key}>
