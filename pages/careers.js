@@ -1,12 +1,21 @@
+import Slider from "react-slick";
+
 import { BitNobButton, BitNobContainer, BitNobLink, getLayout, Page } from "components"
 import { careersPageData } from "static"
 
 const Careers = ()=> {
     const { section1, dividerImg, section2, gallery, jobs } = careersPageData;
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: (typeof window !== 'undefined' && window?.innerWidth) < 1300 ? 1 : 4,
+        slidesToScroll: 1
+    };
 
     return(
         <Page title="Bitnob for Business">
-            <div className="z-0">
+            <div className="z-0 overflow-x-hidden">
                 <div className=" pt-6 pb-20 bg-gradient-to-b from-white via-bitGreen-100">
                     <BitNobContainer>
                         <div className="mt-10 xl:mt-20 text-center mx-auto">
@@ -15,8 +24,8 @@ const Careers = ()=> {
                                 <p className=" md:text-md my-6 font-quicksand text-bitGray-200">{section1.description}</p>
                                 <BitNobButton className="mt-10 mb-2 py-3 md:py-auto max-w-xs w-max mx-auto">Get Started</BitNobButton>
                             </div>
-                            <div style={{borderRadius:"50px"}} className="max-w-4xl overflow-hidden 2xl:max-w-7xl mx-auto mt-20">
-                                <img src={dividerImg} />
+                            <div style={{borderRadius:"50px"}} className=" transform scale-150 lg:scale-100 max-w-4xl overflow-hidden 2xl:max-w-7xl mx-auto mt-20">
+                                <img className="" src={dividerImg} />
                             </div>
                         </div>
                     </BitNobContainer>
@@ -28,25 +37,27 @@ const Careers = ()=> {
                                 <h2 className="font-black text-2xl md:text-3xl xl:text-4xl font-gordita">{section2.heading}</h2>
                                 <p className=" md:text-md my-6 font-quicksand text-bitGray-200">{section2.description}</p>
                             </div>
-                            <div className=" grid grid-cols-4 gap-3 max-w-7xl overflow-hidden 2xl:max-w-7xl mx-auto mt-20">
-                                {
-                                    gallery.map(g=> (
-                                        <div className="max-w-xs h-64">
-                                            <img src={g} className="w-full max-w-full h-auto" />
-                                        </div>
-                                    ))
-                                }
+                            <div className="max-w-7xl 2xl:max-w-7xl mx-auto mt-20">
+                                <Slider {...settings}>
+                                    {
+                                        gallery.map(g=> (
+                                            <div className=" max-w-xl lg:max-w-xs px-2">
+                                                <img src={g} className="w-full max-w-full h-auto" />
+                                            </div>
+                                        ))
+                                    }
+                                </Slider>
                             </div>
                         </div>
                     </BitNobContainer>
                 </div>
-                <div className=" pt-6 pb-20 bg-gradient-to-b from-white via-bitGreen-100">
+                <div className=" pt-12 pb-20 bg-gradient-to-b from-white via-bitGreen-100">
                     <BitNobContainer>
                         <div className="mt-10 xl:mt-20 text-center mx-auto">
                             <div className="max-w-lg mx-auto">
                                 <h2 className="font-black text-2xl md:text-3xl font-gordita">Apply Now!</h2>
                             </div>
-                            <div className="grid lg:grid-cols-2 gap-4 max-w-4xl overflow-hidden 2xl:max-w-7xl mx-auto mt-20">
+                            <div className="grid lg:grid-cols-2 gap-4 max-w-4xl overflow-hidden 2xl:max-w-7xl mx-auto mt-12">
                                 {
                                     jobs.map(({title, location})=> (
                                         <BitNobLink>
