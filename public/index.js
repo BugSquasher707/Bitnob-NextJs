@@ -33,6 +33,12 @@ import PeopleIcon from './svgs/peopleIcon';
 import InvoiceIcon from './svgs/invoiceIcon';
 import TransactionIcon from './svgs/transactionIcon';
 import WalletIcon from './svgs/walletIcon';
+import IntegrityIcon from './svgs/integrityIcon';
+import HeartIcon from './svgs/heartIcon';
+import LeadershipIcon from './svgs/leadershipIcon';
+import OwnershipIcon from './svgs/ownershipIcon';
+import TeamworkIcon from './svgs/teamworkIcon';
+
 
 export {
     LogoFull,
@@ -69,5 +75,10 @@ export {
     PeopleIcon,
     InvoiceIcon,
     TransactionIcon,
-    WalletIcon
+    WalletIcon,
+    IntegrityIcon,
+    HeartIcon,
+    LeadershipIcon,
+    OwnershipIcon,
+    TeamworkIcon
 }
