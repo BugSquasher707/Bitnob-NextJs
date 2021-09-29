@@ -4,29 +4,25 @@ import { aboutPageData } from "static";
 import { FaFacebook, FaPaperPlane, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
 
-const User = ({ setUser, user })=> {
-    const userRef = useRef(null)
-    const [userData, setUserData] = useState({})
-
-    useEffect(()=> {
-        setUser({
-            ...userData,
-            loci: userRef?.current?.getBoundingClientRect()
-        })
-    },[userData])
-
-    return (
-        <div 
-            ref={userRef}
-            onMouseEnter={()=> setUserData(user)} 
-            className=" md:h-12 md:w-14 lg:w-20 lg:h-20 2xl:h-28 2xl:w-28">
-            <img src='/images/person.png' className="max-w-full h-auto" />
-        </div>
-    )
-}
+const User = ({ 
+    activeUser, 
+    user,
+    setUser })=> (
+    <div 
+        onMouseEnter={()=> {
+            setUser(user);
+        }}
+        onMouseOut={()=> setUser({...user, locked: true})}
+        className={`userAvatar md:h-12 md:w-14 lg:w-20 lg:h-20 2xl:h-28 2xl:w-28 transition-all duration-200 p-1 border-2 rounded-full border-transparent ${activeUser?.id === user?.id ? ' border-bitGreen-200 bg-white' : '' }`}>
+        <img src={user?.avatar || '/images/person.png'} alt={user?.name} className="max-w-full h-auto" />
+    </div>
+)
 
 const AboutUs = ()=> {
+    let event;
     const [user, setUser] = useState(null)
+    const [position, setPosition] = useState({})
+    const positionRef = useRef(null)
     const { welcome, values, mission, join, team } = aboutPageData
     const icons = {
         facebook: <FaFacebook />,
@@ -36,10 +32,27 @@ const AboutUs = ()=> {
         linkedin: <FaLinkedinIn />,
     }
 
-    console.log(user)
+    useEffect(()=> {
+        if(typeof window !== 'undefined'){ 
+            event = document.addEventListener('mousemove', (e)=> {
+                positionRef.current = {
+                    x: e.pageX,
+                    y: e.offsetY
+                };
 
+                setPosition({
+                    x: e.pageX,
+                    y: e.offsetY
+                })
+            })
+        }
 
+        return ()=> removeEventListener('mousemove', event)
+    },[])
 
+    useEffect(()=> {
+        if(user?.locked) removeEventListener('mousemove', event)
+    }, [user])
 
 
     return(
@@ -107,32 +120,38 @@ const AboutUs = ()=> {
                                 Object.values(team.images).map(a => (
                                     <div className="flex space-x-2 md:space-x-6 lg:space-x-10 items-center" key={a}>
                                         {a.map((v => (
-                                            <User setUser={setUser} user={v} key={v} />
+                                            <User 
+                                                activeUser={user} 
+                                                setUser={setUser} 
+                                                user={v} 
+                                                key={v} />
                                         )))}
                                     </div>
                                 ))
                             }
-                            {
-                                user && 
-                                <div 
-                                    onMouseOut={()=> setUser(null)} 
-                                    className="bg-black absolute transition-all top-0 duration-300 p-4 px-6 text-center rounded-2xl">
-                                    <h2 className="font-black text-white text-xs md:text-sm font-gordita">{user.name}</h2>
-                                    <p className="text-2xs font-bold mt-1 uppercase text-bitGreen-400 font-quicksand">{user.title}</p>
-                                    <p className="mt-6 text-xs text-gray-200 w-60 mx-auto font-quicksand">{user.description}</p>
-                                    <div className="flex pt-4 pb-2 space-x-4 justify-center items-center">
-                                        {
-                                            Object.entries(user?.social || {})?.map(([platform, link]) => (
-                                                <BitNobLink to={link}>
-                                                    <span className="text-bitGreen-200 text-xs">
-                                                        {icons[platform]}
-                                                    </span>
-                                                </BitNobLink>
-                                            ))
-                                        }
-                                    </div>
+                            <div 
+                                style={{
+                                    visibility: user ? "visible" : "hidden",
+                                    top: (user?.locked ? positionRef.y : position.y - 20) + 'px',
+                                    left: (user?.locked ? positionRef.x : position.x - 200) + 'px',
+                                }}
+                                onMouseEnter={()=> setUser({...user, locked: true})}
+                                className="bg-black absolute transition-all top-0 duration-300 p-4 px-6 text-center rounded-2xl">
+                                <h2 className="font-black text-white text-xs md:text-sm font-gordita">{user?.name}</h2>
+                                <p className="text-2xs font-bold mt-1 uppercase text-bitGreen-400 font-quicksand">{user?.title}</p>
+                                <p className="mt-6 text-xs text-gray-200 w-60 mx-auto font-quicksand">{user?.description}</p>
+                                <div className="flex pt-4 pb-2 space-x-4 justify-center items-center">
+                                    {
+                                        Object.entries(user?.social || {})?.map(([platform, link]) => (
+                                            <BitNobLink to={link}>
+                                                <span className="text-bitGreen-200 text-xs">
+                                                    {icons[platform]}
+                                                </span>
+                                            </BitNobLink>
+                                        ))
+                                    }
                                 </div>
-                            }
+                            </div>
                         </div>
                     </BitNobContainer>
                 </div>

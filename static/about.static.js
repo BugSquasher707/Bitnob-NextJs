@@ -59,7 +59,9 @@ const aboutPageData = {
             row1: [
                 ...Array.from({length:5}),
                 {
+                    id: 'x-1',
                     name: "Ashley Coby", 
+                    avatar: '/images/person.png',
                     title: "Product Designer",
                     description: "Making people smile one screen per day", 
                     social: {
@@ -72,7 +74,21 @@ const aboutPageData = {
                 },
             ],
             row2: Array.from({length:7}),
-            row3: Array.from({length:6}),
+            row3: [
+                {
+                    id: 'x-2',
+                    name: "Mariam Enouch", 
+                    avatar: '/images/person.png',
+                    title: "Software Engineer",
+                    description: "Making people smile one line of code per day", 
+                    social: {
+                        facebook: "https://facebook.com/ashley",
+                        twitter: "https://twitter.com/ashley",
+                        instagram: "https://instagram.com/ashley",
+                    }
+                },
+                ...Array.from({length:6})
+            ],
         }
     },
     join: {
