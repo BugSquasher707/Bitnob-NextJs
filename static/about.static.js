@@ -57,7 +57,21 @@ const aboutPageData = {
         description: `Bitnob is a 100% remote team. We believe that creative collaboration can happen anywhere and we want our team to work where they feel most comfortable and inspired.`,
         images: {
             row1: [
-                ...Array.from({length:5}),
+                {
+                    id: 'x-1',
+                    name: "Ashley Coby", 
+                    avatar: '/images/person.png',
+                    title: "Product Designer",
+                    description: "Making people smile one screen per day", 
+                    social: {
+                        facebook: "https://facebook.com/ashley",
+                        twitter: "https://twitter.com/ashley",
+                        instagram: "https://instagram.com/ashley",
+                        email: "mailto:ashely@example.com",
+                        linkedIn: "https://linkein.com/ashley",
+                    }
+                },
+                ...Array.from({length:4}),
                 {
                     id: 'x-1',
                     name: "Ashley Coby", 
@@ -87,7 +101,21 @@ const aboutPageData = {
                         instagram: "https://instagram.com/ashley",
                     }
                 },
-                ...Array.from({length:6})
+                ...Array.from({length:4}),
+                {
+                    id: 'x-1',
+                    name: "Ashley Coby", 
+                    avatar: '/images/person.png',
+                    title: "Product Designer",
+                    description: "Making people smile one screen per day", 
+                    social: {
+                        facebook: "https://facebook.com/ashley",
+                        twitter: "https://twitter.com/ashley",
+                        instagram: "https://instagram.com/ashley",
+                        email: "mailto:ashely@example.com",
+                        linkedIn: "https://linkein.com/ashley",
+                    }
+                },
             ],
         }
     },
