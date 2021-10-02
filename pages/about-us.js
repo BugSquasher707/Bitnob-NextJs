@@ -170,7 +170,7 @@ const AboutUs = ()=> {
                                     }
                                 }
                                 onMouseEnter={()=> setUser({...user, locked: true})}
-                                className="bg-black absolute transition-all top-0 duration-300 p-4 px-6 text-center rounded-2xl">
+                                className="bg-black shadow-xl absolute transition-all top-0 duration-300 p-4 px-6 text-center rounded-2xl">
                                 <h2 className="font-black text-white text-xs md:text-sm font-gordita">{user?.name}</h2>
                                 <p className="text-2xs font-bold mt-1 uppercase text-bitGreen-400 font-quicksand">{user?.title}</p>
                                 <p className="mt-6 text-xs text-gray-200 w-60 mx-auto font-quicksand">{user?.description}</p>

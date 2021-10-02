@@ -1,9 +1,32 @@
 import { BitNobButton, BitNobContainer, getLayout, Page, Reviews } from "components"
 import { Review } from "components/Home/reviews";
-import { ArrowOutline } from "public";
+import { ArrowOutline, ShapesSvg } from "public";
 import { useState } from "react";
 import { businessPageData } from "static";
 import styles from 'styles/Business.module.css'
+
+
+const Service = ({ title, index, asset = null, cover, icon, description })=> (
+    <div className="relative my-20">
+        <div className="max-w-8xl mx-auto">
+            <BitNobContainer>
+                <div
+                    style={{minHeight:"600px"}} 
+                    className={`flex justify-center ${!index ? 'flex-col' : 'flex-row items-center'} ${asset ? "space-x-10" : ""} ${(index + 1) % 2 === 0 ? 'flex-row-reverse' : ''} `}>
+                    <div key={title} className={` space-y-4 p-8 flex-1 cursor-default transition-all duration-400 rounded-2xl xl:max-w-sm`}>
+                        <span className=" -ml-3 block w-min -mb-4">{icon}</span>
+                        <h4 className="font-bold text-black text-lg xl:text-xl 2xl:text-2xl whitespace-pre pt-0 font-gordita">{title}</h4>
+                        <p style={{minWidth:"300px"}} className="text-bitGray-200 pb-4 text-xs lg:text-sm xl:text-md md:pb-2 block font-quicksand">{description}</p>
+                    </div>
+                    <div className={`-mt-6 z-10 ${index && 'max-w-3xl'} ${["Customers", "Wallet Services"].includes(title) ? "px-6 2xl:max-w-3xl" : ''}`}>
+                        <img src={cover} className="flex justify-center" />
+                    </div>
+                </div>
+            </BitNobContainer>
+        </div>
+        {asset && <ShapesSvg className={`absolute top-1/2 transform -translate-y-1/2 -${asset}-48 z-0`} />}
+    </div>
+)
 
 const Business = ()=> {
     const [active, setActive] = useState(0)
@@ -21,7 +44,7 @@ const Business = ()=> {
     return(
         <Page title="Bitnob for Business">
             <div className="z-0">
-                <div className=" pt-6 pb-60 bg-gradient-to-b from-white via-bitGreen-100">
+                <div className=" pt-6 pb-60 bg-white">
                     <BitNobContainer>
                         <div className="mt-10 xl:mt-20 text-center mx-auto">
                             <div className="max-w-5xl mx-auto">
@@ -40,26 +63,17 @@ const Business = ()=> {
                         <div className="xl:mt-20 text-center mx-auto">
                             <div className="max-w-5xl mx-auto">
                                 <h2 className="font-black text-2xl md:text-3xl font-gordita">{section2.heading}</h2>
-                                <p className=" md:text-lg mt-4 font-quicksand text-bitGray-200">{section2.description}</p>
-                            </div>
-                            <div className=" max-w-4xl 2xl:max-w-7xl mx-auto">
-                                <img src={section2.cover} />
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 xl:grid-cols-3 text-left mb-10 max-w-7xl mx-auto">
-                                {
-                                    dataList.map(({title, description, icon})=> (
-                                        <div key={title} className={`bg-white space-y-4 p-8 hover:bg-white hover:shadow-xl flex-1 cursor-default transition-all duration-400 rounded-2xl xl:max-w-sm`}>
-                                            <span className=" -ml-3 block w-min">{icon}</span>
-                                            <h4 className="font-bold text-black text-lg xl:text-xl font-gordita">{title}</h4>
-                                            <p className="text-bitGray-200 pb-4 text-xs lg:text-sm md:pb-2 block font-quicksand">{description}</p>
-                                        </div>
-                                    ))
-                                }
+                                <p className=" md:text-lg mt-2 font-quicksand text-bitGray-200">{section2.description}</p>
                             </div>
                         </div>
                     </BitNobContainer>
+                    <div className="text-left mx-auto">
+                        {
+                            dataList.map( (a,i) => <Service {...a} index={i} key={a.title} /> )
+                        }
+                    </div>
                 </div>
-                <div style={{minHeight:600}} className="pt-28 pb-72 relative bg-gradient-to-b from-white via-bitGreen-100 to-white">
+                <div style={{minHeight:600}} className="pt-28 pb-72 relative bg-gradient-to-b from-white via-bitGreen-50 to-white">
                     <BitNobContainer>
                         <div className="relative flex mx-auto max-w-2xl">
                             {

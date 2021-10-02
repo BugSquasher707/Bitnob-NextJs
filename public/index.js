@@ -38,6 +38,8 @@ import HeartIcon from './svgs/heartIcon';
 import LeadershipIcon from './svgs/leadershipIcon';
 import OwnershipIcon from './svgs/ownershipIcon';
 import TeamworkIcon from './svgs/teamworkIcon';
+import ShapesSvg from './svgs/shapes';
+import ArrowCircleIcon from './svgs/arrow-circle';
 
 
 export {
@@ -80,5 +82,7 @@ export {
     HeartIcon,
     LeadershipIcon,
     OwnershipIcon,
-    TeamworkIcon
+    TeamworkIcon,
+    ShapesSvg,
+    ArrowCircleIcon
 }
