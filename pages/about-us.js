@@ -12,20 +12,25 @@ const User = ({
     setUser })=> (
     <div 
         style={{
-            minWidth: "50px",
-            minHeight: "50px"
+            minWidth: "40px",
+            minHeight: "40px"
         }}
-        onMouseEnter={()=> {
+        onMouseEnter={(e)=> {
             setUser(user);
+            e.stopPropagation()
         }}
-        onMouseOut={()=> setUser({...user, locked: true})}
-        className={`userAvatar md:h-12 md:w-14 lg:w-20 lg:h-20 2xl:h-28 2xl:w-28 transition-all duration-200 p-1 border-2 rounded-full border-transparent ${activeUser?.id === user?.id ? ' border-bitGreen-200 bg-white' : '' }`}>
-        <img src={user?.avatar || '/images/person.png'} alt={user?.name} className="max-w-full h-auto" />
+        onMouseOut={(e)=> {
+            setUser({...user, locked: true})
+            e.stopPropagation()
+        }}
+        className={`userAvatar w-12 h-12 md:h-16 md:w-16 lg:w-24 lg:h-24 2xl:h-28 2xl:w-28 transition-all duration-200`}>
+        <img src={user?.avatar || '/images/person.png'} alt={user?.name} className={`max-w-full h-auto`} />
     </div>
 )
 
 const AboutUs = ()=> {
     let event;
+    let event2;
     const [user, setUser] = useState(null)
     const [position, setPosition] = useState({})
     const positionRef = useRef(null)
@@ -42,6 +47,14 @@ const AboutUs = ()=> {
 
     useEffect(()=> {
         if(typeof window !== 'undefined'){ 
+            /**Hide the user details popover if team section is not in view */
+            event2 = document.addEventListener('scroll', ()=> {
+                if(window.scrollY < 2400 || window.scrollY > 3400) {
+                    setUser(null);
+                    removeEventListener('scroll', event2)
+                }
+            })
+            
             event = document.addEventListener('mousemove', (e)=> {
                 positionRef.current = {
                     x: e.pageX,
@@ -55,7 +68,10 @@ const AboutUs = ()=> {
             })
         }
 
-        return ()=> removeEventListener('mousemove', event)
+        return ()=> { 
+            removeEventListener('mousemove', event)
+            removeEventListener('scroll', event2)
+        }
     },[])
 
     useEffect(()=> {
@@ -123,10 +139,10 @@ const AboutUs = ()=> {
                             <h2 className="font-black text-2xl md:text-3xl xl:text-4xl font-gordita">{team.heading}</h2>
                             <p className=" md:text-md my-4 font-quicksand text-bitGray-200">{team.description}</p>
                         </div>
-                        <div className="relative flex flex-col space-y-5 md:space-y-12 items-center mt-8">
+                        <div className="relative flex flex-col space-y-3 md:space-y-8 items-center mt-10">
                             {
                                 Object.values(team.images).map(a => (
-                                    <div className="flex space-x-1 md:space-x-6 lg:space-x-10 items-center" key={a}>
+                                    <div className="flex space-x-1 md:space-x-6 lg:space-x-8 xl:space-x-10 items-center" key={a}>
                                         {a.map((v => (
                                             <User 
                                                 activeUser={user} 
@@ -138,11 +154,21 @@ const AboutUs = ()=> {
                                 ))
                             }
                             <div 
-                                style={{
-                                    visibility: user ? "visible" : "hidden",
-                                    top: (user?.locked ? positionRef.y : position.y - 20) + 'px',
-                                    left: (user?.locked ? positionRef.x : position.x - 200) + 'px',
-                                }}
+                                style={ 
+
+                                    (typeof window !== 'undefined' && window.innerWidth > 600) ? {
+                                        visibility: user ? "visible" : "hidden",
+                                        top: (user?.locked ? positionRef.y : position.y - 20) + 'px',
+                                        left: (user?.locked ? positionRef.x : position.x - 200) + 'px', 
+                                    }
+                                    : 
+                                    {
+                                        left: "50%",
+                                        top: -(user?.locked ? positionRef.y : position.y + 100)+ '%',
+                                        transform: 'translateX(-50%)',
+                                        visibility: user ? "visible" : "hidden",
+                                    }
+                                }
                                 onMouseEnter={()=> setUser({...user, locked: true})}
                                 className="bg-black absolute transition-all top-0 duration-300 p-4 px-6 text-center rounded-2xl">
                                 <h2 className="font-black text-white text-xs md:text-sm font-gordita">{user?.name}</h2>
