@@ -2,10 +2,10 @@ import React from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/dist/client/router';
 
-const BitNobLink = React.forwardRef(({ children, className, activeStyles, to="#", ...rest}, ref) => {
+const BitNobLink = React.forwardRef(({ children, isActive, className, activeStyles, to="#", ...rest}, ref) => {
   const router = useRouter();
   const ACTIVE = router.pathname.startsWith(to);
-  const activeLinkStyle = ACTIVE ? (activeStyles || `text-bitGreen-300`) : ""
+  const activeLinkStyle = (isActive || ACTIVE) ? (activeStyles || `text-bitGreen-300`) : ""
   
   return(
       <Link href={to}>
