@@ -1,7 +1,7 @@
 import BitNobContainer from "../../UI/Container"
 import BitNobButton from "../../UI/Button"
 import BitNobLink from "../../UI/Link"
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
 
 import style from './Header.module.css';
 import { useCloseContext } from "../../../hooks";
@@ -99,24 +99,31 @@ const LinkLists = ({ data }) => {
 const Header = () => {
     const router = useRouter()
     const headerRef = useRef(null)
-    const { ref, visible, setVisible } = useCloseContext()
+    const { ref, visible, setVisible } = useCloseContext(false, true)
+    const [isDesktop, setIsDesktop] = useState(false)
 
+    useLayoutEffect(()=> {
+        if (typeof window !== 'undefined' && window.innerWidth > 768) setIsDesktop(true)
+    },[])
 
     useEffect(()=> {
         headerRef.current?.scrollIntoViewIfNeeded()
     }, [router.pathname])
+
     
     return(
         <BitNobContainer>
             <header ref={headerRef} className="flex z-20 justify-between items-center py-3 xl:py-4 px-4 md:px-6 mt-6 rounded-2xl bg-bitGreen-50 w-full">
-                <LogoFull className=" w-24 lg:w-32" />
+                <BitNobLink to="/">
+                    <LogoFull className=" w-24 lg:w-32" />
+                </BitNobLink>
                 {
-                    !visible ? 
+                    (isDesktop || visible) ? 
                         <div 
                             ref={ref} 
-                            className="bg-white z-50 lg:bg-transparent shadow-lg lg:shadow-none 
+                            className={`${visible ? style.drop_visible : ''} transition-all duration-300 bg-white z-50 lg:bg-transparent shadow-lg lg:shadow-none 
                             px-6 lg:px-0 py-10 lg:py-0 w-full lg:w-auto absolute left-0 top-24 md:top-28 lg:top-0 lg:static flex flex-col 
-                            lg:flex-row justify-between lg:items-center lg:space-x-24">
+                            lg:flex-row justify-between lg:items-center lg:space-x-24`}>
                             <ul className="flex flex-col lg:flex-row relative space-y-10 lg:space-y-0 lg:space-x-12">
                                 {
                                     Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
@@ -131,11 +138,11 @@ const Header = () => {
                 <div 
                     onClick={()=> setVisible(!visible)}
                     tabIndex="0" 
+                    style={{ transform: visible ? 'rotate(135deg)' : ''}}
                     role="button" 
                     className={`
-                        transform ${!visible && "rotate-45"} 
                         appearance-none outline-none text-3xl md:text-4xl lg:hidden 
-                        cursor-default transition-all duration-200 hover:opacity-70 
+                        cursor-default transition-all duration-300 hover:opacity-70 
                         focus:ring-2 focus:ring-offset-2 focus:ring-bitGreen-200 bg-white 
                         rounded-full p-2 md:p-1 flex justify-center items-center box-border w-12 h-12 
                         md:h-16 md:w-16 text-bitGreen-200`}>

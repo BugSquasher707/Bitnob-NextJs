@@ -13,6 +13,26 @@
     animation: moveUp .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.drop_visible {
+    animation: drop .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes drop {
+    0% {
+        opacity: .3;
+        transform: translateY(-10%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(8%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+
 @keyframes moveup {
     from {
         opacity: .5;

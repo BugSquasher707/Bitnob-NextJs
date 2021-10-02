@@ -12,7 +12,7 @@ const Service = ({ title, index, asset = null, cover, icon, description })=> (
             <BitNobContainer>
                 <div
                     style={{minHeight: (typeof window !== "undefined" && window.innerWidth > 800 && index ) && "700px"}} 
-                    className={`flex justify-center lg:space-x-6 ${index ? 'flex-row items-center' : 'flex-col'} ${(index + 1) % 2 === 0 ? 'flex-col lg:flex-row-reverse' : 'flex-col lg:flex-row'} `}>
+                    className={`flex justify-center lg:space-x-6 ${index ? 'flex-row items-center' : 'flex-col'} ${(index + 1) % 2 === 0 ? 'flex-col lg:flex-row-reverse' : index ? 'flex-col lg:flex-row' : 'flex-col'} `}>
                     <div className={`space-y-4 bg-whte z-10 flex-1 cursor-default transition-all duration-400 rounded-2xl md:max-w-sm`}>
                         <span className=" -ml-3 block w-min -mb-4">{icon}</span>
                         <h4 className="font-bold text-black text-lg xl:text-xl 2xl:text-2xl whitespace-pre pt-0 font-gordita">{title}</h4>

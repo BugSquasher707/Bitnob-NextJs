@@ -1,11 +1,13 @@
 import { useRef, useState, useEffect } from 'react';
 
-export const useCloseContext = initialValue => {
+export const useCloseContext = (initialValue, defer = false) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(initialValue);
 
   const handleClickOutside = e => {
-    if (ref.current && !ref.current.contains(e.target)) setVisible(false);
+    if (ref.current && !ref.current.contains(e.target)) {
+      !defer && setVisible(false);
+    }
   };
 
   const handleKeyPress = e => {
