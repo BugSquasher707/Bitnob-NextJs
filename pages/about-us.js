@@ -1,5 +1,7 @@
-import { BitNobContainer, BitNobLink, getLayout, Page } from "components"
 import { useEffect, useRef, useState } from "react"
+import { useRouter } from "next/dist/client/router";
+
+import { BitNobContainer, BitNobButton, BitNobLink, getLayout, Page } from "components"
 import { aboutPageData } from "static";
 import { FaFacebook, FaPaperPlane, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
@@ -9,6 +11,10 @@ const User = ({
     user,
     setUser })=> (
     <div 
+        style={{
+            minWidth: "50px",
+            minHeight: "50px"
+        }}
         onMouseEnter={()=> {
             setUser(user);
         }}
@@ -23,6 +29,8 @@ const AboutUs = ()=> {
     const [user, setUser] = useState(null)
     const [position, setPosition] = useState({})
     const positionRef = useRef(null)
+    const router = useRouter();
+
     const { welcome, values, mission, join, team } = aboutPageData
     const icons = {
         facebook: <FaFacebook />,
@@ -75,7 +83,7 @@ const AboutUs = ()=> {
 
                 <div className="mt-10 md:mt-40 2xl:mt-20">
                     <BitNobContainer>
-                        <div className="bg-bitGreen-50 rounded-2xl p-6 lg:p-12 text-center">
+                        <div className="bg-bitGreen-50 rounded-2xl py-10 px-4 md:p-6 lg:p-12 text-center">
                             <div className="max-w-xl mx-auto">
                                 <h2 className="font-black text-2xl md:text-3xl xl:text-4xl font-gordita">{values.heading}</h2>
                                 <p className=" md:text-md my-4 font-quicksand text-bitGray-200">{values.description}</p>
@@ -87,7 +95,7 @@ const AboutUs = ()=> {
                                         <div key={i} className="flex items-center flex-col space-y-5">
                                             {
                                                 v.map(({title, description, icon})=> (
-                                                    <div key={title} className={`${ title === "Integrity" ? "bg-white shadow-xl" : ""} space-y-4 p-8 hover:bg-white hover:shadow-xl flex-1 cursor-default transition-all duration-400 rounded-2xl xl:max-w-sm`}>
+                                                    <div key={title} className={`${ title === "Integrity" ? "bg-white shadow-xl" : ""} space-y-4 p-6 md:p-8 hover:bg-white hover:shadow-xl flex-1 cursor-default transition-all duration-400 rounded-2xl xl:max-w-sm`}>
                                                         <span className=" -ml-3 block w-min">{icon}</span>
                                                         <h4 className="font-bold text-black text-lg xl:text-xl font-gordita">{title}</h4>
                                                         <p className="text-bitGray-200 pb-4 text-xs lg:text-sm md:pb-2 block font-quicksand">{description}</p>
@@ -118,7 +126,7 @@ const AboutUs = ()=> {
                         <div className="relative flex flex-col space-y-5 md:space-y-12 items-center mt-8">
                             {
                                 Object.values(team.images).map(a => (
-                                    <div className="flex space-x-2 md:space-x-6 lg:space-x-10 items-center" key={a}>
+                                    <div className="flex space-x-1 md:space-x-6 lg:space-x-10 items-center" key={a}>
                                         {a.map((v => (
                                             <User 
                                                 activeUser={user} 
@@ -155,6 +163,21 @@ const AboutUs = ()=> {
                         </div>
                     </BitNobContainer>
                 </div>
+                <BitNobContainer>
+                    <div 
+                        className={`flex flex-col lg:flex-row justify-between items-center mt-20 md:mt-40 bg-black text-white rounded-3xl overflow-hidden lg:overflow-visible px-6 md:px-20 py-12 lg:px-14 xl:px-20 2xl:p-20 relative bg-left bg-cover`}>
+                        <div className="flex lg:block flex-col items-center lg:items-stretch text-center lg:text-left max-w-md lg:max-w-sm xl:max-w-lg">
+                            <h2 className="font-black text-2xl md:text-3xl xl:text-4xl font-gordita">{join.heading}</h2>
+                            <p className=" text-xs md:text-md my-4 font-quicksand">{join.description}</p>
+                            <BitNobButton 
+                                onClick={()=> router.push('/careers')} 
+                                className="my-8 md:my-14 lg:mt-10 mb-2 py-3 md:py-auto w-max">See Job Openings</BitNobButton>
+                        </div>
+                        <div className="max-w-xs md:max-w-lg lg:max-w-xs xl:max-w-md p-6 md:p-0 box-border mt-12 md:mt-20 lg:mt-0">
+                            <img src={join.image} alt="app"  />
+                        </div>
+                    </div>
+                </BitNobContainer>
             </div>
         </Page>
     )

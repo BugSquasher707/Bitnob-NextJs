@@ -57,7 +57,7 @@ const Careers = ()=> {
                             <div className="max-w-lg mx-auto">
                                 <h2 className="font-black text-2xl md:text-3xl font-gordita">Apply Now!</h2>
                             </div>
-                            <div className="grid lg:grid-cols-2 gap-4 max-w-4xl overflow-hidden 2xl:max-w-7xl mx-auto mt-12">
+                            <div className="grid lg:grid-cols-2 gap-4 max-w-4xl overflow-hidden 2xl:max-w-6xl mx-auto mt-12">
                                 {
                                     jobs.map(({title, location})=> (
                                         <BitNobLink>
