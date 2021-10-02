@@ -11,20 +11,20 @@ const Service = ({ title, index, asset = null, cover, icon, description })=> (
         <div className="max-w-8xl mx-auto">
             <BitNobContainer>
                 <div
-                    style={{minHeight: (typeof window !== "undefined" && window.innerWidth > 800 && index) && "600px"}} 
-                    className={`flex justify-center ${!index ? 'flex-col' : 'flex-col lg:flex-row items-center'} ${asset ? "lg:space-x-10" : ""} ${(index + 1) % 2 === 0 ? 'flex-row-reverse' : ''} `}>
-                    <div className={` space-y-4 bg-white z-10 flex-1 cursor-default transition-all duration-400 rounded-2xl md:max-w-sm`}>
+                    style={{minHeight: (typeof window !== "undefined" && window.innerWidth > 800 && index ) && "700px"}} 
+                    className={`flex justify-center lg:space-x-6 ${index ? 'flex-row items-center' : 'flex-col'} ${(index + 1) % 2 === 0 ? 'flex-col lg:flex-row-reverse' : 'flex-col lg:flex-row'} `}>
+                    <div className={`space-y-4 bg-whte z-10 flex-1 cursor-default transition-all duration-400 rounded-2xl md:max-w-sm`}>
                         <span className=" -ml-3 block w-min -mb-4">{icon}</span>
                         <h4 className="font-bold text-black text-lg xl:text-xl 2xl:text-2xl whitespace-pre pt-0 font-gordita">{title}</h4>
                         <p style={{minWidth:"300px"}} className="text-bitGray-200 pb-4 text-xs lg:text-sm xl:text-md md:pb-2 block font-quicksand">{description}</p>
                     </div>
-                    <div className={`mt-6 justify-center items-center mx-auto lg:-mt-6 z-10 ${index && 'max-w-3xl'} ${["Customers", "Wallet Services"].includes(title) ? "px-6 2xl:max-w-3xl" : ''}`}>
-                        <img src={cover} className="flex justify-center transform scale-110 lg:scale-x-100" />
+                    <div className={`mt-6 justify-center items-center mx-auto z-10 ${index && 'max-w-3xl'} ${["Customers", "Wallet Services"].includes(title) ? "px-6 2xl:max-w-3xl" : ''}`}>
+                        <img src={cover} className="flex justify-center transform scale-110 lg:scale-100" />
                     </div>
                 </div>
             </BitNobContainer>
         </div>
-        {asset && <ShapesSvg className={`absolute top-1/2 transform -translate-y-1/2 scale-75 lg:scale-100 -${asset}-48 z-0`} />}
+        {asset && <ShapesSvg className={`absolute opacity-30 lg:opacity-100 top-1/2 transform -translate-y-1/2 scale-75 lg:scale-100 -${asset}-48 z-0`} />}
     </div>
 )
 
