@@ -9,6 +9,7 @@ const Careers = ()=> {
         dots: true,
         infinite: true,
         speed: 500,
+        autoPlay: true,
         slidesToShow: (typeof window !== 'undefined' && window?.innerWidth) < 1300 ? 1 : 4,
         slidesToScroll: 1
     };

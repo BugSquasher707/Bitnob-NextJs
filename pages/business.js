@@ -7,24 +7,24 @@ import styles from 'styles/Business.module.css'
 
 
 const Service = ({ title, index, asset = null, cover, icon, description })=> (
-    <div className="relative my-20">
+    <div className="relative my-10 px-1">
         <div className="max-w-8xl mx-auto">
             <BitNobContainer>
                 <div
-                    style={{minHeight:"600px"}} 
-                    className={`flex justify-center ${!index ? 'flex-col' : 'flex-row items-center'} ${asset ? "space-x-10" : ""} ${(index + 1) % 2 === 0 ? 'flex-row-reverse' : ''} `}>
-                    <div key={title} className={` space-y-4 p-8 flex-1 cursor-default transition-all duration-400 rounded-2xl xl:max-w-sm`}>
+                    style={{minHeight: (typeof window !== "undefined" && window.innerWidth > 800 && index) && "600px"}} 
+                    className={`flex justify-center ${!index ? 'flex-col' : 'flex-col lg:flex-row items-center'} ${asset ? "lg:space-x-10" : ""} ${(index + 1) % 2 === 0 ? 'flex-row-reverse' : ''} `}>
+                    <div className={` space-y-4 bg-white z-10 flex-1 cursor-default transition-all duration-400 rounded-2xl md:max-w-sm`}>
                         <span className=" -ml-3 block w-min -mb-4">{icon}</span>
                         <h4 className="font-bold text-black text-lg xl:text-xl 2xl:text-2xl whitespace-pre pt-0 font-gordita">{title}</h4>
                         <p style={{minWidth:"300px"}} className="text-bitGray-200 pb-4 text-xs lg:text-sm xl:text-md md:pb-2 block font-quicksand">{description}</p>
                     </div>
-                    <div className={`-mt-6 z-10 ${index && 'max-w-3xl'} ${["Customers", "Wallet Services"].includes(title) ? "px-6 2xl:max-w-3xl" : ''}`}>
-                        <img src={cover} className="flex justify-center" />
+                    <div className={`mt-6 justify-center items-center mx-auto lg:-mt-6 z-10 ${index && 'max-w-3xl'} ${["Customers", "Wallet Services"].includes(title) ? "px-6 2xl:max-w-3xl" : ''}`}>
+                        <img src={cover} className="flex justify-center transform scale-110 lg:scale-x-100" />
                     </div>
                 </div>
             </BitNobContainer>
         </div>
-        {asset && <ShapesSvg className={`absolute top-1/2 transform -translate-y-1/2 -${asset}-48 z-0`} />}
+        {asset && <ShapesSvg className={`absolute top-1/2 transform -translate-y-1/2 scale-75 lg:scale-100 -${asset}-48 z-0`} />}
     </div>
 )
 
@@ -50,10 +50,10 @@ const Business = ()=> {
                             <div className="max-w-5xl mx-auto">
                                 <h2 className="font-black text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-gordita">{section1.heading}</h2>
                                 <p className=" md:text-md my-6 font-quicksand text-bitGray-200">{section1.description}</p>
-                                <BitNobButton className="mt-6 mb-2 py-3 md:py-auto max-w-xs w-max mx-auto">Get Started</BitNobButton>
+                                <BitNobButton className="my-6 mb-2 py-3 md:py-auto max-w-xs w-max mx-auto">Get Started</BitNobButton>
                             </div>
-                            <div className="max-w-4xl 2xl:max-w-7xl mx-auto mt-10">
-                                <img src={section1.cover} />
+                            <div className="max-w-4xl 2xl:max-w-7xl mx-auto mt-16 md:mt-10">
+                                <img src={section1.cover} className="transform scale-110 md:scale-100" />
                             </div>
                         </div>
                     </BitNobContainer>
@@ -67,7 +67,7 @@ const Business = ()=> {
                             </div>
                         </div>
                     </BitNobContainer>
-                    <div className="text-left mx-auto">
+                    <div className="text-left overflow-hidden mx-auto">
                         {
                             dataList.map( (a,i) => <Service {...a} index={i} key={a.title} /> )
                         }
@@ -88,7 +88,7 @@ const Business = ()=> {
                             }
                         </div>
                     </BitNobContainer>
-                    <div className=" absolute transform left-1/2 -translate-x-1/2 space-x-10 -bottom-10 flex w-full max-w-sm justify-center items-center">
+                    <div className=" absolute transform left-1/2 -translate-x-1/2 space-x-10 bottom-10 md:-bottom-10 flex w-full max-w-sm justify-center items-center">
                         <ArrowOutline
                             arial-label="Previous" 
                             onClick={()=> handleSlide(0)} 
@@ -103,16 +103,14 @@ const Business = ()=> {
                             className="transform -rotate-180 scale-50 md:scale-75 transition-all duration-100 hover:shadow-md rounded-full focus:ring-2 focus:ring-offset-2 focus:ring-black" />
                     </div>
                 </div>
-                <div className="mt-40">
+                <div className=" mt-14 md:mt-40">
                     <BitNobContainer>
-                        <div className={`max-w-7xl mx-auto flex flex-col items-center overflow-hidden lg:overflow-visible pb-0 pt-10 lg:pt-20 px-6 relative rounded-2xl bg-left bg-cover ${styles.business_foot}`}>
+                        <div className={`max-w-7xl mx-auto flex flex-col items-center overflow-hidden lg:overflow-visible pb-0 pt-14 lg:pt-20 px-6 relative rounded-2xl bg-left bg-cover ${styles.business_foot}`}>
                             <div className=" max-w-4xl text-center mx-auto lg:mx-0">
-                                <h1 className="text-black pb-2 leading-tight text-xl sm:text-3xl md:text-5xl lg:text-4xl font-gordita font-black">
+                                <h1 className="text-black pb-2 leading-tight text-xl sm:text-3xl md:text-4xl lg:text-4xl font-gordita font-black">
                                     {section3.title}
                                 </h1>
-                                <div className="flex space-x-4 justify-center max-w-xs mx-auto items-center my-6">
-                                    <BitNobButton className="w-min text-white whitespace-pre">Get Started</BitNobButton>
-                                </div>
+                                <BitNobButton className="w-min flex justify-center mx-auto my-6 text-white whitespace-pre">Get Started</BitNobButton>
                             </div>
                             <img src={section3.cover} alt="app" />
                         </div>
