@@ -37,7 +37,7 @@ const headerLinks = {
     ],
     Business: '/business',
     Company: [
-        {title: "About", route:"/"},
+        {title: "About", route:"/about-us"},
         {title: "Careers", route:"/careers"},
         {title: "Learn", route:"/learn"},
         {title: "FAQs", route:"/faqs"},
@@ -48,7 +48,7 @@ const headerLinks = {
 const footerLinks = {
     links: {
         Company: [
-            {title: "About", route:"/"},
+            {title: "About", route:"/about-us"},
             {title: "Careers", route:"/careers"},
             {title: "Learn", route:"/learn"},
             {title: "FAQs", route:"/faqs"},
@@ -81,9 +81,7 @@ const footerLinks = {
             icon: <FaLinkedinIn />
         },
     },
-    description: `Digital currency is not legal tender, is not backed by any federal government and Coinfly accounts are not FDIC insured. 
-    While Coinfly and its custodial partners make every effort to keep your money safe and covered, please note that any investment entails 
-    risk. The interest rates featured on this page vary according to the dynamics of digital currency markets and are subject to change at any time.`
+    description: `Bitnob is not a custodian, depository institution, fiduciary or bank. Your assets with Bitnob are not insured by any insurance plan. Note that trading or using crypto assets carry significant risks. Bitnob does not provide any financial advice, no information on this website should be considered as such`
 }
 
 
