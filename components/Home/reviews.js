@@ -46,9 +46,9 @@ const Reviews = () => {
         <div className={` mt-32 overflow-x-hidden pb-10 overflow-y-hidden md:mt-40 bg-gradient-to-b from-white via-bitGreen-100 to-white relative ${styles.reviews}`}>
             <BitNobContainer>
                 <div className="max-w-2xl mx-auto"> 
-                    <div className="text-left lg:text-center max-w-sm lg:max-w-md mx-auto xl:max-w-full">
-                        <h2 className="font-bold leading-tight text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl text-black font-gordita mb-2">{homeData.reviews.heading}</h2>
-                        <p className=" md:text-md pt-2 text-bitGray-200 font-quicksand">{homeData.reviews.description}</p>
+                    <div className="text-left lg:text-center max-w-sm lg:max-w-md mx-auto xl:max-w-lg">
+                        <h2 className="font-bold leading-tight text-2xl md:text-3xl xl:text-3xl 2xl:text-5xl text-black font-gordita mb-2">{homeData.reviews.heading}</h2>
+                        <p className="text-small pt-2 text-bitGray-200 font-quicksand">{homeData.reviews.description}</p>
                     </div>
                     <div className="relative mt-28 flex mx-auto max-w-xl xl:max-w-2xl">
                         {

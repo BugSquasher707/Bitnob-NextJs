@@ -64,12 +64,15 @@
           },
       ]
     },
-    slides: [
-      { title: "Lightning Transactions", image: "/images/phone-0.png", trace: <Trace1 /> },
-      { title: "Group Savings", image: "/images/phone-1.png", trace: <Trace2 /> },
-      { title: "Cross Platform Transfers", image: "/images/phone-2.png", trace: <Trace3 />},
-      { title: "NobCredit", image: "/images/phone-3.png", trace: <Trace4 />},
-    ],
+    slides: {
+      defaultImage: '/images/slide-0.png',
+      steps: [
+        { title: "Lightning Transactions", image: "/images/slide-1.png", trace: <Trace1 /> },
+        { title: "Group Savings", image: "/images/slide-2.png", trace: <Trace2 /> },
+        { title: "Bank Withdrawal", image: "/images/slide-3.png", trace: <Trace3 />},
+        { title: "NobCredit", image: "/images/slide-4.png", trace: <Trace4 />},
+      ]
+    },
     seeInAction: {
       heading: "See it in action",
       image: '/images/video.png',
@@ -103,7 +106,7 @@
       ]
     },
     business: {
-      image: "/svgs/business-cover.svg",
+      image: "/images/business-cover.png",
       heading: "See it in action",
       description: "Bring your business onboard for to experience Secure bitcoin payment processing infrastructure."
     },
