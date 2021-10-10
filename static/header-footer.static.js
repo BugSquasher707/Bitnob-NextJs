@@ -1,4 +1,3 @@
-import { FaqSvg, NobCredit, Savings, Usd, Wallet } from "public"
 import { FaFacebook, FaPaperPlane, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
 const headerLinks = {
@@ -6,33 +5,35 @@ const headerLinks = {
     Features: [
         {
             title: 'Dollar Cost Averaging',
-            icon: <Usd />,
+            icon: 'dollar-cost.png',
             route: '/features/dollar-cost-averaging',
             description:'Spread the purchase of an asset over an extended period.'
         },
         {
             title: 'Group Savings',
-            icon: <Savings />,
+            icon: 'group-saving.png',
             route: '/features/group-saving',
             description:'Create a savings plan and invite others to join.'
         },
         {
             title: 'USD Wallet',
-            icon: <Wallet />,
+            icon: 'usd-wallet.png',
             route: '/features/usd-wallet',
             description:'Save in USD and send USD to anyone anywhere in the world.'
         },
         {
             title: 'Nob Credit',
-            icon: <NobCredit />,
+            icon: 'nob-credit.png',
+            // scale: true,
             route: '/features/nob-credit',
             description:'Take a loan for up to 12 months.'
         },
         {
-            title: 'Bitnob Business',
-            icon: <FaqSvg />,
+            title: 'Bank Withdrawal',
+            icon: 'bank-withdrawal.png',
+            scale: true,
             route: '/features/bitnob-business',
-            description:'Take a loan for up to 12 months.'
+            description:'Make withdrawals to your bank account with ease.'
         },
     ],
     Business: '/business',

@@ -1,31 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
     font-family: 'Gordita';
-    src: url('/fonts/gordita/Gordita-Black.eot');
-    src: url('/fonts/gordita/Gordita-Black.ttf');
-    src: url('/fonts/gordita/Gordita-Black.woff');
-    src: url('/fonts/gordita/Gordita-Black.woff2');
-
-    src: url('/fonts/gordita/Gordita-Bold.eot');
-    src: url('/fonts/gordita/Gordita-Bold.ttf');
-    src: url('/fonts/gordita/Gordita-Bold.woff');
-    src: url('/fonts/gordita/Gordita-Bold.woff2');
-
-    src: url('/fonts/gordita/Gordita-Light.eot');
-    src: url('/fonts/gordita/Gordita-Light.ttf');
-    src: url('/fonts/gordita/Gordita-Light.woff');
-    src: url('/fonts/gordita/Gordita-Light.woff2');
-
-    src: url('/fonts/gordita/Gordita-Medium.eot');
-    src: url('/fonts/gordita/Gordita-Medium.ttf');
-    src: url('/fonts/gordita/Gordita-Medium.woff');
-    src: url('/fonts/gordita/Gordita-Medium.woff2');
-
-    src: url('/fonts/gordita/Gordita-Regular.eot');
-    src: url('/fonts/gordita/Gordita-Regular.ttf');
-    src: url('/fonts/gordita/Gordita-Regular.woff');
-    src: url('/fonts/gordita/Gordita-Regular.woff2');
+    font-weight: 900;
+    src: 
+        url('/fonts/gordita/GorditaBlack.otf') format("otf"),
+        url('/fonts/gordita/GorditaBlackItalic.otf') format("otf")
 }
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 700;
+    src: 
+        url('/fonts/gordita/GorditaBold.otf'),
+        url('/fonts/gordita/GorditaBoldtalic.otf')
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 600;
+    src: 
+        url('/fonts/gordita/GorditaMedium.otf'),
+        url('/fonts/gordita/GorditaMediumItalic.otf');
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 500;
+    src: 
+        url('/fonts/gordita/GorditaRegular.otf'),
+        url('/fonts/gordita/GorditaRegularItalic.otf');
+}
+
 
 body {
     font-family: "Quicksand", Gordita;

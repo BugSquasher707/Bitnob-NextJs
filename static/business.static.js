@@ -20,7 +20,7 @@ const businessPageData = {
         },
         {
             asset: "left",
-            cover: '/svgs/payment-form.svg',
+            cover: '/svgs/new-invoice.svg',
             title: "Invoices",
             icon: <InvoiceIcon />,
             description: `You can use Bitnob for business via a dashboard or via our public API for businesses that wants to integrate our services on their own platform`

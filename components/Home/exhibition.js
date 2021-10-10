@@ -16,10 +16,14 @@ const Exhibition = () => {
                         homeData.slides.map(({ trace, title })=> {
                             return(
                                 <div 
-                                    style={{borderColor:"rgba(239, 241, 241, 1)"}} 
+                                    style={{
+                                        borderColor:"rgba(239, 241, 241, 1)",
+                                        minWidth: "300px",
+                                        background: 'red'
+                                    }} 
                                     className="relative py-7 px-12 lg:px-10 xl:px-14 lg:py-4 bg-white whitespace-pre text-black font-bold border font-gordita text-center text-lg md:text-xl lg:text-sm xl:text-md 2xl:text-lg rounded-3xl">
                                     {title}
-                                    <span className="hidden lg:block left-1/2 transform -translate-x-2/3 top-full absolute">{trace}</span>
+                                    {/* <span className="hidden lg:block left-1/2 transform -translate-x-2/3 top-full absolute">{trace}</span> */}
                                 </div>
                             )
                         })
