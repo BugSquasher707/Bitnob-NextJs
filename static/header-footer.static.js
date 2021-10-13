@@ -40,9 +40,10 @@ const headerLinks = {
     Company: [
         {title: "About", route:"/about-us"},
         {title: "Careers", route:"/careers"},
-        {title: "Learn", route:"/learn"},
-        {title: "FAQs", route:"/faqs"},
-        {title: "Referral Leader Board", route:"/referral"},
+        {title: "Learn", route:"https://bitnob.com/academy/"},
+        {title: "FAQs", route:"https://bitnob.com/faq/"},
+        {title: "Referral Leader Board", route:"https://leaderboard.bitnob.com/?_gl=1*1gob7ec*_ga*Nzk4MDIxMTU4LjE2MzI3NjI0MDQ.*_ga_QJNNYZ5R95*MTYzMzY1MDY5NS44LjEuMTYzMzY1MTk5NS4w&_ga=2.15618550.1378171926.1633624459-798021158.1632762404"},
+       
     ]
 }
 
@@ -51,38 +52,38 @@ const footerLinks = {
         Company: [
             {title: "About", route:"/about-us"},
             {title: "Careers", route:"/careers"},
-            {title: "Learn", route:"/learn"},
-            {title: "FAQs", route:"/faqs"},
-            {title: "Referral Leader Board", route:"/referral"},
+            {title: "Learn", route:"https://bitnob.com/academy/"},
+            {title: "FAQs", route:"https://bitnob.com/faq/"},
+            {title: "Referral Leader Board", route:"https://leaderboard.bitnob.com/?_gl=1*1gob7ec*_ga*Nzk4MDIxMTU4LjE2MzI3NjI0MDQ.*_ga_QJNNYZ5R95*MTYzMzY1MDY5NS44LjEuMTYzMzY1MTk5NS4w&_ga=2.15618550.1378171926.1633624459-798021158.1632762404"},
         ],
         Legal: [
-            {title: "Terms of service", route: '/terms'},
-            {title: "Privacy Policy", route: '/privacy'}
+            {title: "Terms of service", route: 'https://bitnob.com/terms-of-services/'},
+            {title: "Privacy Policy", route: 'https://bitnob.com/privacypolicy/'}
         ]
     },
     socials: {
         facebook: {
-            link: "https://facebook.com",
+            link: "https://web.facebook.com/bitnob",
             icon: <FaFacebook />
         },
         twitter: {
-            link: "https://twitter.com",
+            link: "https://twitter.com/Bitnob_official",
             icon: <FaTwitter />
         },
         Instagram: {
-            link: "https://instagram.com",
+            link: "https://www.instagram.com/bitnob",
             icon: <FaInstagram />
         },
-        Email: {
-            link: "email",
+        telegram: {
+            link: "https://t.me/bitnobles",
             icon: <FaPaperPlane />
         },
         LinkinIn: {
-            link: "https://linkindin.com",
+            link: "https://www.linkedin.com/company/bitnob",
             icon: <FaLinkedinIn />
         },
     },
-    description: `Bitnob is not a custodian, depository institution, fiduciary or bank. Your assets with Bitnob are not insured by any insurance plan. Note that trading or using crypto assets carry significant risks. Bitnob does not provide any financial advice, no information on this website should be considered as such`
+    description: `Digital currency is not legal tender, is not backed by any federal government and Coinfly accounts are not FDIC insured. While Coinfly and its custodial partners make every effort to keep your money safe and covered, please note that any investment entails risk. The interest rates featured on this page vary according to the dynamics of digital currency markets and are subject to change at any time.`
 }
 
 

@@ -44,7 +44,7 @@
     },
     howItWorks: {
       cover: "/images/how-it-works.png",
-      heading: "How It Works",
+      heading: "How it works",
       description: "We can help you save and manage your money in a way that maximizes the value of your returns.",
       list: [
           {
@@ -106,7 +106,7 @@
       ]
     },
     business: {
-      image: "/images/business-cover.png",
+      image: "/svgs/business-cover.svg",
       heading: "See it in action",
       description: "Bring your business onboard for to experience Secure bitcoin payment processing infrastructure."
     },

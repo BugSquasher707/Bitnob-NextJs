@@ -19,11 +19,11 @@ const Footer = ()=> {
                         Object.entries(footerLinks.links).map(([title, links])=> (
                             <React.Fragment>
                                 <ul>
-                                    <h3 className="text-black font-bold font-gordita text-xs md:text-sm uppercase mb-3">{title}</h3>
+                                    <h3 className="text-black font-bold font-gordita text-xs md:text-xs uppercase mb-3">{title}</h3>
                                     {
                                         links.map(l=> (
                                             <li>
-                                                <BitNobLink className="block w-full lg:w-max text-center lg:text-left font-normal py-2" to={l.title}>{l.title}</BitNobLink>
+                                                <BitNobLink className="hover:text-bitGreen-200 block w-full lg:w-max text-center lg:text-left py-2" to={l.title}>{l.title}</BitNobLink>
                                             </li>
                                         ))
                                     }
@@ -55,13 +55,13 @@ const Footer = ()=> {
                         {
                             Object.entries(footerLinks.socials).map(([key, {link, icon}])=> (
                                 <li title={key}>
-                                    <BitNobLink className="text-black text-lg" to={link} title={key}>{icon}</BitNobLink>
+                                    <BitNobLink className="text-black text-lg hover:text-bitGreen-200" isExternal to={link} title={key}>{icon}</BitNobLink>
                                 </li>
                             ))
                         }
                     </ul>
                 </div>
-                <p className="mt-10 leading-7 md:leading-normal text-2xs md:text-sm pb-4 md:pb-0 text-bitGray-100">{footerLinks.description}</p>
+                <p className="mt-10 leading-7 md:leading-normal text-2xs md:text-sm pb-4 md:pb-0 opacity-80 text-bitGray-100">{footerLinks.description}</p>
             </BitNobContainer>
         </footer>
     )

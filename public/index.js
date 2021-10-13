@@ -21,7 +21,6 @@ import Trace1 from './svgs/trace-1';
 import Trace2 from './svgs/trace-2';
 import Trace3 from './svgs/trace-3';
 import Trace4 from './svgs/trace-4';
-import Arrow2 from './svgs/arrow-2';
 import PlayButton from './svgs/play';
 import Quote from './svgs/quote';
 import Dots from './svgs/dots';
@@ -40,6 +39,8 @@ import OwnershipIcon from './svgs/ownershipIcon';
 import TeamworkIcon from './svgs/teamworkIcon';
 import ShapesSvg from './svgs/shapes';
 import ArrowCircleIcon from './svgs/arrow-circle';
+import ArrowL from './svgs/ArrowL';
+import ArrowR from './svgs/ArrowR';
 
 
 export {
@@ -59,7 +60,8 @@ export {
     Trace1,
     Trace2,
     Trace3,
-    Arrow2,
+    ArrowL,
+    ArrowR,
     Trace4,
     HowItWorks,
     Shield,

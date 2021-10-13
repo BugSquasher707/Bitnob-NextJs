@@ -3,7 +3,7 @@ import { PlayButton } from "public";
 import { homeData } from "static";
 
 const SeeInAction = () => (
-    <div className=" max-w-4xl xl:max-w-5xl md:mt-60 xl:mt-44 mx-auto">
+    <div className=" max-w-4xl xl:max-w-5xl mt-20 md:mt-60 xl:mt-44 mx-auto">
         <BitNobContainer>
           <div className="max-w-md lg:text-center mx-auto">
             <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl text-black font-gordita mb-2">{homeData.seeInAction.heading}</h2>

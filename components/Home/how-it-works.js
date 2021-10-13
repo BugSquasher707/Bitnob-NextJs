@@ -25,7 +25,7 @@ const HowItWorks = () => {
                     <div className="flex flex-col lg:flex-row mt-20 xl:mt-28 space-y-10 lg:space-y-0 lg:space-x-10 lg:justify-center mb-10">
                         {
                             howItWorks.list.map(({title, description, icon})=> (
-                                <div key={title} className={className(styles.how_hover, "space-y-4 p-8 hover:bg-white flex-1 cursor-default transition-all duration-300 rounded-2xl xl:max-w-xs")}>
+                                <div key={title} className={className(styles.how_hover, "space-y-4 p-8 hover:bg-white flex-1 cursor-default transition-all duration-300 xl:max-w-xs")}>
                                     <span className="block w-min" style={{transform: title === "Loans" && "rotate(180deg)"}}>{icon}</span>
                                     <h4 className="font-bold text-black text-lg md:text-2xl lg:text-md font-gordita">{title}</h4>
                                     <p className="text-bitGray-300 pb-4 text-xs lg:text-sm md:pb-2 block font-quicksand">{description}</p>
