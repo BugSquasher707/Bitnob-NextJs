@@ -1,6 +1,5 @@
 import { BitNobContainer, BitNobLink } from "components"
-import { bitnobPlayStore } from "constants"
-import { bitnobAppleStore } from "constants"
+import { bitnobPlayStore, bitnobAppleStore } from "app-constants"
 import { AppStore, PlayStore } from "public"
 import { homeData } from "static"
 
@@ -18,10 +17,10 @@ const PreFooter = () => (
             }
           </div>
           <div className="flex py-4 lg:py-0 space-x-4 justify-center items-center mt-8">
-            <BitNobLink className="transform scale-90 xl:scale-100" to={bitnobAppleStore}>
+            <BitNobLink className="transform scale-90 xl:scale-100" isExternal to={bitnobAppleStore}>
               <AppStore />
             </BitNobLink>
-            <BitNobLink className="transform scale-90 xl:scale-100" to={bitnobPlayStore}>
+            <BitNobLink className="transform scale-90 xl:scale-100" isExternal to={bitnobPlayStore}>
               <PlayStore />
             </BitNobLink>
           </div>

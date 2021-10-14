@@ -7,18 +7,48 @@ import {
 
 import { AppStore, PlayStore } from "public";
 import styles from 'styles/Home.module.css';
-import { bitnobAppleStore } from 'constants';
-import { bitnobPlayStore } from 'constants';
+import { bitnobAppleStore, bitnobPlayStore } from 'app-constants';
+import { useLayoutEffect, useRef } from 'react';
+import gsap from 'gsap';
 
 const Landing = ()=> {
+  const landingRef = useRef(null)
+  const phoneRef = useRef(null)
   const { landing } = homeData;
+
+  useLayoutEffect(()=> {
+    gsap.timeline()
+    .from(landingRef.current, {
+      y: 400,
+      duration: .6,
+      opacity: 0,
+      scaleY: .5
+    })
+    .to(landingRef.current, {
+      y: 0,
+      opacity: 1,
+      scaleY: 1
+    })
+
+    gsap.timeline()
+    .from(phoneRef.current, {
+      x: 400,
+      duration: .6,
+      opacity: 0
+    })
+    .to(phoneRef.current, {
+      x: 0,
+      opacity: 1
+    })
+  },[])
+
 
   return (
     <Page title="Welcome to BitNob">
       <div className="relative xl:mt-5 overflow-hidden">
         <BitNobContainer>
           <div className="flex flex-col lg:flex-row w-full pt-16 md:pt-20 lg:justify-between">
-            <div className=" mt-8 max-w-md flex-1">
+            <div ref={landingRef} className=" mt-8 max-w-md flex-1">
               <h1 className="text-black leading-tight text-5xl font-gordita font-bold">
                 <span className="italic">{landing.heading[0]}</span> {landing.heading[1]}
               </h1>
@@ -33,7 +63,7 @@ const Landing = ()=> {
               </div>
             </div>
             <div className={`flex-1 flex justify-end mt-10 md:mt-8 lg:mt-0 relative ${styles.landing_cover}`}>
-              <img src={landing.cover} alt="smatphone" className="z-10 relative phone" />
+              <img ref={phoneRef} src={landing.cover} alt="smatphone" className="z-10 relative phone" />
             </div>
           </div>
         </BitNobContainer>

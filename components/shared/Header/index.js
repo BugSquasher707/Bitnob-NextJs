@@ -11,8 +11,7 @@ import { HiViewGrid } from 'react-icons/hi';
 import { LogoFull } from "public";
 import { headerFooterLinks } from "static";
 import { useRouter } from "next/dist/client/router";
-import Image from 'next/image';
-import { bitnobAppleStore } from 'constants'
+import { bitnobAppleStore } from 'app-constants'
 
 const { headerLinks } = headerFooterLinks;
 
@@ -28,7 +27,7 @@ const MenuDropDown = ({ title, data, visible }) => {
                         <BitNobLink 
                             style={{minWidth: "200px"}} 
                             activeStyles='bg-bitGreen-50 px-4 w-full py-1' 
-                            className="py-2 px-8  rounded-xl hover:bg-bitGreen-50" 
+                            className="py-2 px-8  rounded-xl font-semibold hover:bg-bitGreen-50" 
                             to={d.route}>{d.title}</BitNobLink>
                     ))
                 }
@@ -49,8 +48,8 @@ const MenuDropDown = ({ title, data, visible }) => {
                                     <img className="max-w-full" src={`/images/${d.icon}`}  />
                                 </figure>
                                 <div className="pl-3">
-                                    <h4 className="text-bitGreen-500">{d.title}</h4>
-                                    <p className="text-xs mt-1 text-left font-medium">{d.description}</p>
+                                    <h4 className="text-bitGreen-500 font-semibold">{d.title}</h4>
+                                    <p className="text-xs mt-2 text-left font-medium">{d.description}</p>
                                 </div>
                             </div>
                         </BitNobLink>

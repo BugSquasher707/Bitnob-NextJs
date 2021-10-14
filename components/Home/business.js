@@ -11,7 +11,7 @@ const BusinessSection = () => (
           <div className=" mt-10 md:mt-14">
             <img src={homeData.business.image} alt="business" className=" p-2 md:p-0 transform scale-125 md:scale-100" />
             <div className="max-w-xs w-max mx-auto">
-              <BitNobLink className="mt-6 w-60 mb-2" to="https://business.bitnob.com/sign-up">
+              <BitNobLink className="mt-6 w-60 mb-2" isExternal to="https://app.bitnob.co">
                 <BitNobButton className="py-3 md:py-auto">Learn More</BitNobButton>
               </BitNobLink>
             </div>
