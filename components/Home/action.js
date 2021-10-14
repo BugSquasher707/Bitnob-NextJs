@@ -3,10 +3,10 @@ import { PlayButton } from "public";
 import { homeData } from "static";
 
 const SeeInAction = () => (
-    <div className=" max-w-4xl xl:max-w-5xl md:mt-60 xl:mt-44 mx-auto">
+    <div className=" max-w-4xl xl:max-w-5xl mt-20 md:mt-60 xl:mt-44 mx-auto">
         <BitNobContainer>
           <div className="max-w-md lg:text-center mx-auto">
-            <h2 className="font-black text-2xl md:text-5xl text-black font-gordita mb-2">{homeData.seeInAction.heading}</h2>
+            <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl text-black font-gordita mb-2">{homeData.seeInAction.heading}</h2>
             <p className=" md:text-md text-bitGray-200 font-quicksand">{homeData.seeInAction.description}</p>
           </div>
           <div className="bg-bitGreen-200 rounded-xl overflow-hidden relative max-w-3xl lg:max-w-6xl mx-auto mt-10 md:mt-16">

@@ -19,11 +19,11 @@ const Footer = ()=> {
                         Object.entries(footerLinks.links).map(([title, links])=> (
                             <React.Fragment>
                                 <ul>
-                                    <h3 className="text-black font-bold font-gordita text-xs md:text-sm uppercase mb-3">{title}</h3>
+                                    <h3 className="text-black font-bold font-gordita text-xs md:text-xs uppercase mb-3">{title}</h3>
                                     {
                                         links.map(l=> (
                                             <li>
-                                                <BitNobLink className="block w-full lg:w-max text-center lg:text-left font-normal py-2" to={l.title}>{l.title}</BitNobLink>
+                                                <BitNobLink className="hover:text-bitGreen-200 font-medium block w-full lg:w-max text-center lg:text-left py-2" to={l.title}>{l.title}</BitNobLink>
                                             </li>
                                         ))
                                     }
@@ -33,7 +33,7 @@ const Footer = ()=> {
                     }
                     <ul className="flex-1 px-3 md:px-0 md:max-w-sm">
                         <h3 className="text-black font-bold font-gordita text-2xs md:text-sm uppercase mb-4">Subscribe to our newsletter</h3>
-                        <p className=" text-xs md:text-sm text-black">
+                        <p className=" text-xs md:text-sm text-black font-medium">
                             The latest news, articles, and resources, sent to your inbox weekly.
                         </p>
                         <div className="mt-4 ">
@@ -48,20 +48,20 @@ const Footer = ()=> {
                 </div>
                 <div style={{height:"1px"}} className="bg-bitGray-50 mt-16 mb-9 w-full" />
                 <div className="flex flex-col-reverse md:flex-row text-center md:text-left justify-between items-center md:space-x-5">
-                    <h2 className="font-quicksand text-xs md:text-lg mt-8 md:mt-0 block font-bold">
+                    <h2 className="font-quicksand text-xs md:text-sm mt-8 md:mt-0 block font-bold">
                         © {new Date().getFullYear()} Bitnob Technologies. All rights reserved.
                     </h2>
                     <ul className="flex w-full md:w-auto justify-evenly md:justify-items-start space-x-7">
                         {
                             Object.entries(footerLinks.socials).map(([key, {link, icon}])=> (
                                 <li title={key}>
-                                    <BitNobLink className="text-black text-lg" to={link} title={key}>{icon}</BitNobLink>
+                                    <BitNobLink className="text-black text-lg hover:text-bitGreen-200" isExternal to={link} title={key}>{icon}</BitNobLink>
                                 </li>
                             ))
                         }
                     </ul>
                 </div>
-                <p className="mt-10 leading-7 md:leading-normal text-2xs md:text-sm pb-4 md:pb-0 text-bitGray-100">{footerLinks.description}</p>
+                <p className="mt-10 leading-7 md:leading-normal text-2xs md:text-sm pb-4 md:pb-0 opacity-80 text-bitGray-100">{footerLinks.description}</p>
             </BitNobContainer>
         </footer>
     )

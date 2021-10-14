@@ -22,6 +22,7 @@
     }, 
     solutionSection: {
         image: '/images/solution.png',
+        emojis: ['/images/girl-cap.png', '/images/fav.png','/images/black-girl.png','/images/black-man.png'],
         heading: `We’re the solution you’ve been waiting for`,
         description: [`Keeping money in USD and Bitcoin has never been easier`, 'Don’t just take our word for it.'],
         list: [
@@ -44,7 +45,7 @@
     },
     howItWorks: {
       cover: "/images/how-it-works.png",
-      heading: "How It Works",
+      heading: "How it works",
       description: "We can help you save and manage your money in a way that maximizes the value of your returns.",
       list: [
           {
@@ -64,12 +65,15 @@
           },
       ]
     },
-    slides: [
-      { title: "Lightning Transactions", image: "/images/phone-0.png", trace: <Trace1 /> },
-      { title: "Group Savings", image: "/images/phone-1.png", trace: <Trace2 /> },
-      { title: "Cross Platform Transfers", image: "/images/phone-2.png", trace: <Trace3 />},
-      { title: "NobCredit", image: "/images/phone-3.png", trace: <Trace4 />},
-    ],
+    slides: {
+      defaultImage: '/images/slide-0.png',
+      steps: [
+        { title: "Lightning Transactions", image: "/images/slide-1.png", trace: <Trace1 /> },
+        { title: "Group Savings", image: "/images/slide-2.png", trace: <Trace2 /> },
+        { title: "Bank Withdrawal", image: "/images/slide-3.png", trace: <Trace3 />},
+        { title: "NobCredit", image: "/images/slide-4.png", trace: <Trace4 />},
+      ]
+    },
     seeInAction: {
       heading: "See it in action",
       image: '/images/video.png',

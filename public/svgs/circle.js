@@ -2,7 +2,7 @@
 const Circle = props => (
     <svg width="830" height="830" viewBox="0 0 830 830" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <mask id="mask0" maskUnits="userSpaceOnUse" x="0" y="0" width="830" height="830">
-            <circle cx="415" cy="415" r="415" fill="#23E0A2" />
+            <circle cx="415" cy="415" r="415" fill="#23FDB4" />
         </mask>
         <g mask="url(#mask0)">
             <circle cx="415" cy="415" r="415" fill="#23FDB4" />

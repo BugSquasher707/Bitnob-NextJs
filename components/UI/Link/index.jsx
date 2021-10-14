@@ -1,18 +1,40 @@
 import React from 'react';
 import Link from 'next/link'
 import { useRouter } from 'next/dist/client/router';
+import classNames from 'classnames';
 
-const BitNobLink = React.forwardRef(({ children, isActive, className, activeStyles, to="#", ...rest}, ref) => {
+const BitNobLink = React.forwardRef(({ children, isExternal, isActive, className = '', activeStyles, to ="", ...rest}, ref) => {
   const router = useRouter();
   const ACTIVE = router.pathname.startsWith(to);
-  const activeLinkStyle = (isActive || ACTIVE) ? (activeStyles || `text-bitGreen-300`) : ""
+  const activeLinkStyle = (isActive || ACTIVE) ? activeStyles : ""
   
   return(
-      <Link href={to}>
-        <a ref={ref} className={`font-quicksand transition-colors duration-75 text-sm font-medium text-bitGray-200 hover:opacity-90 ${className} ${activeLinkStyle}`} {...rest}>
-          {children}
-        </a>
-      </Link>
+      <>
+        {
+          isExternal ?
+          <a href={to} ref={ref} className={
+            classNames(
+              {'text-bitGray-300': className.indexOf('text-') === -1}, 
+              'font-quicksand transition-colors duration-100 text-sm ',
+              className, 
+              activeLinkStyle
+            )} {...rest}>
+            {children}
+          </a>
+          :
+          <Link href={to}>
+            <a ref={ref} className={
+              classNames(
+                {'text-bitGray-300': className.indexOf('text-') === -1}, 
+                'font-quicksand transition-colors duration-100 text-sm ',
+                className, 
+                activeLinkStyle
+              )} {...rest}>
+              {children}
+            </a>
+          </Link>
+        }
+      </>
     )
   })
 
