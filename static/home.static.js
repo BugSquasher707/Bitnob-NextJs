@@ -22,6 +22,7 @@
     }, 
     solutionSection: {
         image: '/images/solution.png',
+        emojis: ['/images/girl-cap.png', '/images/fav.png','/images/black-girl.png','/images/black-man.png'],
         heading: `We’re the solution you’ve been waiting for`,
         description: [`Keeping money in USD and Bitcoin has never been easier`, 'Don’t just take our word for it.'],
         list: [

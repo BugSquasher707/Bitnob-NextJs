@@ -12,6 +12,7 @@ import { LogoFull } from "public";
 import { headerFooterLinks } from "static";
 import { useRouter } from "next/dist/client/router";
 import Image from 'next/image';
+import { bitnobAppleStore } from 'constants'
 
 const { headerLinks } = headerFooterLinks;
 
@@ -143,9 +144,11 @@ const Header = () => {
                                     Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
                                 }
                             </ul>
-                            <BitNobButton className=" mt-12 py-4 md:py-4 lg:py-2 shadow-md lg:shadow-none lg:mt-0 z-10">
-                                Get Started
-                            </BitNobButton>
+                            <BitNobLink isExternal to={bitnobAppleStore}>
+                                <BitNobButton className=" mt-12 py-4 md:py-4 lg:py-2 shadow-md lg:shadow-none lg:mt-0 z-10">
+                                    Get Started
+                                </BitNobButton>
+                            </BitNobLink>
                         </div>
                     : null
                 }

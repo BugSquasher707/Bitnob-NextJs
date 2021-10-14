@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { homeData } from 'static';
 import { BitNobContainer } from '../';
 
@@ -6,9 +7,27 @@ const Solution = () => {
 
     return (
         <BitNobContainer>
-            <div className="flex flex-col-reverse mt-16 lg:mt-0 lg:items-stretch lg:flex-row md:space-x-10 lg:space-x-14 xl:space-x-20">
-                <div className="self-center w-full lg:self-stretch mt-10 lg:mt-0 relative -ml-3 xl:-ml-8 max-w-lg lg:max-w-lg 2xl:max-w-2xl">
+            <div className="flex flex-col-reverse mt-16 lg:mt-0 lg:items-start lg:flex-row md:space-x-10 lg:space-x-14 xl:space-x-20">
+                <div className="self-center w-full overflow-hidden lg:self-stretch mt-10 lg:mt-0 relative -ml-3 xl:-ml-8 max-w-lg lg:max-w-lg 2xl:max-w-2xl">
                     <img className="max-w-full" src={solutionSection.image} alt="solution" />
+                    {
+                        solutionSection.emojis.map((a, i)=> {
+                        const loci = {
+                            0: {top:"1%", right:"12%"},
+                            1: {top:"23%", right:"1%"},
+                            2: {top:"65%", left:"15%"},
+                            3: {top:"28%", left:"0%"},
+                        }
+
+                            return (
+                                <img 
+                                    src={a} 
+                                    style={loci?.[i]} 
+                                    alt="avatar" 
+                                    className={classNames( {'p-2': i === 1, 'bg-bitGreen-50': i !== 1}, 'absolute w-16 h-16 xl:h-20 xl:w-20  hover:bg-bitGreen-100 rounded-full z-30')} />
+                            )
+                        })
+                    }
                 </div>
                 <div className="max-w-xl lg:max-w-2xl xl:mt-20">
                     <div className="max-w-md 2xl:max-w-2xl">
