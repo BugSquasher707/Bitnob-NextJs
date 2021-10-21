@@ -24,7 +24,6 @@ const headerLinks = {
         {
             title: 'Nob Credit',
             icon: 'nob-credit.png',
-            // scale: true,
             route: '/features/nob-credit',
             description:'Take a loan for up to 12 months.'
         },
