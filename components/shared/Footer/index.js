@@ -19,7 +19,7 @@ const Footer = ()=> {
                         Object.entries(footerLinks.links).map(([title, links])=> (
                             <React.Fragment>
                                 <ul>
-                                    <h3 className="text-black font-bold font-gordita text-xs md:text-xs uppercase mb-3">{title}</h3>
+                                    <h3 className="text-black font-bold font-gordita text-2xs md:text-xs uppercase mb-3">{title}</h3>
                                     {
                                         links.map(l=> (
                                             <li>
@@ -33,7 +33,7 @@ const Footer = ()=> {
                     }
                     <ul className="flex-1 px-3 md:px-0 md:max-w-sm">
                         <h3 className="text-black font-bold font-gordita text-2xs md:text-sm uppercase mb-4">Subscribe to our newsletter</h3>
-                        <p className=" text-xs md:text-sm text-black font-medium">
+                        <p className=" text-2xs md:text-sm text-black font-medium">
                             The latest news, articles, and resources, sent to your inbox weekly.
                         </p>
                         <div className="mt-4 ">
@@ -48,7 +48,7 @@ const Footer = ()=> {
                 </div>
                 <div style={{height:"1px"}} className="bg-bitGray-50 mt-16 mb-9 w-full" />
                 <div className="flex flex-col-reverse md:flex-row text-center md:text-left justify-between items-center md:space-x-5">
-                    <h2 className="font-quicksand text-xs md:text-sm mt-8 md:mt-0 block font-bold">
+                    <h2 className="font-quicksand text-2xs md:text-sm mt-8 md:mt-0 block font-bold">
                         © {new Date().getFullYear()} Bitnob Technologies. All rights reserved.
                     </h2>
                     <ul className="flex w-full md:w-auto justify-evenly md:justify-items-start space-x-7">

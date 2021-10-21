@@ -10,7 +10,7 @@ const PreFooter = () => (
             {
               homeData.preFooter.map(({title, description})=> (
                 <div key={title} className=" p-7 md:p-8 lg:px-6 lg:py-4 flex-1 rounded-3xl bg-white">
-                  <h3 className=" text-md md:text-xl lg:text-md xl:text-lg font-gordita font-bold mb-1">{title}</h3>
+                  <h3 className=" text-xs md:text-xl lg:text-md xl:text-lg font-gordita font-bold mb-1">{title}</h3>
                   <p className=" text-2xs md:text-sm lg:text-xs xl:text-sm text-bitGray-200">{description}</p>
                 </div>
               ))

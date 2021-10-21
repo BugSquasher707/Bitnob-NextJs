@@ -97,6 +97,7 @@
 
     .landing_cover img {
         left: -15%;
+        top: 20px;
         object-fit: contain;
         position: relative;
         transform: scale(1.5); 

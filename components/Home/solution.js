@@ -32,7 +32,7 @@ const Solution = () => {
                 <div className="max-w-xl lg:max-w-2xl xl:mt-20">
                     <div className="max-w-md 2xl:max-w-2xl">
                         <h2 className="font-bold text-xl md:text-4xl xl:text-3xl 2xl:text-4xl font-gordita leading-tight">{solutionSection.heading}</h2>
-                        <p className=" md:text-sm mt-4 font-quicksand text-bitGray-300">{solutionSection.description[0]} <br /> {solutionSection.description[1]}</p>
+                        <p className=" text-xs md:text-sm mt-4 font-quicksand text-bitGray-300">{solutionSection.description[0]} <br /> {solutionSection.description[1]}</p>
                     </div>
                     <div className="space-y-6 mt-14 md:mt-18 max-w-lg">
                         {
@@ -42,8 +42,8 @@ const Solution = () => {
                                         {icon}
                                     </div>
                                     <div style={{borderColor:"rgba(239, 241, 241, 1)"}} className=" px-8 2xl:px-10 py-6 md:py-6 border rounded-3xl">
-                                        <h4 className="text-lg pb-2 md:pb-0 lg:text-lg  whitespace-pre 2xl:text-lg font-gordita font-bold">{title}</h4>
-                                        <p className="mt-2 text-sm text-bitGray-200">{description}</p>
+                                        <h4 className=" text-sm md:text-lg pb-2 md:pb-0 lg:text-lg  md:whitespace-pre 2xl:text-lg font-gordita font-bold">{title}</h4>
+                                        <p className="mt-2 text-2xs md:text-sm opacity-90 text-bitGray-200">{description}</p>
                                     </div>
                                 </div>
                             ))

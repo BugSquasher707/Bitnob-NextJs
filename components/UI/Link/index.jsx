@@ -14,9 +14,9 @@ const BitNobLink = React.forwardRef(({ children, isExternal, isActive, className
           isExternal ?
           <a href={to} ref={ref} className={
             classNames(
+              className, 
               {'text-bitGray-300': className.indexOf('text-') === -1}, 
               'font-quicksand transition-colors duration-100 text-sm ',
-              className, 
               activeLinkStyle
             )} {...rest}>
             {children}
