@@ -82,8 +82,8 @@ const businessData = {
 const dollarCostData = {
     heading: "Dollar Cost Averaging",
     subHeading: "Bitnob's Feature",
-    cover: "/svgs/dollar-cost-desktop-cover.svg",
-    art: "/svgs/dollar-cost-mobile-cover.svg",
+    cover: "/images/dollarcost-cover.png",
+    art: "/svgs/dollarcost-art.svg",
     dataList:[
         {
             title: "What is Dollar Cost Averaging?",
