@@ -12,6 +12,7 @@ import { LogoFull } from "public";
 import { headerFooterLinks } from "static";
 import { useRouter } from "next/dist/client/router";
 import { bitnobAppleStore } from 'app-constants'
+import { isBrowser } from 'utils'
 
 const { headerLinks } = headerFooterLinks;
 
@@ -117,8 +118,9 @@ const Header = () => {
     const [isDesktop, setIsDesktop] = useState(false)
 
     useLayoutEffect(()=> {
-        if (typeof window !== 'undefined' && window.innerWidth > 768) setIsDesktop(true)
-    },[])
+        if (isBrowser()?.innerWidth > 768) return setIsDesktop(true);
+        setIsDesktop(false)
+    },[isBrowser()?.innerWidth])
 
     useEffect(()=> {
         headerRef.current?.scrollIntoViewIfNeeded()

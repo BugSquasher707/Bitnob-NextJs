@@ -3,8 +3,8 @@
 const nobCreditData = {
     heading: "NobCredit",
     subHeading: "Bitnob's Feature",
-    desktopImg: "/svgs/nob-desktop-cover.svg",
-    mobileImg: "/svgs/nob-mobile-cover.svg",
+    cover: "/images/nob-img.png",
+    art: "/svgs/nob-art.svg",
     dataList:[
         {
             title: "What is NobCredit",
@@ -31,8 +31,8 @@ const nobCreditData = {
 const usdWalletData = {
     heading: "USD Wallet",
     subHeading: "Bitnob's Feature",
-    desktopImg: "/svgs/usdWallet-desktop-cover.svg",
-    mobileImg: "/svgs/usdWallet-mobile-cover.svg",
+    cover: "/svgs/usdWallet-desktop-cover.svg",
+    art: "/svgs/usdWallet-mobile-cover.svg",
     dataList:[
         {
             title: "What is USD Wallet?",
@@ -57,8 +57,8 @@ const usdWalletData = {
 const businessData = {
     heading: "Bitnob for Businesses",
     subHeading: "Bitnob's Feature",
-    desktopImg: "/svgs/business-desktop-cover.svg",
-    mobileImg: "/svgs/business-mobile-cover.svg",
+    cover: "/svgs/business-desktop-cover.svg",
+    art: "/svgs/business-mobile-cover.svg",
     dataList:[
         {
             title: "What is Bitnob for Businesses?",
@@ -82,8 +82,8 @@ const businessData = {
 const dollarCostData = {
     heading: "Dollar Cost Averaging",
     subHeading: "Bitnob's Feature",
-    desktopImg: "/svgs/dollar-cost-desktop-cover.svg",
-    mobileImg: "/svgs/dollar-cost-mobile-cover.svg",
+    cover: "/svgs/dollar-cost-desktop-cover.svg",
+    art: "/svgs/dollar-cost-mobile-cover.svg",
     dataList:[
         {
             title: "What is Dollar Cost Averaging?",
@@ -107,8 +107,8 @@ const dollarCostData = {
 const groupSavingData = {
     heading: "Group Saving",
     subHeading: "Bitnob's Feature",
-    desktopImg: "/svgs/group-saving-desktop-cover.svg",
-    mobileImg: "/svgs/group-saving-mobile-cover.svg",
+    cover: "/svgs/group-saving-desktop-cover.svg",
+    art: "/svgs/group-saving-mobile-cover.svg",
     dataList:[
         {
             title: "What is Group Saving?",
