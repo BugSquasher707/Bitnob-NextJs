@@ -7,7 +7,7 @@ const nobCreditData = {
     art: "/svgs/nob-art.svg",
     dataList:[
         {
-            title: "What is NobCredit",
+            title: "What is NobCredit?",
             description: `NobCredit is Bitnob loans feature that allows you to take a loan for up to 12 months with your Bitcoin as collateral. Users qualify for this program with a minimum BTC Wallet balance of $100.`
         },
         {
@@ -31,8 +31,8 @@ const nobCreditData = {
 const usdWalletData = {
     heading: "USD Wallet",
     subHeading: "Bitnob's Feature",
-    cover: "/svgs/usdWallet-desktop-cover.svg",
-    art: "/svgs/usdWallet-mobile-cover.svg",
+    cover: "/svgs/usdwallet-cover.svg",
+    art: "/svgs/usdwallet-art.svg",
     dataList:[
         {
             title: "What is USD Wallet?",
