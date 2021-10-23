@@ -107,8 +107,8 @@ const dollarCostData = {
 const groupSavingData = {
     heading: "Group Saving",
     subHeading: "Bitnob's Feature",
-    cover: "/svgs/group-saving-desktop-cover.svg",
-    art: "/svgs/group-saving-mobile-cover.svg",
+    cover: "/svgs/groupsaving-cover.svg",
+    art: "/svgs/groupsaving-art.svg",
     dataList:[
         {
             title: "What is Group Saving?",
