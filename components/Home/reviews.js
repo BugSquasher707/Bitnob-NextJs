@@ -43,12 +43,12 @@ const Reviews = () => {
     }
 
     return(
-        <div className={` mt-32 overflow-x-hidden pb-10 overflow-y-hidden md:mt-40 bg-gradient-to-b from-white via-bitGreen-100 to-white relative ${styles.reviews}`}>
+        <div className={` mt-32 overflow-x-hidden pb-20 md:pb-10 overflow-y-hidden md:mt-40 bg-gradient-to-b from-white via-bitGreen-100 to-white relative ${styles.reviews}`}>
             <BitNobContainer>
                 <div className="max-w-2xl mx-auto"> 
                     <div className="text-left lg:text-center max-w-sm lg:max-w-md mx-auto xl:max-w-lg">
                         <h2 className="font-bold leading-tight text-2xl md:text-3xl xl:text-3xl 2xl:text-5xl text-black font-gordita mb-2">{homeData.reviews.heading}</h2>
-                        <p className="text-small pt-2 text-bitGray-200 font-quicksand">{homeData.reviews.description}</p>
+                        <p className=" text-xs md:text-sm pt-2 text-bitGray-200 font-quicksand">{homeData.reviews.description}</p>
                     </div>
                     <div className="relative mt-28 flex mx-auto max-w-xl xl:max-w-2xl">
                         {
@@ -65,7 +65,7 @@ const Reviews = () => {
                         <Dots className="absolute -top-20 md:-top-8 transform scale-75 md:scale-90 -right-52 md:-right-32" />
                         <Dots variant="green" className="absolute top-52 transform scale-75 md:scale-90 -left-40 md:-left-28" />
                     </div>
-                    <div className=" absolute transform left-1/2 -translate-x-1/2 space-x-10 bottom-0 flex w-full max-w-sm justify-center items-center md:mt-16 pb-6">
+                    <div className=" absolute transform left-1/2 -translate-x-1/2 space-x-10 -bottom-14 md:bottom-0 flex w-full max-w-sm justify-center items-center md:mt-16 pb-14 md:pb-6">
                         <ArrowOutline
                             arial-label="Previous" 
                             onClick={()=> handleSlide(0)} 

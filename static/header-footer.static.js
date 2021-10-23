@@ -6,33 +6,32 @@ const headerLinks = {
         {
             title: 'Dollar Cost Averaging',
             icon: 'dollar-cost.png',
-            route: '/features/dollar-cost-averaging',
+            route: '/dollar-cost-averaging',
             description:'Spread the purchase of an asset over an extended period.'
         },
         {
             title: 'Group Savings',
             icon: 'group-saving.png',
-            route: '/features/group-saving',
+            route: '/group-saving',
             description:'Create a savings plan and invite others to join.'
         },
         {
             title: 'USD Wallet',
             icon: 'usd-wallet.png',
-            route: '/features/usd-wallet',
+            route: '/usd-wallet',
             description:'Save in USD and send USD to anyone anywhere in the world.'
         },
         {
             title: 'Nob Credit',
             icon: 'nob-credit.png',
-            // scale: true,
-            route: '/features/nob-credit',
+            route: '/nob-credit',
             description:'Take a loan for up to 12 months.'
         },
         {
             title: 'Bank Withdrawal',
             icon: 'bank-withdrawal.png',
             scale: true,
-            route: '/features/bitnob-business',
+            route: '/bank-withdrawal',
             description:'Make withdrawals to your bank account with ease.'
         },
     ],

@@ -47,12 +47,12 @@ const Landing = ()=> {
     <Page title="Welcome to BitNob">
       <div className="relative xl:mt-5 overflow-hidden">
         <BitNobContainer>
-          <div className="flex flex-col lg:flex-row w-full pt-16 md:pt-20 lg:justify-between">
+          <div className="flex flex-col lg:flex-row w-full pt-10 md:pt-20 lg:justify-between">
             <div ref={landingRef} className=" mt-8 max-w-md flex-1">
-              <h1 className="text-black leading-tight text-5xl font-gordita font-bold">
+              <h1 className="text-black leading-tight text-4xl md:text-5xl font-gordita font-bold">
                 <span className="italic">{landing.heading[0]}</span> {landing.heading[1]}
               </h1>
-              <p className="mt-6 max-w-md text-xs md:text-sm xl:text-md text-bitGray-200">{landing.description}</p>
+              <p className="mt-6 max-w-md text-xs md:text-sm xl:text-md font-quicksand font-light opacity-90 text-bitGray-200">{landing.description}</p>
               <div className="flex space-x-2 md:space-x-4 items-center mt-12 md:mt-8">
                 <BitNobLink isExternal to={bitnobAppleStore}>
                   <AppStore className="w-38 xl:w-auto" />
