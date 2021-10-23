@@ -54,27 +54,29 @@ const usdWalletData = {
     ]
 }
 
-const businessData = {
-    heading: "Bitnob for Businesses",
+const bankwithdrawalData = {
+    heading: "Bank Withdrawal",
     subHeading: "Bitnob's Feature",
-    cover: "/svgs/business-desktop-cover.svg",
-    art: "/svgs/business-mobile-cover.svg",
+    cover: "/images/bankwithdrawal-cover.png",
+    art: "/svgs/bankwithdrawal-art.svg",
     dataList:[
         {
-            title: "What is Bitnob for Businesses?",
-            description: `Bitnob for Businesses is an enterprise platform that enables businesses accept payments for services in Cryptocurrency (Bitcoin).`
+            title: "What is Bank Withdrawal?",
+            description: `With Bank Withdrawal, you can withdraw from your USD wallet into your local bank account within minutes. This feature allows you to still have access to some funds from your USD savings, to meet emergency needs in your local currency.`
         },
         {
-            title: "How does Bitnob for Business work?",
-            description: "You can use Bitnob for Business via a dashboard or via our public API for businesses that wants to integrate our services on their own platform."
+            title: "How does Bank Withdrawal work?",
+            description: `All you need to do is go to your USD wallet, click on Withdraw and select your preferred local currency. After that, indicate the USD amount you want to withdraw. The exchange rate is instantly displayed and you already know how much you are getting in your local currency. 
+            Provide your local account details you want to be credited in. Once this is done, you will receive your money.
+            `
         },
         {
-            title: "What is the purpose of Bitnob for Business?",
+            title: "How does Bank Withdrawal work?",
             description: `The purpose of Bitnob for Business is to help businesses accept payments in Bitcoin.`,
         },
         {
-            title: "What makes Bitnob for Business? unique?",
-            description: `What makes Bitnob for Business unique is the fact that buusiness owners can accept payment for services in cryptocurrency.`,
+            title: "What makes Bitnob Bankwithdrawal unique?",
+            description: `Our Bank Withdrawal feature is unique because it is fast and seamless.`,
         }
     ]
 }
@@ -133,7 +135,7 @@ const groupSavingData = {
 export {
     nobCreditData,
     usdWalletData,
-    businessData,
+    bankwithdrawalData,
     dollarCostData,
     groupSavingData
 }

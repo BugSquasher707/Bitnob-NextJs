@@ -1,0 +1,126 @@
+.wrapper {
+    width: 100%;
+    max-height: 700px;
+    margin-top: 100px;
+    left: 10%;
+    position: relative;
+}
+
+.wrapper img {
+    object-fit: contain;
+    z-index: 9;
+}
+
+.product_bg {
+    left: 5%;
+    height: 55%;
+    min-height: 380px;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    min-width: 2000px;
+    transform: translateY(-50%);
+    background: linear-gradient(258.64deg, rgba(0, 228, 175, 0.6) 37.72%, rgba(0, 228, 175, 0.2) 110.03%);
+    border-radius: 24px;
+}
+
+
+
+@media (min-width:1024px) {
+    .wrapper img:first-child {
+        position: relative;
+        top: -25px;
+        left: 0%;
+        z-index: 99;
+        min-width: 300px;
+    }
+    
+    .art {
+        max-height: 400px;
+        position: relative;
+        right: 30%;
+        bottom: 80px;
+        z-index: 0;
+    }
+    
+    .product_bg {
+        left: -10%;
+        min-height: 350px;
+    }
+}
+
+
+@media (min-width:1028px) {
+    .wrapper img:first-child {
+        left: 5%;
+        min-width: 280px;
+    }
+
+    .product_bg {
+        left: -5%;
+        min-width: 6000px;
+        min-height: 390px;
+    }
+
+    .art {
+        right: 10%;
+        bottom: 70px;
+    }
+    
+}
+
+@media (min-width:1536px){
+    .wrapper img:first-child {
+        left: 0%;
+        min-width: 300px;
+        z-index: 99;
+    }
+    
+    .art {
+        left: 5%;
+        bottom: 75px;
+    }
+
+    .product_bg {
+        left: -15%;
+    }
+}
+
+@media (max-width: 768px){
+    .wrapper {
+        margin-bottom: -80px;
+    }
+
+    .wrapper img:first-child {
+        max-height: 700px ;
+        position: relative;
+        left: 10%;
+        top: -15px;
+        min-width: 450px;
+    }
+
+    .art {
+        display: none;
+    }
+
+    .product_bg {
+        min-height: 450px;
+        left: 10%;
+    }
+    
+}
+
+@media (max-width: 640px){
+    .wrapper img:first-child {
+        transform: scale(1.2);
+        left: 0%;
+        top: -30px;
+        min-width: 100%;
+        max-height: 400px;
+    }
+
+    .product_bg {
+        min-height: 300px;
+        left: 0%;
+    }
+}
