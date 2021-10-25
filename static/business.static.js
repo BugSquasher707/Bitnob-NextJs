@@ -5,7 +5,7 @@ const businessPageData = {
     section1: {
         heading: "Accept business payments in Bitcoin",
         description: "Bitnob for Businesses is an enterprise platform that enables businesses accept payments for services in Bitcoin",
-        cover: "/svgs/business-page-cover1.svg",
+        cover: "/images/business-cover.png",
     },
     section2:{
         heading: "All the features your business needs",
@@ -19,15 +19,15 @@ const businessPageData = {
             description: `You can use Bitnob for business via a dashboard or via our public API for businesses that wants to integrate our services on their own platform`
         },
         {
-            asset: "left",
             cover: '/svgs/new-invoice.svg',
+            asset: '/svgs/invoices-art.svg',
             title: "Invoices",
             icon: <InvoiceIcon />,
             description: `You can use Bitnob for business via a dashboard or via our public API for businesses that wants to integrate our services on their own platform`
         },
         {
-            asset: "right",
             cover: '/svgs/customer-form.svg',
+            asset: '/svgs/customer-art.svg',
             title: "Customers",
             icon: <PeopleIcon />,
             description: `You can use Bitnob for business via a dashboard or via our public API for businesses that wants to integrate our services on their own platform`

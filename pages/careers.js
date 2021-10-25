@@ -21,7 +21,7 @@ const Careers = ()=> {
                     <BitNobContainer>
                         <div className="mt-10 xl:mt-20 text-center mx-auto">
                             <div className="max-w-lg mx-auto">
-                                <h2 className="font-black text-2xl md:text-3xl xl:text-4xl font-gordita">{section1.heading}</h2>
+                                <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl font-gordita">{section1.heading}</h2>
                                 <p className=" md:text-md my-6 font-quicksand text-bitGray-200">{section1.description}</p>
                                 <BitNobButton className="mt-10 mb-2 py-3 md:py-auto max-w-xs w-max mx-auto">Get Started</BitNobButton>
                             </div>
