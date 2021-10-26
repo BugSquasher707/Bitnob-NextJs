@@ -81,8 +81,8 @@ const Business = ()=> {
                         </div>
 
                         <div className={`flex flex-col-reverse lg:flex-row justify-center items-center max-w-4xl mx-auto gap-x-20 mt-20`}>
-                            <div className={`max-w-lg flex justify-center mx-auto relative z-10 mt-8 lg:mt-0 `}>
-                                <img src={dataList[3]?.cover} className="z-10" />
+                            <div className={`max-w-lg flex justify-center mx-auto relative mt-16 z-10 md:mt-10 lg:mt-0 `}>
+                                <img src={dataList[3]?.cover} className="z-10 transform scale-125 md:scale-100" />
                                 <img style={{maxHeight: '500px'}} src={dataList[3]?.asset} className="flex justify-center absolute -left-80" />
                             </div>
                             <div className={`space-y-4 max-w-sm z-10 cursor-default transition-all duration-400 rounded-2xl `}>

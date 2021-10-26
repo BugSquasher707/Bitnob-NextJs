@@ -61,3 +61,7 @@ body {
     transition: cubic-bezier(0.165, 0.84, 0.44, 1);
     transform: scale(1.7) !important;
 } 
+
+.bit-shadow:hover {
+    box-shadow: 60px 64px 74px rgba(151, 142, 142, 0.1);
+}
