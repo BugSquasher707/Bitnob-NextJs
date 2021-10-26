@@ -12,17 +12,19 @@ export const Review = ({ i, active, position, reviews, description, author})=> {
         zIndex:  isActive ? reviews.length : reviews.length - i,
         transform: `translateY(${ isActive ? 0 : (i * 35)}px) scale(${ isActive ? 1 : (1 - i/10)})`,
         opacity: isActive ? 1 : `1 - ${i/10}`,
-        boxShadow:"0px 18px 52.8537px rgba(63, 177, 181, 0.16)"
+        boxShadow: '0px 18px 52.8537px rgba(63, 177, 181, 0.16)',
+        borderRadius: '20px',
+        maxWidth: "600px"
     }
 
     return (
         <>
-            <div style={styles} className={`text-center transition-all duration-300 absolute rounded-3xl bg-white px-6 md:p-12 py-9 flex flex-col items-center`}>
+            <div style={styles} className={`text-center mx-auto transition-all duration-300 absolute bg-white px-4 md:px-6 md:p-12 py-9 flex flex-col items-center`}>
                 <Quote className="absolute transform scale-50 xl:scale-75 -top-1" />
                 
                 <p className=" md:text-md lg:text-lg mt-8 text-bitGray-300 font-quicksand">{description}</p>
-                <span className="block mt-8 md:mt-12 text-xs md:text-md 2xl:text-lg">
-                    <b>{author}</b> - <span>{position}</span>
+                <span className="block mt-8 md:mt-12 text-xs md:text-md font-gordita">
+                    <b>{author}</b> {position ? '-' : null} <span>{position}</span>
                 </span>
             </div>
         </>

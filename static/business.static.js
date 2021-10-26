@@ -1,4 +1,4 @@
-import { CogIcon, InvoiceIcon, PeopleIcon, TransactionIcon, WalletIcon } from "public"
+import { CogIcon, InvoiceIcon, PeopleIcon, TicketIcon, TransactionIcon, WalletIcon } from "public"
 
 
 const businessPageData = {
@@ -35,12 +35,12 @@ const businessPageData = {
         {
             cover: '/svgs/payment-form.svg',
             title: "Payment Links & Processing",
-            icon: <TransactionIcon />,
+            icon: <TicketIcon />,
             description: `With Bitnob for business, payments can either be processed Onchain or via the Lightning Network.`
         },
         {
-            asset: "right",
             cover: '/svgs/api-form.svg',
+            asset: '/svgs/api-art.svg',
             title: "API Integration",
             icon: <CogIcon />,
             description: `Our API integration enables businesses build on our in house infrastructure. It is a seamless process with our detailed documentation by your side.
