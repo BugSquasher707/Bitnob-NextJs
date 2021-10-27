@@ -65,8 +65,8 @@ const AboutUs = ()=> {
                     <div 
                         className={`flex flex-col lg:flex-row justify-between items-center mt-20 md:mt-36 bg-black text-white rounded-3xl overflow-hidden lg:overflow-visible px-6 md:px-20 py-12 lg:px-14 xl:px-20 2xl:p-20 relative bg-left bg-cover`}>
                         <div className="flex lg:block flex-col items-center lg:items-stretch text-center lg:text-left max-w-md lg:max-w-sm xl:max-w-lg">
-                            <h2 className="font-black text-2xl md:text-3xl xl:text-4xl font-gordita">{join.heading}</h2>
-                            <p className=" text-xs md:text-md my-4 font-quicksand">{join.description}</p>
+                            <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl font-gordita">{join.heading}</h2>
+                            <p className=" text-xs md:text-md my-4 opacity-95 font-quicksand">{join.description}</p>
                             <BitNobButton 
                                 onClick={()=> router.push('/careers')} 
                                 className="my-8 md:my-14 lg:mt-10 mb-2 py-3 md:py-auto w-max">See Job Openings</BitNobButton>

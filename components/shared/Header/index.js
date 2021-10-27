@@ -1,8 +1,8 @@
-import className from 'classnames'
+import classNames from 'classnames'
 import BitNobContainer from "../../UI/Container"
 import BitNobButton from "../../UI/Button"
 import BitNobLink from "../../UI/Link"
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
+import React, { useEffect, useRef } from "react"
 
 import style from './Header.module.css';
 import { useCloseContext } from "../../../hooks";
@@ -12,12 +12,11 @@ import { LogoFull } from "public";
 import { headerFooterLinks } from "static";
 import { useRouter } from "next/dist/client/router";
 import { bitnobAppleStore } from 'app-constants'
-import { isBrowser } from 'utils'
 
 const { headerLinks } = headerFooterLinks;
 
 
-const MenuDropDown = ({ title, data, visible }) => {
+const MenuDropDown = ({ title, setVisible, data, visible }) => {
     if (!data) return null
 
     if (title === "Company") {
@@ -26,6 +25,7 @@ const MenuDropDown = ({ title, data, visible }) => {
                 {
                     data.map((d) => (
                         <BitNobLink 
+                            onClick={()=> setVisible(false)}
                             style={{minWidth: "200px"}} 
                             activeStyles='bg-bitGreen-50 px-4 w-full py-1' 
                             className="py-2 px-8  rounded-xl font-semibold hover:bg-bitGreen-50" 
@@ -41,11 +41,14 @@ const MenuDropDown = ({ title, data, visible }) => {
             <div className={`absolute z-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-2 md:py-6 lg:py-8 px-2 md:px-6 lg:px-10 rounded-lg bg-white shadow-md ${style.dropDown} ${style.wide} ${visible ? 'flex' : 'hidden'}`}>
                 {
                     data.map((d) => (
-                        <BitNobLink className="hover:bg-bitGreen-50 rounded-xl hover:bitGreen-50 pl-2 pr-6 py-2" activeStyles='bg-bitGreen-50 transition-all duration-100' to={d.route}>
+                        <BitNobLink 
+                            onClick={()=> setVisible(false)}
+                            className="hover:bg-bitGreen-50 rounded-xl hover:bitGreen-50 pl-2 pr-6 py-2" 
+                            activeStyles='bg-bitGreen-50 transition-all duration-100' to={d.route}>
                             <div className="flex">
                                 <figure 
                                     style={{minWidth: "55px", maxWidth: "55px", height:"55px"}} 
-                                    className={className({'p-2': d.scale}, 'relative -mt-1')}>
+                                    className={classNames({'p-2': d.scale}, 'relative -mt-1')}>
                                     <img className="max-w-full" src={`/images/${d.icon}`}  />
                                 </figure>
                                 <div className="pl-3">
@@ -66,20 +69,13 @@ const MenuDropDown = ({ title, data, visible }) => {
 
 const LinkLists = ({ data }) => {
     const [key, val] = data
-    const router = useRouter()
 
     const [activelink, setActiveLink] = React.useState('')
-    const { ref, visible, setVisible } = useCloseContext(true)
-
-    useEffect(()=> {
-        setVisible(false)
-    }, [router.pathname])
-
-
+    const { ref, visible, setVisible } = useCloseContext(false)
 
     return (
         <React.Fragment key={key}>
-            <li className={className({relative: activelink === 'Company'})} ref={ref}>
+            <li className={classNames({relative: activelink === 'Company'})} ref={ref}>
                 {
                     Array.isArray(val) ?
                         <span
@@ -87,7 +83,7 @@ const LinkLists = ({ data }) => {
                                 setActiveLink(key);
                                 setVisible(!visible)
                             }}
-                            className={className(
+                            className={classNames(
                                 {'text-bitGray-300': !(activelink === key && visible)}, 
                                 {'text-bitGreen-300':(activelink === key && visible)}, 
                                 `flex lg:cursor-pointer transition-all duration-200 hover:text-bitGreen-200 items-center space-x-8 w-full lg:w-auto lg:space-x-1`
@@ -105,7 +101,7 @@ const LinkLists = ({ data }) => {
                             {key}
                         </BitNobLink>
                 }
-                <MenuDropDown visible={activelink === key && visible} title={activelink} data={headerLinks[activelink]} />
+                <MenuDropDown setVisible={setVisible} visible={activelink === key && visible} title={activelink} data={headerLinks[activelink]} />
             </li>
         </React.Fragment>
     )
@@ -115,26 +111,57 @@ const Header = () => {
     const router = useRouter()
     const headerRef = useRef(null)
     const { ref, visible, setVisible } = useCloseContext(false, true)
-    const [isDesktop, setIsDesktop] = useState(false)
-
-    useLayoutEffect(()=> {
-        if (isBrowser()?.innerWidth > 768) return setIsDesktop(true);
-        setIsDesktop(false)
-    },[isBrowser()?.innerWidth])
 
     useEffect(()=> {
+        setVisible(false)
         headerRef.current?.scrollIntoViewIfNeeded()
     }, [router.pathname])
 
     
     return(
         <BitNobContainer>
-            <header ref={headerRef} className="flex z-20 justify-between items-center relative py-3 xl:py-4 px-4 md:px-6 mt-6 rounded-2xl bg-bitGreen-50 w-full">
+            <header ref={headerRef} className="hidden lg:flex z-20 justify-between items-center relative py-3 xl:py-4 px-4 md:px-6 mt-6 rounded-2xl bg-bitGreen-50 w-full">
+                <BitNobLink to="/">
+                    <LogoFull className=" w-24 lg:w-32" />
+                </BitNobLink>
+                    <div 
+                        ref={ref} 
+                        className={classNames(`transition-all duration-300 bg-white z-50 lg:bg-transparent shadow-lg lg:shadow-none 
+                        px-6 lg:px-0 py-10 lg:py-0 w-full lg:w-auto absolute left-0 top-24 md:top-28 lg:top-0 lg:static flex flex-col 
+                        lg:flex-row justify-between lg:items-center lg:space-x-24`, style.drop_visible)}>
+                        <ul className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-12">
+                            {
+                                Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
+                            }
+                        </ul>
+                        <BitNobLink isExternal to={bitnobAppleStore}>
+                            <BitNobButton className=" mt-12 py-4 md:py-4 lg:py-2 shadow-md lg:shadow-none lg:mt-0 z-10">
+                                Get Started
+                            </BitNobButton>
+                        </BitNobLink>
+                    </div>
+                <div 
+                    onClick={()=> setVisible(!visible)}
+                    tabIndex="0" 
+                    style={{ transform: visible ? 'rotate(135deg)' : ''}}
+                    role="button" 
+                    className={`
+                        appearance-none outline-none text-3xl md:text-4xl lg:hidden 
+                        cursor-default transition-all duration-300 hover:opacity-70 
+                        focus:ring-2 focus:ring-offset-2 focus:ring-bitGreen-200 bg-white 
+                        rounded-full p-2 md:p-1 flex justify-center items-center box-border w-12 h-12 
+                        md:h-16 md:w-16 text-bitGreen-200`}>
+                    <HiViewGrid />
+                </div>
+            </header>
+
+            {/**Mobile */}
+            <header ref={headerRef} className="flex lg:hidden z-20 justify-between items-center relative py-3 xl:py-4 px-4 md:px-6 mt-6 rounded-2xl bg-bitGreen-50 w-full">
                 <BitNobLink to="/">
                     <LogoFull className=" w-24 lg:w-32" />
                 </BitNobLink>
                 {
-                    (isDesktop || visible) ? 
+                    visible ? 
                         <div 
                             ref={ref} 
                             className={`${visible ? style.drop_visible : ''} transition-all duration-300 bg-white z-50 lg:bg-transparent shadow-lg lg:shadow-none 

@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 
-export const useCloseContext = (initialValue, defer = false) => {
+export const useCloseContext = (initialValue = false, defer = false) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(initialValue);
 
