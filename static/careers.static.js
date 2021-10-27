@@ -11,13 +11,10 @@ const careersPageData = {
     },
     gallery: ['/images/team1.png','/images/team2.png','/images/team3.png','/images/team4.png'],
     jobs: [
-        {title: "Product Designer", location: "Nigeria"},
-        {title: "Product Designer", location: "Ghana"},
-        {title: "UX Writer", location: "Nigeria"},
-        {title: "Product Manager - Collaboration", location: "Nigeria"},
-        {title: "Content Marketing Manager", location: "Nigeria"},
-        {title: "Product Designer", location: "Nigeria"},
-        {title: "Product Designer", location: "Nigeria"},
+        {title: "HR Programs Lead", link: '#', tags:['Human Resource', 'Full-time', 'Remote'], description:`HR Programs Lead As HR Programs Lead, your responsibility will be to build excellent people programs to attract, develop and retain top talent. You will use innovative and streamlined processes to help the company maintain its culture as it rapidly scales. Human Resources Full-time Remote`},
+        {title: "Product Designer", link: '#', tags:['Design', 'Full-time', 'Remote'], description: `Product Designer
+        As Product designer, your responsibility will be to build excellent user interfaces and also create amazing user experiences as well. You will use innovative and streamlined processes to help the company maintain its culture as it rapidly scales.
+        Design   Full-time  Remote`},
     ]
 }
 

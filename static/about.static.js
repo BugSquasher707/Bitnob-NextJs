@@ -4,7 +4,7 @@ const aboutPageData = {
     welcome: {
         heading: "Welcome to the World of Crypto!",
         description: "Begin your journey with us today.",
-        bg: "/svgs/about-us.svg",
+        bg: "/images/aboutus-cover.png",
         cover: "/images/about-us-phone.png"
     },
     values: {
@@ -51,73 +51,6 @@ const aboutPageData = {
     mission: {
         heading: "Our Mission",
         description: `At Bitnob, we have one single Mission, which is making it easy for every african and african business to connect with the bitcoin blockchain.`
-    },
-    team: {
-        heading: "Meet The Team",
-        description: `Bitnob is a 100% remote team. We believe that creative collaboration can happen anywhere and we want our team to work where they feel most comfortable and inspired.`,
-        images: {
-            row1: [
-                {
-                    id: 'x-1',
-                    name: "Ashley Coby", 
-                    avatar: '/images/person.png',
-                    title: "Product Designer",
-                    description: "Making people smile one screen per day", 
-                    social: {
-                        facebook: "https://facebook.com/ashley",
-                        twitter: "https://twitter.com/ashley",
-                        instagram: "https://instagram.com/ashley",
-                        email: "mailto:ashely@example.com",
-                        linkedIn: "https://linkein.com/ashley",
-                    }
-                },
-                ...Array.from({length:4}),
-                {
-                    id: 'x-1',
-                    name: "Ashley Coby", 
-                    avatar: '/images/person.png',
-                    title: "Product Designer",
-                    description: "Making people smile one screen per day", 
-                    social: {
-                        facebook: "https://facebook.com/ashley",
-                        twitter: "https://twitter.com/ashley",
-                        instagram: "https://instagram.com/ashley",
-                        email: "mailto:ashely@example.com",
-                        linkedIn: "https://linkein.com/ashley",
-                    }
-                },
-            ],
-            row2: Array.from({length:7}),
-            row3: [
-                {
-                    id: 'x-2',
-                    name: "Mariam Enouch", 
-                    avatar: '/images/person.png',
-                    title: "Software Engineer",
-                    description: "Making people smile one line of code per day", 
-                    social: {
-                        facebook: "https://facebook.com/ashley",
-                        twitter: "https://twitter.com/ashley",
-                        instagram: "https://instagram.com/ashley",
-                    }
-                },
-                ...Array.from({length:4}),
-                {
-                    id: 'x-1',
-                    name: "Ashley Coby", 
-                    avatar: '/images/person.png',
-                    title: "Product Designer",
-                    description: "Making people smile one screen per day", 
-                    social: {
-                        facebook: "https://facebook.com/ashley",
-                        twitter: "https://twitter.com/ashley",
-                        instagram: "https://instagram.com/ashley",
-                        email: "mailto:ashely@example.com",
-                        linkedIn: "https://linkein.com/ashley",
-                    }
-                },
-            ],
-        }
     },
     join: {
         heading: "Join the Team",

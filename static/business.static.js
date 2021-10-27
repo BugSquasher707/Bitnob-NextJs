@@ -1,11 +1,11 @@
-import { CogIcon, InvoiceIcon, PeopleIcon, TransactionIcon, WalletIcon } from "public"
+import { CogIcon, InvoiceIcon, PeopleIcon, TicketIcon, TransactionIcon, WalletIcon } from "public"
 
 
 const businessPageData = {
     section1: {
         heading: "Accept business payments in Bitcoin",
         description: "Bitnob for Businesses is an enterprise platform that enables businesses accept payments for services in Bitcoin",
-        cover: "/svgs/business-page-cover1.svg",
+        cover: "/images/business-cover.png",
     },
     section2:{
         heading: "All the features your business needs",
@@ -19,15 +19,15 @@ const businessPageData = {
             description: `You can use Bitnob for business via a dashboard or via our public API for businesses that wants to integrate our services on their own platform`
         },
         {
-            asset: "left",
             cover: '/svgs/new-invoice.svg',
+            asset: '/svgs/invoices-art.svg',
             title: "Invoices",
             icon: <InvoiceIcon />,
             description: `You can use Bitnob for business via a dashboard or via our public API for businesses that wants to integrate our services on their own platform`
         },
         {
-            asset: "right",
             cover: '/svgs/customer-form.svg',
+            asset: '/svgs/customer-art.svg',
             title: "Customers",
             icon: <PeopleIcon />,
             description: `You can use Bitnob for business via a dashboard or via our public API for businesses that wants to integrate our services on their own platform`
@@ -35,12 +35,12 @@ const businessPageData = {
         {
             cover: '/svgs/payment-form.svg',
             title: "Payment Links & Processing",
-            icon: <TransactionIcon />,
+            icon: <TicketIcon />,
             description: `With Bitnob for business, payments can either be processed Onchain or via the Lightning Network.`
         },
         {
-            asset: "right",
             cover: '/svgs/api-form.svg',
+            asset: '/svgs/api-art.svg',
             title: "API Integration",
             icon: <CogIcon />,
             description: `Our API integration enables businesses build on our in house infrastructure. It is a seamless process with our detailed documentation by your side.

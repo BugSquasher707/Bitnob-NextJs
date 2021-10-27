@@ -37,6 +37,7 @@ import HeartIcon from './svgs/heartIcon';
 import LeadershipIcon from './svgs/leadershipIcon';
 import OwnershipIcon from './svgs/ownershipIcon';
 import TeamworkIcon from './svgs/teamworkIcon';
+import TicketIcon from './svgs/ticketIcon';
 import ShapesSvg from './svgs/shapes';
 import ArrowCircleIcon from './svgs/arrow-circle';
 import ArrowL from './svgs/ArrowL';
@@ -83,6 +84,7 @@ export {
     IntegrityIcon,
     HeartIcon,
     LeadershipIcon,
+    TicketIcon,
     OwnershipIcon,
     TeamworkIcon,
     ShapesSvg,
