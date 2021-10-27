@@ -17,13 +17,13 @@ const Footer = ()=> {
                     <LogoFull />
                     {
                         Object.entries(footerLinks.links).map(([title, links])=> (
-                            <React.Fragment>
+                            <React.Fragment key={title}>
                                 <ul>
                                     <h3 className="text-black font-bold font-gordita text-2xs md:text-xs uppercase mb-3">{title}</h3>
                                     {
                                         links.map(l=> (
-                                            <li>
-                                                <BitNobLink className="hover:text-bitGreen-200 font-medium block w-full lg:w-max text-center lg:text-left py-2" to={l.title}>{l.title}</BitNobLink>
+                                            <li key={l}>
+                                                <BitNobLink className="hover:text-bitGreen-200 font-medium block w-full lg:w-max text-center lg:text-left py-2" to={l.route}>{l.title}</BitNobLink>
                                             </li>
                                         ))
                                     }
@@ -54,7 +54,7 @@ const Footer = ()=> {
                     <ul className="flex w-full md:w-auto justify-evenly md:justify-items-start space-x-7">
                         {
                             Object.entries(footerLinks.socials).map(([key, {link, icon}])=> (
-                                <li title={key}>
+                                <li key={key} title={key}>
                                     <BitNobLink className="text-black text-lg hover:text-bitGreen-200" isExternal to={link} title={key}>{icon}</BitNobLink>
                                 </li>
                             ))

@@ -92,6 +92,7 @@ const Reviews = () => {
 
                             return (
                                 <img 
+                                    key={a}
                                     src={a} 
                                     style={loci?.[i]} 
                                     alt="avatar" 

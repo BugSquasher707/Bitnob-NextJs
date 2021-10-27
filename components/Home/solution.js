@@ -7,7 +7,7 @@ const Solution = () => {
 
     return (
         <BitNobContainer>
-            <div className="flex flex-col-reverse mt-16 lg:mt-0 lg:items-start lg:flex-row md:space-x-10 lg:space-x-14 xl:space-x-20">
+            <div className="flex flex-col-reverse mt-10 lg:mt-0 lg:items-start lg:flex-row md:space-x-10 lg:space-x-14 xl:space-x-20">
                 <div className="self-center w-full overflow-hidden lg:self-stretch mt-10 lg:mt-0 relative -ml-3 xl:-ml-8 max-w-lg lg:max-w-lg 2xl:max-w-2xl">
                     <img className="max-w-full" src={solutionSection.image} alt="solution" />
                     {
@@ -21,6 +21,7 @@ const Solution = () => {
 
                             return (
                                 <img 
+                                    key={a}
                                     src={a} 
                                     style={loci?.[i]} 
                                     alt="avatar" 
