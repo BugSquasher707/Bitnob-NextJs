@@ -25,6 +25,7 @@ const MenuDropDown = ({ title, setVisible, data, visible }) => {
                 {
                     data.map((d) => (
                         <BitNobLink 
+                            key={d.route}
                             onClick={()=> setVisible(false)}
                             style={{minWidth: "200px"}} 
                             activeStyles='bg-bitGreen-50 px-4 w-full py-1' 
@@ -42,6 +43,7 @@ const MenuDropDown = ({ title, setVisible, data, visible }) => {
                 {
                     data.map((d) => (
                         <BitNobLink 
+                            key={d.route}
                             onClick={()=> setVisible(false)}
                             className="hover:bg-bitGreen-50 rounded-xl hover:bitGreen-50 pl-2 pr-6 py-2" 
                             activeStyles='bg-bitGreen-50 transition-all duration-100' to={d.route}>

@@ -22,7 +22,7 @@ const Footer = ()=> {
                                     <h3 className="text-black font-bold font-gordita text-2xs md:text-xs uppercase mb-3">{title}</h3>
                                     {
                                         links.map(l=> (
-                                            <li key={l}>
+                                            <li key={l.title}>
                                                 <BitNobLink className="hover:text-bitGreen-200 font-medium block w-full lg:w-max text-center lg:text-left py-2" to={l.route}>{l.title}</BitNobLink>
                                             </li>
                                         ))

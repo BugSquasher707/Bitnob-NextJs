@@ -11,8 +11,8 @@ const PeopleIcon = props => (
         <path opacity="0.4" d="M29.3999 18.3877C29.0955 18.3252 28.7815 18.2904 28.4544 18.2904C25.4458 18.2904 23.0832 21.1374 23.8902 24.3073C24.4323 26.4434 26.3986 27.8615 28.5893 27.8039C28.809 27.7979 29.0251 27.7775 29.234 27.7414C29.3856 27.715 29.462 27.5433 29.3761 27.416C28.5404 26.1793 28.064 24.6916 28.064 23.0946C28.064 21.4267 28.5845 19.8742 29.4883 18.6002C29.5169 18.5606 29.5384 18.4993 29.5098 18.4537C29.4859 18.4165 29.4417 18.3973 29.3999 18.3877Z" fill="white" />
         <path d="M24.4313 30.0254C22.9593 30.3147 21.9923 30.9043 21.5911 31.764C21.2509 32.4689 21.2509 33.2866 21.5911 33.9914C22.2048 35.3218 24.183 35.7505 24.9519 35.8597C25.1107 35.8838 25.2372 35.7469 25.2205 35.586C24.8277 31.8973 27.9521 30.1478 28.7615 29.7456C28.7949 29.7264 28.8021 29.6988 28.7985 29.6807C28.7961 29.6687 28.783 29.6507 28.7567 29.6483C27.0065 29.6147 25.1274 29.8548 24.4313 30.0254Z" fill="white" />
         <defs>
-            <filter id="filter0_d" x="0" y="0" width="72" height="72" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
+            <filter id="filter0_d" x="0" y="0" width="72" height="72" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                 <feOffset dy="8" />
                 <feGaussianBlur stdDeviation="6" />

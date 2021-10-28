@@ -61,7 +61,7 @@ const Reviews = () => {
                                     setReviews={setReviews} 
                                     reviews={reviews} 
                                     i={i} 
-                                    key={a.author} />
+                                    key={a.id} />
                             ))
                         }
                         <Dots className="absolute -top-20 md:-top-8 transform scale-75 md:scale-90 -right-52 md:-right-32" />

@@ -42,7 +42,7 @@ const Exhibition = () => {
                             }
 
                             return(
-                                <div key={title} className="relative w-full">
+                                <div className="relative w-full">
                                     <div
                                         role="button" 
                                         onMouseEnter={()=> setActive(i)}

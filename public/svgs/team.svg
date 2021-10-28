@@ -16,7 +16,7 @@
 <rect width="1372" height="144" rx="30" fill="white"/>
 </g>
 <g style="mix-blend-mode:color">
-<rect width="1372" height="144" rx="30" fill="#23E0A2" fillOpacity="0.4"/>
+<rect width="1372" height="144" rx="30" fill="#23E0A2" fill-opacity="0.4"/>
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

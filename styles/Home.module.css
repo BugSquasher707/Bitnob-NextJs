@@ -99,7 +99,7 @@
         top: 0px;
         object-fit: contain;
         position: relative;
-        transform: scale(1.2) !important;
+        transform: scale(1.2) !important; 
     }
 
     .slide_image {

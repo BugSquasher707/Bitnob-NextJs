@@ -76,7 +76,7 @@
     },
     seeInAction: {
       heading: "See it in action",
-      image: '/images/video.png',
+      image: '/images/video-bg.png',
       description: "Enough with the talking, why not see for yourself. Have a glimpse of our app in acton."
     },
     reviews: {
@@ -85,23 +85,27 @@
       assets: ["/images/r-1.png", "/images/r-2.png", "/images/r-3.png", "/images/r-4.png", "/images/r-5.png", "/images/r-6.png"],
       comments: [
         {
+          id:1,
           description:`No other platform allows people to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
           author: "Bernard Parah",
           position: "CEO Bitnob"
         },
         {
+          id:2,
           description:`Platform allows  people to start for free and grow their wealth as their business grows. More importantly, No other  platform a Bitnob doesn't charge you a portion of your profits as your business grows!`,
-          author: "Bernard Para",
+          author: "Bernard Parah",
           position: "CEO EcoBank"
         },
         {
+          id:3,
           description:`Other  platform allows people to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
-          author: "Bernard Farah",
+          author: "Bernard Parah",
           position: "CEO Patricia"
         },
         {
+          id:4,
           description:`Allows people no other  platform a to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
-          author: "Bernard Pah",
+          author: "Bernard Parah",
           position: "CEO WYreOut"
         },
       ]
