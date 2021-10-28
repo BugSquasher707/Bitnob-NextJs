@@ -90,16 +90,16 @@
 
 @media (max-width: 640px) {
     .product_bg {
-        top: 60%;
+        top: 55%;
         transform: scale(1.1);
     }
 
     .landing_cover img {
-        left: -15%;
-        top: 20px;
+        left: -5%;
+        top: 0px;
         object-fit: contain;
         position: relative;
-        transform: scale(1.5); 
+        transform: scale(1.2) !important; 
     }
 
     .slide_image {
