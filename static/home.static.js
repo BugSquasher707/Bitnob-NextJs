@@ -91,17 +91,17 @@
         },
         {
           description:`Platform allows  people to start for free and grow their wealth as their business grows. More importantly, No other  platform a Bitnob doesn't charge you a portion of your profits as your business grows!`,
-          author: "Bernard Para",
+          author: "Bernard Parah",
           position: "CEO EcoBank"
         },
         {
           description:`Other  platform allows people to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
-          author: "Bernard Farah",
+          author: "Bernard Parah",
           position: "CEO Patricia"
         },
         {
           description:`Allows people no other  platform a to start for free and grow their wealth as their business grows. More importantly, Bitnob doesn't charge you a portion of your profits as your business grows!`,
-          author: "Bernard Pah",
+          author: "Bernard Parah",
           position: "CEO WYreOut"
         },
       ]

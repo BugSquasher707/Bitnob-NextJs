@@ -42,7 +42,7 @@ const Exhibition = () => {
                             }
 
                             return(
-                                <div key={title} className="relative w-full">
+                                <div className="relative w-full">
                                     <div
                                         role="button" 
                                         onMouseEnter={()=> setActive(i)}
@@ -71,7 +71,7 @@ const Exhibition = () => {
                         className={classNames({'bg-bitGreen-200': _isActive, 'bg-white': !_isActive}," hover:bg-bitGreen-200  z-20 relative w-14 h-14 md:w-20 md:h-20 lg:h-24 lg:w-24 p-4 md:p-6 lg:p-8 rounded-2xl md:rounded-3xl transition-all transform duration-150 cursor-pointer")} />
                 </div>
                 <Circle className={classNames(
-                        {'w-60' : isBrowser()?.innerWidth < 400},
+                        {'w-64' : isBrowser()?.innerWidth < 400},
                         'max-w-xs md:max-w-xl lg:max-w-2xl xl:max-w-3xl z-0 top-52 md:top-96 lg:-top-14 absolute'
                     )} />
             </div>
