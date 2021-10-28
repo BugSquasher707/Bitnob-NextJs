@@ -76,7 +76,7 @@
     },
     seeInAction: {
       heading: "See it in action",
-      image: '/images/video.png',
+      image: '/images/video-bg.png',
       description: "Enough with the talking, why not see for yourself. Have a glimpse of our app in acton."
     },
     reviews: {
