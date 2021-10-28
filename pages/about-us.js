@@ -1,6 +1,4 @@
-import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/dist/client/router";
-import Image from 'next/image'
 
 import { BitNobContainer, BitNobButton, getLayout, Page } from "components"
 import { aboutPageData } from "static";

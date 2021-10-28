@@ -36,7 +36,7 @@ const ProductPage= ({ heading, subHeading, dataList, adjust, children })=> {
                             <div className={`space-y-12 items-center ${adjust ? 'mt-40 lg:mt-12' : "md:mt-12"}`}>
                                 {
                                     dataList?.map(({title, description})=> (
-                                        <div>
+                                        <div key={title}>
                                             <h1 className="text-bitGray-400 mb-4 leading-tight text-xs md:text-md font-gordita font-bold">{title}</h1>
                                             <p className=" pt-2 text-2xs md:text-sm opacity-80 md:opacity-95 text-bitGray-300">{description}</p>
                                         </div>

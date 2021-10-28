@@ -20,7 +20,7 @@ const Careers = ()=> {
                         <div className="grid gap-4 max-w-4xl space-y-8 md:space-y-5 overflow-hidden 2xl:max-w-6xl mx-auto mt-12">
                             {
                                 jobs.map(({title, description, link, tags})=> (
-                                    <div style={{borderRadius: "30px"}} className="bg-white relative text-left px-6 py-8 md:py-6">
+                                    <div key={title} style={{borderRadius: "30px"}} className="bg-white relative text-left px-6 py-8 md:py-6">
                                         <div className="lg:pr-40">
                                             <h4 className="font-bold font-gordita md:text-lg">{title}</h4>
                                             <p className=" mt-2 mb-6 text-xs md:text-sm text-bitGray-300">{description}</p>
