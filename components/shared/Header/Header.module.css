@@ -46,7 +46,6 @@
 @media (max-width:1300px){
     .wide {
         top: 60px;
-        transform: translateX(50%);
     }
 
 }
@@ -58,6 +57,5 @@
     
     .wide {
         top: 40px;
-        transform: translateX(-50%);
     }
 }

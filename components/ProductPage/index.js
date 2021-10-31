@@ -4,6 +4,7 @@ import { BitNobContainer, BitNobLink } from "components";
 import styles from 'styles/ProductPage.module.css';
 import { AppStore, PlayStore } from "public"
 import { isBrowser, screenSize } from 'utils';
+import { bitnobAppleStore, bitnobPlayStore } from 'app-constants';
 
 
 const ProductPage= ({ heading, subHeading, dataList, adjust, children })=> {
@@ -67,10 +68,10 @@ const ProductPage= ({ heading, subHeading, dataList, adjust, children })=> {
                             Freedom For <br className="md:hidden" /> Your Money
                         </h1>
                         <div className="flex space-x-4 justify-center items-center mt-6 md:mt-12">
-                            <BitNobLink to="#">
+                            <BitNobLink to={bitnobAppleStore}>
                                 <AppStore className="w-32 md:w-auto" />
                             </BitNobLink>
-                            <BitNobLink to="#">
+                            <BitNobLink to={bitnobPlayStore}>
                                 <PlayStore className="w-32 md:w-auto" />
                             </BitNobLink>
                         </div>
