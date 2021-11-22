@@ -1,26 +1,30 @@
 import { useRouter } from "next/dist/client/router";
+import Image from 'next/image';
 
 import { BitNobContainer, BitNobButton, getLayout, Page } from "components"
 import { aboutPageData } from "static";
+import useWindow from "hooks/use-window";
 
 
 const AboutUs = ()=> {
     const { welcome, values, mission, join } = aboutPageData
     const router = useRouter();
+    const { innerWidth } = useWindow()
+    
 
     return(
         <Page title="About Us">
             <div className=" mt-12 lg:mt-24">
-                <div style={{minHeight: "500px"}} className="relative overflow-hidden w-full h-full">
+                <div style={{minHeight: innerWidth > 768 ? "1000px" : '600px'}} className="relative overflow-hidden w-full h-full">
                     <BitNobContainer>
                         <div className="max-w-xl 2xl:max-w-2xl mx-auto lg:absolute top-0 left-1/2 transform lg:-translate-x-1/2 text-center">
-                            <div className="max-w-md mx-auto">
+                            <div className="z-20 relative max-w-md mx-auto">
                                 <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl font-gordita">{welcome.heading}</h2>
                                 <p className=" md:text-md my-4 font-quicksand text-bitGray-200">{welcome.description}</p>
                             </div>
                         </div>
                     </BitNobContainer>
-                    <img src={welcome.bg} className="absolute transform scale-150 md:scale-100 z-10 md:top-1/4 lg:static" />
+                    <Image src={welcome.bg} objectFit="contain" priority layout="fill" className="absolute transform scale-150 md:scale-100 z-10 md:top-1/4 lg:static" />
                 </div>
 
                 <div className="mt-10 md:mt-60 lg:mt-20 2xl:mt-20">

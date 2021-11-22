@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { BitNobButton, BitNobContainer, getLayout, Page } from "components"
 import { Review } from "components/Home/reviews";
 import { ArrowOutline } from "public";
@@ -30,13 +31,13 @@ const Business = ()=> {
                                 <BitNobButton className="my-6 mb-2 py-3 md:py-auto max-w-xs w-max mx-auto">Get Started</BitNobButton>
                             </div>
                             <div className="mt-16 mb-20 relative md:mt-10">
-                                <img src={section1.cover} />
+                                <Image src={section1.cover} objectFit="contain" width="1500" height="1200" priority />
                             </div>
                         </div>
                     </BitNobContainer>
                 </div>
                 <BitNobContainer>
-                    <div className="text-center mx-auto -mt-10 lg:-mt-20">
+                    <div className="text-center mx-auto -mt-14 lg:-mt-20">
                         <div className="max-w-5xl mx-auto">
                             <h2 className="font-bold text-lg md:text-2xl font-gordita">{section2.heading}</h2>
                             <p className="text-2xs mt-4 md:text-lg font-quicksand text-bitGray-200">{section2.description}</p>
@@ -106,7 +107,7 @@ const Business = ()=> {
 
                         <div className={`flex flex-col-reverse lg:flex-row justify-between gap-x-10 mt-20`}>
                             <div className={`max-w-4xl flex justify-center mx-auto relative mt-8 lg:mt-0 z-10`}>
-                                <img src={dataList[5]?.cover} className="z-10" />
+                                <Image src={dataList[5]?.cover} className="z-10" width="1000" height="1000" priority objectFit="contain" />
                             </div>
                             <div className={`space-y-4 mt-20 max-w-sm z-10 cursor-default transition-all duration-400 rounded-2xl`}>
                                 <span className=" -ml-3 block w-min -mb-4">{dataList[5]?.icon}</span>

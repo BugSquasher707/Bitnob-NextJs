@@ -18,8 +18,9 @@
     left: 42%;
 }
 
-.landing_cover img {
+.phone {
     height: 650px;
+    width: 650px
 }
 
 .how_hover {
@@ -51,7 +52,7 @@
 
 @media (min-width: 1380px) {
     .product_bg {
-        height: 50%;
+        height: 60%;
         top: 15%;
         left: 45%;
     }
@@ -59,28 +60,30 @@
 
 @media (max-width: 1380px) {
     .product_bg {
+        height: 65%;
         left: 50%;    
     }
 
-    .landing_cover img {
-        height: 550px;
+    .phone {
+        height: 600px;
     }
     
 }
 
 @media (max-width: 768px) {
     .product_bg {
-        height: 300px;
+        height: 460px;
         top: 55%;
         left: 0px;
         background-size: cover;
         border-radius: 0;
     }
 
-    .landing_cover img {
+    .phone {
+        top: 35px;
+        right: -40px;
         position: relative;
         height: 550px;
-        right: 5%;
     }
 
     .slide_image {
@@ -90,11 +93,12 @@
 
 @media (max-width: 640px) {
     .product_bg {
+        height: 300px;
         top: 55%;
         transform: scale(1.1);
     }
 
-    .landing_cover img {
+    .phone {
         left: -5%;
         top: 0px;
         object-fit: contain;
