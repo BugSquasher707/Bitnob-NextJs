@@ -1,4 +1,6 @@
 import classNames from 'classnames';
+import Image from 'next/image';
+
 import { homeData } from 'static';
 import { BitNobContainer } from '../';
 
@@ -9,7 +11,7 @@ const Solution = () => {
         <BitNobContainer>
             <div className="flex flex-col-reverse mt-10 lg:mt-0 lg:items-start lg:flex-row md:space-x-10 lg:space-x-14 xl:space-x-20">
                 <div className="self-center w-full overflow-hidden lg:self-stretch mt-10 lg:mt-0 relative -ml-3 xl:-ml-8 max-w-lg lg:max-w-lg 2xl:max-w-2xl">
-                    <img className="max-w-full" src={solutionSection.image} alt="solution" />
+                    <Image src={solutionSection.image} alt="solution" className="max-w-full" objectFit="contain" height="1060" width="800" priority="true" />
                     {
                         solutionSection.emojis.map((a, i)=> {
                         const loci = {

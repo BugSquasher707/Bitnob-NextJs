@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { homeData } from 'static';
 import { 
   BitNobContainer, 
@@ -83,7 +84,9 @@ const Landing = ()=> {
               </div>
             </div>
             <div className={classNames(`flex-1 justify-end mt-10 md:mt-8 lg:mt-0 relative`, {flex: visible, hidden: !visible}, styles.landing_cover)}>
-              <img ref={phoneRef} src={landing.cover} alt="smatphone" className="z-10 relative phone" />
+              <figure ref={phoneRef} className={classNames("phone z-10 relative", styles.phone)}>
+                <Image src={landing.cover} alt="smatphone" layout="fill" priority="100" objectFit="contain" />
+              </figure>
             </div>
           </div>
         </BitNobContainer>
