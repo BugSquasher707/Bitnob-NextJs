@@ -45,7 +45,7 @@ const Solution = () => {
                                     </div>
                                     <div style={{borderColor:"rgba(239, 241, 241, 1)"}} className=" px-8 2xl:px-10 py-6 md:py-6 border rounded-3xl">
                                         <h4 className=" text-sm md:text-lg pb-2 md:pb-0 lg:text-lg  md:whitespace-pre 2xl:text-lg font-gordita font-bold">{title}</h4>
-                                        <p className="mt-2 text-2xs md:text-sm opacity-90 text-bitGray-200">{description}</p>
+                                        <p className="mt-2 text-2xs md:text-sm opacity-90 text-bitGray-200" dangerouslySetInnerHTML={{__html: description}} />
                                     </div>
                                 </div>
                             ))
