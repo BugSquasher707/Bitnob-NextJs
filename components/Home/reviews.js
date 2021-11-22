@@ -10,7 +10,7 @@ export const Review = ({ i, active, position, reviews, description, author})=> {
 
     const styles = {
         zIndex:  isActive ? reviews.length : reviews.length - i,
-        transform: `translateY(${ isActive ? 0 : (i * 35)}px) scale(${ isActive ? 1 : (1 - i/10)})`,
+        transform: `translateY(${ isActive ? 0 : (i * 25)}px) scale(${ isActive ? 1 : (1 - i/10)})`,
         opacity: isActive ? 1 : `1 - ${i/10}`,
         boxShadow: '0px 18px 52.8537px rgba(63, 177, 181, 0.16)',
         borderRadius: '20px',
