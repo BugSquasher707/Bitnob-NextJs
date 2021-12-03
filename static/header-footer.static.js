@@ -41,7 +41,8 @@ const headerLinks = {
         {title: "Careers", route:"/careers"},
         {title: "Learn", route:"https://bitnob.com/academy/"},
         {title: "FAQs", route:"/faq"},
-    ]
+    ],
+    Developers: '/developers',
 }
 
 const footerLinks = {
