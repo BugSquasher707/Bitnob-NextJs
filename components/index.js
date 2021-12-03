@@ -7,6 +7,7 @@ import Page from "./shared/Page";
 import BitNobContainer from "./UI/Container";
 import Header from "./shared/Header";
 import Footer from "./shared/Footer";
+import Accordion from './UI/Accordion';
 
 import Exhibition from "./Home/exhibition";
 import Landing from "./Home/landing";
@@ -28,6 +29,7 @@ export{
     getLayout,
     Page,
     BitNobContainer,
+    Accordion,
 
     Landing,
     Exhibition,
@@ -38,5 +40,5 @@ export{
     BusinessSection,
     PreFooter,
     ProductPage
-    
+
 }

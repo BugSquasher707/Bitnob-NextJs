@@ -40,9 +40,7 @@ const headerLinks = {
         {title: "About", route:"/about-us"},
         {title: "Careers", route:"/careers"},
         {title: "Learn", route:"https://bitnob.com/academy/"},
-        {title: "FAQs", route:"https://bitnob.com/faq/"},
-        {title: "Referral Leader Board", route:"https://leaderboard.bitnob.com/?_gl=1*1gob7ec*_ga*Nzk4MDIxMTU4LjE2MzI3NjI0MDQ.*_ga_QJNNYZ5R95*MTYzMzY1MDY5NS44LjEuMTYzMzY1MTk5NS4w&_ga=2.15618550.1378171926.1633624459-798021158.1632762404"},
-       
+        {title: "FAQs", route:"/faq"},
     ]
 }
 
@@ -53,11 +51,10 @@ const footerLinks = {
             {title: "Careers", route:"/careers"},
             {title: "Learn", route:"https://bitnob.com/academy/"},
             {title: "FAQs", route:"https://bitnob.com/faq/"},
-            {title: "Referral Leader Board", route:"https://leaderboard.bitnob.com/?_gl=1*1gob7ec*_ga*Nzk4MDIxMTU4LjE2MzI3NjI0MDQ.*_ga_QJNNYZ5R95*MTYzMzY1MDY5NS44LjEuMTYzMzY1MTk5NS4w&_ga=2.15618550.1378171926.1633624459-798021158.1632762404"},
         ],
         Legal: [
-            {title: "Terms of service", route: 'https://bitnob.com/terms-of-services/'},
-            {title: "Privacy Policy", route: 'https://bitnob.com/privacypolicy/'}
+            {title: "Terms of service", route: '/terms-of-services'},
+            {title: "Privacy Policy", route: '/privacy-policy'}
         ]
     },
     socials: {

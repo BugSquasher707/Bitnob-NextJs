@@ -42,6 +42,7 @@ import ShapesSvg from './svgs/shapes';
 import ArrowCircleIcon from './svgs/arrow-circle';
 import ArrowL from './svgs/ArrowL';
 import ArrowR from './svgs/ArrowR';
+import Caret from './svgs/caret';
 
 
 export {
@@ -88,5 +89,6 @@ export {
     OwnershipIcon,
     TeamworkIcon,
     ShapesSvg,
-    ArrowCircleIcon
+    ArrowCircleIcon,
+    Caret
 }
