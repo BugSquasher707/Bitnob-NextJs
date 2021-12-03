@@ -39,7 +39,6 @@ const headerLinks = {
     Company: [
         {title: "About", route:"/about-us"},
         {title: "Careers", route:"/careers"},
-        {title: "Learn", route:"https://bitnob.com/academy/"},
         {title: "FAQs", route:"/faq"},
     ],
     Developers: '/developers',
@@ -50,7 +49,6 @@ const footerLinks = {
         Company: [
             {title: "About", route:"/about-us"},
             {title: "Careers", route:"/careers"},
-            {title: "Learn", route:"https://bitnob.com/academy/"},
             {title: "FAQs", route:"https://bitnob.com/faq/"},
         ],
         Legal: [
