@@ -15,7 +15,7 @@ import Solution from "./Home/solution";
 import HowItWorks from "./Home/how-it-works";
 import Reviews from "./Home/reviews";
 import SeeInAction from "./Home/action";
-import PreFooter from "./Home/pre-footer";
+import PreFooter from "./shared/Footer/pre-footer";
 import BusinessSection from "./Home/business";
 import ProductPage from "./ProductPage";
 

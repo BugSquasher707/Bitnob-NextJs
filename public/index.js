@@ -43,7 +43,13 @@ import ArrowCircleIcon from './svgs/arrow-circle';
 import ArrowL from './svgs/ArrowL';
 import ArrowR from './svgs/ArrowR';
 import Caret from './svgs/caret';
-
+import Discount from './svgs/discount';
+import TimeCircle from './svgs/timeCircle';
+import WalletGreen from './svgs/walletGreen';
+import Buy from './svgs/buy';
+import TickSquare from './svgs/tickSquare';
+import Send from './svgs/send';
+import WalletDark from './svgs/walletDark';
 
 export {
     LogoFull,
@@ -90,5 +96,12 @@ export {
     TeamworkIcon,
     ShapesSvg,
     ArrowCircleIcon,
-    Caret
+    Caret,
+    Discount,
+    TimeCircle,
+    WalletGreen,
+    Buy,
+    TickSquare,
+    Send,
+    WalletDark
 }

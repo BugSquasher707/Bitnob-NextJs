@@ -4,35 +4,28 @@ const headerLinks = {
     Home: '/',
     Features: [
         {
-            title: 'Dollar Cost Averaging',
-            icon: 'dollar-cost.png',
-            route: '/dollar-cost-averaging',
-            description:'Spread the purchase of an asset over an extended period.'
-        },
-        {
-            title: 'Group Savings',
+            title: 'Savings',
             icon: 'group-saving.png',
-            route: '/group-saving',
-            description:'Create a savings plan and invite others to join.'
+            route: '/savings',
+            description:'Easily save for yourself or your kids in Bitcoin and USD.'
         },
         {
-            title: 'USD Wallet',
-            icon: 'usd-wallet.png',
-            route: '/usd-wallet',
-            description:'Save in USD and send USD to anyone anywhere in the world.'
+            title: 'Lightning Address',
+            icon: 'lightning-address.png',
+            route: '/lightning-address',
+            description:'Receive money via the lightning network without having to send invoices.'
+        },
+        {
+            title: 'Virtual Dollar Cards',
+            icon: 'virtual-dollar-card.png',
+            route: '/virtual-dollar-card',
+            description:'Perform any dollar transactions with your card.'
         },
         {
             title: 'Nob Credit',
             icon: 'nob-credit.png',
             route: '/nob-credit',
             description:'Take a loan for up to 12 months.'
-        },
-        {
-            title: 'Bank Withdrawal',
-            icon: 'bank-withdrawal.png',
-            scale: true,
-            route: '/bank-withdrawal',
-            description:'Make withdrawals to your bank account with ease.'
         },
     ],
     Business: '/business',

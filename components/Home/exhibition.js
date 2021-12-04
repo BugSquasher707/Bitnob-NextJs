@@ -76,7 +76,7 @@ const Exhibition = () => {
                         )
                     }
                 </div>
-                <div className="flex w-full -mt-20 md:-mt-28 lg:-mt-60 space-x-28 md:space-x-10 md:space-x-0 justify-evenly md:justify-around items-center">
+                <div className="flex w-full -mt-20 md:-mt-28 lg:-mt-60 space-x-28 md:space-x-10 md:space-x-0 justify-evenly md:justify-around items-center cursor-pointer">
                     <ArrowL 
                         isActive={_isActive}
                         onClick={()=> skipB()} 

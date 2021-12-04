@@ -131,12 +131,91 @@ const groupSavingData = {
     ]
 }
 
+const savingsData = {
+    heading: "Savings",
+    subHeading: "Bitnob's Feature",
+    cover: "/svgs/groupsaving-cover.svg",
+    art: "/svgs/groupsaving-art.svg",
+    dataList:[
+        {
+            title: "What is Savings?",
+            description: `Bitnob's Savings comprises of Dollar Cost Averaging and USD Wallet. Dollar Cost Averaging, popularly known as DCA entails spreading the purchase of an asset over an extended period rather than investing in such assets in one huge lump sum. 
+            While USD Wallet on the other hand is a dollar wallet that is used to save funds from your local currency to a more stable and stronger currency. You can also use it to send USD to anyone anywhere in the world as long as they have a Bitnob app. In addition, the USD Wallet is used to fund your Bitcoin savings plan automatically, based on how you set up your savings plan for DCA (Dollar-Cost Averaging).`
+        },
+        {
+            title: "What is The Purpose of Bitnob’s Savings?",
+            description: "The purpose of Savings with Bitnob is to enable users save and invest in Bitcoin and dollar, either by using Dollar Cost Averaging or USD Wallet. And to protect Africans against the ever-growing risk of inflation and provide an easy way to transfer USD without regulations and sanctions across borders."
+        },
+        {
+            title: "How Does it Work?",
+            description: `Dollar Cost Averaging (DCA) is an investment strategy that proposes periodic and timely acquisitions of a given amount of Bitcoin or stocks. A simple example is buying $10 worth of BTC on a weekly basis, irrespective of the current market price. While saving in your USD wallet involves saving your local currency in a more stable and stronger currency, in other to avert the risk of inflation.`,
+        },
+        {
+            title: "What Makes Savings With Bitnob Unique?",
+            description: `Saving with Bitnob is unique because of its distinct investment strategy. With Bitnob, users can now save daily, weekly and monthly in Bitcoin and USD over a specific period of time by using Dollar Cost Averaging and their USD Wallet on the Bitnob mobile app. 
+Also, all transfers on the USD Wallet are free of charge and they reflect instantly. The USD Wallet also serves as both a storage wallet and a transaction wallet. In fact, think of it as a Dollar Domiciliary Account without the restrictions or high fees involved.`,
+        }
+    ]
+}
+
+const lightningAddressData = {
+    heading: "Lightning Address",
+    subHeading: "Bitnob's Feature",
+    cover: "/svgs/groupsaving-cover.svg",
+    art: "/svgs/groupsaving-art.svg",
+    dataList:[
+        {
+            title: "What is Lightning Address?",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`
+        },
+        {
+            title: "How does Lightning Address work?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            title: "What is the purpose of Lightning Address?",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+        },
+        {
+            title: "What makes Lightning Address unique?",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+        }
+    ]
+}
+
+const virtualDollarCardData = {
+    heading: "Virtual Dollar Cards",
+    subHeading: "Bitnob's Feature",
+    cover: "/svgs/groupsaving-cover.svg",
+    art: "/svgs/groupsaving-art.svg",
+    dataList:[
+        {
+            title: "What are Virtual Dollar Cards?",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`
+        },
+        {
+            title: "How does Virtual Dollar Cards work?",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            title: "What is the purpose of Virtual Dollar Cards?",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+        },
+        {
+            title: "What makes Virtual Dollar Cards unique?",
+            description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+        }
+    ]
+}
 
 export {
     nobCreditData,
     usdWalletData,
     bankwithdrawalData,
     dollarCostData,
-    groupSavingData
+    groupSavingData,
+    savingsData,
+    lightningAddressData,
+    virtualDollarCardData
 }
 

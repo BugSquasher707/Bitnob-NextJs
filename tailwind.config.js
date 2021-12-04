@@ -72,6 +72,14 @@ module.exports = {
           xl: '5rem',
           '2xl': '6rem',
         },
+      },
+      width: {
+        '252': '252px',
+        '82p5': '82.5%'
+      },
+      borderRadius: {
+        '12': '12px',
+        '20': '20px',
       }
     },
   },
