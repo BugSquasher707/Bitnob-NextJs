@@ -120,7 +120,7 @@ const Business = ()=> {
                 </div>
                 <div style={{minHeight:600}} className="pt-28 pb-72 relative bg-gradient-to-b from-white via-bitGreen-100 to-white">
                     <BitNobContainer>
-                        <div className="relative flex mx-auto max-w-2xl">
+                        <div className="relative flex mx-auto max-w-2xl justify-center">
                             {
                                 reviews?.map((a, i)=> (
                                     <Review
