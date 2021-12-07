@@ -136,11 +136,6 @@ const Header = () => {
                                 Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
                             }
                         </ul>
-                        <BitNobLink isExternal to={bitnobAppleStore}>
-                            <BitNobButton className=" mt-12 py-4 md:py-4 lg:py-2 shadow-md lg:shadow-none lg:mt-0 z-10">
-                                Get Started
-                            </BitNobButton>
-                        </BitNobLink>
                     </div>
                 <div 
                     onClick={()=> setVisible(!visible)}
@@ -174,11 +169,6 @@ const Header = () => {
                                     Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
                                 }
                             </ul>
-                            <BitNobLink isExternal to={bitnobAppleStore}>
-                                <BitNobButton className=" mt-12 py-4 md:py-4 lg:py-2 shadow-md lg:shadow-none lg:mt-0 z-10">
-                                    Get Started
-                                </BitNobButton>
-                            </BitNobLink>
                         </div>
                     : null
                 }

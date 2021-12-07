@@ -4,22 +4,22 @@ const headerLinks = {
     Home: '/',
     Features: [
         {
-            title: 'Dollar Cost Averaging',
-            icon: 'dollar-cost.png',
-            route: '/dollar-cost-averaging',
-            description:'Spread the purchase of an asset over an extended period.'
-        },
-        {
-            title: 'Group Savings',
+            title: 'Savings',
             icon: 'group-saving.png',
-            route: '/group-saving',
-            description:'Create a savings plan and invite others to join.'
+            route: '/savings',
+            description:'Easily save for yourself or your kids in Bitcoin and USD.'
         },
         {
-            title: 'USD Wallet',
-            icon: 'usd-wallet.png',
-            route: '/usd-wallet',
-            description:'Save in USD and send USD to anyone anywhere in the world.'
+            title: 'Lightning Address',
+            icon: 'lightning-address.png',
+            route: '/lightning-address',
+            description:'Receive money via the lightning network without having to send invoices.'
+        },
+        {
+            title: 'Virtual Dollar Cards',
+            icon: 'virtual-dollar-card.png',
+            route: '/virtual-dollar-card',
+            description:'Perform any dollar transactions with your card.'
         },
         {
             title: 'Nob Credit',
@@ -27,23 +27,14 @@ const headerLinks = {
             route: '/nob-credit',
             description:'Take a loan for up to 12 months.'
         },
-        {
-            title: 'Bank Withdrawal',
-            icon: 'bank-withdrawal.png',
-            scale: true,
-            route: '/bank-withdrawal',
-            description:'Make withdrawals to your bank account with ease.'
-        },
     ],
     Business: '/business',
     Company: [
         {title: "About", route:"/about-us"},
         {title: "Careers", route:"/careers"},
-        {title: "Learn", route:"https://bitnob.com/academy/"},
-        {title: "FAQs", route:"https://bitnob.com/faq/"},
-        {title: "Referral Leader Board", route:"https://leaderboard.bitnob.com/?_gl=1*1gob7ec*_ga*Nzk4MDIxMTU4LjE2MzI3NjI0MDQ.*_ga_QJNNYZ5R95*MTYzMzY1MDY5NS44LjEuMTYzMzY1MTk5NS4w&_ga=2.15618550.1378171926.1633624459-798021158.1632762404"},
-       
-    ]
+        {title: "FAQs", route:"/faq"},
+    ],
+    Developers: '/developers',
 }
 
 const footerLinks = {
@@ -51,13 +42,11 @@ const footerLinks = {
         Company: [
             {title: "About", route:"/about-us"},
             {title: "Careers", route:"/careers"},
-            {title: "Learn", route:"https://bitnob.com/academy/"},
             {title: "FAQs", route:"https://bitnob.com/faq/"},
-            {title: "Referral Leader Board", route:"https://leaderboard.bitnob.com/?_gl=1*1gob7ec*_ga*Nzk4MDIxMTU4LjE2MzI3NjI0MDQ.*_ga_QJNNYZ5R95*MTYzMzY1MDY5NS44LjEuMTYzMzY1MTk5NS4w&_ga=2.15618550.1378171926.1633624459-798021158.1632762404"},
         ],
         Legal: [
-            {title: "Terms of service", route: 'https://bitnob.com/terms-of-services/'},
-            {title: "Privacy Policy", route: 'https://bitnob.com/privacypolicy/'}
+            {title: "Terms of service", route: '/terms-of-services'},
+            {title: "Privacy Policy", route: '/privacy-policy'}
         ]
     },
     socials: {
