@@ -25,7 +25,15 @@
 
 .reviews {
     min-height: 800px;
+
+    
 }
+
+/* @media screen and (max-width: 600px) {
+    .reviews {
+        min-height: 800px;
+    }
+} */
 
 .image_slide {
     animation: appear .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
@@ -100,5 +108,9 @@
 
     .slide_image {
         height: 220px !important;
+    }
+
+    .reviews {
+        min-height: 650px;
     }
 }

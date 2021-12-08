@@ -162,7 +162,7 @@ const lightningAddressData = {
     heading: "Lightning Address",
     subHeading: "Bitnob's Feature",
     cover: "/svgs/groupsaving-cover.svg",
-    art: "/svgs/groupsaving-art.svg",
+    art: "/svgs/lightning_art.svg",
     dataList:[
         {
             title: "What is Lightning Address?",
@@ -187,7 +187,7 @@ const virtualDollarCardData = {
     heading: "Virtual Dollar Cards",
     subHeading: "Bitnob's Feature",
     cover: "/svgs/groupsaving-cover.svg",
-    art: "/svgs/groupsaving-art.svg",
+    art: "/svgs/virtual_dollar_art.svg",
     dataList:[
         {
             title: "What are Virtual Dollar Cards?",
