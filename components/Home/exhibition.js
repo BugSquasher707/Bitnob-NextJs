@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Image from 'next/image';
 
 import { homeData } from 'static';
@@ -42,7 +42,7 @@ const Exhibition = () => {
                                 <>
                                     {
                                         title && 
-                                        <div className="relative w-full">
+                                        <div className="relative w-full" key={title}>
                                             <div
                                                 role="button" 
                                                 onMouseEnter={()=> setActive(i)}
@@ -62,10 +62,9 @@ const Exhibition = () => {
                 <div style={{minHeight: "300px"}} className="flex transform scale-105 md:scale-100 -mt-16 z-10 lg:max-w-4xl xl:max-w-5xl lg:min-h-screen relative">
                     {
                         homeData.slides.map(({ image }, i) => (
-                            <figure className={classNames('max-w-full', {'hidden': i !== active } )}>
+                            <figure key={image} className={classNames('max-w-full', {'hidden': i !== active } )}>
                                 <Image 
-                                    className="cursor-default"
-                                    key={image} 
+                                    className="cursor-default" 
                                     src={image} 
                                     width="1500" 
                                     height="1200" 
@@ -86,10 +85,7 @@ const Exhibition = () => {
                         onClick={()=> skipF()} 
                         className={classNames({'bg-bitGreen-200': _isActive, 'bg-white': !_isActive}," hover:bg-bitGreen-200  z-20 relative w-14 h-14 md:w-20 md:h-20 lg:h-24 lg:w-24 p-4 md:p-6 lg:p-8 rounded-2xl md:rounded-3xl transition-all transform duration-150")} />
                 </div>
-                <Circle className={classNames(
-                        {'w-60' : isBrowser()?.innerWidth < 600},
-                        'max-w-xs md:max-w-xl lg:max-w-2xl xl:max-w-3xl z-0 top-52 md:top-96 lg:-top-14 absolute'
-                    )} />
+                <Circle className={`max-w-xs md:max-w-xl lg:max-w-2xl xl:max-w-3xl z-0 top-52 md:top-96 lg:-top-14 absolute ${isBrowser()?.innerWidth < 600 && 'w-60'}`} />
             </div>
             </BitNobContainer>
         </div>

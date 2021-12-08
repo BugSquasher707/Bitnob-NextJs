@@ -26,7 +26,7 @@ const HowItWorks = () => {
                                     <span className="w-16 h-16 border flex justify-center items-center rounded-2xl">{icon}</span>
                                     <h4 className="font-bold pt-4 md:pt-0 text-black text-lg md:text-2xl lg:text-md font-gordita">{title}</h4>
                                     <p className="text-bitGray-300 pb-4 text-2xs lg:text-sm md:pb-2 block font-quicksand">{description}</p>
-                                    <BitNobLink className="font-bold text-2xs lg:text-sm text-bitGreen-500">Learn More</BitNobLink>
+                                    <BitNobLink href="#" className="font-bold text-2xs lg:text-sm text-bitGreen-500">Learn More</BitNobLink>
                                 </div>
                             ))
                         }
