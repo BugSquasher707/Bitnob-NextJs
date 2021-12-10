@@ -59,7 +59,7 @@ const footerLinks = {
             icon: <FaTwitter />
         },
         Instagram: {
-            link: "https://www.instagram.com/bitnob",
+            link: "https://www.instagram.com/bitnob/",
             icon: <FaInstagram />
         },
         telegram: {

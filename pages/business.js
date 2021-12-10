@@ -27,7 +27,7 @@ const Business = ()=> {
                         <div className="mt-10 xl:mt-20 text-center">
                             <div>
                                 <h2 className="font-bold text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-gordita">{section1.heading}</h2>
-                                <p className=" text-2xs md:text-md my-6 font-quicksand text-bitGray-300">{section1.description}</p>
+                                <p className=" text-2xs md:text-md mt-2 mb-10 font-quicksand text-bitGray-300">{section1.description}</p>
                                 <BitNobButton className="my-6 mb-2 py-3 md:py-auto max-w-xs w-max mx-auto">Get Started</BitNobButton>
                             </div>
                             <div className="mt-16 mb-20 relative md:mt-10">
@@ -118,42 +118,14 @@ const Business = ()=> {
 
                     </BitNobContainer>
                 </div>
-                <div style={{minHeight:600}} className="pt-28 pb-72 relative bg-gradient-to-b from-white via-bitGreen-100 to-white">
-                    <BitNobContainer>
-                        <div className="relative flex mx-auto max-w-2xl justify-center">
-                            {
-                                reviews?.map((a, i)=> (
-                                    <Review
-                                        {...a} 
-                                        i={i} 
-                                        active={active}
-                                        reviews={reviews} 
-                                        key={a.author} />
-                                ))
-                            }
-                        </div>
-                    </BitNobContainer>
-                    <div className=" absolute transform left-1/2 -translate-x-1/2 space-x-10 -bottom-10 flex w-full max-w-sm justify-center items-center md:mt-16 pb-14 md:pb-6">
-                        <ArrowOutline
-                            arial-label="Previous" 
-                            onClick={()=> handleSlide(0)} 
-                            role="button" 
-                            className="transform scale-50 md:scale-75 transition-all duration-100 hover:shadow-2xl hover:bg-bitGreen-200 rounded-full" />
-                        <ArrowOutline
-                            arial-label="Next" 
-                            onClick={()=> handleSlide(1)} 
-                            role="button" 
-                            className="transform -rotate-180 scale-50 md:scale-75 transition-all duration-100 hover:shadow-2xl hover:bg-bitGreen-200 rounded-full" />
-                    </div>
-                </div>
-                <div className=" mt-14 md:mt-40">
+                <div className="mt-10">
                     <BitNobContainer>
                         <div className={`max-w-7xl mx-auto flex flex-col items-center overflow-hidden lg:overflow-visible pb-0 pt-14 lg:pt-20 px-6 relative rounded-2xl bg-left bg-cover ${styles.business_foot}`}>
                             <div className=" max-w-4xl text-center mx-auto lg:mx-0">
                                 <h1 className="text-black pb-2 leading-tight text-xl sm:text-2xl md:text-3xl font-gordita font-bold">
                                     {section3.title}
                                 </h1>
-                                <BitNobButton className="w-min flex justify-center mx-auto my-6 text-white whitespace-pre">Get Started</BitNobButton>
+                                <BitNobButton className="w-min flex justify-center mx-auto my-6 text-white whitespace-pre" variant="black">Get Started</BitNobButton>
                             </div>
                             <img src={section3.cover} alt="app" className=" md:-mb-2 lg:-mb-0 " />
                         </div>

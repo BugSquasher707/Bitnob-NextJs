@@ -59,12 +59,12 @@ const PrivacyPolicy = () => (
 
         <ul className="list-disc ml-4 mt-2 sm:mt-4">
           <li className="text-sm sm:text-xl">
-            <a href="#" className="text-bitGreen-link">
+            <a href="https://policies.google.com/privacy" className="text-bitGreen-link">
               Google Play Services
             </a>
           </li>
           <li className=" text-sm sm:text-xl">
-            <a href="#" className="text-bitGreen-link">
+            <a href="https://firebase.google.com/policies/analytics" className="text-bitGreen-link">
               Firebase Analytics
             </a>
           </li>

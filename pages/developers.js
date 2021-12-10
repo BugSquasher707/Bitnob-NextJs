@@ -47,25 +47,26 @@ const Developers = () => (
         <div className="mt-20 sm:grid sm:grid-cols-2 md:grid-cols-3">
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_1.png" width="15" height="21" />
+              <Image src="/images/dev_1.png" width="27" height="26" />
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Lorem Ipsum
+              Send/ Receive Bitcoin (Onchain)
             </p>
 
             <p className="mb-2 text-md font-medium">
-              Get historical bitcoin data for your data-driven applications.
+              Initiate send or receive transactions that are recorded and
+              verified on the blockchain.
             </p>
           </div>
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_2.png" width="18" height="28" />
+              <Image src="/images/dev_2.png" width="25" height="25" />
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Lorem Ipsum
+              Data
             </p>
 
             <p className="mb-2 text-md font-medium">
@@ -79,7 +80,7 @@ const Developers = () => (
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Lorem Ipsum
+              Virtual Cards
             </p>
 
             <p className="mb-2 text-md font-medium">
@@ -89,11 +90,11 @@ const Developers = () => (
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_4.png" width="25" height="20" />
+              <Image src="/images/dev_4.png" width="17" height="28" />
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Lorem Ipsum
+              Send/ Receive Bitcoin (Lightning)
             </p>
 
             <p className="mb-2 text-md font-medium">
@@ -107,7 +108,7 @@ const Developers = () => (
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Lorem Ipsum
+              Wallet Services
             </p>
 
             <p className="mb-2 text-md font-medium">
@@ -117,11 +118,11 @@ const Developers = () => (
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_6.png" width="27" height="27" />
+              <Image src="/images/dev_6.png" width="25" height="25" />
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Lorem Ipsum
+              Storage
             </p>
 
             <p className="mb-2 text-md font-medium">
@@ -131,11 +132,11 @@ const Developers = () => (
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_7.png" width="24" height="24" />
+              <Image src="/images/dev_7.png" width="17" height="25" />
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Lorem Ipsum
+              Loans
             </p>
 
             <p className="mb-2 text-md font-medium">
@@ -145,25 +146,11 @@ const Developers = () => (
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_8.png" width="25" height="25" />
+              <Image src="/images/dev_8.png" width="36" height="36" />
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Lorem Ipsum
-            </p>
-
-            <p className="mb-2 text-md font-medium">
-              Real-time notifications of wallet transactions.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
-            <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_9.png" width="36" height="36" />
-            </div>
-
-            <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Lorem Ipsum
+              SDKs
             </p>
 
             <p className="mb-2 text-md font-medium">
