@@ -7,6 +7,12 @@ module.exports = {
       current: "currentColor",
     },
     extend: {
+      backgroundImage: {
+        'abstract-bg-1': "url('/svgs/abstract_bg_1.svg')",
+        'abstract-bg-2': "url('/svgs/abstract_bg_2.svg')",
+        'abstract-bg-3': "url('/svgs/abstract_bg_3.svg')",
+        'abstract-bg-4': "url('/svgs/abstract_bg_4.svg')",
+      },
       fontWeight: {
         extraBold: "900",
       },
@@ -76,12 +82,18 @@ module.exports = {
       width: {
         252: "252px",
         "82p5": "82.5%",
+        300: "300px",
+        400: "400px",
         434: "434px",
+        450: "450px",
+        500: "500px",
         600: "600px",
       },
       height: {
         250: "250px",
+        300: "300px",
         350: "350px",
+        450: "450px",
       },
       borderRadius: {
         12: "12px",
