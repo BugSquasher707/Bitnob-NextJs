@@ -142,7 +142,7 @@ const savingsData = {
   heading: "Savings",
   subHeading: "Bitnob's Feature",
   cover: "/svgs/groupsaving-cover.svg",
-  art: "/svgs/groupsaving-art.svg",
+  art: "/images/savings_illustration.png",
   dataList: [
     {
       title: "What is Savings?",
@@ -195,7 +195,7 @@ const virtualDollarCardData = {
   heading: "Virtual Dollar Cards",
   subHeading: "Bitnob's Feature",
   cover: "/svgs/groupsaving-cover.svg",
-  art: "/svgs/virtual_dollar_art.svg",
+  art: "/images/virtual_cards_illustration.png",
   dataList: [
     {
       title: "What are Virtual Dollar Cards?",

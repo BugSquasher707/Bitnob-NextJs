@@ -11,7 +11,7 @@ import { isBrowser } from '../../utils'
 
 const Exhibition = () => {
     const length = homeData.slides.length;
-    const [active, setActive] = useState(-1);
+    const [active, setActive] = useState(0);
     const _isActive = active > -1;
 
     const skipF = () => {
@@ -42,10 +42,13 @@ const Exhibition = () => {
                                 <>
                                     {
                                         title && 
-                                        <div className="relative w-full" key={title}>
+                                        <div
+                                            className="relative w-full"
+                                            key={title}
+                                        >
                                             <div
-                                                role="button" 
-                                                onMouseEnter={()=> setActive(i)}
+                                                role="button"
+                                                onMouseEnter={()=> { setActive(i) }}
                                                 style={{border: `1.7px solid ${isActive ? "#23FDB4" : 'rgba(239, 241, 241, 1)'} `}} 
                                                 className={classNames(
                                                 `relative z-10 flex cursor-default justify-center items-center w-full lg:w-56 xl:w-64 py-7 px-8 lg:py-4 bg-white whitespace-pre text-black font-bold font-gordita text-center text-md md:text-xl lg:text-sm 2xl:text-md
@@ -69,7 +72,7 @@ const Exhibition = () => {
                                     width="1500" 
                                     height="1200" 
                                     objectFit="contain" 
-                                    priority />
+                                    loading='eager' />
                             </figure>
                             )
                         )
