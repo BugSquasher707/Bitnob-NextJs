@@ -50,6 +50,8 @@ import Buy from './svgs/buy';
 import TickSquare from './svgs/tickSquare';
 import Send from './svgs/send';
 import WalletDark from './svgs/walletDark';
+import SavingsPig from './svgs/savings-pig';
+import World from './svgs/world';
 
 export {
     LogoFull,
@@ -103,5 +105,7 @@ export {
     Buy,
     TickSquare,
     Send,
-    WalletDark
+    WalletDark,
+    SavingsPig,
+    World
 }

@@ -22,15 +22,13 @@ export const Review = ({
     opacity: isActive ? 1 : 1 - (i / 10),
     boxShadow: "0px 18px 52.8537px rgba(63, 177, 181, 0.16)",
     borderRadius: "20px",
-    width: "600px",
-    height: "350px",
   };
 
   return (
     <>
       <div
         style={styles}
-        className={`text-center mx-auto transition-opacity duration-500 absolute bg-white px-4 md:px-6 md:p-12 py-9 flex flex-col items-center`}
+        className={`text-center mx-auto transition-opacity duration-500 absolute bg-white px-4 md:px-6 md:p-12 py-9 flex flex-col items-center h-250 sm:h-350`}
       >
         <Quote className="absolute transform scale-50 xl:scale-75 -top-1" />
 
@@ -62,15 +60,15 @@ const Reviews = () => {
       className={` mt-32 overflow-x-hidden pb-20 md:pb-10 overflow-y-hidden md:mt-40 bg-gradient-to-b from-white via-bitGreen-100 to-white relative ${styles.reviews}`}
     >
       <BitNobContainer>
+        <div className="flex flex-col items-center mx-auto">
+          <h2 className="font-bold leading-tight text-2xl md:text-3xl xl:text-3xl 2xl:text-5xl text-black font-gordita mb-2 w-1/2 text-center">
+            {homeData.reviews.heading}
+          </h2>
+          <p className=" text-xs md:text-sm pt-2 text-bitGray-200 font-quicksand">
+            {homeData.reviews.description}
+          </p>
+        </div>
         <div className="max-w-2xl mx-auto">
-          <div className="text-left lg:text-center max-w-sm lg:max-w-md mx-auto xl:max-w-lg">
-            <h2 className="font-bold leading-tight text-2xl md:text-3xl xl:text-3xl 2xl:text-5xl text-black font-gordita mb-2">
-              {homeData.reviews.heading}
-            </h2>
-            <p className=" text-xs md:text-sm pt-2 text-bitGray-200 font-quicksand">
-              {homeData.reviews.description}
-            </p>
-          </div>
           <div className="relative mt-28 flex mx-auto max-w-xl xl:max-w-2xl">
             {reviews?.map((a, i) => (
               <Review
@@ -88,7 +86,7 @@ const Reviews = () => {
               className="absolute top-52 transform scale-75 md:scale-90 -left-40 md:-left-28"
             />
           </div>
-          <div className=" absolute transform left-1/2 -translate-x-1/2 space-x-10 -bottom-14 md:bottom-0 flex w-full max-w-sm justify-center items-center md:mt-20 pb-14 md:pb-6">
+          <div className="absolute transform left-1/2 -translate-x-1/2 space-x-10 -bottom-14 md:bottom-0 flex w-full max-w-sm justify-center items-center md:mt-20 pb-14 md:pb-6">
             <ArrowOutline
               arial-label="Previous"
               onClick={() => handleSlide(0)}

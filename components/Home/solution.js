@@ -23,6 +23,7 @@ const Solution = () => {
 
                             return (
                                 <img 
+                                    key={a}
                                     src={a} 
                                     style={loci?.[i]} 
                                     alt="avatar" 
@@ -43,7 +44,7 @@ const Solution = () => {
                                     <div style={{minWidth:"6rem"}} className="h-24 w-24 transform scale-90 2xl:scale-100 rounded-3xl flex justify-center items-center bg-bitGreen-50">
                                         {icon}
                                     </div>
-                                    <div style={{borderColor:"rgba(239, 241, 241, 1)"}} className="px-8 2xl:px-10 py-6 md:py-6 border rounded-3xl" style={{ width: '434px' }}>
+                                    <div style={{borderColor:"rgba(239, 241, 241, 1)"}} className="px-8 2xl:px-10 py-6 md:py-6 border rounded-3xl w-full sm:w-434">
                                         <h4 className=" text-sm md:text-lg pb-2 md:pb-0 lg:text-lg  md:whitespace-pre 2xl:text-lg font-gordita font-bold w-full" dangerouslySetInnerHTML={{__html: title}} />
                                         <p className="mt-2 text-2xs md:text-sm opacity-90 text-bitGray-200" dangerouslySetInnerHTML={{__html: description}} />
                                     </div>

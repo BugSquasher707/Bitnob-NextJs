@@ -21,7 +21,7 @@ const MenuDropDown = ({ title, setVisible, data, visible }) => {
 
     if (title === "Company") {
         return (
-            <div className={`absolute z-20 flex-col text-center items-center space-y-2 py-4 md:py-6 lg:py-8 px-4 md:px-6 lg:px-10 whitespace-pre rounded-lg bg-white shadow-md ${style.dropDown} ${visible ? 'flex' : 'hidden'}`}>
+            <div className={`absolute z-20 flex-col text-center items-center space-y-2 py-4 md:py-6 lg:py-8 px-4 md:px-12 lg:px-10 whitespace-pre rounded-lg bg-white shadow-md ${style.dropDown} ${visible ? 'flex' : 'hidden'}`}>
                 {
                     data.map((d) => (
                         <BitNobLink 
@@ -122,7 +122,7 @@ const Header = () => {
     
     return(
         <BitNobContainer>
-            <header ref={headerRef} className="hidden lg:flex z-20 justify-between items-center relative py-3 xl:py-4 px-4 md:px-6 mt-6 rounded-2xl bg-bitGreen-50 w-full">
+            <header ref={headerRef} className="hidden lg:flex z-20 justify-between items-center relative py-3 xl:py-4 px-4 md:px-12 mt-6 rounded-2xl bg-bitGreen-50 w-full">
                 <BitNobLink to="/">
                     <LogoFull className=" w-24 lg:w-32" />
                 </BitNobLink>

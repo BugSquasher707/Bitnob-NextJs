@@ -1,15 +1,15 @@
 import {
+  Buy,
+  SavingsPig,
+  Send,
+  TickSquare,
+  TimeCircle,
   Trace1,
   Trace2,
   Trace3,
   Trace4,
-  Discount,
-  TimeCircle,
-  WalletGreen,
-  Buy,
-  TickSquare,
-  Send,
   WalletDark,
+  World,
 } from "../public";
 
 const homeData = {
@@ -38,7 +38,7 @@ const homeData = {
         title: "Save in Bitcoin and USD",
         description:
           "Easily save for yourself or your kids in Bitcoin and USD, accessible globally. We save you the time and effort ",
-        icon: <Discount />,
+        icon: <SavingsPig />,
       },
       {
         title: "Borrow in Minutes",
@@ -48,7 +48,7 @@ const homeData = {
       {
         title: "Make payments and get paid <br />from anywhere",
         description: `Pay people around the world and enjoy fast and easy payments anywhere you are.`,
-        icon: <WalletGreen />,
+        icon: <World />,
       },
     ],
   },
