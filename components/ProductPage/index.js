@@ -6,7 +6,7 @@ import styles from 'styles/ProductPage.module.css';
 const ProductPage= ({ heading, subHeading, dataList, adjust, children })=> {
     const icons = {
         "Savings": 'group-saving.png',
-        "Lightning Address": 'lightning-address.png',
+        "Lightning Network": 'lightning-address.png',
         "Virtual Dollar Cards": 'virtual-dollar-card.png',
         'NobCredit': 'nob-credit.png',
     }
