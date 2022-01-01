@@ -167,26 +167,25 @@ const savingsData = {
 };
 
 const lightningAddressData = {
-  heading: "Lightning Address",
+  heading: "Lightning Network",
   subHeading: "Bitnob's Feature",
   cover: "/svgs/groupsaving-cover.svg",
   art: "/svgs/lightning_art.svg",
   dataList: [
     {
-      title: "What is Lightning Address?",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+      title: "What is Lightning Network?",
+      description:
+        "Lightning as the name implies is a network built on the Bitcoin Blockchain to facilitate instant and almost free bitcoin transfers. With the Bitnob app, you can send and receive Bitcoin via the lightning network. ",
     },
     {
-      title: "How does Lightning Address work?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "What can I use lightning for?",
+      description:
+        "You can use lightning to pay for things online. E.g buy airtime or gift cards on Bitrefill.com. Instantly receive money from family and friends abroad. Tip your favourite content creators or contribute to crowdfunding.",
     },
     {
-      title: "What is the purpose of Lightning Address?",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
-    },
-    {
-      title: "What makes Lightning Address unique?",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+      title: "How do I make use of Lightning?",
+      description:
+        "To use lightning is simple, all you need is your lightning address or lightning invoice. Your lightning address is a username unique to you, somewhat like an email 'user@bitnob.com'. With this address you can receive payments on the lightning network from anywhere and on any application that supports it. A lightning invoice on the other hand is like an address but usually suitable for one time or multiple payments in any given amount. To make a lightning payment with Bitnob, all you need to do is copy the lightning address or invoice and open the Bitnob app, you would then be notified on how to proceed once the address is detected in your phone's clipboard.",
     },
   ],
 };
@@ -198,20 +197,24 @@ const virtualDollarCardData = {
   art: "/images/virtual_cards_illustration.png",
   dataList: [
     {
-      title: "What are Virtual Dollar Cards?",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+      title: "What is the Bitnob Virtual Card?",
+      description:
+        "The virtual card is a prepaid USD virtual MasterCard that can be used for purchases on all websites that accept MasterCard.",
     },
     {
-      title: "How does Virtual Dollar Cards work?",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      title: "What are the limits on the cards?",
+      description:
+        "You can fund up to $10,000 at a time. The maximum balance a single card can hold is dependent on how much you have in your Bitnob USD savings account. Funds in your card will be available to you at any time to pay for things online.",
     },
     {
-      title: "What is the purpose of Virtual Dollar Cards?",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+      title: "How many cards can you have?",
+      description:
+        "You can create multiple virtual cards for different kinds of purchases and/or subscriptions, this gives you full control of how cash leaves your cards. ",
     },
     {
-      title: "What makes Virtual Dollar Cards unique?",
-      description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.`,
+      title: "How can I get a virtual card? ",
+      description:
+        "Getting one is easy, first you need to download the app, sign up, fund your USD wallet. After that click on the actions panel on the navigation bar and click on the Create Virtual Card option.",
     },
   ],
 };
