@@ -31,7 +31,7 @@ const homeData = {
     ],
     heading: `When second best isn't enough, use Bitnob.`,
     description: [
-      "If you need to experience something different, something better, use your  Bitnob account to:",
+      "If you need to experience something different, something better, Bitnob helps you:",
     ],
     list: [
       {
@@ -159,29 +159,23 @@ const homeData = {
       {
         id: 8,
         description: `Bitnob is my first dance with crypto. Not a full blown tap dance yet... but more like a waltz 😅. But it’s such an easy product for us non-crypto intellectuals to use. I love the simplicity of the product, but I love the team behind it even more.`,
-        author: "Edmond Olotu",
+        author: "Edmund Olotu",
         position: "Customer",
       },
       {
         id: 9,
-        description: `Very good idea honestly and their UX is sleek. My weekly buys have been seamless, the only time I had an issue the support team had it sorted right away. Quickly becoming my favourite Bitcoin app.`,
-        author: "Gafa Home",
-        position: "Customer",
-      },
-      {
-        id: 10,
         description: `In my BTC travails, Bitnob is one of the best exchange sites I have come across.`,
         author: "Jay Jay",
         position: "Customer",
       },
       {
-        id: 11,
+        id: 10,
         description: `No better app than Bitnob. So easy and user friendly.`,
         author: "Harrison Wealth",
         position: "Customer",
       },
       {
-        id: 12,
+        id: 11,
         description: `@Bitnob_official is one of the best finance apps I’ve ever used. It’s really responsive. I hate that they don’t do enough marketing for it.`,
         author: "Tamara Posibi",
         position: "Customer",
