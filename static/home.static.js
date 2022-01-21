@@ -96,7 +96,7 @@ const homeData = {
     { title: "NobCredit", image: "/images/slide-4.png", trace: <Trace4 /> },
   ],
   seeInAction: {
-    heading: "See it in action",
+    heading: "Watch video",
     image: "/images/video-bg.png",
     description:
       "Enough with the talking, why not see for yourself. Have a glimpse of our app in acton.",
