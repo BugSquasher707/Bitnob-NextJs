@@ -33,7 +33,7 @@ const AboutUs = ()=> {
                             <div className="max-w-xl mx-auto">
                                 <h2 className="font-bold text-2xl md:text-3xl xl:text-4xl font-gordita">{values.heading}</h2>
                                 <p className=" md:text-md my-4 font-quicksand text-bitGray-200">{values.description}</p>
-                                <p className=" md:text-md my-4 font-quicksand text-bitGray-200">These 5 values form the Acronym <b>PILOT</b></p>
+                                <p className=" md:text-md my-4 font-quicksand text-bitGray-200">These 5 values form the Acronym <b>LOGIC</b></p>
                             </div>
                             <div className="grid grid-cols-1 items-center lg:grid-cols-2 gap-3 lg:gap-5 xl:grid-cols-3 text-left mb-10 max-w-7xl mx-auto">
                                 {
