@@ -2,7 +2,7 @@ import { HeartIcon, IntegrityIcon, LeadershipIcon, OwnershipIcon, TeamworkIcon, 
 
 const aboutPageData = {
     welcome: {
-        heading: "Welcome to the World of Crypto!",
+        heading: "Welcome to the World of Bitcoin!",
         description: "Begin your journey with us today.",
         bg: "/images/aboutus-cover.png",
         cover: "/images/about-us-phone.png"

@@ -44,7 +44,7 @@ const FAQ = () => (
           question="What Is Dollar-Cost Averaging?"
           answer="Dollar-cost averaging (DCA) is an investment strategy in which an investor divides up the total amount to be invested across periodic purchases of a target asset in an effort to reduce the impact of volatility on the overall purchase. The purchases occur at regular intervals, regardless of the assets price.
 
-          Recurring Buy gives App users the ability to apply this investment strategy DCA to cryptocurrency by creating recurring purchases of cryptocurrencies."
+          Recurring Buy gives App users the ability to apply this investment strategy DCA to bitcoin by creating recurring purchases of bitcoin."
         />
 
         <Accordion

@@ -158,7 +158,7 @@ const homeData = {
       },
       {
         id: 8,
-        description: `Bitnob is my first dance with crypto. Not a full blown tap dance yet... but more like a waltz 😅. But it’s such an easy product for us non-crypto intellectuals to use. I love the simplicity of the product, but I love the team behind it even more.`,
+        description: `Bitnob is my first dance with bitcoin. Not a full blown tap dance yet... but more like a waltz 😅. But it’s such an easy product for us non-bitcoin intellectuals to use. I love the simplicity of the product, but I love the team behind it even more.`,
         author: "Edmund Olotu",
         position: "Customer",
       },
@@ -186,7 +186,7 @@ const homeData = {
     image: "/svgs/business-cover.svg",
     heading: "Bitnob for Business",
     description:
-      "We've crafted simple tools to aid the complex needs of your business, from accepting payments in crypto, invoices and payment links, APIs for 3rd party integration, automatic settlements, customer management, and more.",
+      "We've crafted simple tools to aid the complex needs of your business, from accepting payments in bitcoin, invoices and payment links, APIs for 3rd party integration, automatic settlements, customer management, and more.",
   },
   preFooter: [
     {
