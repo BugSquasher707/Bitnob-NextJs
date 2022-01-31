@@ -15,12 +15,12 @@ const headerLinks = {
             route: '/lightning-address',
             description:'Receive money via the lightning network without having to send invoices.'
         },
-        {
-            title: 'Virtual Dollar Cards',
-            icon: 'virtual-dollar-card.png',
-            route: '/virtual-dollar-card',
-            description:'Perform any dollar transactions with your card.'
-        },
+        // {
+        //     title: 'Virtual Dollar Cards',
+        //     icon: 'virtual-dollar-card.png',
+        //     route: '/virtual-dollar-card',
+        //     description:'Perform any dollar transactions with your card.'
+        // },
         {
             title: 'Nob Credit',
             icon: 'nob-credit.png',
