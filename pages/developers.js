@@ -11,7 +11,7 @@ const Developers = () => (
         </h1>
 
         <p className="mt-4 text-md sm:text-3xl font-gordita">
-          Built by developers, for developers
+          Built by bitcoiners, for developers
         </p>
 
         <BitNobContainer
@@ -45,6 +45,19 @@ const Developers = () => (
         </p>
 
         <div className="mt-20 sm:grid sm:grid-cols-2 md:grid-cols-3">
+        <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
+            <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
+              <Image src="/images/dev_4.png" width="17" height="28" />
+            </div>
+
+            <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
+              Send/ Receive Bitcoin (Lightning)
+            </p>
+
+            <p className="mb-2 text-md font-medium">
+              Build your own bitcoin and lightning payment processor.
+            </p>
+          </div>
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
               <Image src="/images/dev_1.png" width="27" height="26" />
@@ -60,7 +73,7 @@ const Developers = () => (
             </p>
           </div>
 
-          <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
+          {/* <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
               <Image src="/images/dev_2.png" width="25" height="25" />
             </div>
@@ -72,7 +85,7 @@ const Developers = () => (
             <p className="mb-2 text-md font-medium">
               Send and Receive Bitcoin and Lightning transactions.
             </p>
-          </div>
+          </div> */}
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
@@ -85,20 +98,6 @@ const Developers = () => (
 
             <p className="mb-2 text-md font-medium">
               Set up virtual dollar cards for your customers.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
-            <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_4.png" width="17" height="28" />
-            </div>
-
-            <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
-              Send/ Receive Bitcoin (Lightning)
-            </p>
-
-            <p className="mb-2 text-md font-medium">
-              Build your own bitcoin and lightning payment processor.
             </p>
           </div>
 
@@ -144,7 +143,7 @@ const Developers = () => (
             </p>
           </div>
 
-          <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
+          {/* <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
               <Image src="/images/dev_8.png" width="36" height="36" />
             </div>
@@ -157,7 +156,7 @@ const Developers = () => (
               Connect your product to Bitnob user accounts, using the Bitnob
               Connect Oauth2 SDK.
             </p>
-          </div>
+          </div> */}
         </div>
       </div>
 

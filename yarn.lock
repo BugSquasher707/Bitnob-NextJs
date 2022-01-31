@@ -57,6 +57,11 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@bradgarropy/next-seo@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@bradgarropy/next-seo/-/next-seo-1.2.0.tgz#0c79eab154b887ec5ac5d9e744c5e3dc54354c2f"
+  integrity sha512-AdSZOJw3NIvTxKoRv5IDX/WFhLi7Y2bvmW0OVWLf/rzIJRONms3MZ+aJz2u5Hv2FMgl4cT2Y/4xxEuOmB5u03w==
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
