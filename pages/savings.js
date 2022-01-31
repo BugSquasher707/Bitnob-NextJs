@@ -20,7 +20,7 @@ const Savings = () => (
           className={classNames("right-0 max-w-auto art", styles.art)}
         />
         <div
-          className={`h-96 bg-bitGreen-100 w-full absolute ${styles.product_bg}`}
+          className={`h-96 bg-bitGreen-100 w-full absolute ${styles.produsct_bg}`}
         />
       </div>
     </ProductPage>

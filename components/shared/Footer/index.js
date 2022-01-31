@@ -61,7 +61,7 @@ const Footer = ()=> {
                         }
                     </ul>
                 </div>
-                <p className="mt-10 leading-7 md:leading-normal text-2xs md:text-sm pb-4 md:pb-0 opacity-80 text-bitGray-100">{footerLinks.description}</p>
+                {/* <p className="mt-10 leading-7 md:leading-normal text-2xs md:text-sm pb-4 md:pb-0 opacity-80 text-bitGray-100">{footerLinks.description}</p> */}
             </BitNobContainer>
         </footer>
     )
