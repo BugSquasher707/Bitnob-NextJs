@@ -70,7 +70,7 @@ const Landing = ()=> {
             <div style={{minHeight: isBrowser()?.innerWidth > 768 ? "600px" : '400px'}} className='max-w-md flex-1'>
               <div ref={landingRef} className={classNames({hidden: !visible})}  >
                 <h1 className="text-black leading-tight text-4xl md:text-5xl font-gordita font-bold">
-                  <span className="italic">{landing.heading[0]}</span> <br /> {landing.heading[1]}
+                  <span>{landing.heading[0]}</span> <br /> {landing.heading[1]}
                 </h1>
                 <p className="mt-6 max-w-md text-xs md:text-sm xl:text-md font-quicksand font-light opacity-90 text-bitGray-200">{landing.description[0]}</p>
                 <p className="mt-2 max-w-md text-xs md:text-sm xl:text-md font-quicksand font-light opacity-90 text-bitGray-200">{landing.description[1]}</p>
