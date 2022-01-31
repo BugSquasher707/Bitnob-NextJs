@@ -58,7 +58,7 @@ const businessPageData = {
       cover: "/svgs/wallet-service.svg",
       title: "Wallet Services",
       icon: <WalletIcon />,
-      description: `We own our bitcoin and Lightning Infrastructure which handles the Bitnob Payment Process and enables us offer Cryptocurrency Wallet services to businesses that wishes to use Bitnob for Business`,
+      description: `We own our bitcoin and Lightning Infrastructure which handles the Bitnob Payment Process and enables us offer bitcoin Wallet services to businesses that wishes to use Bitnob for Business`,
     },
   ],
   section3: {

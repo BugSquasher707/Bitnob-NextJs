@@ -2,7 +2,7 @@ import { HeartIcon, IntegrityIcon, LeadershipIcon, OwnershipIcon, TeamworkIcon, 
 
 const aboutPageData = {
     welcome: {
-        heading: "Welcome to the World of Crypto!",
+        heading: "Welcome to the World of Bitcoin!",
         description: "Begin your journey with us today.",
         bg: "/images/aboutus-cover.png",
         cover: "/images/about-us-phone.png"
@@ -13,7 +13,7 @@ const aboutPageData = {
         dataList: {
             group1: [
                 {
-                    title: "Passion",
+                    title: "Low Ego",
                     icon: <HeartIcon />,
                     description: `Every Bitnobber is Passionate about Africa as a continent and solving the problems Africans and their businesses face by building solutions using Blockchain technology.
                     `
@@ -34,12 +34,12 @@ const aboutPageData = {
             ],
             group3: [
                 {
-                    title: "Leadership",
+                    title: "Grit",
                     icon: <LeadershipIcon />,
                     description: `Bitnobbers are leaders in every sense of the word, taking charge every day and leading individually and as a team to solve problems and create lasting solutions.`
                 },
                 {
-                    title: "Teamwork",
+                    title: "Crazy",
                     icon: <TeamworkIcon />,
                     description: `As a company, we have big dreams and these dreams are fueled by the work we do as a team. Our success as a company is greatly hinged on our collective intelligence as a team.`
                 },

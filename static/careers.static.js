@@ -1,7 +1,7 @@
 const careersPageData = {
     section1:{
         heading: "Work with Us",
-        description: "Join our team and help build the world’s best platform for buying, selling and managing cryptocurrency.",
+        description: "Join our team and help build the world’s best platform for buying, selling and managing bitcoin.",
     },
     dividerImg: '/svgs/team.svg',
     section2:{
