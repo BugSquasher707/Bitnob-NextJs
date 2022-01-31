@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@bradgarropy/next-seo": "^1.2.0",
     "classnames": "^2.3.1",
     "gsap": "^3.8.0",
     "next": "latest",

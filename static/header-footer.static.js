@@ -9,12 +9,12 @@ const headerLinks = {
             route: '/savings',
             description:'Easily save for yourself or your kids in Bitcoin and USD.'
         },
-        {
-            title: 'Lightning Address',
-            icon: 'lightning-address.png',
-            route: '/lightning-address',
-            description:'Receive money via the lightning network without having to send invoices.'
-        },
+        // {
+        //     title: 'Lightning Address',
+        //     icon: 'lightning-address.png',
+        //     route: '/lightning-address',
+        //     description:'Receive money via the lightning network without having to send invoices.'
+        // },
         // {
         //     title: 'Virtual Dollar Cards',
         //     icon: 'virtual-dollar-card.png',
@@ -29,11 +29,11 @@ const headerLinks = {
         },
     ],
     Business: '/business',
-    Company: [
-        {title: "About", route:"/about-us"},
-        {title: "Careers", route:"/careers"},
-        {title: "FAQs", route:"/faq"},
-    ],
+    // Company: [
+        // {title: "About", route:"/about-us"},
+        // {title: "Careers", route:"/careers"},
+        // {title: "FAQs", route:"/faq"},
+    // ],
     Developers: '/developers',
 }
 
@@ -41,8 +41,8 @@ const footerLinks = {
     links: {
         Company: [
             {title: "About", route:"/about-us"},
-            {title: "Careers", route:"/careers"},
-            {title: "FAQs", route:"https://bitnob.com/faq/"},
+            // {title: "Careers", route:"/careers"},
+            // {title: "FAQs", route:"/faq"},
         ],
         Legal: [
             {title: "Terms of service", route: '/terms-of-services'},

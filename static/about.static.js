@@ -15,7 +15,7 @@ const aboutPageData = {
                 {
                     title: "Low Ego",
                     icon: <HeartIcon />,
-                    description: `Every Bitnobber is Passionate about Africa as a continent and solving the problems Africans and their businesses face by building solutions using Blockchain technology.
+                    description: `We care deeply, 
                     `
                 },
                 {
