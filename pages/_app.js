@@ -14,14 +14,14 @@ function BitNob({ Component, pageProps }) {
 				title='Welcome to Bitnob'
 				description='Bitnob is a delightful way to save, borrow, pay, receive, and get paid in Bitcoin on time'
 				keywords={['Savings', 'Bitcoin', 'DCA', 'Dollar Cost Averaging', 'Lightning Network', 'Lightning', 'USD Savings', 'Bitcoin Savings',' Automatically Save in Bitcoin', 'Buy', 'Sell', 'Send', 'Receive', 'Virtual Cards', 'Loans', 'Bitcoin Loans', 'APIs', 'Payments', 'Wallet', 'Accept payment in bitcoin', 'Remittance']}
-				icon='/images/logo-full.png'
+				icon='/images/bitnob_ico.ico'
 				twitter={{
 					card: 'summary',
 					site: '@bitnob_official',
-					image: './images/aboutus-cover.png',
+					image: '/images/featured_image_bitnob.png',
 				}}
         facebook={{
-          image: './images/aboutus-cover.png',
+          image: '/images/featured_image_bitnob.png',
 					url: 'https://bitnob.com',
 					type: 'website'
         }}
