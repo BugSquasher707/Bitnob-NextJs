@@ -7,6 +7,8 @@ import 'slick-carousel/slick/slick-theme.css'
 import SEO from '@bradgarropy/next-seo'
 import { useRouter } from 'next/dist/client/router'
 import { useEffect } from 'react'
+import * as gtag from 'lib/gtag'
+
 
 function BitNob({ Component, pageProps }) {
   const router = useRouter()
