@@ -5,8 +5,20 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 import SEO from '@bradgarropy/next-seo'
+import { useRouter } from 'next/dist/client/router'
+import { useEffect } from 'react'
 
 function BitNob({ Component, pageProps }) {
+  const router = useRouter()
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 	const getLayout = Component.getLayout || ((page) => page)
 	return getLayout(
 		<>
