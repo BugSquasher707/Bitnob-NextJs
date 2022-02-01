@@ -9,7 +9,7 @@ const aboutPageData = {
     },
     values: {
         heading: "Our Values",
-        description: `Our values are the bedrock for all that we do at Bitnob - And that’s why we have 5 Values that form the basis of our identity, and guide our interactions with customers, investors, stakeholders and the general public. These values are  Passion, Integrity, Leadership, Ownership and Teamwork.`,
+        description: `Our values are the bedrock for all that we do at Bitnob - And that’s why we have 5 Values that form the basis of our identity, and guide our interactions with customers, investors, stakeholders and the general public. These values are  Low Ego, Ownershop, Grit, Integrity and Crazy.`,
         dataList: {
             group1: [
                 {
