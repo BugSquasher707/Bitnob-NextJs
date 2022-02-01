@@ -15,13 +15,13 @@ const aboutPageData = {
                 {
                     title: "Low Ego",
                     icon: <HeartIcon />,
-                    description: `We care deeply, 
+                    description: `We care deeply, and never feel too important to show up and serve our collegues & customers.
                     `
                 },
                 {
                     title: "Ownership",
                     icon: <OwnershipIcon />,
-                    description: `Every Bitnobber is capable and willing to take the responsibility needed to make every dream a success.
+                    description: `We are accountable to ourselves and others, we take responsibility and go the extra mile to deliever results
                     `
                 },
             ],
@@ -29,19 +29,19 @@ const aboutPageData = {
                 {
                     title: "Integrity",
                     icon: <IntegrityIcon />,
-                    description: `At Bitnob, Integrity forms the core of everything we do and this reflects on every Bitnobber and what we do as a company.`
+                    description: `We hold ourselves to high standards, and we consistently uphold transparency and truth.`
                 },
             ],
             group3: [
                 {
                     title: "Grit",
                     icon: <LeadershipIcon />,
-                    description: `Bitnobbers are leaders in every sense of the word, taking charge every day and leading individually and as a team to solve problems and create lasting solutions.`
+                    description: `We don't stop, we don't quit, we keep finding new ways to accomplish our mission.`
                 },
                 {
                     title: "Crazy",
                     icon: <TeamworkIcon />,
-                    description: `As a company, we have big dreams and these dreams are fueled by the work we do as a team. Our success as a company is greatly hinged on our collective intelligence as a team.`
+                    description: `We think limitless, there is no box. We break barriers and do the impossible.`
                 },
                 
             ]
