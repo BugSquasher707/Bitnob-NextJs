@@ -14,7 +14,7 @@ import {
 
 
 const Home = ()=> (
-  <Page title="Welcome to BitNob">
+  <Page title="Welcome to Bitnob">
     <Landing />
     <Solution />
     <HowItWorks />
