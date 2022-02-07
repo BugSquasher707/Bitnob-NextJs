@@ -4,12 +4,12 @@ const aboutPageData = {
     welcome: {
         heading: "Welcome to the World of Bitcoin!",
         description: "Begin your journey with us today.",
-        bg: "/images/aboutus-cover.png",
+        bg: "/images/aboutus-cover.webp",
         cover: "/images/about-us-phone.png"
     },
     values: {
         heading: "Our Values",
-        description: `Our values are the bedrock for all that we do at Bitnob - And that’s why we have 5 Values that form the basis of our identity, and guide our interactions with customers, investors, stakeholders and the general public. These values are  Low Ego, Ownershop, Grit, Integrity and Crazy.`,
+        description: `Our values are the bedrock for all that we do at Bitnob - And that’s why we have 5 Values that form the basis of our identity, and guide our interactions with customers, investors, stakeholders and the general public. These values are  Low Ego, Ownership, Grit, Integrity and Crazy.`,
         dataList: {
             group1: [
                 {

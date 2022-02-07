@@ -81,19 +81,19 @@ const homeData = {
     ],
   },
   slides: [
-    { image: "/images/slide-0.png" },
+    { image: "/images/slide-0.webp" },
     {
       title: "Lightning Transactions",
-      image: "/images/slide-1.png",
+      image: "/images/slide-1.webp",
       trace: <Trace1 />,
     },
-    { title: "Savings", image: "/images/slide-2.png", trace: <Trace2 /> },
+    { title: "Savings", image: "/images/slide-2.webp", trace: <Trace2 /> },
     {
       title: "Virtual Dollar Cards",
-      image: "/images/slide-3.png",
+      image: "/images/slide-3.webp",
       trace: <Trace3 />,
     },
-    { title: "NobCredit", image: "/images/slide-4.png", trace: <Trace4 /> },
+    { title: "NobCredit", image: "/images/slide-4.webp", trace: <Trace4 /> },
   ],
   seeInAction: {
     heading: "Watch video",

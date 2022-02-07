@@ -12,7 +12,7 @@ const businessPageData = {
     heading: "Accept business payments in Bitcoin",
     description:
       "Specially built for merchants, content creators, and small business owners to quickly start accepting payments in Bitcoin in minutes.",
-    cover: "/images/business-cover.png",
+    cover: "/images/business-cover.webp",
   },
   section2: {
     heading: "Tools to manage your Bitcoin payments",

@@ -111,7 +111,7 @@ const Business = () => {
 
 							<div className='flex-1'>
 								<img
-									src='/images/business_transactions.png'
+									src='/images/business_transactions.webp'
 									className='w-full'
 								/>
 							</div>

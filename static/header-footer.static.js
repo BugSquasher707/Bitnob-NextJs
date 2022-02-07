@@ -29,11 +29,11 @@ const headerLinks = {
         },
     ],
     Business: '/business',
-    // Company: [
-        // {title: "About", route:"/about-us"},
+    Company: [
+        {title: "About", route:"/about-us"},
         // {title: "Careers", route:"/careers"},
         // {title: "FAQs", route:"/faq"},
-    // ],
+    ],
     Developers: '/developers',
 }
 

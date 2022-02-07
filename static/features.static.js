@@ -62,7 +62,7 @@ const usdWalletData = {
 const bankwithdrawalData = {
   heading: "Bank Withdrawal",
   subHeading: "Bitnob's Feature",
-  cover: "/images/bankwithdrawal-cover.png",
+  cover: "/images/bankwithdrawal-cover.webp",
   art: "/svgs/bankwithdrawal-art.svg",
   dataList: [
     {
