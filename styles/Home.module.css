@@ -1,0 +1,116 @@
+.landing {
+    min-height: 700px;
+    overflow: hidden;
+}
+
+.landing_cover {
+   min-height: 400px;
+}
+
+.product_bg {
+    background-image: url('/images/artboard.png');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 440px;
+    width: 100%;
+    top: 10%;
+    left: 42%;
+}
+
+.phone {
+    height: 650px;
+    width: 650px
+}
+
+.reviews {
+    min-height: 800px;
+
+    
+}
+
+/* @media screen and (max-width: 600px) {
+    .reviews {
+        min-height: 800px;
+    }
+} */
+
+.image_slide {
+    animation: appear .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+@keyframes appear {
+    from {
+        opacity: .5;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (min-width: 1380px) {
+    .product_bg {
+        height: 60%;
+        top: 15%;
+        left: 45%;
+    }
+}
+
+@media (max-width: 1380px) {
+    .product_bg {
+        height: 65%;
+        left: 50%;    
+    }
+
+    .phone {
+        height: 600px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .product_bg {
+        height: 460px;
+        top: 55%;
+        left: 0px;
+        background-size: cover;
+        border-radius: 0;
+    }
+
+    .phone {
+        top: 35px;
+        right: -40px;
+        position: relative;
+        height: 550px;
+    }
+
+    .slide_image {
+        height: 350px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .product_bg {
+        height: 300px;
+        top: 55%;
+        transform: scale(1.1);
+    }
+
+    .phone {
+        left: -5%;
+        top: 0px;
+        object-fit: contain;
+        position: relative;
+        transform: scale(1.2) !important; 
+    }
+
+    .slide_image {
+        height: 220px !important;
+    }
+
+    .reviews {
+        min-height: 650px;
+    }
+}

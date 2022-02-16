@@ -1,0 +1,18 @@
+.hero {
+    min-height: 700px;
+    overflow: hidden;
+}
+
+
+.product_foot {
+    min-height: 300px;
+    background-image: url("/images/product-page-bg.png");
+}
+
+
+@media(max-width: 768px){
+    .product_foot {
+        min-height: 300px;
+        background-image: url("/images/product-page-bg-mobile.png");
+    }    
+}

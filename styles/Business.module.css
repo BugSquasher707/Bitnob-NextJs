@@ -1,0 +1,11 @@
+.business_foot {
+    background-image: url("/images/product-page-bg.png");
+
+}
+
+@media (max-width: 1007px) {
+    .business_foot {
+        background-image: url("/images/product-page-bg-mobile.png");
+    }
+    
+}
