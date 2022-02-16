@@ -1,12 +1,11 @@
-import { useRouter } from 'next/router'
+import Link from 'next/link';
 
 const Card = ({ slug, image, title, description }) => {
 
-  const router = useRouter()
-
   return (
     <div className="w-full lg:p-8 p-5 pt-0">
-        <div className="w-full h-full p-3 rounded-xl bg-bitGreen-50 cursor-pointer" onClick={() => router.push(`/post/${slug}`)}>
+      <Link href={'/post/id/[postSlug]'} as={`/post/id/${slug}`}>
+        <div className="w-full h-full p-3 rounded-xl bg-bitGreen-50 cursor-pointer">
           <img src={image} className="w-full rounded-xl" />
           <h1 className="ml-1 text-green-500 text-sm font-semibold mt-3">
             {title}
@@ -15,6 +14,7 @@ const Card = ({ slug, image, title, description }) => {
             {description}
           </p>
         </div>
+        </Link>
     </div>
   );
 };
