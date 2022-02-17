@@ -29,6 +29,7 @@ export async function getStaticPaths() {
   const paths = res.posts.map((post) => ({
     params: { search: post.primary_tag.slug },
   }));
+
   return { paths, fallback: true };
 }
 
@@ -43,8 +44,6 @@ export const getStaticProps = async ({ params }) => {
 
 const search = ({ searchResult }) => {
   const [fetchedData, setFetchedData] = useState([]);
-
-  console.log(searchResult, 'search');
 
   useEffect(() => {
     setFetchedData(searchResult)
@@ -85,7 +84,7 @@ const search = ({ searchResult }) => {
                   fetchedData.map((item, i) => {
                     return (
                       <>
-                        {item.primary_tag.name.includes(search) && (
+                        {
                           <Card
                             key={item.id}
                             slug={item.slug}
@@ -98,12 +97,12 @@ const search = ({ searchResult }) => {
                             description={item.excerpt}
                             tag={item.primary_tag.slug}
                           />
-                        )}
+                        }
                       </>
                     );
                   })}
               </div>
-              {fetchedData == null && <p className="w-full mb-10">
+              {fetchedData.length == 0 && <p className="w-full mb-10">
                 It seems we can't find what you're looking for.
               </p>}
 

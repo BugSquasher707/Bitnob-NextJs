@@ -132,7 +132,8 @@ const Header = () => {
 
         e.preventDefault();
 
-        if(searchVal.length){
+        
+        if(!/(\s)/g.test(searchVal)){
             router.push(`/post/search/${searchVal}`)
             setSearchVal('')
         }
