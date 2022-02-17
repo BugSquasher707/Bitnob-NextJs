@@ -33,7 +33,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async ({}) => {
   const res1 = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_KEY}`
+    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_KEY}&include=tags,authors`
   );
   const post = await res1.json();
 
@@ -78,7 +78,7 @@ const date = ({ post }) => {
                 </button>
               </div>
               <div className="w-full mt-10">
-                <h1 className="text-center text-3xl font-bold">
+                <h1 className="text-center md:text-2xl text-xl font-bold">
                     {formatedDate}
                 </h1>
               </div>
@@ -96,8 +96,9 @@ const date = ({ post }) => {
                               ? obj.feature_image
                               : "../../images/blog-default.jpeg"
                           }
-                          title={obj.title}
+                          title={obj.primary_tag.name}
                           description={obj.excerpt}
+                          tag={obj.primary_tag.slug}
                         />
                       )}
                     </>

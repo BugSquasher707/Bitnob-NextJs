@@ -18,8 +18,8 @@ const blogPageData = {
                 sideSubDesc: 'My Money Mistake: I Gambled Away ₦700k On Baba Ijebu'
             },
             {
-                sideSubHeading3: 'Quiz',
-                sideSubDesc3: 'QUIZ: Are You More A Saver Or A Spender?'
+                sideSubHeading: 'Quiz',
+                sideSubDesc: 'QUIZ: Are You More A Saver Or A Spender?'
             },
             {
                 sideSubHeading: 'Money',

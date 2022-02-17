@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   BitNobButton,
   BitNobContainer,
@@ -44,6 +45,19 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const authorSlug = ({ author, allPost }) => {
+
+  const [activeBtn, setActiveBtn] = useState(true);
+  let [postCount, setPostCount] = useState(6);
+
+  const handleReadMoreBtn = () => {
+    setActiveBtn(false);
+
+    setTimeout(() => {
+      setActiveBtn(true);
+      setPostCount((postCount += 6));
+    }, 1200);
+  }
+
   return (
     <Page title="Bitnob Blog Author">
       <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-5 pb-0">
@@ -61,14 +75,14 @@ const authorSlug = ({ author, allPost }) => {
               </button>
             </div>
 
-            <div className="w-full mt-10">
-              <h1 className="text-center text-3xl font-bold">
+            <div className="w-full my-10">
+              <h1 className="text-center md:text-2xl text-xl font-bold">
                 {author[0].name}
               </h1>
             </div>
 
             <div className="w-full mt-5 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-              {allPost.map((item) => {
+              {allPost.slice(0, postCount).map((item) => {
                 return (
                   <>
                     {item.primary_author.name === author[0].name && 
@@ -80,21 +94,34 @@ const authorSlug = ({ author, allPost }) => {
                           ? item.feature_image
                           : "../images/blog-default.jpeg"
                       }
-                      title={item.title}
+                      title={item.primary_tag.name}
                       description={item.excerpt}
+                      tag={item.primary_tag.slug}
                     />}
                   </>
                 );
               })}
             </div>
 
-            <div className="mt-5 flex justify-center items-center">
-              <button
-                type="button"
-                className="p-3 cursor-pointer pl-10 pr-10 rounded-lg border-2 text-sm font-bold text-bitGreen-500 lg:mt-0 mt-5"
-              >
-                {blogPageData.section3.btnText}
-              </button>
+            <div className="flex justify-center items-center">
+              {activeBtn && (
+                <button
+                  type="button"
+                  className="p-3 cursor-pointer pl-10 pr-10 rounded-lg border-2 text-sm font-bold text-bitGreen-500 lg:mt-0 mt-5"
+                  onClick={handleReadMoreBtn}
+                >
+                  {blogPageData.section3.btnText}
+                </button>
+              )}
+
+              {!activeBtn && (
+                <button
+                  type="button"
+                  className="p-3 cursor-pointer pl-10 pr-10 rounded-lg border-2 text-sm font-bold text-bitGreen-500 lg:mt-0 mt-5"
+                >
+                  {blogPageData.section3.btnLoadingText}
+                </button>
+              )}
             </div>
           </BitNobContainer>
         </div>

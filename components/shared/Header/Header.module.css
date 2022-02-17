@@ -42,12 +42,32 @@
     }
 }
 
+.searchContainer input,
+.boxSearchBar input{
+    font-size: 14px;
+}
+
+.animateSearchBox{
+    animation: drop .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 
 @media (max-width:1300px){
     .wide {
         top: 60px;
     }
 
+}
+
+@media (max-width:1280px){
+    .searchContainer {
+        display: none;
+    }
+
+    .searchIconContainer{
+        display: block;
+        margin-top: 3px !important;
+    }
 }
 
 @media (max-width:768px) {

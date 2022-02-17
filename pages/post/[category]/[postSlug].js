@@ -1,4 +1,3 @@
-
 import {
   BitNobButton,
   BitNobContainer,
@@ -26,7 +25,7 @@ export async function getStaticPaths() {
   ).then((res) => res.json());
 
   const paths = res.posts.map((post) => ({
-    params: { postSlug: post.slug.toString() },
+    params: { category: post.primary_tag.slug ,postSlug: post.slug.toString() },
   }));
   return { paths, fallback: false };
 }
@@ -48,13 +47,13 @@ export const getStaticProps = async ({ params }) => {
 const PostSlug = ({ post, allPost }) => {
   const router = useRouter();
 
-  const paramSlug = router.query.postSlug
+  // const paramSlug = router.query.postSlug
 
   return (
     <>
       <Page title="Bitnob Blog Post">
         <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-5 pb-0">
-          <div className="pt-6 pb-20 lg:pl-28 lg:pr-28">
+          <div className="pt-6 pb-20">
             <BitNobContainer>
               <div className="bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
                 <h1 className="text-lg font-bold md:mr-20 md:mb-0 mr-0 mb-7">
@@ -78,7 +77,7 @@ const PostSlug = ({ post, allPost }) => {
                   <>
                     <div className="mt-20" key={obj.id}>
                       <div className="w-full">
-                        <h1 className="text-black-900 font-bold text-2xl text-center">
+                        <h1 className="xl:px-32 text-black-900 font-bold md:text-2xl text-xl text-center">
                           {obj.title}
                         </h1>
                         <img
@@ -87,21 +86,21 @@ const PostSlug = ({ post, allPost }) => {
                               ? obj.feature_image
                               : "../../images/blog-default.jpeg"
                           }
-                          className="lg:w-4/6 w-full mb-5 mx-auto mt-8 rounded-xl"
+                          className="lg:w-3/6 w-full mb-5 mx-auto mt-8 rounded-xl"
                           alt=""
                         />
-                        <div className="lg:w-4/6 w-full mx-auto block lg:flex justify-start items-center">
-                          <div className="lg:w-5/6 md:flex block justfy-start items-center">
+                        <div className="w-full xl:px-32 mx-auto block md:flex justify-between items-center">
+                          <div className="md:grid md:grid-cols-3 block justfy-start items-center">
                             <div
-                              className="w-full p-3 pr-0 pl-0 flex justify-start items-center cursor-pointer"
+                              className="w-full mr-8 p-3 px-0 flex justify-start items-center cursor-pointer"
                               onClick={() =>
                                 router.push(
                                   `/author/${obj.primary_author.slug}`
                                 )
                               }
                             >
-                              <BiUserCircle className="text-sm text-bitGreen-500" />
-                              <span className="w-4/6 text-xs ml-3 text-bitGreen-500 font-medium">
+                              <BiUserCircle className="text-sm text-gray-600" />
+                              <span className="text-xs ml-2 text-gray-600 font-medium">
                                 By {obj.primary_author.name}
                               </span>
                             </div>
@@ -114,46 +113,46 @@ const PostSlug = ({ post, allPost }) => {
                                 },
                               }}
                             >
-                              <div className="w-full p-3 md:pl-2 md:pr-2 pl-0 pr-0 flex justify-start items-center cursor-pointer">
-                                <AiFillCalendar className="text-sm text-bitGreen-500" />
-                                <span className="w-full text-xs ml-3 text-bitGreen-500 font-medium">
+                              <div className="w-full p-3 pl-0 pr-0 flex justify-start items-center cursor-pointer">
+                                <AiFillCalendar className="text-sm text-gray-600" />
+                                <span className="w-full text-xs ml-2 text-gray-600 font-medium">
                                   {formatedDate}
                                 </span>
                               </div>
                             </Link>
 
-                            <div className="w-full p-3 md:pl-2 md:pr-2 pl-0 pr-0 flex justify-start items-center cursor-pointer">
-                              <FaTags className="text-sm text-bitGreen-500" />
-                              <span className="w-full text-xs ml-3 text-bitGreen-500 font-medium">
+                            <div className="w-full p-3 pl-0 pr-0 flex justify-start items-center cursor-pointer">
+                              <FaTags className="text-sm text-gray-600" />
+                              <span className="w-full text-xs ml-2 text-gray-600 font-medium">
                                 {obj.primary_tag.name}
                               </span>
                             </div>
                           </div>
-                          <div className="lg:w-2/6 lg:mt-0 lg:mb-0 mt-5 mb-5 flex lg:justify-end justify-start item-center">
-                            <div className="p-3 bg-bitGreen-50 rounded-full cursor-pointer">
+                          <div className="lg:mt-0 lg:mb-0 mt-5 mb-5 flex lg:justify-end justify-start item-center">
+                            <div className="p-2 bg-bitGreen-50 rounded-full cursor-pointer">
                               <FaFacebook className="text-bitGreen-500" />
                             </div>
-                            <div className="p-3 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
+                            <div className="p-2 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
                               <FaTwitter className="text-bitGreen-500" />
                             </div>
-                            <div className="p-3 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
+                            <div className="p-2 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
                               <FaWhatsapp className="text-bitGreen-500" />
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className="w-full mt-5">
+                      <div className="w-full mt-5 xl:px-32">
                         <p className="mb-5 font-medium">{obj.excerpt}</p>
                       </div>
                     </div>
                     <div className="w-full mx-auto p-5 pl-0 pr-0">
                       <div className="w-full py-20 bg-bitGreen-400 rounded-2xl">
                         <img
-                          src="../images/logo-full.png"
-                          className="w-32 mx-auto"
+                          src="../../images/logo-full.png"
+                          className="md:w-32 w-28 mx-auto"
                           alt=""
                         />
-                        <h1 className="text-2xl font-bold text-center mt-8">
+                        <h1 className="md:text-2xl text-xl font-bold text-center mt-8">
                           The Better Way To Save & Invest
                         </h1>
                         <div className="mt-8 flex justify-center items-center">
@@ -167,7 +166,7 @@ const PostSlug = ({ post, allPost }) => {
                       </div>
                     </div>
 
-                    <div className="w-full mt-10 mb-10">
+                    <div className="w-full my-5">
                       <div className="w-full flex justify-start item-center">
                         <div className="p-3 bg-bitGreen-50 rounded-full cursor-pointer">
                           <FaFacebook className="text-lg text-bitGreen-500" />
@@ -181,7 +180,7 @@ const PostSlug = ({ post, allPost }) => {
                       </div>
                     </div>
                     <div className="w-full mt-10">
-                      <h1 className="text-center text-3xl font-bold">
+                      <h1 className="text-center md:text-2xl text-xl font-bold">
                         You'll Like This
                       </h1>
                       <div className="w-full mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
@@ -198,8 +197,9 @@ const PostSlug = ({ post, allPost }) => {
                                       ? item.feature_image
                                       : "../../images/blog-default.jpeg"
                                   }
-                                  title={item.title}
+                                  title={item.primary_tag.name}
                                   description={item.excerpt}
+                                  tag={item.primary_tag.slug}
                                 />
                               )}
                             </>

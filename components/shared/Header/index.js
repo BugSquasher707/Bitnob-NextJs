@@ -2,11 +2,11 @@ import classNames from 'classnames'
 import BitNobContainer from "../../UI/Container"
 import BitNobButton from "../../UI/Button"
 import BitNobLink from "../../UI/Link"
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 import style from './Header.module.css';
 import { useCloseContext } from "../../../hooks";
-import { BiChevronDown, BiChevronUp } from 'react-icons/bi';
+import { BiChevronDown, BiChevronUp, BiSearch } from 'react-icons/bi';
 import { HiViewGrid } from 'react-icons/hi';
 import { LogoFull } from "public";
 import { headerFooterLinks } from "static";
@@ -14,7 +14,6 @@ import { useRouter } from "next/dist/client/router";
 import { bitnobAppleStore } from 'app-constants'
 
 const { headerLinks } = headerFooterLinks;
-
 
 const MenuDropDown = ({ title, setVisible, data, visible }) => {
     if (!data) return null
@@ -68,7 +67,6 @@ const MenuDropDown = ({ title, setVisible, data, visible }) => {
     return null
 }
 
-
 const LinkLists = ({ data }) => {
     const [key, val] = data
 
@@ -111,6 +109,7 @@ const LinkLists = ({ data }) => {
 }
 
 const Header = () => {
+    
     const router = useRouter()
     const headerRef = useRef(null)
     const { ref, visible, setVisible } = useCloseContext(false, true)
@@ -118,26 +117,82 @@ const Header = () => {
     useEffect(()=> {
         setVisible(false)
         headerRef.current?.scrollIntoViewIfNeeded()
+
     }, [router.pathname])
 
+    const [addClass, setAddClass] = useState(false)
+
+    const showSearchBar = () => {
+        setAddClass(!addClass)
+    }
+
+    const [searchVal, setSearchVal] = useState('')
+
+    const handleSearchBar = async (e) => {
+
+        e.preventDefault();
+
+        if(searchVal.length){
+            router.push(`/post/search/${searchVal}`)
+        }
+
+    }
     
     return(
         <BitNobContainer>
             <header ref={headerRef} className="hidden lg:flex z-20 justify-between items-center relative py-3 xl:py-4 px-4 md:px-12 mt-6 rounded-2xl bg-bitGreen-50 w-full">
+
                 <BitNobLink to="/">
                     <LogoFull className=" w-24 lg:w-32" />
                 </BitNobLink>
+                
                     <div 
                         ref={ref} 
                         className={classNames(`transition-all duration-300 bg-white z-50 lg:bg-transparent shadow-lg lg:shadow-none 
                         px-6 lg:px-0 py-10 lg:py-0 w-full lg:w-auto absolute left-0 top-24 md:top-28 lg:top-0 lg:static flex flex-col 
                         lg:flex-row justify-between lg:items-center lg:space-x-24`, style.drop_visible)}>
+                        
                         <ul className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-12">
+                            
                             {
                                 Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
                             }
+                            
+                            <div className={`hidden relative ${style.searchIconContainer}`}>
+                            
+                                <BiSearch className={`cursor-pointer text-lg`} onClick={showSearchBar}/>
+                                
+                                {addClass && <div className={`h-16 flex justify-center items-center absolute top-12 right-0 ${style.animateSearchBox}`}>    
+
+                                    <div className={`flex relative justify-start items-center ${style.boxSearchBar}`}>
+                                
+                                        <BiSearch className='absolute text-sm ml-3 text-gray-500'/>
+
+                                        <form onSubmit={handleSearchBar}>
+                                            <input type="text" placeholder='Search' onChange={(e) => setSearchVal(e.target.value)}
+                                            className='w-48 py-1 px-2 pl-9 text-sm font-semibold text-gray-500 focus:outline-none rounded-lg border'/>
+                                        </form>
+                                    </div>
+
+                                </div>}
+                            
+                            </div>
+
+                            <div className={`flex relative justify-start items-center ${style.searchContainer}`}>
+                            
+                                <BiSearch className='absolute text-sm ml-3 text-gray-500'/>
+                                
+                                <form onSubmit={handleSearchBar}>
+                                    <input type="text" placeholder='Search' onChange={(e) => setSearchVal(e.target.value)}
+                                    className='w-48 py-1 px-2 pl-9 text-sm font-semibold text-gray-500 focus:outline-none rounded-lg border'/>
+                                </form>
+                            
+                            </div>
+
                         </ul>
+
                     </div>
+
                 <div 
                     onClick={()=> setVisible(!visible)}
                     tabIndex="0" 
@@ -151,6 +206,7 @@ const Header = () => {
                         md:h-16 md:w-16 text-bitGreen-200`}>
                     <HiViewGrid />
                 </div>
+
             </header>
 
             {/**Mobile */}
@@ -165,26 +221,68 @@ const Header = () => {
                             className={`${visible ? style.drop_visible : ''} transition-all duration-300 bg-white z-50 lg:bg-transparent shadow-lg lg:shadow-none 
                             px-6 lg:px-0 py-10 lg:py-0 w-full lg:w-auto absolute left-0 top-24 md:top-28 lg:top-0 lg:static flex flex-col 
                             lg:flex-row justify-between lg:items-center lg:space-x-24`}>
+                            
                             <ul className="flex flex-col lg:flex-row space-y-10 lg:space-y-0 lg:space-x-12">
+                                
+
                                 {
                                     Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
                                 }
+
                             </ul>
                         </div>
                     : null
                 }
-                <div 
-                    onClick={()=> setVisible(!visible)}
-                    tabIndex="0" 
-                    style={{ transform: visible ? 'rotate(135deg)' : ''}}
-                    role="button" 
-                    className={`
-                        appearance-none outline-none text-3xl md:text-4xl lg:hidden 
+
+
+                <div className='flex justify-between items-center'>
+
+                        <div className={`hidden relative ${style.searchIconContainer}`}>
+                                                                            
+                             {addClass && <div className={`h-16 flex justify-center items-center absolute sm:top-10 top-9 -right-10 ${style.animateSearchBox}`}>    
+                
+                                 <div className={`flex relative justify-start items-center ${style.boxSearchBar}`}>
+                                                
+                                    <BiSearch className='absolute text-sm ml-3 text-gray-500'/>
+                                                        
+                                    <form onSubmit={handleSearchBar}>
+                                        <input type="text" placeholder='Search' onChange={(e) => setSearchVal(e.target.value)}
+                                        className='w-48 py-1 px-2 pl-9 text-sm font-semibold text-gray-500 focus:outline-none rounded-lg border'/>
+                                    </form>
+                                                    
+                                </div>
+                
+                            </div>}
+                                            
+                        </div>
+                    <div 
+                        onClick={showSearchBar}
+                        tabIndex="0" 
+                        className={`
+                        appearance-none outline-none text-xl md:text-2xl lg:hidden 
                         cursor-default transition-all duration-300 hover:opacity-70 
-                        focus:ring-2 focus:ring-offset-2 focus:ring-bitGreen-200 bg-white 
+                        ${addClass ? `focus:ring-2 focus:ring-offset-2 focus:ring-bitGreen-200` : ''} bg-white 
                         rounded-full p-2 md:p-1 flex justify-center items-center box-border w-12 h-12 
-                        md:h-16 md:w-16 text-bitGreen-200`}>
-                    <HiViewGrid />
+                        md:h-16 md:w-16 text-bitGreen-200 mr-3`}>
+                        <BiSearch />
+
+
+                    </div>
+
+                    <div 
+                        onClick={()=> setVisible(!visible)}
+                        tabIndex="1" 
+                        style={{ transform: visible ? 'rotate(135deg)' : ''}}
+                        role="button" 
+                        className={`
+                            appearance-none outline-none text-3xl md:text-4xl lg:hidden 
+                            cursor-default transition-all duration-300 hover:opacity-70 
+                            focus:ring-2 focus:ring-offset-2 focus:ring-bitGreen-200 bg-white 
+                            rounded-full p-2 md:p-1 flex justify-center items-center box-border w-12 h-12 
+                            md:h-16 md:w-16 text-bitGreen-200`}>
+                        <HiViewGrid />
+                    </div>
+                    
                 </div>
             </header>
         </BitNobContainer>

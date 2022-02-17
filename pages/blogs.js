@@ -11,9 +11,10 @@ import {
 import Card from "components/UI/Card/Card";
 import blogPageData from "static/blog-static";
 
+const BLOG_URL = "https://blog.bitnob.com";
+const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
+
 async function getPosts() {
-  const BLOG_URL = "https://blog.bitnob.com";
-  const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
 
   const res = await fetch(
     `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_KEY}&include=tags,authors`
@@ -36,15 +37,15 @@ export const getStaticProps = async () => {
 
 const Blogs = ({ postsData }) => {
 
-  const [activeBtn, setActiveBtn] = useState(true)
-  let [postCount, setPostCount] = useState(6)
+  const [activeBtn, setActiveBtn] = useState(true);
+  let [postCount, setPostCount] = useState(6);
 
   const handleReadMoreBtn = () => {
-    setActiveBtn(false)
-    
+    setActiveBtn(false);
+
     setTimeout(() => {
-      setActiveBtn(true)
-      setPostCount(postCount+=6)
+      setActiveBtn(true);
+      setPostCount((postCount += 6));
     }, 1200);
   }
 
@@ -101,7 +102,6 @@ const Blogs = ({ postsData }) => {
                     </div>
                   );
                 })}
-
               </div>
             </div>
 
@@ -116,29 +116,33 @@ const Blogs = ({ postsData }) => {
                         ? item.feature_image
                         : "../images/blog-default.jpeg"
                     }
-                    title={item.title}
+                    title={item.primary_tag.name}
                     description={item.excerpt}
+                    tag={item.primary_tag.slug}
                   />
                 );
               })}
             </div>
 
             <div className="flex justify-center items-center">
-              {activeBtn && <button
-                type="button"
-                className="p-3 cursor-pointer pl-10 pr-10 rounded-lg border-2 text-sm font-bold text-bitGreen-500 lg:mt-0 mt-5"
-                onClick={handleReadMoreBtn}
-              >
-                {blogPageData.section3.btnText}
-              </button>}
+              {activeBtn && (
+                <button
+                  type="button"
+                  className="p-3 cursor-pointer pl-10 pr-10 rounded-lg border-2 text-sm font-bold text-bitGreen-500 lg:mt-0 mt-5"
+                  onClick={handleReadMoreBtn}
+                >
+                  {blogPageData.section3.btnText}
+                </button>
+              )}
 
-              {!activeBtn && <button
-                type="button"
-                className="p-3 cursor-pointer pl-10 pr-10 rounded-lg border-2 text-sm font-bold text-bitGreen-500 lg:mt-0 mt-5"
-              >
-                {blogPageData.section3.btnLoadingText}
-              </button>}
-
+              {!activeBtn && (
+                <button
+                  type="button"
+                  className="p-3 cursor-pointer pl-10 pr-10 rounded-lg border-2 text-sm font-bold text-bitGreen-500 lg:mt-0 mt-5"
+                >
+                  {blogPageData.section3.btnLoadingText}
+                </button>
+              )}
             </div>
           </BitNobContainer>
         </div>
