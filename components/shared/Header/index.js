@@ -134,6 +134,7 @@ const Header = () => {
 
         if(searchVal.length){
             router.push(`/post/search/${searchVal}`)
+            setSearchVal('')
         }
 
     }
@@ -169,7 +170,7 @@ const Header = () => {
                                         <BiSearch className='absolute text-sm ml-3 text-gray-500'/>
 
                                         <form onSubmit={handleSearchBar}>
-                                            <input type="text" placeholder='Search' onChange={(e) => setSearchVal(e.target.value)}
+                                            <input type="text" placeholder='Search' value={searchVal} onChange={(e) => setSearchVal(e.target.value)}
                                             className='w-48 py-1 px-2 pl-9 text-sm font-semibold text-gray-500 focus:outline-none rounded-lg border'/>
                                         </form>
                                     </div>
@@ -183,7 +184,7 @@ const Header = () => {
                                 <BiSearch className='absolute text-sm ml-3 text-gray-500'/>
                                 
                                 <form onSubmit={handleSearchBar}>
-                                    <input type="text" placeholder='Search' onChange={(e) => setSearchVal(e.target.value)}
+                                    <input type="text" placeholder='Search' value={searchVal} onChange={(e) => setSearchVal(e.target.value)}
                                     className='w-48 py-1 px-2 pl-9 text-sm font-semibold text-gray-500 focus:outline-none rounded-lg border'/>
                                 </form>
                             
@@ -246,7 +247,7 @@ const Header = () => {
                                     <BiSearch className='absolute text-sm ml-3 text-gray-500'/>
                                                         
                                     <form onSubmit={handleSearchBar}>
-                                        <input type="text" placeholder='Search' onChange={(e) => setSearchVal(e.target.value)}
+                                        <input type="text" placeholder='Search' value={searchVal} onChange={(e) => setSearchVal(e.target.value)}
                                         className='w-48 py-1 px-2 pl-9 text-sm font-semibold text-gray-500 focus:outline-none rounded-lg border'/>
                                     </form>
                                                     
