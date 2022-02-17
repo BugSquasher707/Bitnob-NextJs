@@ -1,9 +1,10 @@
 import Link from 'next/link';
+import style from '../../shared/Header/Header.module.css'
 
 const Card = ({ slug, image, title, description, tag }) => {
 
   return (
-    <div className="w-full lg:p-8 p-5 pt-0">
+    <div className={`w-full lg:p-8 p-5 pt-0 ${style.animateCards}`}>
       <Link href={'/post/[category]/[postSlug]'} as={`/post/${tag}/${slug}`}>
         <div className="w-full h-full p-3 rounded-xl bg-bitGreen-50 cursor-pointer">
           <img src={image} className="w-full rounded-xl" />

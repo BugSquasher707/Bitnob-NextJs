@@ -16,7 +16,6 @@ import { AiFillCalendar } from "react-icons/ai";
 import { FaTags, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
-import { featureData } from "static";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -42,16 +41,21 @@ export const getStaticProps = async ({ params }) => {
   return { props: { searchResult: post.posts } };
 };
 
-const search = ({ searchResult }) => {
+const searchComponent = ({ searchResult }) => {
   const [fetchedData, setFetchedData] = useState([]);
-
-  useEffect(() => {
-    setFetchedData(searchResult)
-  }, [])
 
   const router = useRouter();
 
   let { search } = router.query;
+
+  useEffect(async () => {
+    const res1 = await fetch(
+      `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_KEY}&include=tags,authors&limit=all&filter=tag:${search}`
+    );
+    const post = await res1.json();
+
+    setFetchedData(post.posts)
+  }, [search])
 
   return (
     <>
@@ -80,7 +84,7 @@ const search = ({ searchResult }) => {
               {/* Search Results */}
 
               <div className="w-full mt-5 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-                {fetchedData != null &&
+                {fetchedData.length > 0 &&
                   fetchedData.map((item, i) => {
                     return (
                       <>
@@ -135,6 +139,6 @@ const search = ({ searchResult }) => {
   );
 };
 
-search.getLayout = getLayout;
+searchComponent.getLayout = getLayout;
 
-export default search;
+export default searchComponent;
