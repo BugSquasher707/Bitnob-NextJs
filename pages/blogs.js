@@ -10,12 +10,12 @@ import {
 } from "components";
 import Card from "components/UI/Card/Card";
 import blogPageData from "static/blog-static";
+import SearchBox from "components/UI/SearchBox/SearchBox";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
 
 async function getPosts() {
-
   const res = await fetch(
     `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_KEY}&include=tags,authors`
   ).then((res) => res.json());
@@ -36,7 +36,6 @@ export const getStaticProps = async () => {
 };
 
 const Blogs = ({ postsData }) => {
-
   const [activeBtn, setActiveBtn] = useState(true);
   let [postCount, setPostCount] = useState(6);
 
@@ -47,14 +46,15 @@ const Blogs = ({ postsData }) => {
       setActiveBtn(true);
       setPostCount((postCount += 6));
     }, 1200);
-  }
+  };
 
   return (
     <Page title="Welcome to Bitnob Blogs">
-      <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-5 pb-0">
-        <div className=" pt-6 pb-20">
-          <BitNobContainer>
-            <div className="bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
+      <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-0 pb-0">
+        <div className="pt-0 pb-20">
+          <BitNobContainer> 
+            <SearchBox/>
+            <div className="mt-10 bg-bitGreen-50 w-full rounded-2xl mt-0 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
               <h1 className="text-lg font-bold md:mr-20 md:mb-0 mr-0 mb-7">
                 {blogPageData.section1.heading}
               </h1>

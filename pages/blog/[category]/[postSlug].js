@@ -6,7 +6,6 @@ import {
   Page,
   PreFooter,
 } from "components";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { bitnobPlayStore, bitnobAppleStore } from "app-constants";
 import { AppStore, PlayStore } from "public";
@@ -15,6 +14,9 @@ import { AiFillCalendar } from "react-icons/ai";
 import { FaTags, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
+import style from "../../../components/shared/Header/Header.module.css";
+import { htmlToText } from "html-to-text";
+import SearchBox from "components/UI/SearchBox/SearchBox";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -25,7 +27,7 @@ export async function getStaticPaths() {
   ).then((res) => res.json());
 
   const paths = res.posts.map((post) => ({
-    params: { category: post.primary_tag.slug ,postSlug: post.slug.toString() },
+    params: { category: post.primary_tag.slug, postSlug: post.slug.toString() },
   }));
   return { paths, fallback: false };
 }
@@ -52,10 +54,11 @@ const PostSlug = ({ post, allPost }) => {
   return (
     <>
       <Page title="Bitnob Blog Post">
-        <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-5 pb-0">
-          <div className="pt-6 pb-20">
+        <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-0 pb-0">
+          <div className="pt-0">
             <BitNobContainer>
-              <div className="bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
+              <SearchBox />
+              <div className="mt-10 bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
                 <h1 className="text-lg font-bold md:mr-20 md:mb-0 mr-0 mb-7">
                   {blogPageData.section1.heading}
                 </h1>
@@ -72,12 +75,12 @@ const PostSlug = ({ post, allPost }) => {
                   "en-US",
                   { year: "numeric", month: "long", day: "numeric" }
                 );
-                
+
                 return (
                   <>
-                    <div className="mt-20" key={obj.id}>
+                    <div className="mt-20 " key={obj.id}>
                       <div className="w-full">
-                        <h1 className="xl:px-32 text-black-900 font-bold md:text-2xl text-xl text-center">
+                        <h1 className="text-black-900 font-bold mb-5 md:text-2xl text-xl text-center">
                           {obj.title}
                         </h1>
                         <img
@@ -86,44 +89,53 @@ const PostSlug = ({ post, allPost }) => {
                               ? obj.feature_image
                               : "../../images/blog-default.jpeg"
                           }
-                          className="lg:w-3/6 w-full mb-5 mx-auto mt-8 rounded-xl"
+                          className={` ${style.main_img} w-full mb-5 mx-auto mt-8 rounded-xl`}
                           alt=""
                         />
-                        <div className="w-full xl:px-32 mx-auto block md:flex justify-between items-center">
-                          <div className="md:grid md:grid-cols-3 block justfy-start items-center">
+                        <div className="w-full mx-auto block lg:flex justify-between items-center">
+                          <div className="w-full md:flex block justfy-start items-center">
                             <div
-                              className="w-full mr-8 p-3 px-0 flex justify-start items-center cursor-pointer"
+                              className={`${style.postTagWidth}  p-3 px-0 flex justify-start items-center cursor-pointer`}
                               onClick={() =>
                                 router.push(
                                   `/author/${obj.primary_author.slug}`
                                 )
                               }
                             >
-                              <BiUserCircle className="text-sm text-gray-600" />
-                              <span className="text-xs ml-2 text-gray-600 font-medium">
+                              <BiUserCircle
+                                className={`${style.iconSize} text-sm text-bitGreen-500`}
+                              />
+                              <span
+                                className={`text-xs ml-2 text-gray-600 font-medium`}
+                              >
                                 By {obj.primary_author.name}
                               </span>
                             </div>
 
-                            <Link
-                              href={{
-                                pathname: "/post/date/[postDate]",
-                                query: {
-                                  postDate: objDate,
-                                },
-                              }}
+                            <div
+                              className={`${style.postTagWidth} p-3 px-0  flex justify-center items-center cursor-pointer`}
+                              onClick={() =>
+                                router.push(`/blog/date/${objDate}`)
+                              }
                             >
-                              <div className="w-full p-3 pl-0 pr-0 flex justify-start items-center cursor-pointer">
-                                <AiFillCalendar className="text-sm text-gray-600" />
-                                <span className="w-full text-xs ml-2 text-gray-600 font-medium">
-                                  {formatedDate}
-                                </span>
-                              </div>
-                            </Link>
-
-                            <div className="w-full p-3 pl-0 pr-0 flex justify-start items-center cursor-pointer">
-                              <FaTags className="text-sm text-gray-600" />
+                              <AiFillCalendar
+                                className={`${style.iconSize} text-sm text-bitGreen-500`}
+                              />
                               <span className="w-full text-xs ml-2 text-gray-600 font-medium">
+                                {formatedDate}
+                              </span>
+                            </div>
+
+                            <div
+                              className={`${style.postTagWidth} p-3 pl-0 pr-0 flex justify-center items-center cursor-pointer`}
+                              onClick={() =>
+                                router.push(`/blog/category/${obj.primary_tag.slug}`)
+                              }
+                            >
+                              <FaTags
+                                className={`${style.iconSize1} text-sm text-bitGreen-500`}
+                              />
+                              <span className="w-full capitalize text-xs ml-2 text-gray-600 font-medium">
                                 {obj.primary_tag.name}
                               </span>
                             </div>
@@ -141,8 +153,10 @@ const PostSlug = ({ post, allPost }) => {
                           </div>
                         </div>
                       </div>
-                      <div className="w-full mt-5 xl:px-32">
-                        <p className="mb-5 font-medium">{obj.excerpt}</p>
+                      <div className="w-full mt-5">
+                        <p className="mb-5 break-words font-medium">
+                          {htmlToText(obj.html)}
+                        </p>
                       </div>
                     </div>
                     <div className="w-full mx-auto p-5 pl-0 pr-0">
@@ -165,7 +179,6 @@ const PostSlug = ({ post, allPost }) => {
                         </div>
                       </div>
                     </div>
-
                     <div className="w-full my-5">
                       <div className="w-full flex justify-start item-center">
                         <div className="p-3 bg-bitGreen-50 rounded-full cursor-pointer">
@@ -184,7 +197,7 @@ const PostSlug = ({ post, allPost }) => {
                         You'll Like This
                       </h1>
                       <div className="w-full mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-                        {allPost.slice(0,3).map((item) => {
+                        {allPost.slice(0, 3).map((item) => {
                           return (
                             <>
                               {item.primary_author.name !==

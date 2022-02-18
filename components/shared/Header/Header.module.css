@@ -42,30 +42,67 @@
     }
 }
 
-.searchContainer input,
-.boxSearchBar input{
+.searchContainer{
+    width: 100%;
+}
+
+.searchContainer form{
+    width: 25%;
+}
+
+.searchContainer input{
     font-size: 14px;
+    width: 100%;
 }
 
 .animateSearchBox, .animateCards{
     animation: drop .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
+.main_img{
+    height: 30rem !important;
+}
+
+.postTagWidth{
+    width: fit-content;
+    margin-right: 5rem;
+}
+
+.postTagWidth span{
+    transition: all .2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.postTagWidth span:hover{
+    font-weight: 700;
+}
+
+.iconSize{
+    font-size: 20px !important;
+}
+
+.iconSize1{
+    font-size: 22px !important;
+}
+
 @media (max-width:1300px){
     .wide {
         top: 60px;
     }
-
 }
 
-@media (max-width:1280px){
-    .searchContainer {
-        display: none;
+@media (max-width:1200px){
+    .searchContainer form{
+        width: 30%;
+    }
+}
+
+@media (max-width:1024px) {
+    .main_img{
+        height: 25rem !important;
     }
 
-    .searchIconContainer{
-        display: block;
-        margin-top: 3px !important;
+    .searchContainer form{
+        width: 40%;
     }
 }
 
@@ -76,5 +113,19 @@
     
     .wide {
         top: 40px;
+    }
+
+    .main_img{
+        height: 20rem !important;
+    }
+
+    .searchContainer form{
+        width: 45%;
+    }
+}
+
+@media (max-width:576px) {
+    .searchContainer form{
+        width: 100%;
     }
 }

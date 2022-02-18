@@ -1,20 +1,13 @@
 import {
-  BitNobButton,
   BitNobContainer,
-  BitNobLink,
   getLayout,
   Page,
   PreFooter,
 } from "components";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { bitnobPlayStore, bitnobAppleStore } from "app-constants";
-import { AppStore, PlayStore } from "public";
-import { BiUserCircle } from "react-icons/bi";
-import { AiFillCalendar } from "react-icons/ai";
-import { FaTags, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
+import SearchBox from "components/UI/SearchBox/SearchBox";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -50,8 +43,6 @@ const date = ({ post }) => {
     return item.published_at.slice(0,10) === paramDate
   })
 
-  console.log(postDate.length);
-
   const unfomatedDate = postDate[0].published_at.slice(0, 10)
 
   let formatedDate = new Date(unfomatedDate).toLocaleDateString("en-US", {
@@ -63,10 +54,11 @@ const date = ({ post }) => {
   return (
     <>
       <Page title="Bitnob Blog Post Date">
-        <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-5 pb-0">
-          <div className="pt-6 pb-20 lg:pl-28 lg:pr-28">
+        <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-0 pb-0">
+          <div className="pt-0 pb-0 lg:px-28">
             <BitNobContainer>
-              <div className="bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
+              <SearchBox/>
+              <div className="mt-10 bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
                 <h1 className="text-lg font-bold md:mr-20 md:mb-0 mr-0 mb-7">
                   {blogPageData.section1.heading}
                 </h1>
@@ -83,11 +75,10 @@ const date = ({ post }) => {
                 </h1>
               </div>
               <div className="w-full mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-                {post.map((obj) => {
-                  const objDate = obj.published_at.slice(0, 10);
+                {postDate.map((obj) => {
                   return (
                     <>
-                      {objDate === paramDate && (
+                      {
                         <Card
                           key={obj.id}
                           slug={obj.slug}
@@ -100,7 +91,7 @@ const date = ({ post }) => {
                           description={obj.excerpt}
                           tag={obj.primary_tag.slug}
                         />
-                      )}
+                      }
                     </>
                   );
                 })}

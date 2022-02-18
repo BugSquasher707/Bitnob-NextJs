@@ -4,7 +4,7 @@ import BitNobButton from "../../UI/Button"
 import BitNobLink from "../../UI/Link"
 import React, { useEffect, useRef, useState } from "react"
 
-import style from './Header.module.css';
+import style from "./Header.module.css";
 import { useCloseContext } from "../../../hooks";
 import { BiChevronDown, BiChevronUp, BiSearch } from 'react-icons/bi';
 import { HiViewGrid } from 'react-icons/hi';
@@ -119,26 +119,6 @@ const Header = () => {
         headerRef.current?.scrollIntoViewIfNeeded()
 
     }, [router.pathname])
-
-    const [addClass, setAddClass] = useState(false)
-
-    const showSearchBar = () => {
-        setAddClass(!addClass)
-    }
-
-    const [searchVal, setSearchVal] = useState('')
-
-    const handleSearchBar = async (e) => {
-
-        e.preventDefault();
-
-        
-        if(!/(\s)/g.test(searchVal)){
-            router.push(`/post/search/${searchVal}`)
-            setSearchVal('')
-        }
-
-    }
     
     return(
         <BitNobContainer>
@@ -159,37 +139,6 @@ const Header = () => {
                             {
                                 Object.entries(headerLinks).map((a) => <LinkLists key={a[0]} data={a} />)
                             }
-                            
-                            <div className={`hidden relative ${style.searchIconContainer}`}>
-                            
-                                <BiSearch className={`cursor-pointer text-lg`} onClick={showSearchBar}/>
-                                
-                                {addClass && <div className={`h-16 flex justify-center items-center absolute top-12 right-0 ${style.animateSearchBox}`}>    
-
-                                    <div className={`flex relative justify-start items-center ${style.boxSearchBar}`}>
-                                
-                                        <BiSearch className='absolute text-sm ml-3 text-gray-500'/>
-
-                                        <form onSubmit={handleSearchBar}>
-                                            <input type="text" placeholder='Search' value={searchVal} onChange={(e) => setSearchVal(e.target.value)}
-                                            className='w-48 py-1 px-2 pl-9 text-sm font-semibold text-gray-500 focus:outline-none rounded-lg border'/>
-                                        </form>
-                                    </div>
-
-                                </div>}
-                            
-                            </div>
-
-                            <div className={`flex relative justify-start items-center ${style.searchContainer}`}>
-                            
-                                <BiSearch className='absolute text-sm ml-3 text-gray-500'/>
-                                
-                                <form onSubmit={handleSearchBar}>
-                                    <input type="text" placeholder='Search' value={searchVal} onChange={(e) => setSearchVal(e.target.value)}
-                                    className='w-48 py-1 px-2 pl-9 text-sm font-semibold text-gray-500 focus:outline-none rounded-lg border'/>
-                                </form>
-                            
-                            </div>
 
                         </ul>
 
@@ -239,41 +188,9 @@ const Header = () => {
 
                 <div className='flex justify-between items-center'>
 
-                        <div className={`hidden relative ${style.searchIconContainer}`}>
-                                                                            
-                             {addClass && <div className={`h-16 flex justify-center items-center absolute sm:top-10 top-9 -right-10 ${style.animateSearchBox}`}>    
-                
-                                 <div className={`flex relative justify-start items-center ${style.boxSearchBar}`}>
-                                                
-                                    <BiSearch className='absolute text-sm ml-3 text-gray-500'/>
-                                                        
-                                    <form onSubmit={handleSearchBar}>
-                                        <input type="text" placeholder='Search' value={searchVal} onChange={(e) => setSearchVal(e.target.value)}
-                                        className='w-48 py-1 px-2 pl-9 text-sm font-semibold text-gray-500 focus:outline-none rounded-lg border'/>
-                                    </form>
-                                                    
-                                </div>
-                
-                            </div>}
-                                            
-                        </div>
-                    <div 
-                        onClick={showSearchBar}
-                        tabIndex="0" 
-                        className={`
-                        appearance-none outline-none text-xl md:text-2xl lg:hidden 
-                        cursor-default transition-all duration-300 hover:opacity-70 
-                        ${addClass ? `focus:ring-2 focus:ring-offset-2 focus:ring-bitGreen-200` : ''} bg-white 
-                        rounded-full p-2 md:p-1 flex justify-center items-center box-border w-12 h-12 
-                        md:h-16 md:w-16 text-bitGreen-200 mr-3`}>
-                        <BiSearch />
-
-
-                    </div>
-
                     <div 
                         onClick={()=> setVisible(!visible)}
-                        tabIndex="1" 
+                        tabIndex="0" 
                         style={{ transform: visible ? 'rotate(135deg)' : ''}}
                         role="button" 
                         className={`

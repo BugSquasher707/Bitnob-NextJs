@@ -1,8 +1,9 @@
+const BitNobContainer = ({ children, className, ...rest }) => {
 
-
-const BitNobContainer = ({ children, className, ...rest })=> (
-    <div className={`container mx-auto ${className || ''}`} {...rest}>
-        {children}
+  return (
+    <div className={`container mx-auto ${className || ""}`} {...rest}>
+      {children}
     </div>
-)
-export default BitNobContainer
+  );
+};
+export default BitNobContainer;
