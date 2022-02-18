@@ -37,8 +37,7 @@ const date = ({ post }) => {
   const router = useRouter();
 
   const paramDate = router.query.postDate;
-
-  // const objDate = post[0].published_at.slice(0, 10);
+  
   const postDate = post.filter(item => {
     return item.published_at.slice(0,10) === paramDate
   })
