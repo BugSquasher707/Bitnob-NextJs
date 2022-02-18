@@ -88,7 +88,6 @@ const TagPost = ({ tagPosts, allPost }) => {
 
               <div className="w-full mt-5 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
                 {arr.slice(0, postCount).map((item) => {
-                  console.log(item.primary_tag.name === tagPosts[0].name);
                   return (
                     <>
                       {
