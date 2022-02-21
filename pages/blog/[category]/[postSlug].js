@@ -17,6 +17,7 @@ import Card from "components/UI/Card/Card";
 import style from "../../../components/shared/Header/Header.module.css";
 import { htmlToText } from "html-to-text";
 import SearchBox from "components/UI/SearchBox/SearchBox";
+import React from "react";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -52,7 +53,7 @@ const PostSlug = ({ post, allPost }) => {
   // const paramSlug = router.query.postSlug
 
   return (
-    <>
+    <React.Fragment>
       <Page title="Bitnob Blog Post">
         <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-0 pb-0">
           <div className="pt-0">
@@ -78,7 +79,7 @@ const PostSlug = ({ post, allPost }) => {
 
                 return (
                   <>
-                    <div className="mt-20 " key={obj.id}>
+                    <div className="mt-20 " key={objIndex}>
                       <div className="w-full">
                         <h1 className="text-black-900 font-bold mb-5 md:text-2xl text-xl text-center">
                           {obj.title}
@@ -197,13 +198,13 @@ const PostSlug = ({ post, allPost }) => {
                         You'll Like This
                       </h1>
                       <div className="w-full mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
-                        {allPost.slice(0, 3).map((item) => {
+                        {allPost.slice(0, 3).map((item, i) => {
                           return (
                             <>
                               {item.primary_author.name !==
                                 obj.primary_author.name && (
                                 <Card
-                                  key={item.id}
+                                  key={i}
                                   slug={item.slug}
                                   image={
                                     item.feature_image
@@ -228,7 +229,7 @@ const PostSlug = ({ post, allPost }) => {
         </div>
         <PreFooter />
       </Page>
-    </>
+    </React.Fragment>
   );
 };
 
