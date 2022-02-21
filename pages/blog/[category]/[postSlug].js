@@ -193,12 +193,10 @@ const PostSlug = ({ post, allPost }) => {
                     </div>
                     <div className="w-full mx-auto p-5 pl-0 pr-0">
                       <div className="w-full py-20 bg-bitGreen-400 rounded-2xl">
-                        <Image
+                        <img
                           src="../../images/logo-full.png"
                           className="md:w-32 w-28 mx-auto"
                           alt=""
-                          width=''
-                          height=''
                         />
                         <h1 className="md:text-2xl text-xl font-bold text-center mt-8">
                           The Better Way To Save & Invest

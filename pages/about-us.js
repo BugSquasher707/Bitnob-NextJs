@@ -74,7 +74,8 @@ const AboutUs = ()=> {
                                 className="my-8 md:my-14 lg:mt-10 mb-2 py-3 md:py-auto w-max">See Job Openings</BitNobButton>
                         </div>
                         <div className="max-w-xs md:max-w-lg lg:max-w-xs xl:max-w-md p-6 md:p-0 box-border mt-12 md:mt-20 lg:mt-0">
-                            <Image src={join.image} alt="app" width='' height='' />
+                           {/* // eslint-disable-next-line */}
+                            <img src={join.image} alt="app"  />
                         </div>
                     </div>
                 </BitNobContainer>

@@ -46,7 +46,7 @@ const Business = () => {
               </div>
               <div className="mt-16 mb-20 relative md:mt-10">
                 {/* eslint-disable-next-line */}
-                <Image
+                <img
                   src={section1.cover}
                   objectFit="contain"
                   width="1500"
@@ -78,18 +78,16 @@ const Business = () => {
             >
               <div className="flex-1">
                 {/* eslint-disable-next-line */}
-                <Image
+                <img
                   src="/svgs/payment-form.svg"
                   className="w-450 h-450"
                   alt=""
-                  width=''
-                  height=''
                 />
               </div>
 
               <div className="flex-1 space-y-6">
                 <div className="w-12 h-12 bg-bitGreen-300 flex items-center justify-center rounded-12">
-                  <Image src="/svgs/ticket.svg" alt="" height='' width='' />
+                  <img src="/svgs/ticket.svg" alt="" />
                 </div>
 
                 <h4 className="font-bold text-black text-md lg:text-2xl whitespace-pre font-gordita">
@@ -111,7 +109,7 @@ const Business = () => {
               <div className="sm:w-400 space-y-6 mb-4">
                 <div className="w-12 h-12 bg-bitGreen-300 flex items-center justify-center rounded-12">
                   {/* eslint-disable-next-line */}
-                  <Image src="/svgs/transactions.svg" alt="" />
+                  <img src="/svgs/transactions.svg" alt="" />
                 </div>
 
                 <h4 className="font-bold text-black text-md lg:text-2xl whitespace-pre font-gordita">
@@ -126,12 +124,10 @@ const Business = () => {
 
               <div className="flex-1">
                 {/* eslint-disable-next-line */}
-                <Image
+                <img
                   src="/images/business_transactions.webp"
                   className="w-full"
                   alt=""
-                  width=''
-                  height=''
                 />
               </div>
             </BitNobContainer>
@@ -143,19 +139,17 @@ const Business = () => {
             >
               <div className="flex-1 flex items-center justify-center">
                 {/* eslint-disable-next-line */}
-                <Image
+                <img
                   src="/svgs/new-invoice.svg"
                   className="w-300 h-300"
                   alt=""
-                  height=''
-                  width=''
                 />
               </div>
 
               <div className="flex-1 space-y-6">
                 <div className="w-12 h-12 bg-bitGreen-300 flex items-center justify-center rounded-12">
                   {/* eslint-disable-next-line */}
-                  <Image src="/svgs/paper.svg" alt="" height='' width='' />
+                  <img src="/svgs/paper.svg" alt="" />
                 </div>
 
                 <h4 className="font-bold text-black text-md lg:text-2xl whitespace-pre font-gordita">
@@ -177,7 +171,7 @@ const Business = () => {
               <div className="sm:w-400 space-y-6 mb-4">
                 <div className="w-12 h-12 bg-bitGreen-300 flex items-center justify-center rounded-12">
                   {/* eslint-disable-next-line */}
-                  <Image src="/svgs/three-users.svg" alt="" height='' width='' />
+                  <img src="/svgs/three-users.svg" alt="" />
                 </div>
 
                 <h4 className="font-bold text-black text-md lg:text-2xl whitespace-pre font-gordita">
@@ -192,7 +186,7 @@ const Business = () => {
 
               <div className="flex-1">
                 {/* eslint-disable-next-line */}
-                <Image src="/svgs/customer-form.svg" className="w-full" alt="" height='' width='' />
+                <img src="/svgs/customer-form.svg" className="w-full" alt="" />
               </div>
             </BitNobContainer>
           </div>
@@ -203,19 +197,18 @@ const Business = () => {
             >
               <div className="flex-1">
                 {/* eslint-disable-next-line */}
-                <Image
+                <img
                   src="/images/new_api_popup.png"
                   className="sm:w-500"
                   alt=""
-                  height='' width=''
                 />
               </div>
 
               <div className="flex-1 space-y-6">
                 <div className="w-12 h-12 bg-bitGreen-300 flex items-center justify-center rounded-12">
                   {/* eslint-disable-next-line */}
-                  <Image src="/svgs/connect.svg" alt="" height='' width='' />
-                </div> 
+                  <img src="/svgs/connect.svg" alt="" />
+                </div>
 
                 <h4 className="font-bold text-black text-md lg:text-2xl whitespace-pre font-gordita">
                   Easy Integration
@@ -236,7 +229,7 @@ const Business = () => {
               <div className="flex-1 space-y-6 mb-4">
                 <div className="w-12 h-12 bg-bitGreen-300 flex items-center justify-center rounded-12">
                   {/* eslint-disable-next-line */}
-                  <Image src="/svgs/setting.svg" alt="" height='' width='' />
+                  <img src="/svgs/setting.svg" alt="" />
                 </div>
 
                 <h4 className="font-bold text-black text-md lg:text-2xl whitespace-pre font-gordita">
@@ -253,11 +246,10 @@ const Business = () => {
 
               <div className="flex-1">
                 {/* eslint-disable-next-line */}
-                <Image
+                <img
                   src="/images/split_payment_form.png"
                   className="w-full sm:w-450"
                   alt=""
-                  height='' width=''
                 />
               </div>
             </BitNobContainer>
@@ -269,18 +261,17 @@ const Business = () => {
             >
               <div className="flex-1">
                 {/* eslint-disable-next-line */}
-                <Image
+                <img
                   src="/images/team_management.png"
                   className="w-full sm:w-500"
                   alt=""
-                  height='' width=''
                 />
               </div>
 
               <div className="flex-1 space-y-6 mb-4">
                 <div className="w-12 h-12 bg-bitGreen-300 flex items-center justify-center rounded-12">
                   {/* eslint-disable-next-line */}
-                  <Image src="/svgs/add-user.svg" alt="" height='' width='' />
+                  <img src="/svgs/add-user.svg" alt="" />
                 </div>
 
                 <h4 className="font-bold text-black text-md lg:text-2xl whitespace-pre font-gordita">
@@ -314,12 +305,10 @@ const Business = () => {
                 </BitNobButton>
               </div>
               {/* eslint-disable-next-line */}
-              <Image
+              <img
                 src={section3.cover}
                 alt="app"
                 className=" md:-mb-2 lg:-mb-0 "
-                width=''
-                height=''
               />
             </div>
           </BitNobContainer>
