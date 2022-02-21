@@ -69,6 +69,14 @@ body {
 .kg-image, 
 .kg-bookmark-icon, 
 .kg-bookmark-thumbnail img{
-    width: 60% !important;
+    width: 30% !important;
     margin: 15px 0px !important;
+}
+
+.kg-bookmark-icon{
+    width: 250px !important;
+}
+
+.kg-bookmark-thumbnail img{
+    width: 60%;
 }
