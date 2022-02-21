@@ -115,12 +115,11 @@ const Header = () => {
     const headerRef = useRef(null)
     const { ref, visible, setVisible } = useCloseContext(false, true)
 
-                {/* eslint-disable-next-line */}
     useEffect(()=> {
         setVisible(false)
         headerRef.current?.scrollIntoViewIfNeeded()
 
-    }, [router.pathname])
+    }, [router.pathname, setVisible])
     
     return(
         <BitNobContainer>
