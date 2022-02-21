@@ -48,11 +48,11 @@ export const getStaticProps = async ({ params }) => {
 const PostSlug = ({ post, allPost }) => {
   const router = useRouter();
 
-  const [url, setUrl] = useState('')
-  
+  const [url, setUrl] = useState("");
+
   useEffect(() => {
-    setUrl(window.location.href)
-  }, [])
+    setUrl(document.location.href);
+  }, []);
 
   return (
     <React.Fragment>
@@ -161,12 +161,26 @@ const PostSlug = ({ post, allPost }) => {
                                 <FaFacebook className="text-bitGreen-500" />
                               </div>
                             </a>
-                            <div className="p-2 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
-                              <FaTwitter className="text-bitGreen-500" />
-                            </div>
-                            <div className="p-2 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
-                              <FaWhatsapp className="text-bitGreen-500" />
-                            </div>
+                            <a
+                              className="fb-share"
+                              href={`https://twitter.com/intent/tweet?url=${url}`}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <div className="p-2 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
+                                <FaTwitter className="text-bitGreen-500" />
+                              </div>
+                            </a>
+                            <a
+                              className="fb-share"
+                              href={`https://api.whatsapp.com/send?text=Hello World ${url}`}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <div className="p-2 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
+                                <FaWhatsapp className="text-bitGreen-500" />
+                              </div>
+                            </a>
                           </div>
                         </div>
                       </div>

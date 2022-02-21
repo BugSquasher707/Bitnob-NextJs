@@ -65,3 +65,8 @@ body {
 .bit-shadow:hover {
     box-shadow: 60px 64px 74px rgba(151, 142, 142, 0.1);
 }
+
+.kg-image{
+    width: 250px !important;
+    margin: 15px 20px;
+}
