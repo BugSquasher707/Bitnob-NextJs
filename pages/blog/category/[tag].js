@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { BitNobContainer, BitNobLink, getLayout, Page, PreFooter } from "components";
 import { AppStore, PlayStore } from "public";
 import { bitnobPlayStore, bitnobAppleStore } from "app-constants";
@@ -85,7 +85,7 @@ const TagPost = ({ tagPosts, allPost }) => {
               <div className="w-full mt-5 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
                 {arr.slice(0, postCount).map((item) => {
                   return (
-                    <>
+                    <React.Fragment key={item.id}>
                       {
                         <Card
                           key={item.id}
@@ -100,7 +100,7 @@ const TagPost = ({ tagPosts, allPost }) => {
                           tag={item.primary_tag.slug}
                         />
                       }
-                    </>
+                    </React.Fragment>
                   );
                 })}
               </div>

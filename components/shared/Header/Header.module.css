@@ -60,11 +60,12 @@
 }
 
 .main_img{
-    height: 30rem !important;
+    width: 100% !important;
+    height: 600px !important;
+    object-fit: cover !important;
 }
 
 .postTagWidth{
-    width: fit-content;
     margin-right: 5rem;
 }
 

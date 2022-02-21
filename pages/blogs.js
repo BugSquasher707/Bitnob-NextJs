@@ -71,7 +71,7 @@ const Blogs = ({ postsData }) => {
                 <div className="p-3 rounded-xl lg:pb-8 md:pb-6 bg-bitGreen-50 cursor-pointer">
                   <img
                     src={blogPageData.section2.mainImage}
-                    className="w-6/6 rounded-xl mb-3"
+                    className="w-6/6 object-cover rounded-xl mb-3"
                     alt=""
                   />
                   <h1 className="text-green-500 text-sm font-semibold">

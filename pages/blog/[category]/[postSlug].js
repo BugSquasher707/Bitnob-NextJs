@@ -197,7 +197,7 @@ const PostSlug = ({ post, allPost }) => {
                       <div className="w-full mt-10 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1">
                         {allPost.slice(0, 3).map((item, i) => {
                           return (
-                            <>
+                            <React.Fragment key={i}>
                               {item.primary_author.name !==
                                 obj.primary_author.name && (
                                 <Card
@@ -213,7 +213,7 @@ const PostSlug = ({ post, allPost }) => {
                                   tag={item.primary_tag.slug}
                                 />
                               )}
-                            </>
+                            </React.Fragment>
                           );
                         })}
                       </div>

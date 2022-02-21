@@ -26,7 +26,7 @@ const PreFooter = () => (
         </div>
       </div>
       <img
-        style={{ top: isBrowser()?.innerWidth >= screenSize.lg && "-67px" }}
+        style={{ top: isBrowser()?.innerWidth >= screenSize.lg && "-67px" }} 
         src="/images/half-phone.png"
         alt="app"
         className="lg:absolute bottom-0 max-w-sm md:max-w-lg lg:max-w-md right-0 mt-12 md:mt-20 lg:mt-0"

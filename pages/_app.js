@@ -23,7 +23,7 @@ function BitNob({ Component, pageProps }) {
 	}, [router.events])
 	const getLayout = Component.getLayout || ((page) => page)
 	return getLayout(
-		<React.Fragment>
+		<>
 			<SEO
 				title='Welcome to Bitnob'
 				description='Bitnob is a delightful way to save, borrow, pay, receive, and get paid in Bitcoin on time'
@@ -63,7 +63,7 @@ function BitNob({ Component, pageProps }) {
 				}}
 			/>
 			<Component {...pageProps} />
-		</React.Fragment>,
+		</>,
 	)
 }
 

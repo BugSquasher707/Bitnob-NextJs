@@ -25,7 +25,7 @@ module.exports = {
         right: "right",
         "right-bottom": "right bottom",
         "right-top": "right top",
-        top: "top",
+        top: "top", 
       },
       fontFamily: {
         gordita: "Gordita",
