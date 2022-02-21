@@ -26,7 +26,6 @@ export async function getStaticPaths() {
   const res = await fetch(
     `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_KEY}&include=tags,authors`
   ).then((res) => res.json());
-
   const paths = res.posts.map((post) => ({
     params: { category: post.primary_tag.slug, postSlug: post.slug.toString() },
   }));
@@ -49,8 +48,6 @@ export const getStaticProps = async ({ params }) => {
 
 const PostSlug = ({ post, allPost }) => {
   const router = useRouter();
-
-  // const paramSlug = router.query.postSlug
 
   return (
     <React.Fragment>

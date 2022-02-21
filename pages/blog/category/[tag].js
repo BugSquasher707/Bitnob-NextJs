@@ -23,8 +23,6 @@ export async function getStaticPaths() {
 }
 
 export const getStaticProps = async ({ params }) => {
-  console.log(params, "params");
-
   const res1 = await fetch(
     `${BLOG_URL}/ghost/api/v3/content/tags/slug/${params.tag}/?key=${CONTENT_KEY}`
   );
@@ -58,8 +56,6 @@ const TagPost = ({ tagPosts, allPost }) => {
   let arr = allPost.filter(item => {
     return item.primary_tag.name == tagPosts[0].name
   })
-
-  console.log(arr);
 
   return (
     <>

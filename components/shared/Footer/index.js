@@ -17,8 +17,8 @@ const Footer = ()=> {
                     <LogoFull />
                     {
                         Object.entries(footerLinks.links).map(([title, links])=> (
-                            <React.Fragment key={title}>
-                                <ul>
+                            <>
+                                <ul key={title}>
                                     <h3 className="text-black font-bold font-gordita text-2xs md:text-xs uppercase mb-3">{title}</h3>
                                     {
                                         links.map(l=> (
@@ -28,7 +28,7 @@ const Footer = ()=> {
                                         ))
                                     }
                                 </ul>
-                            </React.Fragment>
+                            </>
                         ))
                     }
                     <ul className="flex-1 px-3 md:px-0 md:max-w-sm">
