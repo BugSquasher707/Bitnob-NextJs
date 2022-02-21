@@ -17,6 +17,7 @@ import Card from "components/UI/Card/Card";
 import style from "../../../components/shared/Header/Header.module.css";
 import SearchBox from "components/UI/SearchBox/SearchBox";
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -84,8 +85,8 @@ const PostSlug = ({ post, allPost }) => {
                 }
 
                 return (
-                  <>
-                    <div className="mt-20 " key={objIndex}>
+                  <React.Fragment key={objIndex}>
+                    <div className="mt-20 " >
                       <div className="w-full">
                         <h1 className="text-black-900 font-bold mb-5 md:text-2xl text-xl text-center">
                           {obj.title}
@@ -188,18 +189,16 @@ const PostSlug = ({ post, allPost }) => {
                         className="w-full mt-5"
                         dangerouslySetInnerHTML={createMarkup()}
                       >
-                        {/* {obj.html} */}
-                        {/* <p className="mb-5 break-words font-medium">
-                        </p> */}
                       </div>
                     </div>
                     <div className="w-full mx-auto p-5 pl-0 pr-0">
                       <div className="w-full py-20 bg-bitGreen-400 rounded-2xl">
-                        {/* eslint-disable-next-line */}
-                        <img
+                        <Image
                           src="../../images/logo-full.png"
                           className="md:w-32 w-28 mx-auto"
                           alt=""
+                          width=''
+                          height=''
                         />
                         <h1 className="md:text-2xl text-xl font-bold text-center mt-8">
                           The Better Way To Save & Invest
@@ -238,7 +237,6 @@ const PostSlug = ({ post, allPost }) => {
                               {item.primary_author.name !==
                                 obj.primary_author.name && (
                                 <Card
-                                  key={i}
                                   slug={item.slug}
                                   image={
                                     item.feature_image
@@ -255,7 +253,7 @@ const PostSlug = ({ post, allPost }) => {
                         })}
                       </div>
                     </div>
-                  </>
+                  </React.Fragment>
                 );
               })}
             </BitNobContainer>

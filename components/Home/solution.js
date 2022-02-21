@@ -22,12 +22,15 @@ const Solution = () => {
                         }
 
                             return (
-                                <img 
+                                <Image 
                                     key={a}
                                     src={a} 
                                     style={loci?.[i]} 
                                     alt="avatar" 
-                                    className={classNames( {'p-2': i === 1, 'bg-bitGreen-50': i !== 1}, 'absolute w-16 h-16 xl:h-20 xl:w-20  hover:bg-bitGreen-100 rounded-full z-30')} />
+                                    className={classNames( {'p-2': i === 1, 'bg-bitGreen-50': i !== 1}, 'absolute w-16 h-16 xl:h-20 xl:w-20  hover:bg-bitGreen-100 rounded-full z-30')} 
+                                    width=''
+                                    height=''
+                                    />
                             )
                         })
                     }

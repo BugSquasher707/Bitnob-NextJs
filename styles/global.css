@@ -66,7 +66,12 @@ body {
     box-shadow: 60px 64px 74px rgba(151, 142, 142, 0.1);
 }
 
-.kg-image{
+.kg-image, .kg-bookmark-icon{
     width: 250px !important;
-    margin: 15px 20px;
+    margin: 15px 20px !important;
+}
+
+.kg-bookmark-thumbnail img{
+    width: 650px !important;
+    margin: 15px 20px !important;
 }

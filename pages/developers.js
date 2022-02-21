@@ -21,6 +21,7 @@ const Developers = () => (
             href="https://docs.bitnob.com/"
             className="w-full sm:w-252 text-center mb-4 sm:mb-0 mr-8 py-4 bg-bitGreen-300 rounded-12 text-bitGray-700 font-bold"
             target="_blank"
+            without rel="noreferrer"
           >
             Read our API Docs
           </a>
@@ -29,6 +30,7 @@ const Developers = () => (
             href="https://app.bitnob.co"
             className="w-full sm:w-252 text-center sm:w-63 mr-8 px-14 py-4 rounded-12 text-bitGray-700 font-bold border-2 border-bitGreen-300"
             target="_blank"
+            without rel="noreferrer"
           >
             Get our API Keys
           </a>
@@ -176,6 +178,7 @@ const Developers = () => (
             href="https://docs.bitnob.com/"
             className="w-full sm:w-252 text-center mb-4 sm:mb-0 mr-8 py-4 bg-bitGreen-300 rounded-12 text-bitGray-700 font-bold"
             target="_blank"
+            without rel="noreferrer"
           >
             Read our API Docs
           </a>
@@ -184,6 +187,7 @@ const Developers = () => (
             href="https://app.bitnob.co"
             className="w-full sm:w-252 text-center sm:w-63 mr-8 px-14 py-4 rounded-12 text-bitGray-700 font-bold border-2 border-bitGreen-300"
             target="_blank"
+            without rel="noreferrer"
           >
             Get our API Keys
           </a>
