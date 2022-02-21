@@ -162,7 +162,7 @@ const PostSlug = ({ post, allPost }) => {
                     </div>
                     <div className="w-full mx-auto p-5 pl-0 pr-0">
                       <div className="w-full py-20 bg-bitGreen-400 rounded-2xl">
-                {/* eslint-disable-next-line */}
+                        {/* eslint-disable-next-line */}
                         <img
                           src="../../images/logo-full.png"
                           className="md:w-32 w-28 mx-auto"
