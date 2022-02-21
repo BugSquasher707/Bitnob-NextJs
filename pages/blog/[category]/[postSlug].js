@@ -16,7 +16,7 @@ import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
 import style from "../../../components/shared/Header/Header.module.css";
 import SearchBox from "components/UI/SearchBox/SearchBox";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -48,11 +48,11 @@ export const getStaticProps = async ({ params }) => {
 const PostSlug = ({ post, allPost }) => {
   const router = useRouter();
 
-  let currentUrl = "";
-
+  const [url, setUrl] = useState('')
+  
   useEffect(() => {
-    currentUrl = window.location.href;
-  }, []);
+    setUrl(window.location.href)
+  }, [])
 
   return (
     <React.Fragment>
@@ -153,17 +153,9 @@ const PostSlug = ({ post, allPost }) => {
                           <div className="lg:mt-0 lg:mb-0 mt-5 mb-5 flex lg:justify-end justify-start item-center">
                             <a
                               className="fb-share"
-                              href={`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`}
+                              href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
                               target="_blank"
                               rel="noreferrer"
-                              onClick={() => {
-                                window.open(
-                                  this.href,
-                                  "targetWindow",
-                                  "toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250"
-                                );
-                                return false;
-                              }}
                             >
                               <div className="p-2 bg-bitGreen-50 rounded-full cursor-pointer">
                                 <FaFacebook className="text-bitGreen-500" />
