@@ -44,11 +44,11 @@ const SearchComponent = ({ searchResult }) => {
 
   let { search } = router.query;
 
-  useEffect(() => {
-    const res1 = fetch(
+  useEffect(async () => {
+    const res1 = await fetch(
       `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_KEY}&include=tags,authors&limit=all&filter=tag:${search}`
     );
-    const post = res1.json();
+    const post = await res1.json();
 
     setFetchedData(post.posts)
   }, [search])
