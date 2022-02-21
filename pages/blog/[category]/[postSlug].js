@@ -222,7 +222,6 @@ const PostSlug = ({ post, allPost }) => {
                             <FaFacebook className="text-lg text-bitGreen-500" />
                           </div>
                         </a>
-
                         <a
                           className="fb-share"
                           href={`https://twitter.com/intent/tweet?text=Hello World...!!!${url}`}
@@ -233,7 +232,6 @@ const PostSlug = ({ post, allPost }) => {
                             <FaTwitter className="text-lg text-bitGreen-500" />
                           </div>
                         </a>
-
                         <a
                           className="fb-share"
                           href={`https://api.whatsapp.com/send?text=Hello World ${url}`}
