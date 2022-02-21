@@ -15,7 +15,6 @@ import { FaTags, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
 import style from "../../../components/shared/Header/Header.module.css";
-import { htmlToText } from "html-to-text";
 import SearchBox from "components/UI/SearchBox/SearchBox";
 import React from "react";
 
@@ -49,6 +48,9 @@ export const getStaticProps = async ({ params }) => {
 const PostSlug = ({ post, allPost }) => {
   const router = useRouter();
 
+  console.log(router.asPath);
+  console.log(router.basePath);
+
   return (
     <React.Fragment>
       <Page title="Bitnob Blog Post">
@@ -73,6 +75,10 @@ const PostSlug = ({ post, allPost }) => {
                   "en-US",
                   { year: "numeric", month: "long", day: "numeric" }
                 );
+
+                function createMarkup() {
+                  return { __html: obj.html };
+                }
 
                 return (
                   <>
@@ -143,7 +149,14 @@ const PostSlug = ({ post, allPost }) => {
                           </div>
                           <div className="lg:mt-0 lg:mb-0 mt-5 mb-5 flex lg:justify-end justify-start item-center">
                             <div className="p-2 bg-bitGreen-50 rounded-full cursor-pointer">
-                              <FaFacebook className="text-bitGreen-500" />
+                              <a
+                                className="fb-share"
+                                href={`https://www.facebook.com/sharer/sharer.php?u=https://www.google.com`}
+                                target="_blank"
+                                onClick={() => {window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;}}
+                              >
+                                <FaFacebook className="text-bitGreen-500" />
+                              </a>
                             </div>
                             <div className="p-2 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
                               <FaTwitter className="text-bitGreen-500" />
@@ -154,10 +167,13 @@ const PostSlug = ({ post, allPost }) => {
                           </div>
                         </div>
                       </div>
-                      <div className="w-full mt-5">
-                        <p className="mb-5 break-words font-medium">
-                          {htmlToText(obj.html)}
-                        </p>
+                      <div
+                        className="w-full mt-5"
+                        dangerouslySetInnerHTML={createMarkup()}
+                      >
+                        {/* {obj.html} */}
+                        {/* <p className="mb-5 break-words font-medium">
+                        </p> */}
                       </div>
                     </div>
                     <div className="w-full mx-auto p-5 pl-0 pr-0">
