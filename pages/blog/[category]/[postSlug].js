@@ -16,7 +16,7 @@ import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
 import style from "../../../components/shared/Header/Header.module.css";
 import SearchBox from "components/UI/SearchBox/SearchBox";
-import React from "react";
+import React, { useEffect } from "react";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -48,8 +48,12 @@ export const getStaticProps = async ({ params }) => {
 const PostSlug = ({ post, allPost }) => {
   const router = useRouter();
 
-  console.log(router.asPath);
-  console.log(router.basePath);
+  let currentUrl = ''
+
+  useEffect(() => {
+    currentUrl = window.location.href
+  }, [])
+
 
   return (
     <React.Fragment>
@@ -58,7 +62,7 @@ const PostSlug = ({ post, allPost }) => {
           <div className="pt-0">
             <BitNobContainer>
               <SearchBox />
-              <div className="mt-10 bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
+              <div className="bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
                 <h1 className="text-lg font-bold md:mr-20 md:mb-0 mr-0 mb-7">
                   {blogPageData.section1.heading}
                 </h1>
@@ -151,7 +155,7 @@ const PostSlug = ({ post, allPost }) => {
                             <div className="p-2 bg-bitGreen-50 rounded-full cursor-pointer">
                               <a
                                 className="fb-share"
-                                href={`https://www.facebook.com/sharer/sharer.php?u=https://www.google.com`}
+                                href={`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`}
                                 target="_blank"
                                 rel="noreferrer"
                                 onClick={() => {window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;}}
