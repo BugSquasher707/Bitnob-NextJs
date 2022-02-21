@@ -48,12 +48,11 @@ export const getStaticProps = async ({ params }) => {
 const PostSlug = ({ post, allPost }) => {
   const router = useRouter();
 
-  let currentUrl = ''
+  let currentUrl = "";
 
   useEffect(() => {
-    currentUrl = window.location.href
-  }, [])
-
+    currentUrl = window.location.href;
+  }, []);
 
   return (
     <React.Fragment>
@@ -152,17 +151,24 @@ const PostSlug = ({ post, allPost }) => {
                             </div>
                           </div>
                           <div className="lg:mt-0 lg:mb-0 mt-5 mb-5 flex lg:justify-end justify-start item-center">
-                            <div className="p-2 bg-bitGreen-50 rounded-full cursor-pointer">
-                              <a
-                                className="fb-share"
-                                href={`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`}
-                                target="_blank"
-                                rel="noreferrer"
-                                onClick={() => {window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;}}
-                              >
+                            <a
+                              className="fb-share"
+                              href={`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              onClick={() => {
+                                window.open(
+                                  this.href,
+                                  "targetWindow",
+                                  "toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250"
+                                );
+                                return false;
+                              }}
+                            >
+                              <div className="p-2 bg-bitGreen-50 rounded-full cursor-pointer">
                                 <FaFacebook className="text-bitGreen-500" />
-                              </a>
-                            </div>
+                              </div>
+                            </a>
                             <div className="p-2 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
                               <FaTwitter className="text-bitGreen-500" />
                             </div>
