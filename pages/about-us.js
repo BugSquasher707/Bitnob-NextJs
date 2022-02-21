@@ -24,7 +24,7 @@ const AboutUs = ()=> {
                             </div>
                         </div>
                     </BitNobContainer>
-                    <Image src={welcome.bg} objectFit="contain" priority layout="fill" className="absolute transform scale-150 md:scale-100 z-10 md:top-1/4 lg:static" />
+                    <Image src={welcome.bg} objectFit="contain" priority layout="fill" alt="image" className="absolute transform scale-150 md:scale-100 z-10 md:top-1/4 lg:static" />
                 </div>
 
                 <div className="mt-10 md:mt-60 lg:mt-20 2xl:mt-20">
@@ -74,6 +74,7 @@ const AboutUs = ()=> {
                                 className="my-8 md:my-14 lg:mt-10 mb-2 py-3 md:py-auto w-max">See Job Openings</BitNobButton>
                         </div>
                         <div className="max-w-xs md:max-w-lg lg:max-w-xs xl:max-w-md p-6 md:p-0 box-border mt-12 md:mt-20 lg:mt-0">
+                           {/* // eslint-disable-next-line */}
                             <img src={join.image} alt="app"  />
                         </div>
                     </div>

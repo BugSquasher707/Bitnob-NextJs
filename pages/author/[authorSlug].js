@@ -38,7 +38,7 @@ export const getStaticProps = async ({ params }) => {
   return { props: { author: author.authors, allPost: allPost.posts } };
 };
 
-const authorSlug = ({ author, allPost }) => {
+const AuthorSlug = ({ author, allPost }) => {
 
   const [activeBtn, setActiveBtn] = useState(true);
   let [postCount, setPostCount] = useState(6);
@@ -130,6 +130,6 @@ const authorSlug = ({ author, allPost }) => {
   );
 };
 
-authorSlug.getLayout = getLayout;
+AuthorSlug.getLayout = getLayout;
 
-export default authorSlug;
+export default AuthorSlug;

@@ -69,6 +69,7 @@ const Blogs = ({ postsData }) => {
             <div className="w-full lg:p-20 p-5 md:pl-0 md:pr-0 md:block mt-5 mb-5 lg:flex justify-between items-start">
               <div className="lg:w-2/3 md:w-full lg:pl-8 lg:pr-8 flex justify-center items-start flex-col">
                 <div className="p-3 rounded-xl lg:pb-8 md:pb-6 bg-bitGreen-50 cursor-pointer">
+                {/* eslint-disable-next-line */}
                   <img
                     src={blogPageData.section2.mainImage}
                     className="w-6/6 object-cover rounded-xl mb-3"

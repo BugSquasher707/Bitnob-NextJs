@@ -50,7 +50,8 @@ const MenuDropDown = ({ title, setVisible, data, visible }) => {
                                 <figure 
                                     style={{minWidth: "55px", maxWidth: "55px", height:"55px"}} 
                                     className={classNames({'p-2': d.scale}, 'relative -mt-1')}>
-                                    <img className="max-w-full" src={`/images/${d.icon}`}  />
+                {/* eslint-disable-next-line */}
+                                    <img className="max-w-full" src={`/images/${d.icon}`}  alt=''/>
                                 </figure>
                                 <div className="pl-3">
                                     <h4 className="text-bitGreen-500 font-semibold">{d.title}</h4>
@@ -114,6 +115,7 @@ const Header = () => {
     const headerRef = useRef(null)
     const { ref, visible, setVisible } = useCloseContext(false, true)
 
+                {/* eslint-disable-next-line */}
     useEffect(()=> {
         setVisible(false)
         headerRef.current?.scrollIntoViewIfNeeded()

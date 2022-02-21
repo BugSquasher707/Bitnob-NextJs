@@ -2,7 +2,7 @@ import { homeData } from "static";
 import { BitNobContainer } from "../";
 import { Quote, Dots, ArrowOutline } from "public";
 import styles from "styles/Home.module.css";
-import { useState } from "react";
+import React, { useState } from "react";
 
 export const Review = ({
   i,
@@ -19,7 +19,7 @@ export const Review = ({
     transform: `translateY(${isActive ? 0 : 25}px) scale(${
       isActive ? 1 : 0.9
     })`,
-    opacity: isActive ? 1 : 1 - (i / 10),
+    opacity: isActive ? 1 : 1 - i / 10,
     boxShadow: "0px 18px 52.8537px rgba(63, 177, 181, 0.16)",
     borderRadius: "20px",
   };
@@ -111,13 +111,16 @@ const Reviews = () => {
             };
 
             return (
-              <img
-                key={a}
-                src={a}
-                style={loci?.[i]}
-                alt="avatar"
-                className=" hidden lg:block absolute w-20 h-20 xl:h-28 xl:w-28 bg-bitGreen-50 hover:bg-bitGreen-100 rounded-full z-30"
-              />
+              <React.Fragment key={a}>
+                {/* eslint-disable-next-line */}
+                <img
+                  key={a}
+                  src={a}
+                  style={loci?.[i]}
+                  alt="avatar"
+                  className=" hidden lg:block absolute w-20 h-20 xl:h-28 xl:w-28 bg-bitGreen-50 hover:bg-bitGreen-100 rounded-full z-30"
+                />
+              </React.Fragment>
             );
           })}
         </div>

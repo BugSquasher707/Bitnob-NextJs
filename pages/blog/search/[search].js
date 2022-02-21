@@ -37,20 +37,24 @@ export const getStaticProps = async ({ params }) => {
   return { props: { searchResult: post.posts } };
 };
 
-const searchComponent = ({ searchResult }) => {
+const SearchComponent = ({ searchResult }) => {
   const [fetchedData, setFetchedData] = useState([]);
 
   const router = useRouter();
 
   let { search } = router.query;
 
-  useEffect(async () => {
+  const fetchData = async () => {
     const res1 = await fetch(
       `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_KEY}&include=tags,authors&limit=all&filter=tag:${search}`
     );
     const post = await res1.json();
 
     setFetchedData(post.posts)
+  }
+
+  useEffect(() => {
+    fetchData()
   }, [search])
 
   return (
@@ -109,6 +113,7 @@ const searchComponent = ({ searchResult }) => {
 
               <div className="w-full mx-auto p-5 pl-0 pr-0">
                 <div className="w-full py-20 bg-bitGreen-400 rounded-2xl">
+                {/* eslint-disable-next-line */}
                   <img
                     src="../../images/logo-full.png"
                     className="md:w-32 w-28 mx-auto"
@@ -136,6 +141,6 @@ const searchComponent = ({ searchResult }) => {
   );
 };
 
-searchComponent.getLayout = getLayout;
+SearchComponent.getLayout = getLayout;
 
-export default searchComponent;
+export default SearchComponent;

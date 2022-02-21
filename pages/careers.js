@@ -25,7 +25,8 @@ const Careers = () => {
                 <p className=" text-xs md:text-sm my-6 font-quicksand text-bitGray-200">
                   {section1.description}
                 </p>
-                <img src="/svgs/empty-careers.svg" />
+                {/* eslint-disable-next-line */}
+                <img src="/svgs/empty-careers.svg" alt="" />
               </div>
             </div>
             {/* <div className="grid gap-4 max-w-4xl space-y-8 md:space-y-5 overflow-hidden 2xl:max-w-6xl mx-auto mt-12">

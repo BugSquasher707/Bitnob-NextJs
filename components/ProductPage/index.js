@@ -68,6 +68,7 @@ const ProductPage = ({ heading, subHeading, dataList, adjust, children }) => {
 			{heading === 'Savings' ? (
 				<BitNobContainer
 					className={'mt-12 flex flex-col sm:flex-row justify-start'}>
+                {/* eslint-disable-next-line */}
 					<a
 						href='https://dca.bitnob.com/'
 						className='w-full sm:w-252 text-center mb-4 sm:mb-0 mr-8 py-4 bg-bitGreen-300 rounded-12 text-bitGray-700 font-bold'

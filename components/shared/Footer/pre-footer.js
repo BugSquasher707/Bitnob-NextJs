@@ -25,6 +25,7 @@ const PreFooter = () => (
           </BitNobLink>
         </div>
       </div>
+                {/* eslint-disable-next-line */}
       <img
         style={{ top: isBrowser()?.innerWidth >= screenSize.lg && "-67px" }} 
         src="/images/half-phone.png"

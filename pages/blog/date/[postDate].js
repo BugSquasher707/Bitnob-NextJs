@@ -33,7 +33,7 @@ export const getStaticProps = async ({}) => {
   return { props: { post: post.posts } };
 };
 
-const date = ({ post }) => {
+const PostDate = ({ post }) => {
   const router = useRouter();
 
   const paramDate = router.query.postDate;
@@ -104,6 +104,6 @@ const date = ({ post }) => {
   );
 };
 
-date.getLayout = getLayout;
+PostDate.getLayout = getLayout;
 
-export default date;
+export default PostDate;

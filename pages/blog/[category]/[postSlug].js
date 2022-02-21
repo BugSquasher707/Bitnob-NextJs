@@ -81,6 +81,7 @@ const PostSlug = ({ post, allPost }) => {
                         <h1 className="text-black-900 font-bold mb-5 md:text-2xl text-xl text-center">
                           {obj.title}
                         </h1>
+                        {/* eslint-disable-next-line */}
                         <img
                           src={
                             obj.feature_image
@@ -127,7 +128,9 @@ const PostSlug = ({ post, allPost }) => {
                             <div
                               className={`${style.postTagWidth} p-3 pl-0 pr-0 flex justify-center items-center cursor-pointer`}
                               onClick={() =>
-                                router.push(`/blog/category/${obj.primary_tag.slug}`)
+                                router.push(
+                                  `/blog/category/${obj.primary_tag.slug}`
+                                )
                               }
                             >
                               <FaTags
@@ -159,6 +162,7 @@ const PostSlug = ({ post, allPost }) => {
                     </div>
                     <div className="w-full mx-auto p-5 pl-0 pr-0">
                       <div className="w-full py-20 bg-bitGreen-400 rounded-2xl">
+                {/* eslint-disable-next-line */}
                         <img
                           src="../../images/logo-full.png"
                           className="md:w-32 w-28 mx-auto"

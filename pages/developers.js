@@ -47,7 +47,7 @@ const Developers = () => (
         <div className="mt-20 sm:grid sm:grid-cols-2 md:grid-cols-3">
         <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_4.png" width="17" height="28" />
+              <Image src="/images/dev_4.png" width="17" height="28" alt=""/>
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
@@ -60,7 +60,7 @@ const Developers = () => (
           </div>
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_1.png" width="27" height="26" />
+              <Image src="/images/dev_1.png" width="27" height="26" alt=""/>
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
@@ -89,7 +89,7 @@ const Developers = () => (
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_3.png" width="24" height="16" />
+              <Image src="/images/dev_3.png" width="24" height="16" alt=""/>
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
@@ -103,7 +103,7 @@ const Developers = () => (
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_5.png" width="25" height="25" />
+              <Image src="/images/dev_5.png" width="25" height="25" alt=""/>
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
@@ -117,7 +117,7 @@ const Developers = () => (
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_6.png" width="25" height="25" />
+              <Image src="/images/dev_6.png" width="25" height="25" alt=""/>
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">
@@ -131,7 +131,7 @@ const Developers = () => (
 
           <div className="flex flex-col items-start p-8 hover:bg-white rounded-20">
             <div className="bg-bitGreen-300 w-12 h-12 rounded flex justify-center items-center mb-4">
-              <Image src="/images/dev_7.png" width="17" height="25" />
+              <Image src="/images/dev_7.png" width="17" height="25" alt=""/>
             </div>
 
             <p className="font-bold text-bitGray-500 text-sm sm:text-xl mb-1">

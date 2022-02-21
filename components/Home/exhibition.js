@@ -71,7 +71,8 @@ const Exhibition = () => {
                                     width="1500" 
                                     height="1200" 
                                     objectFit="contain" 
-                                    loading='eager' />
+                                    loading='eager'
+                                    alt='' />
                             </figure>
                             )
                         )

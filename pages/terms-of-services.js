@@ -14,6 +14,7 @@ const TermsOfService = () => (
 
         <p className="mt-2 sm:mt-4 text-sm sm:text-xl">
           By accessing the website at{" "}
+                {/* eslint-disable-next-line */}
           <a href="/" className="text-bitGreen-link">
             https://bitnob.com
           </a>

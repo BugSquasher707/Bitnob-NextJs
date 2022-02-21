@@ -2,7 +2,7 @@
 const { SitemapStream, streamToPromise } = require('sitemap')
 const { Readable } = require('stream')
 
-export default async (req, res) => {
+export default sitemap = async (req, res) => {
 	try {
 		const links = []
 		// blog post links in to be implemented
