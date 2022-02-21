@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { homeData } from 'static';
 import { BitNobContainer } from '..';
 import { ArrowL, ArrowR, Circle } from "public";
-import styles from 'styles/Home.module.css'
 import classNames from 'classnames';
 import { isBrowser } from '../../utils'
 
@@ -44,7 +43,7 @@ const Exhibition = () => {
                                         title && 
                                         <div
                                             className="relative w-full"
-                                            key={title}
+                                            key={i}
                                         >
                                             <div
                                                 role="button"
@@ -65,7 +64,7 @@ const Exhibition = () => {
                 <div style={{minHeight: "300px"}} className="flex transform scale-105 md:scale-100 -mt-16 z-10 lg:max-w-4xl xl:max-w-5xl lg:min-h-screen relative">
                     {
                         homeData.slides.map(({ image }, i) => (
-                            <figure key={image} className={classNames('max-w-full', {'hidden': i !== active } )}>
+                            <figure key={i} className={classNames('max-w-full', {'hidden': i !== active } )}>
                                 <Image 
                                     className="cursor-default" 
                                     src={image} 

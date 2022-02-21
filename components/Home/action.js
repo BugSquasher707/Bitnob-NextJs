@@ -15,10 +15,10 @@ const SeeInAction = () => (
       </div>
       <div className="flex justify-center overflow-hidden relative max-w-3xl lg:max-w-6xl mx-auto mt-10 md:mt-16">
         <iframe
-          frameborder="0"
+          frameBorder="0"
           scrolling="no"
-          marginheight="0"
-          marginwidth="0"
+          marginHeight="0"
+          marginWidth="0"
           width="788.54"
           height="443"
           type="text/html"
