@@ -153,6 +153,7 @@ const PostSlug = ({ post, allPost }) => {
                                 className="fb-share"
                                 href={`https://www.facebook.com/sharer/sharer.php?u=https://www.google.com`}
                                 target="_blank"
+                                rel="noreferrer"
                                 onClick={() => {window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false;}}
                               >
                                 <FaFacebook className="text-bitGreen-500" />
