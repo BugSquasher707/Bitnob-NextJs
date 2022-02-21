@@ -86,7 +86,7 @@ const PostSlug = ({ post, allPost }) => {
 
                 return (
                   <React.Fragment key={objIndex}>
-                    <div className="mt-20 " >
+                    <div className="mt-20 ">
                       <div className="w-full">
                         <h1 className="text-black-900 font-bold mb-5 md:text-2xl text-xl text-center">
                           {obj.title}
@@ -164,7 +164,7 @@ const PostSlug = ({ post, allPost }) => {
                             </a>
                             <a
                               className="fb-share"
-                              href={`https://twitter.com/intent/tweet?url=${url}`}
+                              href={`https://twitter.com/intent/tweet?text=Hello World...!!!${url}`}
                               target="_blank"
                               rel="noreferrer"
                             >
@@ -188,8 +188,7 @@ const PostSlug = ({ post, allPost }) => {
                       <div
                         className="w-full mt-5"
                         dangerouslySetInnerHTML={createMarkup()}
-                      >
-                      </div>
+                      ></div>
                     </div>
                     <div className="w-full mx-auto p-5 pl-0 pr-0">
                       <div className="w-full py-20 bg-bitGreen-400 rounded-2xl">
@@ -213,15 +212,38 @@ const PostSlug = ({ post, allPost }) => {
                     </div>
                     <div className="w-full my-5">
                       <div className="w-full flex justify-start item-center">
-                        <div className="p-3 bg-bitGreen-50 rounded-full cursor-pointer">
-                          <FaFacebook className="text-lg text-bitGreen-500" />
-                        </div>
-                        <div className="p-3 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
-                          <FaTwitter className="text-lg text-bitGreen-500" />
-                        </div>
-                        <div className="p-3 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
-                          <FaWhatsapp className="text-lg text-bitGreen-500" />
-                        </div>
+                        <a
+                          className="fb-share"
+                          href={`https://www.facebook.com/sharer/sharer.php?u=${url}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <div className="p-3 bg-bitGreen-50 rounded-full cursor-pointer">
+                            <FaFacebook className="text-lg text-bitGreen-500" />
+                          </div>
+                        </a>
+
+                        <a
+                          className="fb-share"
+                          href={`https://twitter.com/intent/tweet?text=Hello World...!!!${url}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <div className="p-3 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
+                            <FaTwitter className="text-lg text-bitGreen-500" />
+                          </div>
+                        </a>
+
+                        <a
+                          className="fb-share"
+                          href={`https://api.whatsapp.com/send?text=Hello World ${url}`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          <div className="p-3 bg-bitGreen-50 ml-3 rounded-full cursor-pointer">
+                            <FaWhatsapp className="text-lg text-bitGreen-500" />
+                          </div>
+                        </a>
                       </div>
                     </div>
                     <div className="w-full mt-10">
