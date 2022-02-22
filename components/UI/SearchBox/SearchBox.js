@@ -20,7 +20,7 @@ const SearchBox = () => {
   return (
     <>
       <div
-        className={`pt-10 flex relative justify-end items-center ${style.searchContainer}`}
+        className={`pt-10 pb-5 flex relative justify-end items-center ${style.searchContainer}`}
       >
         <form className="relative" onSubmit={handleSearchBar}>
           <BiSearch className="absolute top-3 text-sm ml-3 text-gray-500" />

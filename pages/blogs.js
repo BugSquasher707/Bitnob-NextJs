@@ -11,6 +11,7 @@ import {
 import Card from "components/UI/Card/Card";
 import blogPageData from "static/blog-static";
 import SearchBox from "components/UI/SearchBox/SearchBox";
+import { useRouter } from 'next/router'
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -36,6 +37,9 @@ export const getStaticProps = async () => {
 };
 
 const Blogs = ({ postsData }) => {
+
+  const router = useRouter();
+
   const [activeBtn, setActiveBtn] = useState(true);
   let [postCount, setPostCount] = useState(6);
 
@@ -52,9 +56,9 @@ const Blogs = ({ postsData }) => {
     <Page title="Welcome to Bitnob Blogs">
       <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-0 pb-0">
         <div className="pt-0 pb-20">
-          <BitNobContainer> 
-            <SearchBox/>
-            <div className="mt-10 bg-bitGreen-50 w-full rounded-2xl mt-0 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
+          <BitNobContainer>
+            <SearchBox />
+            <div className=" bg-bitGreen-50 w-full rounded-2xl mt-0 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
               <h1 className="text-lg font-bold md:mr-20 md:mb-0 mr-0 mb-7">
                 {blogPageData.section1.heading}
               </h1>
@@ -69,7 +73,40 @@ const Blogs = ({ postsData }) => {
             <div className="w-full lg:p-20 p-5 md:pl-0 md:pr-0 md:block mt-5 mb-5 lg:flex justify-between items-start">
               <div className="lg:w-2/3 md:w-full lg:pl-8 lg:pr-8 flex justify-center items-start flex-col">
                 <div className="p-3 rounded-xl lg:pb-8 md:pb-6 bg-bitGreen-50 cursor-pointer">
-                {/* eslint-disable-next-line */}
+                  {/* {postsData.map((item, i) => {
+                    return (
+                      <React.Fragment key={i}>
+                        {item.featured === "true" ? (
+                          <React.Fragment>
+                            <div
+                              className="p-3 rounded-xl lg:pb-8 md:pb-6 bg-bitGreen-50 cursor-pointer"
+                              onClick={router.push(
+                                `/blog/${item.primary_tag.slug}/${item.slug}`
+                              )}
+                            >
+                              <img
+                                src={
+                                  item.feature_image != null
+                                    ? feature_image
+                                    : "../images/blog-default.jpeg"
+                                }
+                                className="w-6/6 object-cover rounded-xl mb-3"
+                                alt=""
+                              />
+                              <h1 className="text-green-500 text-sm font-semibold">
+                                {item.primary_tag.name}
+                              </h1>
+                              <p className="text-black-900 font-semibold text-xs mt-1">
+                                {item.excerpt}
+                              </p>
+                            </div>
+                          </React.Fragment>
+                        ) : (
+                          ""
+                        )}
+                      </React.Fragment>
+                    );
+                  })} */}
                   <img
                     src={blogPageData.section2.mainImage}
                     className="w-6/6 object-cover rounded-xl mb-3"

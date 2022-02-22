@@ -62,7 +62,7 @@ const AuthorSlug = ({ author, allPost }) => {
         <div className="pt-0 pb-20">
           <BitNobContainer>
             <SearchBox/>
-            <div className="mt-10 bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
+            <div className="bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
               <h1 className="text-lg font-bold md:mr-20 md:mb-0 mr-0 mb-7">
                 {blogPageData.section1.heading}
               </h1>

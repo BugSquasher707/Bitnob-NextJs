@@ -17,7 +17,6 @@ import Card from "components/UI/Card/Card";
 import style from "../../../components/shared/Header/Header.module.css";
 import SearchBox from "components/UI/SearchBox/SearchBox";
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -164,7 +163,7 @@ const PostSlug = ({ post, allPost }) => {
                             </a>
                             <a
                               className="fb-share"
-                              href={`https://twitter.com/intent/tweet?text=Hello World...!!!${url}`}
+                              href={`https://twitter.com/intent/tweet?text=${url}`}
                               target="_blank"
                               rel="noreferrer"
                             >
@@ -174,7 +173,7 @@ const PostSlug = ({ post, allPost }) => {
                             </a>
                             <a
                               className="fb-share"
-                              href={`https://api.whatsapp.com/send?text=Hello World ${url}`}
+                              href={`https://api.whatsapp.com/send?text=${url}`}
                               target="_blank"
                               rel="noreferrer"
                             >
@@ -190,8 +189,8 @@ const PostSlug = ({ post, allPost }) => {
                         dangerouslySetInnerHTML={createMarkup()}
                       ></div>
                     </div>
-                    <div className="w-full mx-auto p-5 pl-0 pr-0">
-                      <div className="w-full py-20 bg-bitGreen-400 rounded-2xl">
+                    <div className="w-full mx-auto p-5 px-0">
+                      <div className="w-full py-20 px-5 bg-bitGreen-400 rounded-2xl">
                         <img
                           src="../../images/logo-full.png"
                           className="md:w-32 w-28 mx-auto"
@@ -200,12 +199,12 @@ const PostSlug = ({ post, allPost }) => {
                         <h1 className="md:text-2xl text-xl font-bold text-center mt-8">
                           The Better Way To Save & Invest
                         </h1>
-                        <div className="mt-8 flex justify-center items-center">
+                        <div className="mt-8 flex justify-center items-center sm:flex-row flex-col ">
                           <BitNobLink to={bitnobAppleStore}>
                             <AppStore className="w-32 md:w-auto" />
                           </BitNobLink>
                           <BitNobLink to={bitnobPlayStore}>
-                            <PlayStore className="w-32 ml-5 md:w-auto" />
+                            <PlayStore className="w-32 sm:ml-5 ml-0 md:w-auto" />
                           </BitNobLink>
                         </div>
                       </div>
@@ -224,7 +223,7 @@ const PostSlug = ({ post, allPost }) => {
                         </a>
                         <a
                           className="fb-share"
-                          href={`https://twitter.com/intent/tweet?text=Hello World...!!!${url}`}
+                          href={`https://twitter.com/intent/tweet?text=${url}`}
                           target="_blank"
                           rel="noreferrer"
                         >
@@ -234,7 +233,7 @@ const PostSlug = ({ post, allPost }) => {
                         </a>
                         <a
                           className="fb-share"
-                          href={`https://api.whatsapp.com/send?text=Hello World ${url}`}
+                          href={`https://api.whatsapp.com/send?text=${url}`}
                           target="_blank"
                           rel="noreferrer"
                         >

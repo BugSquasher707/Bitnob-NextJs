@@ -3,80 +3,92 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Gordita';
-    font-weight: 900;
-    src: 
-        url('/fonts/gordita/GorditaBlack.otf') format("otf"),
-        url('/fonts/gordita/GorditaBlackItalic.otf') format("otf")
+  font-family: "Gordita";
+  font-weight: 900;
+  src: url("/fonts/gordita/GorditaBlack.otf") format("otf"),
+    url("/fonts/gordita/GorditaBlackItalic.otf") format("otf");
 }
 
 @font-face {
-    font-family: 'Gordita';
-    font-weight: 700;
-    src: 
-        url('/fonts/gordita/GorditaBold.otf'),
-        url('/fonts/gordita/GorditaBoldtalic.otf')
+  font-family: "Gordita";
+  font-weight: 700;
+  src: url("/fonts/gordita/GorditaBold.otf"),
+    url("/fonts/gordita/GorditaBoldtalic.otf");
 }
 
 @font-face {
-    font-family: 'Gordita';
-    font-weight: 600;
-    src: 
-        url('/fonts/gordita/GorditaMedium.otf'),
-        url('/fonts/gordita/GorditaMediumItalic.otf');
+  font-family: "Gordita";
+  font-weight: 600;
+  src: url("/fonts/gordita/GorditaMedium.otf"),
+    url("/fonts/gordita/GorditaMediumItalic.otf");
 }
 
 @font-face {
-    font-family: 'Gordita';
-    font-weight: 500;
-    src: 
-        url('/fonts/gordita/GorditaRegular.otf'),
-        url('/fonts/gordita/GorditaRegularItalic.otf');
+  font-family: "Gordita";
+  font-weight: 500;
+  src: url("/fonts/gordita/GorditaRegular.otf"),
+    url("/fonts/gordita/GorditaRegularItalic.otf");
 }
-
 
 body {
-    font-family: "Quicksand", Gordita;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
+  font-family: "Quicksand", Gordita;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .slick-dots {
-    bottom: -40px !important;
+  bottom: -40px !important;
 }
 
 .slick-arrow {
-    display: none !important;
+  display: none !important;
 }
 
 .slick-dots li button::before {
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-    color: rgba(35, 224, 162, 1) !important;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: rgba(35, 224, 162, 1) !important;
 }
 
 .slick-dots li.slick-active button::before {
-    color: #009F6B !important;
-    transition: cubic-bezier(0.165, 0.84, 0.44, 1);
-    transform: scale(1.7) !important;
-} 
+  color: #009f6b !important;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: scale(1.7) !important;
+}
 
 .bit-shadow:hover {
-    box-shadow: 60px 64px 74px rgba(151, 142, 142, 0.1);
+  box-shadow: 60px 64px 74px rgba(151, 142, 142, 0.1);
 }
 
-.kg-image, 
-.kg-bookmark-icon, 
-.kg-bookmark-thumbnail img{
-    width: 350px !important;
-    margin: 15px 0px !important;
+.kg-image,
+.kg-bookmark-icon,
+.kg-bookmark-thumbnail img {
+  width: 350px !important;
+  margin: 15px 0px !important;
 }
 
-.kg-bookmark-icon{
-    width: 250px !important;
+.kg-bookmark-icon {
+  width: 250px !important;
 }
 
-.kg-bookmark-thumbnail img{
-    width: 60%;
+.kg-bookmark-thumbnail img {
+  width: 60%;
+}
+
+code {
+  margin: 10px 0px !important;
+  padding: 5px 10px !important;
+  box-sizing: border-box;
+  background-color: rgb(201, 201, 201);
+  display: inline-block;
+  white-space:pre-wrap;
+  width: fit-content;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+table{
+    width: auto !important;
+    margin: 10px 0px;
 }
