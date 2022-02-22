@@ -80,12 +80,13 @@ code {
   margin: 10px 0px !important;
   padding: 5px 10px !important;
   box-sizing: border-box;
-  background-color: rgb(201, 201, 201);
+  background-color: #ebebeb;
   display: inline-block;
   white-space:pre-wrap;
   width: fit-content;
   word-break: break-all;
   word-wrap: break-word;
+  border-radius: 10px;
 }
 
 table{
