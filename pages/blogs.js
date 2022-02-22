@@ -67,7 +67,7 @@ const Blogs = ({ postsData, featured_post }) => {
         <div className="pt-0 pb-5">
           <BitNobContainer>
             <SearchBox />
-            <FeaturedPost featuredPostData = {featured_post}/>
+            <FeaturedPost/>
 
             <div className="w-full lg:py-20 p-5 px-0 md:block mt-5 mb-5 lg:flex justify-between items-start">
               <div className="lg:w-2/3 md:w-full lg:pr-8 flex justify-center items-start flex-col">
@@ -80,7 +80,7 @@ const Blogs = ({ postsData, featured_post }) => {
                         passHref
                       >
                         <div
-                          className="p-3 rounded-xl lg:pb-8 md:pb-6 bg-bitGreen-50 cursor-pointer"
+                          className="p-3 featuredPost rounded-xl lg:pb-8 md:pb-6 bg-bitGreen-50 cursor-pointer"
                         >
                           <img
                             src={
@@ -94,9 +94,12 @@ const Blogs = ({ postsData, featured_post }) => {
                           <h1 className="text-green-500 text-sm font-semibold">
                             {item.primary_tag.name}
                           </h1>
-                          <p className="text-black-900 font-semibold text-xs mt-1">
+                          <div>
+                          <p className="truncate text-black-900 font-semibold text-xs mt-1">
                             {item.excerpt}
                           </p>
+
+                          </div>
                         </div>
                       </Link>
                     </React.Fragment>
@@ -105,20 +108,20 @@ const Blogs = ({ postsData, featured_post }) => {
               </div>
 
               <div className="lg:w-1/3 md:w-full lg:mt-0 mt-8">
-                <div className="w-full mb-4">
+                <div className="w-full mb-3">
                   <h1 className="text-xl font-bold">
-                    {blogPageData.section2.sideHeading}
+                    Most Popular
                   </h1>
                 </div>
 
-                {blogPageData.section2.sideCollection.map((item, i) => {
+                {postsData.slice(0, 5).map((item, i) => {
                   return (
-                    <div className="w-full mb-5" key={i}>
-                      <span className="text-green-500 text-xs font-semibold cursor-pointer">
-                        {item.sideSubHeading}
+                    <div className="w-full mb-5 cursor-pointer" key={i} onClick={() => router.push(`/blog/${item.primary_tag.slug}/${item.slug}`)}>
+                      <span className="text-green-500 capitalize text-xs font-semibold cursor-pointer">
+                        {item.primary_tag.name}
                       </span>
                       <p className="xl:w-4/6 lg:w-full text-black-900 font-semibold text-xs cursor-pointer">
-                        {item.sideSubDesc}
+                        {item.title}.
                       </p>
                     </div>
                   );

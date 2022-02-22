@@ -125,6 +125,11 @@ table {
   font-weight: 500;
 }
 
+.featuredPost{
+  width: 100%;
+  height: 400px;
+}
+
 @media (max-width: 1024px) {
   .featuredImage1,
   .featuredImage2 {
