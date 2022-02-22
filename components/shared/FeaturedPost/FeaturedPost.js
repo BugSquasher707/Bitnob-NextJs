@@ -36,7 +36,7 @@ const FeaturedPost = () => {
                   </h1>
                   <button
                     type="button"
-                    className="p-3 cursor-pointer mt-5 pl-7 pr-7 rounded-xl text-sm font-bold bg-bitGreen-200"
+                    className="p-3 cursor-pointer mt-3 pl-7 pr-7 rounded-xl text-sm font-bold bg-bitGreen-200"
                     onClick={() =>
                       router.push(`/blog/${item.primary_tag.slug}/${item.slug}`)
                     }
