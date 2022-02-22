@@ -12,6 +12,7 @@ import { AppStore, PlayStore } from "public";
 import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
 import SearchBox from "components/UI/SearchBox/SearchBox";
+import FeaturedPost from "components/shared/FeaturedPost/FeaturedPost";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -60,17 +61,7 @@ const SearchComponent = ({ searchResult }) => {
           <div className="pt-0 pb-20">
             <BitNobContainer>
               <SearchBox/>
-              <div className="bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
-                <h1 className="text-lg font-bold md:mr-20 md:mb-0 mr-0 mb-7">
-                  {blogPageData.section1.heading}
-                </h1>
-                <button
-                  type="button"
-                  className="p-3 pl-7 pr-7 rounded-xl text-sm font-bold bg-bitGreen-200"
-                >
-                  {blogPageData.section1.btnText}
-                </button>
-              </div>
+              <FeaturedPost/>
 
               <div className="w-full my-10">
                 <h1 className="text-center md:text-2xl text-xl font-bold">

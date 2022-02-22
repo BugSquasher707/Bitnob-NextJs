@@ -17,6 +17,7 @@ import Card from "components/UI/Card/Card";
 import style from "../../../components/shared/Header/Header.module.css";
 import SearchBox from "components/UI/SearchBox/SearchBox";
 import React, { useEffect, useState } from "react";
+import FeaturedPost from "components/shared/FeaturedPost/FeaturedPost";
 
 const BLOG_URL = "https://blog.bitnob.com";
 const CONTENT_KEY = "c0027dbf06dc327cb24ce5e23b";
@@ -61,17 +62,7 @@ const PostSlug = ({ post, allPost }) => {
           <div className="pt-0">
             <BitNobContainer>
               <SearchBox />
-              <div className="bg-bitGreen-50 w-full rounded-2xl mt-5 p-10 pl-0 pr-0 text-center md:flex sm:block justify-center items-center">
-                <h1 className="text-lg font-bold md:mr-20 md:mb-0 mr-0 mb-7">
-                  {blogPageData.section1.heading}
-                </h1>
-                <button
-                  type="button"
-                  className="p-3 pl-7 pr-7 rounded-xl text-sm font-bold bg-bitGreen-200"
-                >
-                  {blogPageData.section1.btnText}
-                </button>
-              </div>
+              <FeaturedPost />
               {post.map((obj, objIndex) => {
                 const objDate = obj.published_at.slice(0, 10);
                 let formatedDate = new Date(objDate).toLocaleDateString(
@@ -185,7 +176,7 @@ const PostSlug = ({ post, allPost }) => {
                         </div>
                       </div>
                       <div
-                        className="w-full mt-5"
+                        className="w-full mt-5 postParas"
                         dangerouslySetInnerHTML={createMarkup()}
                       ></div>
                     </div>
