@@ -61,19 +61,21 @@ body {
   box-shadow: 60px 64px 74px rgba(151, 142, 142, 0.1);
 }
 
-.kg-image,
-.kg-bookmark-icon,
-.kg-bookmark-thumbnail img {
-  width: 350px !important;
-  margin: 15px 0px !important;
+.kg-image{
+  width: 70%;
+  height: 400px;
+  object-fit: contain;
+  margin: 15px auto;
 }
 
 .kg-bookmark-icon {
-  width: 250px !important;
+  width: 30%;
+  margin: 15px auto;
 }
 
 .kg-bookmark-thumbnail img {
-  width: 60%;
+  width: 70%;
+  margin: 15px auto;
 }
 
 code {
@@ -128,6 +130,17 @@ table {
 .featuredPost{
   width: 100%;
   height: 400px;
+}
+
+.modalImage{
+  width: 70%;
+  height: 40rem;
+  object-fit: contain;
+  margin: auto;
+}
+
+.modalContainer{
+  z-index: 100000;
 }
 
 @media (max-width: 1024px) {
