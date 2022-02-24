@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import { bitnobPlayStore, bitnobAppleStore } from "app-constants";
 import { AppStore, PlayStore } from "public";
 import { BiUserCircle } from "react-icons/bi";
-import { AiFillCalendar,AiFillCloseCircle } from "react-icons/ai";
+import { AiFillCalendar, AiFillCloseCircle } from "react-icons/ai";
 import { FaTags, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
@@ -58,7 +58,7 @@ const PostSlug = ({ post, allPost }) => {
     setUrl(document.location.href);
 
     document.querySelectorAll("figure").forEach((ele) => {
-      if(ele.querySelector('.kg-image')){
+      if (ele.querySelector('.kg-image')) {
         ele.querySelector('.kg-image').classList.add('cursor-pointer')
       }
       ele.addEventListener("click", (e) => {
@@ -73,7 +73,7 @@ const PostSlug = ({ post, allPost }) => {
     <React.Fragment>
       <Page title="Bitnob Blog Post">
         <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-0 pb-0">
-          <div className="pt-0">
+          <div className="pt-0 lg:px-20 px-5">
             <BitNobContainer>
               <SearchBox />
               <FeaturedPost />
@@ -258,18 +258,18 @@ const PostSlug = ({ post, allPost }) => {
                             <React.Fragment key={i}>
                               {item.primary_author.name !==
                                 obj.primary_author.name && (
-                                <Card
-                                  slug={item.slug}
-                                  image={
-                                    item.feature_image
-                                      ? item.feature_image
-                                      : "../../images/blog-default.jpeg"
-                                  }
-                                  title={item.primary_tag.name}
-                                  description={item.excerpt}
-                                  tag={item.primary_tag.slug}
-                                />
-                              )}
+                                  <Card
+                                    slug={item.slug}
+                                    image={
+                                      item.feature_image
+                                        ? item.feature_image
+                                        : "../../images/blog-default.jpeg"
+                                    }
+                                    title={item.primary_tag.name}
+                                    description={item.excerpt}
+                                    tag={item.primary_tag.slug}
+                                  />
+                                )}
                             </React.Fragment>
                           );
                         })}
@@ -281,7 +281,7 @@ const PostSlug = ({ post, allPost }) => {
 
               {showModal ? (
                 <>
-                  <div className={`${style.animateCards} justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 modalContainer outline-none focus:outline-none`}>
+                  <div className={`${style.animateCards} flex overflow-x-hidden overflow-y-auto fixed inset-0 modalContainer outline-none focus:outline-none`}>
                     <div className="relative w-auto my-6 mx-auto max-w-4xl">
                       <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                         <div className="relative p-6 flex-auto">

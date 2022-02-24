@@ -61,21 +61,25 @@ body {
   box-shadow: 60px 64px 74px rgba(151, 142, 142, 0.1);
 }
 
-.kg-image{
+.kg-image {
   width: 70%;
   height: 400px;
-  object-fit: contain;
-  margin: 15px auto;
+  object-fit: fill;
+  /* margin: 15px auto; */
+  /* margin-left: -50px !important; */
+  text-align: left !important;
 }
 
 .kg-bookmark-icon {
   width: 30%;
-  margin: 15px auto;
+  /* margin: 15px auto; */
+  text-align: left !important;
 }
 
 .kg-bookmark-thumbnail img {
   width: 70%;
-  margin: 15px auto;
+  /* margin: 15px auto; */
+  text-align: left !important;
 }
 
 code {
@@ -116,33 +120,44 @@ table {
   height: 100%;
 }
 
-.postParas h1, .postParas h2 {
+.postParas h1,
+.postParas h2 {
   margin-bottom: 15px;
   margin-top: 15px;
   font-weight: 700;
 }
 
-.postParas li,.postParas p {
+.postParas li,
+.postParas p {
   margin-bottom: 15px;
   font-weight: 500;
 }
 
-.featuredPost{
+.featuredPost {
   width: 100%;
   height: 400px;
 }
 
-.modalImage{
-  width: 70%;
-  height: 40rem;
-  object-fit: contain;
+.modalImage {
+  width: 100%;
+  height: 30rem;
+  object-fit: fill;
   margin: auto;
 }
 
-.modalContainer{
+.modalContainer {
   z-index: 100000;
 }
+/* .container {
+  padding-left: 50px;
+  padding-right: 30px;
+} */
 
+@media screen and (max-width: 992px) {
+  .kg-image {
+    width: 100%;
+  }
+}
 @media (max-width: 1024px) {
   .featuredImage1,
   .featuredImage2 {

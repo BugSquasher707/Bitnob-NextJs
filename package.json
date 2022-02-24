@@ -9,6 +9,7 @@
   "dependencies": {
     "@bradgarropy/next-seo": "^1.2.0",
     "classnames": "^2.3.1",
+    "core-js": "^3.21.1",
     "gsap": "^3.8.0",
     "html-to-text": "^8.1.0",
     "next": "latest",
