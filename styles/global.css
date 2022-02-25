@@ -168,7 +168,5 @@ table {
   .blogLayout{
     width: 45% !important;
     margin: auto !important;
-    box-sizing: border-box !important;
-    border: 1px solid #000 !important;
   }
 }
