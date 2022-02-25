@@ -12,7 +12,6 @@ import { AppStore, PlayStore } from "public";
 import { BiUserCircle } from "react-icons/bi";
 import { AiFillCalendar, AiFillCloseCircle } from "react-icons/ai";
 import { FaTags, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
-import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
 import style from "../../../components/shared/Header/Header.module.css";
 import SearchBox from "components/UI/SearchBox/SearchBox";
@@ -95,7 +94,6 @@ const PostSlug = ({ post, allPost }) => {
                         <h1 className="text-black-900 font-bold mb-5 md:text-2xl text-xl text-center">
                           {obj.title}
                         </h1>
-                        {/* eslint-disable-next-line */}
                         <img
                           src={
                             obj.feature_image
