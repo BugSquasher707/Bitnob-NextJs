@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import { bitnobPlayStore, bitnobAppleStore } from "app-constants";
 import { AppStore, PlayStore } from "public";
 import { BiUserCircle } from "react-icons/bi";
-import { AiFillCalendar,AiFillCloseCircle } from "react-icons/ai";
+import { AiFillCalendar } from "react-icons/ai";
 import { FaTags, FaFacebook, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import blogPageData from "static/blog-static";
 import Card from "components/UI/Card/Card";
@@ -51,22 +51,8 @@ const PostSlug = ({ post, allPost }) => {
 
   const [url, setUrl] = useState("");
 
-  const [showModal, setShowModal] = useState(false);
-  const [blogImage, setBlogImage] = useState("false");
-
   useEffect(() => {
     setUrl(document.location.href);
-
-    document.querySelectorAll("figure").forEach((ele) => {
-      if(ele.querySelector('.kg-image')){
-        ele.querySelector('.kg-image').classList.add('cursor-pointer')
-      }
-      ele.addEventListener("click", (e) => {
-        let figureBox = e.currentTarget.querySelector(".kg-image").src;
-        setShowModal(true);
-        setBlogImage(figureBox);
-      });
-    });
   }, []);
 
   return (
@@ -278,7 +264,6 @@ const PostSlug = ({ post, allPost }) => {
                   </React.Fragment>
                 );
               })}
-
               {showModal ? (
                 <>
                   <div className={`${style.animateCards} justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 modalContainer outline-none focus:outline-none`}>

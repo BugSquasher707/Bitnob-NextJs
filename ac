@@ -1,0 +1,571 @@
+[33mcommit 1a3f4ddd015b73a5fb30c47666deaf171cdf7c12[m[33m ([m[1;36mHEAD -> [m[1;32mdev[m[33m, [m[1;31morigin/feature/blogs[m[33m, [m[1;31morigin/dev[m[33m, [m[1;32mfeature/blogs[m[33m)[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 12:28:32 2022 +0500
+
+    update
+
+[33mcommit 8e08f4b3f4beb54e5c620c11bc9373b919ec4782[m
+Merge: 0ec92aa 1baa547
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 12:24:57 2022 +0500
+
+    updated
+
+[33mcommit 0ec92aa7a4d1e3ccea8afcf0dc391bc80ee2e276[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 12:24:24 2022 +0500
+
+    updated
+
+[33mcommit 73b9ddaedbfbbd200d66767f42748b3e7b82b281[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 12:24:01 2022 +0500
+
+    updated
+
+[33mcommit 298dc65215f9426df52f073f826d9c7539ee556c[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 12:14:18 2022 +0500
+
+    Merge branch 'dev' of https://github.com/bitnob/bitnob_web into dev
+
+[33mcommit c38dedca62b69db4e7a1ace09533aae9cf3c708f[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 12:00:07 2022 +0500
+
+    bugs fixed
+
+[33mcommit e934d11600c8a92a5b8885a2bf9e80f6103e88df[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 10:47:20 2022 +0500
+
+    ui fixes
+
+[33mcommit 1baa54744592d32b662610caf038f12053954de7[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 12:11:29 2022 +0500
+
+    Revert "blogs category pages"
+    
+    This reverts commit 8f0752abadb65129eb25887f4cbdfe5f1943ea03.
+
+[33mcommit 85bdeb9ed425db7256115dc69809a9c544bd6b0c[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 12:00:07 2022 +0500
+
+    bugs fixed
+
+[33mcommit 3c1be72bbedb783c452c63303ab3eb402dce3ad7[m[33m ([m[1;32mmain[m[33m)[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 25 10:47:20 2022 +0500
+
+    ui fixes
+
+[33mcommit 8f0752abadb65129eb25887f4cbdfe5f1943ea03[m
+Author: Abdul Wahab <abdulengineer321@gmail.com>
+Date:   Thu Feb 24 19:23:54 2022 +0500
+
+    blogs category pages
+
+[33mcommit de5d732d4d8a712fcf5f7d53e53ef93ecc0c3e48[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Wed Feb 23 18:42:01 2022 +0500
+
+    picson modal complete
+
+[33mcommit 0481efdc1a27a1edf7afca03163b9dac8c1eb840[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Tue Feb 22 18:42:47 2022 +0500
+
+    updated
+
+[33mcommit 79307954a381e1631d771bd9a3f6b3b21b2a8cd1[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Tue Feb 22 18:08:08 2022 +0500
+
+    featured post complete
+
+[33mcommit 8b0cad2fb1969780ed5d523bf694d739ead2e2de[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Tue Feb 22 16:59:17 2022 +0500
+
+    featured post complete
+
+[33mcommit 404d20686b37da6b907b8cf4f4fbe718dda01e2c[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Tue Feb 22 13:07:39 2022 +0500
+
+    responsive issues done
+
+[33mcommit b667b3dbaf2df984584eb268c9b600511bf253e8[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Tue Feb 22 11:49:02 2022 +0500
+
+    responsive issues done
+
+[33mcommit 86dc55740f10901bd26aa897e7cc8cb928e8a359[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 17:57:09 2022 +0500
+
+    share functionality
+
+[33mcommit 33c5ba6012ac9f01710f31a801cde3648422f86e[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 17:54:35 2022 +0500
+
+    bug fixed
+
+[33mcommit daaab801635e3161f96abb6b8debcabfa5ff3112[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 17:43:22 2022 +0500
+
+    bug fixed
+
+[33mcommit 3e51651ffa695cf857908e5d669eccb1ecffb194[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 17:38:54 2022 +0500
+
+    bug fixed
+
+[33mcommit 4611b1563f21d3e0e3681304e55c1bd73fde2b3f[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 17:35:58 2022 +0500
+
+    bug fixed
+
+[33mcommit 2c99920e608d7240998467573b7efdd41924b85a[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 17:25:03 2022 +0500
+
+    bug fixed
+
+[33mcommit b8ea3427422e267acb7e5ec48b9306a3589c3a65[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 17:13:58 2022 +0500
+
+    bug fixed
+
+[33mcommit 958ea40415491533903756bd257239921d109c10[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 16:51:05 2022 +0500
+
+    bug fixed
+
+[33mcommit 5095d59c8612b40c1a14c27972ff22ae62872f25[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 16:17:55 2022 +0500
+
+    bug fixed
+
+[33mcommit 928fc489f7ebdb30fda289ecbc661c124301bae5[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 16:00:50 2022 +0500
+
+    bug fixed
+
+[33mcommit 10f87ab578e77b4f23ea4adfeef423c2f4c29713[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 15:59:16 2022 +0500
+
+    bug fixed
+
+[33mcommit 7df4aaee29929dc583b37c23bedef49734a430b6[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 15:14:22 2022 +0500
+
+    bug fixed
+
+[33mcommit 7486dceab9e8a63054ca9c20db4ac9f3cd722ce6[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 13:54:46 2022 +0500
+
+    bugs fixed
+
+[33mcommit d53c83f69f6360f46ee4baf9961a06bdff06bb5c[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 13:03:42 2022 +0500
+
+    bugs fixed
+
+[33mcommit 4c4707e874a6df9fa278637ba5b9110bd486ddf6[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 12:51:32 2022 +0500
+
+    fix bugs
+
+[33mcommit d4de12cd15b0c4a9686ca457c18fe7f795495984[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 12:38:58 2022 +0500
+
+    bugs fixed
+
+[33mcommit d9c0cd3726963a4b1ed9c300feeb9f7b4416375b[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 12:13:22 2022 +0500
+
+    fix bugs
+
+[33mcommit 6a9804225fa5289cf2a49168c69e5317067c6ad1[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 11:38:33 2022 +0500
+
+    fix bugs
+
+[33mcommit 297edc4acfa44542eb6cd23723a7c6982110c337[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 11:32:58 2022 +0500
+
+    fix bugs
+
+[33mcommit aa5910551553d50ddf4b9693e890b31274e875ae[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 11:30:12 2022 +0500
+
+    fix bugs
+
+[33mcommit a91886795a1d2a771af00184dd84a1ac5cdb08b4[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 11:29:57 2022 +0500
+
+    fix bugs
+
+[33mcommit 15a8c4d445343c4af5e9f20b3454e6588fc0d4c5[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 10:47:33 2022 +0500
+
+    fix bugs
+
+[33mcommit 9282e1260909c822d4fbb64e24a5133a1ec2e842[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Mon Feb 21 10:38:21 2022 +0500
+
+    fix bugs
+
+[33mcommit 9c1d05259042b8ddc1dd7552a1168ef85f2d66c9[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 18 16:03:15 2022 +0500
+
+    bugs fixed
+
+[33mcommit 6d605336e6dcb734c9f9269c855109b9d3efecf2[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 18 12:25:21 2022 +0500
+
+    tag api functionality and other points
+
+[33mcommit 7dbdbc9e6507ac0cb9cef607145845def3d73550[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Fri Feb 18 12:22:21 2022 +0500
+
+    tag api functionality and other points
+
+[33mcommit efd2c96e7be2cf4c63e38bcb677d945c6b9857f8[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Thu Feb 17 16:39:32 2022 +0500
+
+    complete search functionality
+
+[33mcommit 26ce07294753e1e3e1370c36179e7262f91350ea[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Thu Feb 17 16:15:24 2022 +0500
+
+    almost complete search functionality
+
+[33mcommit 495591e169ced9201b873bf87934a9548f58030d[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Thu Feb 17 15:56:00 2022 +0500
+
+    almost complete search functionality
+
+[33mcommit 2983f3ee6f8817a047cbee0b00add7788ef9e84d[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Thu Feb 17 15:52:26 2022 +0500
+
+    almost complete search functionality
+
+[33mcommit 74a69975f6394f38f82e780a7639c3b0b612b873[m
+Merge: f4fe515 c95becc
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Wed Feb 16 18:10:58 2022 +0500
+
+    update dev branch
+
+[33mcommit f4fe515dbc218e759158dacc278fff0dd29acf66[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Wed Feb 16 18:00:38 2022 +0500
+
+    update dev branch
+
+[33mcommit b25a43b81fe158ef8f9d3bccbb7dc27cf5189844[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Wed Feb 16 13:38:57 2022 +0500
+
+    post date page, read more btn functionality
+
+[33mcommit 17da9ded9e042476e68f78bd4131231ce64b3916[m
+Author: DaniyalGuru <danisamim9@gmail.com>
+Date:   Wed Feb 16 09:08:16 2022 +0500
+
+    feature/blogs
+
+[33mcommit c95becc2d355086fc0ac92f72c35d1d22bddd641[m[33m ([m[1;31morigin/update[m[33m)[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Mon Feb 7 14:23:58 2022 +0100
+
+    minor updates
+
+[33mcommit 62ec40e658735df8e96ef215f1c32c1f19de62d4[m
+Merge: 0af187c f538af2
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Wed Feb 2 15:28:29 2022 +0100
+
+    Merge pull request #38 from bitnob/sitemap
+    
+    update sitemap
+
+[33mcommit f538af2871f4d34ca9c7446fd0b55ec93649a739[m[33m ([m[1;31morigin/sitemap[m[33m)[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Wed Feb 2 15:26:49 2022 +0100
+
+    update sitemap
+
+[33mcommit 0af187c033d3658b9d8b9bd7159ea1e7f42edb9b[m
+Merge: a1be004 07f0b15
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Tue Feb 1 21:27:14 2022 +0100
+
+    Merge pull request #37 from bitnob/update-seo-image
+    
+    update tracker
+
+[33mcommit 07f0b159f4791449885a98d22bdce0b19fe88a3b[m[33m ([m[1;31morigin/update-seo-image[m[33m)[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Tue Feb 1 21:25:53 2022 +0100
+
+    update tracker
+
+[33mcommit a1be004c7d77fbb0400ba4d7738d9f2c2255c94f[m
+Merge: 1633b86 0bf3508
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Tue Feb 1 20:59:01 2022 +0100
+
+    Merge pull request #36 from bitnob/update-seo-image
+    
+    add google tracking code
+
+[33mcommit 0bf3508c168b9c6bd1d110d6b705d1a91624604d[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Tue Feb 1 20:57:25 2022 +0100
+
+    add google tracking code
+    add update values in text
+
+[33mcommit 1633b86514969a3c4f4864a2a116d7a589b5a616[m
+Merge: 7c158ee bbb2735
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Tue Feb 1 13:16:15 2022 +0100
+
+    Merge pull request #35 from bitnob/update-seo-image
+    
+    update seo image url
+
+[33mcommit bbb27351977d8a79d8401e73e4cc29f1ba676abe[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Tue Feb 1 13:15:18 2022 +0100
+
+    update seo image url
+
+[33mcommit 7c158ee3d4b9cc3f2584f8a1fcf8a01003273b15[m
+Merge: f23c5ce d8cd5e9
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Tue Feb 1 09:36:39 2022 +0100
+
+    Merge pull request #34 from bitnob/minor-updates
+    
+    update featured image with edited design
+
+[33mcommit d8cd5e9f78d291ccb44660da5c957f0e8660dab1[m[33m ([m[1;31morigin/minor-updates[m[33m)[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Tue Feb 1 09:34:40 2022 +0100
+
+    update featured image with edited design
+    update values
+
+[33mcommit f23c5ce4f837b7bc263dfb4f0e059417306f9540[m
+Merge: 396cb02 d89c921
+Author: Houdini <42790057+NonsoAmadi10@users.noreply.github.com>
+Date:   Mon Jan 31 22:55:47 2022 +0100
+
+    Merge pull request #33 from bitnob/ch-ci-pipeline
+    
+    :hammer: add CI pipeline #CU-24abtm7
+
+[33mcommit d89c9216d999c58e3f69a0a1408a4530fe54638f[m[33m ([m[1;31morigin/ch-ci-pipeline[m[33m)[m
+Author: Houdini <nonsoamadi@aol.com>
+Date:   Mon Jan 31 22:52:24 2022 +0100
+
+    :hammer: add CI pipeline
+
+[33mcommit 396cb02a28b42bb34cd9831cfd3e6d99a4e36801[m
+Merge: 8f54721 16a09f1
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 21:05:58 2022 +0100
+
+    Merge pull request #32 from bitnob/minor-updates
+    
+     add new video
+
+[33mcommit 16a09f1b1007d1ac47e684b5b877c0fc19870b84[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 21:05:01 2022 +0100
+
+     add new video
+
+[33mcommit 8f547213c2796d6bf8ea6ed321ab73d69d7cab35[m
+Merge: c936d31 0721da6
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 21:00:01 2022 +0100
+
+    Merge pull request #31 from bitnob/minor-updates
+    
+    comment out not completed pages
+
+[33mcommit 0721da6f860297325a45392f8a7e4c5080836f68[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 20:59:02 2022 +0100
+
+    comment out  not completed pages
+
+[33mcommit c936d31a52f490ed63d791d5896ca5596e13ac45[m
+Merge: 8630668 2f682d2
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 19:20:58 2022 +0100
+
+    Merge pull request #30 from bitnob/minor-updates
+    
+    hotfix
+
+[33mcommit 2f682d2f56727ecb24d338a48c6fe700742873a8[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 19:19:24 2022 +0100
+
+    hotfix
+
+[33mcommit 863066821a95b1a13b5679d8ad96b9e74fcb06e5[m
+Merge: 1f02e56 2050621
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 18:58:41 2022 +0100
+
+    Merge pull request #29 from bitnob/minor-updates
+    
+    remove unwated italics
+
+[33mcommit 2050621bccbb1722cd1b89a931f5f4a45c5ae8e8[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 18:56:28 2022 +0100
+
+    remove unwated italics
+
+[33mcommit 1f02e56338822f1a49e8eeea1e17b5e351921db8[m
+Merge: 7580512 8fec87b
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 18:47:07 2022 +0100
+
+    Merge pull request #28 from bitnob/minor-updates
+    
+    - hotfixes
+
+[33mcommit 8fec87b78a84536507d2f98beacf3477de143a67[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 18:45:08 2022 +0100
+
+    - disable vitual cards section
+    - remove unwanted term of polity text
+    - link dca calculator
+
+[33mcommit 7580512ba043505bdbc93783aaa0dba8f3740edf[m
+Merge: aa503bf 775d451
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Mon Jan 31 11:11:24 2022 +0100
+
+    Merge pull request #27 from bitnob/minor-updates
+    
+    updates
+
+[33mcommit 775d451a49ad06c923591ef6146298d64ffd03c7[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Fri Jan 28 02:01:07 2022 +0100
+
+    update core valuesi
+
+[33mcommit ac7fce6f03d032cee728245b14b00b5d71da70b2[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Fri Jan 28 01:56:00 2022 +0100
+
+    replace all crypto with bitcoin
+
+[33mcommit aa503bf86a27c5d1a3d20b12108f8272b1c49d98[m
+Merge: 8f09f9b d2238b3
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Fri Jan 21 03:58:16 2022 +0100
+
+    Merge pull request #26 from bitnob/feat/complete-updates
+    
+    correct image and video title
+
+[33mcommit d2238b38e3e1bdeaf440a1a19f052e0cec10ac23[m[33m ([m[1;31morigin/feat/complete-updates[m[33m)[m
+Author: David Alamu <aestrex@gmail.com>
+Date:   Fri Jan 21 03:41:30 2022 +0100
+
+    correct image and video title
+
+[33mcommit 8f09f9b060dc58dec52c346a4b7bcb5e9cc7b6ee[m
+Merge: 48aee17 da5ba26
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Tue Jan 18 14:59:58 2022 +0100
+
+    Merge pull request #25 from bitnob/feat/clean-web
+    
+    final updates
+
+[33mcommit da5ba2658fcb2343db0db6b75879eb67c113d5b2[m[33m ([m[1;31morigin/feat/clean-web[m[33m)[m
+Author: David Alamu <aestrex@gmail.com>
+Date:   Tue Jan 18 14:43:35 2022 +0100
+
+    final updates
+
+[33mcommit 48aee17a5f36d6afedb7166613f33d1995579e6b[m
+Merge: 43b6f23 c95d7cd
+Author: Vinay <vincentayorinde@yahoo.com>
+Date:   Fri Jan 7 09:02:16 2022 +0100
+
+    Merge pull request #24 from bitnob/ch-test-auto-build
+    
+    test auto build
+
+[33mcommit c95d7cd8dd98ae8ce3e369c36be7c8d3c6899d64[m[33m ([m[1;31morigin/ch-test-auto-build[m[33m)[m
+Author: Vincent Ayorinde <vincentayorinde@yahoo.com>
+Date:   Fri Jan 7 09:01:10 2022 +0100
+
+    test auto build
+
+[33mcommit 43b6f2319ad7d3ff82fb0d200c3153dfd6541cb4[m
+Author: Bernard Parah <barjebernard@gmail.com>
+Date:   Sat Jan 1 12:45:57 2022 +0100
+
+    update copy
+
+[33mcommit 982bafa30e9a58f98f34fc34f4170942069c117c[m
+Merge: 466b8de 0adc851
+Author: Bernard Parah <barjebernard@gmail.com>
+Date:   Sat Jan 1 12:32:17 2022 +0100
+
+    Merge pull request #23 from bitnob/feat/update-copy
+    
+    update copy
+
+[33mcommit 0adc8515b7967e9d8c9d18d3dcdcc5a7eb847406[m[33m ([m[1;31morigin/feat/update-copy[m[33m)[m
+Author: David Alamu <aestrex@gmail.com>
+Date:   Sat Dec 25 09:44:27 2021 +0100
+
+    update copy
