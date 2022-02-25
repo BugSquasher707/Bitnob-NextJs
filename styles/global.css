@@ -166,7 +166,7 @@ table {
 
 @media (min-width: 3000px){
   .blogLayout{
-    width: 45% !important;
+    width: 1400px !important;
     margin: auto !important;
   }
 }
