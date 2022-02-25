@@ -278,7 +278,6 @@ const PostSlug = ({ post, allPost }) => {
                   </React.Fragment>
                 );
               })}
-
               {showModal ? (
                 <>
                   <div className={`${style.animateCards} flex overflow-x-hidden overflow-y-auto fixed inset-0 modalContainer outline-none focus:outline-none`}>
