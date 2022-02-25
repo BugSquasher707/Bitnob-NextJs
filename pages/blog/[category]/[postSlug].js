@@ -72,7 +72,7 @@ const PostSlug = ({ post, allPost }) => {
     <React.Fragment>
       <Page title="Bitnob Blog Post">
         <div className="bg-gradient-to-b from-white via-bitGreen-50 z-0 overflow-x-hidden relative pt-0 pb-0">
-          <div className="pt-0 lg:px-20 px-5">
+          <div className="blogLayout pt-0 lg:px-20 px-5">
             <BitNobContainer>
               <SearchBox />
               <FeaturedPost />
