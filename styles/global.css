@@ -170,3 +170,11 @@ table {
     margin: auto !important;
   }
 }
+
+@media (min-width: 1024px)
+.lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    width: 90%;
+    margin: auto;
+}
