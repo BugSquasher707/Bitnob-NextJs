@@ -164,7 +164,7 @@ table {
   }
 }
 
-@media (min-width: 3000px){
+@media (min-width: 2550px){
   .blogLayout{
     width: 1400px !important;
     margin: auto !important;
