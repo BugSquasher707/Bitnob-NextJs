@@ -279,7 +279,7 @@ const PostSlug = ({ post, allPost }) => {
               {showModal ? (
                 <>
                   <div className={`${style.animateCards} flex overflow-x-hidden overflow-y-auto fixed inset-0 modalContainer outline-none focus:outline-none`}>
-                    <div className="relative w-auto my-6 mx-auto max-w-4xl">
+                    <div className="relative w-auto my-6 mx-auto max-w-5xl">
                       <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                         <div className="relative p-6 flex-auto">
                           <div className="w-full flex justify-end mb-3"><AiFillCloseCircle className="text-xl text-bitGreen-500 cursor-pointer" onClick={() => setShowModal(false)} /></div>

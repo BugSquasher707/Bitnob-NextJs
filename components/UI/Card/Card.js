@@ -11,8 +11,8 @@ const Card = ({ slug, image, title, description, tag }) => {
           <h1 className="ml-1 capitalize text-green-500 text-sm font-semibold mt-3">
             {title}
           </h1>
-          <p className="truncate ml-1 mb-3 text-black-900 font-semibold leading-5 mt-1 text-sm">
-            {description}.
+          <p className="ml-1 mb-3 text-black-900 font-semibold leading-5 mt-1 text-sm">
+            {description.slice(0, 60)}.
           </p>
         </div>
         </Link>
