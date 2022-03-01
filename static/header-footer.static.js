@@ -7,7 +7,7 @@ const headerLinks = {
             title: 'Savings',
             icon: 'group-saving.png',
             route: '/savings',
-            description:'Easily save for yourself or your kids in Bitcoin and USD.'
+            description: 'Easily save for yourself or your kids in Bitcoin and USD.'
         },
         // {
         //     title: 'Lightning Address',
@@ -25,13 +25,18 @@ const headerLinks = {
             title: 'Nob Credit',
             icon: 'nob-credit.png',
             route: '/nob-credit',
-            description:'Take a loan for up to 12 months.'
+            description: 'Take a loan for up to 12 months.'
         },
     ],
     Business: '/business',
     Company: [
+<<<<<<< HEAD
         {title: "About", route:"/about-us"},
         {title: "Blog", route:"/blogs"},
+=======
+        { title: "About", route: "/about-us" },
+        { title: "Blog", route: "/blogs" },
+>>>>>>> 73b191fe729b354029bb03b6cea0ed875b2bdf03
         // {title: "Careers", route:"/careers"},
         // {title: "FAQs", route:"/faq"},
     ],
@@ -41,14 +46,20 @@ const headerLinks = {
 const footerLinks = {
     links: {
         Company: [
+<<<<<<< HEAD
             {title: "About", route:"/about-us"},
         {title: "Blog", route:"/blogs"},
         // {title: "Careers", route:"/careers"},
+=======
+            { title: "About", route: "/about-us" },
+            { title: "Blogs", route: "/blogs" },
+            // {title: "Careers", route:"/careers"},
+>>>>>>> 73b191fe729b354029bb03b6cea0ed875b2bdf03
             // {title: "FAQs", route:"/faq"},
         ],
         Legal: [
-            {title: "Terms of service", route: '/terms-of-services'},
-            {title: "Privacy Policy", route: '/privacy-policy'}
+            { title: "Terms of service", route: '/terms-of-services' },
+            { title: "Privacy Policy", route: '/privacy-policy' }
         ]
     },
     socials: {

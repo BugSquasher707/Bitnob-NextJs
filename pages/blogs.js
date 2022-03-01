@@ -67,11 +67,11 @@ const Blogs = ({ postsData, featured_post }) => {
         <div className="pt-0 pb-5">
           <BitNobContainer>
             <SearchBox />
-            <FeaturedPost/>
+            <FeaturedPost />
 
             <div className="w-full lg:py-20 p-5 px-0 md:block mt-5 mb-5 lg:flex justify-between items-start">
               <div className="lg:w-2/3 md:w-full lg:pr-8 flex justify-center items-start flex-col">
-                {featured_post.slice(0,1).map((item, i) => {
+                {featured_post.slice(0, 1).map((item, i) => {
                   return (
                     <React.Fragment key={i}>
                       <Link
@@ -95,9 +95,9 @@ const Blogs = ({ postsData, featured_post }) => {
                             {item.primary_tag.name}
                           </h1>
                           <div>
-                          <p className="truncate text-black-900 font-semibold text-xs mt-1">
-                            {item.excerpt}
-                          </p>
+                            <p className="truncate text-black-900 font-semibold text-xs mt-1">
+                              {item.excerpt}
+                            </p>
 
                           </div>
                         </div>

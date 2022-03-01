@@ -137,6 +137,8 @@ table {
 .postParas p {
   margin-bottom: 15px;
   font-weight: 500;
+  /* list-style: disc; */
+  /* padding-left: 18px; */
 }
 
 .featuredPost {
