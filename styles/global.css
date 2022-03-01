@@ -62,37 +62,37 @@ body {
 }
 
 .kg-image {
-  width: 70%;
-  height: 400px;
-  object-fit: fill;
-  /* margin: 15px auto; */
-  /* margin-left: -50px !important; */
+  width: 35rem;
+  height: 20rem;
+  object-fit: cover;
   text-align: left !important;
 }
-
+.modalContainer img {
+  width: 100%;
+  height: auto;
+}
 .kg-bookmark-icon {
   width: 30%;
-  /* margin: 15px auto; */
   text-align: left !important;
 }
 
 .kg-bookmark-thumbnail img {
   width: 70%;
-  /* margin: 15px auto; */
   text-align: left !important;
 }
 
 code {
   margin-bottom: 15px;
-  padding: 5px 10px !important;
+  padding: 12px !important;
   box-sizing: border-box;
-  background-color: #ebebeb;
+  background-color: darkgrey;
   display: inline-block;
   white-space: pre-wrap;
   width: fit-content;
   word-break: break-all;
   word-wrap: break-word;
   border-radius: 10px;
+  color: white;
 }
 
 table {
@@ -125,12 +125,20 @@ table {
   margin-bottom: 15px;
   margin-top: 15px;
   font-weight: 700;
+  font-size: 22px;
 }
 
-.postParas li,
+.postParas li {
+  margin-bottom: 15px;
+  font-weight: 500;
+  list-style: disc;
+  margin-left: 18px;
+}
 .postParas p {
   margin-bottom: 15px;
   font-weight: 500;
+  /* list-style: disc; */
+  /* padding-left: 18px; */
 }
 
 .featuredPost {
@@ -156,11 +164,18 @@ table {
 @media screen and (max-width: 992px) {
   .kg-image {
     width: 100%;
+    height: auto;
   }
 }
 @media (max-width: 1024px) {
   .featuredImage1,
   .featuredImage2 {
     width: 100%;
+  }
+}
+@media (min-width: 3000px) {
+  .blogLayout {
+    width: 1400px !important;
+    margin: auto !important;
   }
 }
