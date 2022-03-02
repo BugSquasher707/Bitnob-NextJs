@@ -31,7 +31,7 @@ const headerLinks = {
     Business: '/business',
     Company: [
         {title: "About", route:"/about-us"},
-        {title: "Blog", route:"/blogs"},
+        {title: "Blog", route:"/blog"},
         // {title: "Careers", route:"/careers"},
         // {title: "FAQs", route:"/faq"},
     ],
@@ -42,7 +42,7 @@ const footerLinks = {
     links: {
         Company: [
             {title: "About", route:"/about-us"},
-        {title: "Blog", route:"/blogs"},
+        {title: "Blog", route:"/blog"},
         // {title: "Careers", route:"/careers"},
             // {title: "FAQs", route:"/faq"},
         ],
