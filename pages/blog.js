@@ -46,7 +46,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Blogs = ({ postsData, featured_post }) => {
+const Blog = ({ postsData, featured_post }) => {
   const router = useRouter();
 
   const [activeBtn, setActiveBtn] = useState(true);
@@ -176,6 +176,6 @@ const Blogs = ({ postsData, featured_post }) => {
   );
 };
 
-Blogs.getLayout = getLayout;
+Blog.getLayout = getLayout;
 
-export default Blogs;
+export default Blog;

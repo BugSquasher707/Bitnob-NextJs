@@ -66,11 +66,14 @@ body {
   height: auto;
   object-fit: cover;
   text-align: left !important;
+  margin-bottom: 2rem !important;
 }
+
 .modalContainer img {
   width: 100%;
   height: auto;
 }
+
 .kg-bookmark-icon {
   width: 30%;
   text-align: left !important;
@@ -85,14 +88,13 @@ code {
   margin-bottom: 15px;
   padding: 12px !important;
   box-sizing: border-box;
-  background-color: darkgrey;
+  background-color: #f2f2f2;
   display: inline-block;
   white-space: pre-wrap;
   width: fit-content;
   word-break: break-all;
   word-wrap: break-word;
-  border-radius: 10px;
-  color: white;
+  color: black;
 }
 
 table {
