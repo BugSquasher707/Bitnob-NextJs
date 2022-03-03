@@ -23,9 +23,8 @@ async function getPosts() {
   const res = await fetch(
     `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_KEY}&include=tags,authors`
   ).then((res) => res.json());
-
+  
   const posts = res.posts;
-
   return posts;
 }
 
