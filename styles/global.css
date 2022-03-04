@@ -61,12 +61,15 @@ body {
   box-shadow: 60px 64px 74px rgba(151, 142, 142, 0.1);
 }
 
+figure{
+  margin-bottom: 15px;
+}
+
 .kg-image {
-  width: 35rem;
+  width: 100%;
   height: auto;
   object-fit: cover;
   text-align: left !important;
-  margin-bottom: 2rem !important;
 }
 
 .modalContainer img {
@@ -85,13 +88,13 @@ body {
 }
 
 code {
+  width: 100%;
   margin-bottom: 15px;
   padding: 12px !important;
   box-sizing: border-box;
   background-color: #f2f2f2;
   display: inline-block;
   white-space: pre-wrap;
-  width: fit-content;
   word-break: break-all;
   word-wrap: break-word;
   color: black;
