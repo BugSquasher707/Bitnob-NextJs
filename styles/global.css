@@ -175,9 +175,12 @@ table {
     width: 100%;
   }
 }
-@media (min-width: 3000px) {
+@media (min-width: 2000px) {
   .blogLayout {
     width: 1400px !important;
     margin: auto !important;
   }
+}
+.kg-image {
+  margin: auto !important;
 }
